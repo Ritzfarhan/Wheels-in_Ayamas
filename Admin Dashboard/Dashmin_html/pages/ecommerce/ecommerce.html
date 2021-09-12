@@ -3,7 +3,7 @@
 
 <head>
    <!-- Page Title -->
-   <title>Dashmin - Multipurpose Bootstrap Dashboard Template</title>
+   <title>Wheels - In Ayamas</title>
 
    <!-- Meta Data -->
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,7 @@
    <meta name="keywords" content="">
 
    <!-- Favicon -->
-   <link rel="shortcut icon" href="../../assets/img/favicon.png">
+   <link rel="shortcut icon" href="../../assets/img/wia.png">
 
    <!-- Web Fonts -->
    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
@@ -30,6 +30,7 @@
 
    <!-- ======= MAIN STYLES ======= -->
    <link rel="stylesheet" href="../../assets/css/style.css">
+   <link rel="stylesheet" href="../../assets/css/custom.css">
    <!-- ======= END MAIN STYLES ======= -->
 
 </head>
@@ -47,8 +48,8 @@
       <header class="header white-bg fixed-top d-flex align-content-center flex-wrap">
          <!-- Logo -->
          <div class="logo">
-            <a href="../../index.html" class="default-logo"><img src="../../assets/img/logo.png" alt=""></a>
-            <a href="../../index.html" class="mobile-logo"><img src="../../assets/img/mobile-logo.png" alt=""></a>
+            <a href="../../index.html" class="default-logo"><img src="../../assets/img/WIALOGO-removebg.png" alt=""></a>
+            <a href="../../index.html" class="mobile-logo"><img src="../../assets/img/WIALOGO-removebg.png" alt=""></a>
          </div>
          <!-- End Logo -->
 
@@ -77,15 +78,14 @@
 
                                  <!-- User Info -->
                                  <div class="user-info">
-                                    <h4 class="user-name">Abrilay Khatun</h4>
-                                    <p class="user-email">abrilakh@gmail.com</p>
+                                    <h4 class="user-name">Auni Badrina</h4>
+                                    <p class="user-email">aunibadrina88@gmail.com</p>
                                  </div>
                                  <!-- End User Info -->
                               </div>
                            </a>
                            <div class="dropdown-menu">
                               <a href="#">My Profile</a>
-                              <a href="#">task</a>
                               <a href="#">Settings</a>
                               <a href="#">Log Out</a>
                            </div>
@@ -96,7 +96,9 @@
                         <div class="main-header-menu d-block d-lg-none">
                            <div class="header-toogle-menu">
                               <!-- <i class="icofont-navigation-menu"></i> -->
-                              <img src="../../assets/img/menu.png" alt="">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" color= "#00192F" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                               </svg>
                            </div>
                         </div>
                         <!-- End Main Header Menu -->
@@ -107,73 +109,20 @@
                      <!-- Header Right -->
                      <div class="main-header-right d-flex justify-content-end">
                         <ul class="nav">
-                           <li class="ml-0">
-                              <!-- Main Header Language -->
-                              <div class="main-header-language">
-                                 <a href="#" data-toggle="dropdown">
-                                    <img src="../../assets/img/svg/globe-icon.svg" alt="">
-                                 </a>
-                                 <div class="dropdown-menu style--three">
-                                    <a href="#">
-                                       <span><img src="../../assets/img/usa.png" alt=""></span>
-                                       USA
-                                    </a>
-                                    <a href="#">
-                                       <span><img src="../../assets/img/china.png" alt=""></span>
-                                       China
-                                    </a>
-                                    <a href="#">
-                                       <span><img src="../../assets/img/russia.png" alt=""></span>
-                                       Russia
-                                    </a>
-                                    <a href="#">
-                                       <span><img src="../../assets/img/spain.png" alt=""></span>
-                                       Spain
-                                    </a>
-                                    <a href="#">
-                                       <span><img src="../../assets/img/brazil.png" alt=""></span>
-                                       Brazil
-                                    </a>
-                                    <a href="#">
-                                       <span><img src="../../assets/img/france.png" alt=""></span>
-                                       France
-                                    </a>
-                                    <a href="#">
-                                       <span><img src="../../assets/img/algeria.png" alt=""></span>
-                                       Algeria
-                                    </a>
-                                 </div>
-                              </div>
-                              <!-- End Main Header Language -->
-                           </li>
-                           <li class="ml-0 d-none d-lg-flex">
-                              <!-- Main Header Print -->
-                              <div class="main-header-print">
-                                 <a href="#">
-                                    <img src="../../assets/img/svg/print-icon.svg" alt="">
-                                 </a>
-                              </div>
-                              <!-- End Main Header Print -->
-                           </li>
-                           <li class="d-none d-lg-flex">
+                           
+                           <li class="d-block d-lg-flex">
                               <!-- Main Header Time -->
                               <div class="main-header-date-time text-right">
                                  <h3 class="time">
-                                    <span id="hours">21</span>
+                                    <span id="hours"></span>
                                     <span id="point">:</span>
-                                    <span id="min">06</span>
+                                    <span id="min"></span>
                                  </h3>
-                                 <span class="date"><span id="date">Tue, 12 October 2019</span></span>
+                                 <span class="date"><span id="date"></span></span>
                               </div>
                               <!-- End Main Header Time -->
                            </li>
-                           <li class="d-none d-lg-flex">
-                              <!-- Main Header Button -->
-                              <div class="main-header-btn ml-md-1">
-                                 <a href="#" class="btn">Pending Tasks</a>
-                              </div>
-                              <!-- End Main Header Button -->
-                           </li>
+                          
                            <li class="order-2 order-sm-0">
                               <!-- Main Header Search -->
                               <div class="main-header-search">
@@ -181,8 +130,11 @@
                                     <div class="theme-input-group header-search">
                                        <input type="text" class="theme-input-style" placeholder="Search Here">
 
-                                       <button type="submit"><img src="../../assets/img/svg/search-icon.svg" alt=""
-                                             class="svg"></button>
+                                       <button type="submit">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="font-size:20px;color:#820D1B" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                           </svg>
+                                       </button>
                                     </div>
                                  </form>
                               </div>
@@ -192,7 +144,9 @@
                               <!-- Main Header Messages -->
                               <div class="main-header-message">
                                  <a href="#" class="header-icon" data-toggle="dropdown">
-                                    <img src="../../assets/img/svg/message-icon.svg" alt="" class="svg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="font-size:20px;color:#820D1B" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+                                       <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                     </svg>   
                                  </a>
                                  <div class="dropdown-menu dropdown-menu-right">
                                     <!-- Dropdown Header -->
@@ -207,13 +161,13 @@
                                        <!-- Item Single -->
                                        <a href="#" class="item-single d-flex media align-items-center">
                                           <div class="figure">
-                                             <img src="../../assets/img/avatar/m1.png" alt="">
+                                             <img src="../../assets/img/avatar/m1 (50x50).png" alt="">
                                              <span class="avatar-status bg-teal"></span>
                                           </div>
                                           <div class="content media-body">
                                              <div class="d-flex align-items-center mb-2">
-                                                <h6 class="name">Sender Name</h6>
-                                                <p class="time">2 min ago</p>
+                                                <h6 class="name">Solehah Ishak</h6>
+                                                <p class="time">2 mins ago</p>
                                              </div>	
                                              <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
                                           </div>
@@ -223,13 +177,13 @@
                                        <!-- Item Single -->
                                        <a href="#" class="item-single d-flex media align-items-center">
                                           <div class="figure">
-                                             <img src="../../assets/img/avatar/m2.png" alt="">
+                                             <img src="../../assets/img/avatar/m2 (50x50).png" alt="">
                                              <span class="avatar-status bg-teal"></span>
                                           </div>
                                           <div class="content media-body">
                                              <div class="d-flex align-items-center mb-2">
-                                                <h6 class="name">Tonya Lee</h6>
-                                                <p class="time">2 min ago</p>
+                                                <h6 class="name">Nursyaza Naqia</h6>
+                                                <p class="time">2 mins ago</p>
                                              </div>	
                                              <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
                                           </div>
@@ -239,13 +193,13 @@
                                        <!-- Item Single -->
                                        <a href="#" class="item-single d-flex media align-items-center">
                                           <div class="figure">
-                                             <img src="../../assets/img/avatar/m3.png" alt="">
+                                             <img src="../../assets/img/avatar/m3 (50x50).png" alt="">
                                              <span class="avatar-status bg-teal"></span>
                                           </div>
                                           <div class="content media-body">
                                              <div class="d-flex align-items-center mb-2">
-                                                <h6 class="name">Cathy Nichols</h6>
-                                                <p class="time">2 min ago</p>
+                                                <h6 class="name">Haris Daniel</h6>
+                                                <p class="time">10 mins ago</p>
                                              </div>	
                                              <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
                                           </div>
@@ -255,13 +209,13 @@
                                        <!-- Item Single -->
                                        <a href="#" class="item-single d-flex media align-items-center">
                                           <div class="figure">
-                                             <img src="../../assets/img/avatar/m4.png" alt="">
+                                             <img src="../../assets/img/avatar/m4 (50x50).png" alt="">
                                              <span class="avatar-status bg-teal"></span>
                                           </div>
                                           <div class="content media-body">
                                              <div class="d-flex align-items-center mb-2">
-                                                <h6 class="name">Hubert Griffith</h6>
-                                                <p class="time">2 min ago</p>
+                                                <h6 class="name">Aleesa Rizal</h6>
+                                                <p class="time">1 hour ago</p>
                                              </div>	
                                              <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
                                           </div>
@@ -277,8 +231,10 @@
                               <!-- Main Header Notification -->
                               <div class="main-header-notification">
                                  <a href="#" class="header-icon notification-icon" data-toggle="dropdown">
-                                    <span class="count" data-bg-img="../../assets/img/count-bg.png">22</span>
-                                    <img src="../../assets/img/svg/notification-icon.svg" alt="" class="svg">
+                                    <span class="count" data-bg-img="../../assets/img/circle.png">22</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="font-size:20px;color:#820D1B" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                                       <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+                                     </svg>
                                  </a>
                                  <div class="dropdown-menu style--two dropdown-menu-right">
                                     <!-- Dropdown Header -->
@@ -384,11 +340,11 @@
                      <!-- Sub Menu -->
                      <ul class="nav sub-menu">
                         <li class="active"><a href="ecommerce.html">Dashboard 1</a></li>
-                        <li><a href="ecommerce2.html">dashboard 2</a></li>
-                        <li><a href="orders.html">orders</a></li>
+                        <li><a href="ecommerce2.html">Dashboard 2</a></li>
+                        <li><a href="orders.html">Orders</a></li>
                         <li><a href="product-catelog.html">Products Catalog</a></li>
                         <li><a href="product-details.html">Product Details</a></li>
-                        <li><a href="cartlist.html">cart list</a></li>
+                        <li><a href="cartlist.html">Cart List</a></li>
                      </ul>
                      <!-- End Sub Menu -->
                   </li>
@@ -1611,7 +1567,7 @@
 
       <!-- Footer -->
       <footer class="footer">
-         Dashmin © 2020 created by <a href="https://www.themelooks.com/"> ThemeLooks</a>
+         Wheels - In Ayamas © 2021 created by aunibadrina   
       </footer>
       <!-- End Footer -->
    </div>
