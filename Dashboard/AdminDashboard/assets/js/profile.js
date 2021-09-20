@@ -7,7 +7,7 @@ const setupUI = (user) => {
     if (user) {
         // account info
         db.collection('users').doc(user.uid).get().then(doc => {
-            const html = `<h3>${doc.data().f_name}</h3>
+            const html = `<center><h6>${doc.data().Username}</h6></center>
                           <p> ${user.email}</p>`;
                           username.innerHTML = html;
 
