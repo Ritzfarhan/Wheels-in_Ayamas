@@ -1,0 +1,23 @@
+#chef-bg, #chefs {
+  background-color: #deb887;
+}
+#chef-bg p{
+  color: #00192f;
+}
+#testimonials p{
+  color: #00192f;
+}
+#menu p{
+  color: #00192f;
+}
+.menu-comment{
+  font-size: 10px;
+  margin-top: 4px;
+}
+.about p{
+  color: #00192f;
+}
+.footer-newsletter p{
+  color: #00192f;
+}
+
