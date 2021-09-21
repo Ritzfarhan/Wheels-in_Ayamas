@@ -8,13 +8,13 @@ const setupUI = (user) => {
         // account info
         db.collection('users').doc(user.uid).get().then(doc => {
             const html = `<h3>${doc.data().f_name}</h3>
-                          <p> ${user.email}</p>`;
+                          <span> ${user.email}</span>`;
                           username.innerHTML = html;
 
             //const usernamehtml = `<h6>${doc.data().Username}<h6> `;
             //username.innerHTML = usernamehtml;
 
-            const f_namehtml = `<span>First Name :</span> ${doc.data().f_name}`;
+            const f_namehtml = `<br><span>First Name :</span> ${doc.data().f_name}`;
             f_name.innerHTML = f_namehtml;
 
             const l_namehtml = `<span>Last Name :</span> ${doc.data().l_name}`;
