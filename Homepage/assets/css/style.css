@@ -8,60 +8,6 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-
-/*For view profile , file : profile.html */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-
-}
-
-.title {
-  color: grey;
-  font-size: 18px;
-}
-
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
-
-button:hover, a:hover {
-  opacity: 0.7;
-}
-
-
-.center{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  border-radius: 10%; 
-}
-.row {
-  margin: auto;
-  width: 120%;
-}
-/*End For view profile, file : profile.html */
-
-
 body {
   font-family: "Open Sans", sans-serif;
   background: #865846;
@@ -1285,7 +1231,7 @@ button {
 .chefs .member {
   text-align: center;
   margin-bottom: 20px;
-  background: #343a40;
+  background: #deb887;
   position: relative;
   overflow: hidden;
 }
@@ -1463,7 +1409,7 @@ button {
   background: #b52217;
   border: 0;
   padding: 10px 35px;
-  color: #00192f;
+  color: #fff;
   transition: 0.4s;
   border-radius: 50px;
 }
@@ -1654,5 +1600,8 @@ p {
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  color: #00192f;
+  color: #ffe75c;
 }
+
+
+
