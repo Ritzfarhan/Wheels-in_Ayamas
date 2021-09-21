@@ -872,6 +872,7 @@ section {
   padding: 0 10px;
   font-weight: 600;
   color: #fff;
+  height: fit-content;
 }
 .menu .menu-ingredients {
   margin-left: 85px;
