@@ -1602,10 +1602,8 @@ body {
     margin-inline-end: 0px;
     color: #ffe75c;
   }
-  
-  
-  
-  
+
+/*End For view profile, file : profile.html */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
@@ -1648,11 +1646,10 @@ button:hover, a:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 100%;
   border-radius: 10%; 
 }
-.row {
+.solehah-row {
   margin: auto;
-  width: 120%;
+  width: 150%;
 }
-/*End For view profile, file : profile.html */
