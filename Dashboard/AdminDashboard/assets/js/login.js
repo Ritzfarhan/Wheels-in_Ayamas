@@ -18,7 +18,7 @@ loginForm.addEventListener('submit', (e) => {
         //M.Modal.getInstance(modal).close();
         loginForm.reset();
         loginForm.querySelector('.error').innerHTML = '';
-        window.location.href = "/Admin Dashboard/Dashmin_html/index.html";
+        window.location.href = "D:\UniServerZ\www\Master Wheels-in Ayamas\Dashboard\AdminDashboard\index.html";
     }).catch(err => {
         loginForm.querySelector('.error').innerHTML = err.message;
     });
