@@ -1,24 +1,38 @@
 
 const username = document.querySelector('.user-name');
+const username2 = document.querySelector('.user-name2');
 const f_name = document.querySelector('.f_name');
 const l_name = document.querySelector('.l_name');
+const roles = document.querySelector('.roles');
+const roles_profile = document.querySelector('.roles-profile');
 
 const setupUI = (user) => {
     if (user) {
         // account info
         db.collection('users').doc(user.uid).get().then(doc => {
-            const html = `<center><h6>${doc.data().Username}</h6></center>
+            const html = `<center><h6>${doc.data().Username} </h6></center>
                           <p> ${user.email}</p>`;
-                          username.innerHTML = html;
+            username.innerHTML = html;
 
+            const username2html = `<h1>${doc.data().Username} </h1>
+                                    <p> ${user.email}</p>`;
+
+            username2.innerHTML = username2html;
+
+            const roles_profilehtml = `<p>${user.admin ? 'Admin of Ayamas' : user.staff ? 'Staff' : ''}</p>`;
+            roles_profile.innerHTML = roles_profilehtml;
             //const usernamehtml = `<h6>${doc.data().Username}<h6> `;
             //username.innerHTML = usernamehtml;
+            const roleshtml = `<p>${user.admin ? 'Admin' : user.staff ? 'Staff' : ''}</p>`;
+            roles.innerHTML = roleshtml;
 
             const f_namehtml = `<span>First Name :</span> ${doc.data().f_name}`;
             f_name.innerHTML = f_namehtml;
 
             const l_namehtml = `<span>Last Name :</span> ${doc.data().l_name}`;
             l_name.innerHTML = l_namehtml;
+
+
 
         });
     } else {
@@ -33,9 +47,9 @@ auth.onAuthStateChanged(user => {
             user.admin = idTokenResult.claims.admin;
             setupUI(user);
         });
-        db.collection('guides').onSnapshot(snapshot => {
-            setupGuides(snapshot.docs);
-        }, err => console.log(err.message));
+        //db.collection('guides').onSnapshot(snapshot => {
+        //   setupGuides(snapshot.docs);
+        // }, err => console.log(err.message));
     } else {
         setupUI();
 

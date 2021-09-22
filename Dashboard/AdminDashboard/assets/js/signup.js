@@ -1,24 +1,36 @@
-//var messagesRef = db.collection('users');
+/*const setupPage = (user) => {
+    if (user.admin) {
+        const admindashboard = "/AdminDashboard/index.html";
+        window.location.href = admindashboard;
+    }
+    else if (user.staff) {
+        const admindashboard = "/AdminDashboard/index.html";
+        window.location.href = admindashboard;
+    }
+    else {
+        window.location.href = "/Homepage/index.html";
+    }
+
+
+}
+
+
+
 
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
     if (user) {
+        console.log('user logged in: ', user);
         user.getIdTokenResult().then(idTokenResult => {
             user.admin = idTokenResult.claims.admin;
-            setupUI(user);
+            user.staff = idTokenResult.claims.staff;
+            //setupPage(user);
         });
-        db.collection('guides').onSnapshot(snapshot => {
-            setupGuides(snapshot.docs);
-        }, err => console.log(err.message));
+        window.alert("You are Logged in");
     } else {
-        setupUI();
-        setupGuides([]);
+        console.log('user logged out');
     }
-});
-firebase.auth().onAuthStateChanged(function (user) {
-    user.sendEmailVerification();
-});
-
+})*/
 
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
@@ -28,6 +40,8 @@ auth.onAuthStateChanged(user => {
         console.log('user logged out');
     }
 })
+
+
 
 // signup
 const signupForm = document.querySelector('#signup-form');
@@ -43,7 +57,9 @@ signupForm.addEventListener('submit', (e) => {
 
 
         return db.collection('users').doc(cred.user.uid).set({
-            Username: signupForm['signup-username'].value
+            Username: signupForm['signup-username'].value,
+            f_name: signupForm['signup-Firstname'].value,
+            l_name: signupForm['signup-Lastname'].value
         });
 
     }).then(() => {
@@ -52,12 +68,17 @@ signupForm.addEventListener('submit', (e) => {
         //M.Modal.getInstance(modal).close();
         signupForm.reset();
         signupForm.querySelector('.error').innerHTML = ''
-        window.location.href = "/AdminDashboard/index.html";
+        //setupPage(user);
+        window.location.href = "/Homepage/index.html";
     }).catch(err => {
         console.log;
         signupForm.querySelector('.error').innerHTML = err.message;
     });
 })
+
+auth.onAuthStateChanged(function (user) {
+    user.sendEmailVerification();
+});
 /////////////////////////////////////////
 /*
 // signup

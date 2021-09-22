@@ -15,7 +15,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -63,7 +65,8 @@
       <!--<h1 class="logo me-auto me-lg-0"><a href="index.html">Wheels in Ayamas</a></h1>-->
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      <h1 href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo-icon.png" alt="" class="img-fluid"></a></h1>
+      <h1 href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo-icon.png" alt=""
+          class="img-fluid"></a></h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto " href="index.html">Home</a></li>
@@ -91,12 +94,12 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          
+
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
       <a href="#book-a-parking" class="book-a-parking-btn scrollto d-none d-lg-flex">Book a parking</a>
-      <a href="logout" class="log-out-btn  scrollto d-none d-lg-flex">Log Out</a>
+      <a href="#" id="logout" class="log-out-btn  scrollto d-none d-lg-flex">Log Out</a>
 
     </div>
   </header><!-- End Header -->
@@ -110,20 +113,20 @@
           <div class="solehah-row">
             <div class="leftcolumn">
               <div class="card" style="background-color:#d9ba85;">
-                <img src="assets/img/profile.jpg"  style="width:50%" class="center">
+                <img src="assets/img/profile.jpg" style="width:50%" class="center">
                 <div style="margin: 24px 0;">
-                <div class='user-name'></div>
-                <div class='f_name'><span>First Name </span> Abrilay</div>
-                <div class='l_name'><span>Last Name </span> Khatun</div>  
+                  <div class='user-name'></div>
+                  <div class='f_name'><span>First Name </span> Abrilay</div>
+                  <div class='l_name'><span>Last Name </span> Khatun</div>
                 </div>
                 <p><button>Edit Profile</button></p>
               </div>
 
-              </div>
+            </div>
 
+          </div>
         </div>
       </div>
-    </div>
   </section><!-- End Hero -->
 
   <main id="main">
@@ -148,7 +151,7 @@
                 <strong>Email:</strong> contactus@ayamasroasters.com.my<br>
               </p>
               <div class="social-links mt-3">
-                <a href="https://mobile.twitter.com/kedai_ayamas" class="twitter"><i class="bx bxl-twitter" ></i></a>
+                <a href="https://mobile.twitter.com/kedai_ayamas" class="twitter"><i class="bx bxl-twitter"></i></a>
                 <a href="https://www.facebook.com/Ayamasisback/" class="facebook"><i class="bx bxl-facebook"></i></a>
                 <a href="https://www.instagram.com/kedai_ayamas/" class="instagram"><i class="bx bxl-instagram"></i></a>
                 <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
@@ -206,7 +209,8 @@
   </footer><!-- End Footer -->
 
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
@@ -219,40 +223,41 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-      <!--initialize firebase-->
-      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
-      <script>
-          // Initialize Firebase
-          var config = {
-              apiKey: "AIzaSyAS1DsUK4USZG5MMG8kXjkJKjm5-gR8YB0",
-              authDomain: "authentication-8d6ac.firebaseapp.com",
-              projectId: "authentication-8d6ac",
-              storageBucket: "authentication-8d6ac.appspot.com",
-              messagingSenderId: "277365742255",
-              appId: "1:277365742255:web:c09e2d6a2a78b2ee6c125a",
-              measurementId: "G-FVM023WR2T"
-          };
-          firebase.initializeApp(config);
-  
-          // make auth and firestore references
-          const auth = firebase.auth();
-          const db = firebase.firestore();
-          const functions = firebase.functions();
-  
-          // update firestore settings
-          db.settings({ timestampsInSnapshots: true });
-      </script>
-  
-      <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
-      <script src="../../../assets/js/jquery.min.js"></script>
-      <script src="../../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="../../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-      <script src="../../../assets/js/script.js"></script>
-      <script src="assets/js/profile.js"></script>
-      <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
+  <!--initialize firebase-->
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAS1DsUK4USZG5MMG8kXjkJKjm5-gR8YB0",
+      authDomain: "authentication-8d6ac.firebaseapp.com",
+      projectId: "authentication-8d6ac",
+      storageBucket: "authentication-8d6ac.appspot.com",
+      messagingSenderId: "277365742255",
+      appId: "1:277365742255:web:c09e2d6a2a78b2ee6c125a",
+      measurementId: "G-FVM023WR2T"
+    };
+    firebase.initializeApp(config);
+
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    const functions = firebase.functions();
+
+    // update firestore settings
+    db.settings({ timestampsInSnapshots: true });
+  </script>
+
+  <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
+  <script src="../../../assets/js/jquery.min.js"></script>
+  <script src="../../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+  <script src="../../../assets/js/script.js"></script>
+  <script src="assets/js/profile.js"></script>
+  <script src="assets/js/Homepage.js"></script>
+  <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
 
 </body>
 

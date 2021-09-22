@@ -1,3 +1,8 @@
+
+
+
+
+
 // login
 const loginForm = document.querySelector('#login-form');
 loginForm.addEventListener('submit', (e) => {
@@ -16,9 +21,10 @@ loginForm.addEventListener('submit', (e) => {
         // close the signup modal & reset form
         //const modal = document.querySelector('#modal-login');
         //M.Modal.getInstance(modal).close();
+
         loginForm.reset();
         loginForm.querySelector('.error').innerHTML = '';
-        window.location.href = "D:\UniServerZ\www\Master Wheels-in Ayamas\Dashboard\AdminDashboard\index.html";
+        setupPage(user);
     }).catch(err => {
         loginForm.querySelector('.error').innerHTML = err.message;
     });

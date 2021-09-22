@@ -1,8 +1,31 @@
+const setupPage = (user) => {
+  if (user.admin) {
+    const admindashboard = "/AdminDashboard/index.html";
+    window.location.href = admindashboard;
+  }
+  else if (user.staff) {
+    const admindashboard = "/AdminDashboard/index.html";
+    window.location.href = admindashboard;
+  }
+  else {
+    window.location.href = "/Homepage/index.html";
+  }
+
+
+}
+
+
+
+
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
   if (user) {
     console.log('user logged in: ', user);
-    window.location.href = "/AdminDashboard/index.html";
+    user.getIdTokenResult().then(idTokenResult => {
+      user.admin = idTokenResult.claims.admin;
+      user.staff = idTokenResult.claims.staff;
+      setupPage(user);
+    });
     window.alert("You are Logged in");
   } else {
     console.log('user logged out');
