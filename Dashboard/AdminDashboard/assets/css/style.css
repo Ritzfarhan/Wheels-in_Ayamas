@@ -262,6 +262,9 @@ body {
   line-height: 1.466;
   color: #727272;
   background-color: #d5b1e7;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/AdminDashboard/assets/img/bg2.jpg");
   -webkit-font-smoothing: antialiased;
 }
 
@@ -11255,7 +11258,7 @@ select#locale {
 09.5: Authentication
 ********************* */
 .auth-card {
-  padding: 140px 30px 100px;
+  padding: 90px 30px 90px;
   max-width: 1050px;
 }
 

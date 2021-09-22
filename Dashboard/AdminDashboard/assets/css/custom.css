@@ -21,6 +21,10 @@
     font-size: 13px;
 }
 
+.roles{
+    color:#B52217;
+}
+
 /* HEADER SEARCH ICON */
 .search-form .theme-input-group.header-search.theme-input-group input {
     background-color: #FFFFFF;
@@ -115,3 +119,9 @@ table tr:not(:last-child) td {
 
 /* INVOICE BODY */
 
+/* REGISTER */
+
+.error {
+    color: #B52217;
+    
+}
