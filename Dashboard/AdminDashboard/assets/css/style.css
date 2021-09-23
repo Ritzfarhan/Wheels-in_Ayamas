@@ -5884,7 +5884,7 @@ table.invoice-list.style-two td.custom-radio:nth-child(5) [type="radio"]:not(:ch
 }
 
 .header .logo {
-  background-color: #fafafa;
+  background-color: #F9EF82;
   -ms-flex-preferred-size: 260px;
   flex-basis: 260px;
 }
