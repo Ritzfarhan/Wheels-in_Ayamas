@@ -598,7 +598,7 @@ table.table-contextual .change-card-btn.details-btn:hover, table.table-contextua
 
 .c4, #projectLabelModal .modal-header .back-btn, .input-group.bootstrap-touchspin.disable input, #example-vertical > .steps ul li a, .time_circles > div > h4,
 .base-timer__text {
-  color: #dd8b85;
+  color: #e67c75;
 }
 
 .c4-bg, #projectShareModal .modal-body .form-group .input-wrap .menu-icon span, #shareModal .modal-content .modal-body .form-group .input-wrap .menu-icon span, .switch input:disabled ~ .control:after, .switch input:disabled ~ .control .check, .switch .control, .switch.dark input:checked ~ .control:after, .input-group.bootstrap-touchspin.disable button.btn {
@@ -1328,7 +1328,7 @@ theme-input-style, #projectLabelModal .modal-content .modal-body .theme-input-st
 }
 
 .mr-20 {
-  margin-right: 100px;
+  margin-right: 10px;
 }
 
 .mr-30 {
@@ -3703,8 +3703,8 @@ a.text-dark:hover {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-shadow: 0 5px 10px rgba(96, 69, 226, 0.5);
-  box-shadow: 0 5px 10px rgba(96, 69, 226, 0.5);
+  -webkit-box-shadow: 0 5px 10px rgba(158, 61, 47, 0.5);
+  box-shadow: 0 5px 10px rgba(158, 61, 47, 0.5);
 }
 
 .btn-circle svg {
