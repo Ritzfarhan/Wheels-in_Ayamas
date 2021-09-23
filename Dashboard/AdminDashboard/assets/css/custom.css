@@ -99,6 +99,13 @@ table tr:not(:last-child) td {
     margin-bottom: -40px;
 }
 
+.WIA3 {
+    height: 10%;
+    width: 10%;
+    margin-left: 70%;
+    margin-bottom: -40px;
+}
+
 #bgimage ::after {
 
     content: '';   
@@ -113,5 +120,9 @@ table tr:not(:last-child) td {
     transform: translateX(-50%) rotate(0deg);
 }
 
-/* INVOICE BODY */
+/* REGISTER */
 
+.error {
+    color: #B52217;
+    margin-top: 100px;
+}

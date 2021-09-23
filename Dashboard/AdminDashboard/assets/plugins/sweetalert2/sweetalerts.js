@@ -69,6 +69,9 @@ $(function() {
         $("#type-success").on("click", function () {
             Swal.fire({ title: "YAY!", text: "Password has been reset", type: "success", confirmButtonClass: "btn long", buttonsStyling: !1 });
         }),
+        $("#type-success2").on("click", function () {
+            Swal.fire({ title: "SUCCESS", text: "Email has been sent!", type: "success", confirmButtonClass: "btn long", buttonsStyling: !1 });
+        }),
         $("#type-info").on("click", function () {
             Swal.fire({ title: "Info!", text: "You clicked the button!", type: "info", confirmButtonClass: "btn long", buttonsStyling: !1 });
         }),

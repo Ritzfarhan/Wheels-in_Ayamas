@@ -162,8 +162,8 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #header {
   /*background: rgba(12, 11, 9, 0.6);*/
-  background-color: #ffe75c;
-  border-bottom: 1px solid #ffe75c;
+  background-color: #dbae48;
+  border-bottom: 1px solid #d89d13;
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 #header .logo img {
-  max-height: 50px;
+  max-height: 65px;
 }
 
 /*--------------------------------------------------------------
@@ -252,7 +252,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 5px;
 }
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #d9ba85;
+  color: #B52217;
 }
 .navbar .dropdown ul {
   display: block;

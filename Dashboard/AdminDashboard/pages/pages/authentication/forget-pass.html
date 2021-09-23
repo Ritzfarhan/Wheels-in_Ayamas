@@ -24,6 +24,10 @@
     <link rel="stylesheet" href="../../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.css">
     <!-- ======= END BEGIN GLOBAL MANDATORY STYLES ======= -->
 
+    <!-- ======= BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
+    <link rel="stylesheet" href="/AdminDashboard/assets/plugins/sweetalert2/sweetalert2.min.css">
+    <!-- ======= END BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
+    
     <!-- ======= MAIN STYLES ======= -->
     <link rel="stylesheet" href="../../../assets/css/style.css">
     <!-- ======= END MAIN STYLES ======= -->
@@ -38,8 +42,9 @@
                     <!-- Card -->
                     <div class="card justify-content-center auth-card">
                         <div class="row justify-content-center">
+                            <!--<img class="WIA3" src="/AdminDashboard/assets/img/WIAAA.png">-->
                             <div class="col-xl-8 col-lg-10">
-                                <h4 class="mb-5 font-20">Forget Password</h4>
+                                <h4 class="mb-5 font-20">Forgot Password</h4>
 
                                 <form action="#" id="forgot-form">
                                     <!-- Form Group -->
@@ -49,8 +54,12 @@
                                             placeholder="Email Address">
                                     </div>
                                     <!-- End Form Group -->
-
-                                    <button type="submit" class="btn long">Send Password</button>
+                                    
+                                    <div class="sweet-alerts media align-items-sm-center flex-column flex-sm-row mb-5">
+                                        <div class="media-body">
+                                            <button type="submit" class="btn long" id="type-success2" style="color: #ffffff;">Send Password</button>
+                                        </div>
+                                    </div>
                                 </form>
                                 <p class="error pink-text center-align"></p>
                             </div>
@@ -64,7 +73,7 @@
 
     <!-- Footer -->
     <footer class="footer style--two">
-        Dashmin © 2020 created by <a href="https://www.themelooks.com/"> ThemeLooks</a>
+        Wheels - In Ayamas © 2021 created by G6_39
     </footer>
     <!-- End Footer -->
     <!--initialize firebase-->
@@ -101,6 +110,12 @@
     <script src="../../../assets/js/script.js"></script>
     <script src="../../../assets/js/forgotPassword.js"></script>
     <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
+
+    <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
+    <script src="/AdminDashboard/assets/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="/AdminDashboard/assets/plugins/sweetalert2/sweetalerts.js"></script>
+    <!-- ======= End BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
+  
 </body>
 
 </html>

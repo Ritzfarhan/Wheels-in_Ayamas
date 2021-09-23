@@ -201,7 +201,7 @@ h6 {
 }
 
 p:last-child {
-  margin: 0;
+  margin: 10px;
 }
 
 h1 {
@@ -402,7 +402,7 @@ body.modal-open {
 }
 
 .text_color-bg, .comment-action-links .comment-action-link:not(:last-child):after, .btn-circle.style--three, .sidebar .sidebar-body ul.sub-menu li:before, .switch .control:after, .switch .check, .switch.dark input:checked ~ .control {
-  background-color: #ee8982;
+  background-color: #00192f;
 }
 
 .text_color-bo {
