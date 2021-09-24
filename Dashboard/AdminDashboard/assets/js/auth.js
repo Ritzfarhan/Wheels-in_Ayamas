@@ -4,8 +4,8 @@ const setupPage = (user) => {
     window.location.href = admindashboard;
   }
   else if (user.staff) {
-    const admindashboard = "/AdminDashboard/index.html";
-    window.location.href = admindashboard;
+    const staffdashboard = "/StaffDashboard/index.html";
+    window.location.href = staffdashboard;
   }
   else {
     window.location.href = "/Homepage/index.html";

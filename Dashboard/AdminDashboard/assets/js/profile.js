@@ -5,6 +5,8 @@ const f_name = document.querySelector('.f_name');
 const l_name = document.querySelector('.l_name');
 const roles = document.querySelector('.roles');
 const roles_profile = document.querySelector('.roles-profile');
+const f_nameForm = document.getElementById('.edit-fname');
+const l_nameForm = document.getElementById('.edit-lname');
 
 const setupUI = (user) => {
     if (user) {
@@ -14,8 +16,8 @@ const setupUI = (user) => {
                           <p> ${user.email}</p>`;
             username.innerHTML = html;
 
-            const username2html = `<h1>${doc.data().Username} </h1>
-                                    <p> ${user.email}</p>`;
+            const username2html = `<h3>${doc.data().Username}</h3>
+                                    <p>${user.email}</p>`;
 
             username2.innerHTML = username2html;
 
@@ -26,11 +28,21 @@ const setupUI = (user) => {
             const roleshtml = `<h6 class='roles'>${user.admin ? 'Admin' : user.staff ? 'Staff' : ''}</h6>`;
             roles.innerHTML = roleshtml;
 
+            //const f_nameForm_Html = `value=${doc.data().f_name}`;
+            //f_nameForm.value = f_nameForm_Html;
+
+            // const l_nameForm_Html = ` ${doc.data().l_name}`;
+            //l_nameForm.innerHTML = l_nameForm_Html;
+
             const f_namehtml = `<span>First Name :</span> ${doc.data().f_name}`;
             f_name.innerHTML = f_namehtml;
 
             const l_namehtml = `<span>Last Name :</span> ${doc.data().l_name}`;
             l_name.innerHTML = l_namehtml;
+
+
+
+
 
 
 
