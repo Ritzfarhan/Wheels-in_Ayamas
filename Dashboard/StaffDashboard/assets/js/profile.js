@@ -14,12 +14,12 @@ const setupUI = (user) => {
                            ${user.email}`;
             username.innerHTML = html;
 
-            const username2html = `<h3>${doc.data().Username} </h3>
-                                     ${user.email}`;
+            const username2html = `<h3>&nbsp&nbsp&nbsp${doc.data().Username}</h3>
+                                   <p>&nbsp&nbsp&nbsp${user.email}</p>`;
 
             username2.innerHTML = username2html;
 
-            const roles_profilehtml = `<p>${user.admin ? 'Admin of Ayamas' : user.staff ? 'Staff' : ''}</p>`;
+            const roles_profilehtml = `<p>${user.admin ? 'Admin of Ayamas' : user.staff ? 'Staff of Ayamas' : ''}</p>`;
             roles_profile.innerHTML = roles_profilehtml;
             //const usernamehtml = `<h6>${doc.data().Username}<h6> `;
             //username.innerHTML = usernamehtml;

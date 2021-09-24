@@ -21,7 +21,7 @@ const setupUI = (user) => {
 
             username2.innerHTML = username2html;
 
-            const roles_profilehtml = `<p>${user.admin ? 'Admin of Ayamas' : user.staff ? 'Staff' : ''}</p>`;
+            const roles_profilehtml = `${user.admin ? 'Admin of Ayamas' : user.staff ? 'Staff of Ayamas' : ''}`;
             roles_profile.innerHTML = roles_profilehtml;
 
             const usernamehtml = `<h6>${doc.data().Username}<h6> `;
@@ -41,12 +41,6 @@ const setupUI = (user) => {
 
             const l_namehtml = `<span>Last Name :</span> ${doc.data().l_name}`;
             l_name.innerHTML = l_namehtml;
-
-
-
-
-
-
 
         });
     } else {
