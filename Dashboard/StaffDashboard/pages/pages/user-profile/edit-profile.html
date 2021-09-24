@@ -195,10 +195,13 @@
 
                                        <!-- User Info -->
                                        <div class="user-info ">
-                                          <h4 class="user-name d-flex justify-content-end">Auni Badrina</h4>
-                                          <p class="user-email">aunibadrina88@gmail.com</p>
-                                       </div>
-                                       <!-- End User Info -->
+                                        <div class='user-name'></div>
+                                        <center>
+                                            <div class='roles'></div>
+                                        </center>
+                                    </div>
+                                    <!-- End User Info -->
+
                                     </div>
                                  </a>
                                  <div class="dropdown-menu">
@@ -407,10 +410,11 @@
                                                 </div>
                                                 <!-- End Upload Photo -->
                                             </div>
-
+                                            
                                             <div>
-                                                <h3>Auni Badrina</h3>
-                                                <p class="font-14">Front - End Developer</p>
+                                                <div class='user-name2 font-14'></div>
+
+                                                <p class="roles-profile font-14"></p>
                                             </div>
                                         </div>
                                         <!-- End Profile Info -->
@@ -871,11 +875,40 @@
     </div>
     <!-- End wrapper -->
 
+        <!--initialize firebase-->
+        <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyAS1DsUK4USZG5MMG8kXjkJKjm5-gR8YB0",
+                authDomain: "authentication-8d6ac.firebaseapp.com",
+                projectId: "authentication-8d6ac",
+                storageBucket: "authentication-8d6ac.appspot.com",
+                messagingSenderId: "277365742255",
+                appId: "1:277365742255:web:c09e2d6a2a78b2ee6c125a",
+                measurementId: "G-FVM023WR2T"
+            };
+            firebase.initializeApp(config);
+    
+            // make auth and firestore references
+            const auth = firebase.auth();
+            const db = firebase.firestore();
+            const functions = firebase.functions();
+    
+            // update firestore settings
+            db.settings({ timestampsInSnapshots: true });
+        </script>
+
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
    <script src="../../../assets/js/jquery.min.js"></script>
    <script src="../../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
    <script src="../../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
    <script src="../../../assets/js/script.js"></script>
+   <script src="/AdminDashboard/assets/js/profile.js"></script>
+   <script src="/AdminDashboard/assets/js/index.js"></script>
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
 </body>
 
