@@ -17,5 +17,5 @@ logout.addEventListener('click', (e) => {
     e.preventDefault();
     auth.signOut()
     window.alert("You are Logged out");
-    window.location.href = "/Homepage/index.html";
+    window.location.href = "/AdminDashboard/pages/pages/authentication/logout.html";
 });
