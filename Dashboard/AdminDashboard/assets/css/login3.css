@@ -52,7 +52,7 @@ input::placeholder {
   border-radius: 24px;
   text-align: center;
   padding: 15px 40px;
-  margin-top: 5px;
+  margin-top: 15px;
   background-color: #caa476;
   color: #fff;
   font-size: 14px;
@@ -126,4 +126,8 @@ a {
   margin-left: 20px;
   margin-right: 20px;
   text-align: center;
+}
+
+.row {
+  text-align: left!important;
 }

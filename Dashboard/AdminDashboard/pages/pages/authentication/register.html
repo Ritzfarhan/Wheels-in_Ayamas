@@ -21,7 +21,9 @@
     <div class="panel col-12 col-lg-6 offset-lg-3">
       <div class="row">
         <div class="panel__left col-12 col-lg-7 py-4 px-4">
-          <div class="panel__left-title text-center">            
+          <div class="panel__left-title text-center">           
+            <div class="col-lg-12">
+              <div class="col-md-12"> 
             <svg class="panel__left-title-logo img-fluid"><?xml version="1.0" encoding="iso-8859-1"?>
               <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -59,66 +61,76 @@
               </g>
               </svg>
               </svg>
+        
+        
             <span class="login_title"><b>Sign Up</b></span>
           </div>
-
+        </div>  
           <div class="panel__left-body">
             <form action="#" id="login-form">
-              <div class="form-group">
-                <label for="email">E-mail Address</label>
-                <input
-                  type="email"
-                  name="email"
-                  class="form-control"
-                  id="signup-email"
-                  placeholder="@gmail.com"
-                />
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="email">E-mail Address</label>
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    id="signup-email"
+                    placeholder="@gmail.com"
+                  />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="passwd">Password</label>
+                  <input
+                    type="password"
+                    name="passwd"
+                    class="form-control"
+                    id="signup-password"
+                    placeholder="Password"
+                  />
+                </div>
               </div>
-              <div class="form-group">
-                <label for="passwd">Password</label>
-                <input
-                  type="password"
-                  name="passwd"
-                  class="form-control"
-                  id="signup-password"
-                  placeholder="Password"
-                />
+
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="u-name">Username</label>
+                  <input
+                    type="text"
+                    name="username"
+                    class="form-control"
+                    id="signup-username"
+                    placeholder="Username"
+                  />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="u_name">First Name</label>
+                  <input
+                    type="text"
+                    name="firstname"
+                    class="form-control"
+                    id="signup-Firstname"
+                    placeholder=""
+                  />
+                </div>
               </div>
-              <div class="form-group">
-                <label for="u-name">Username</label>
-                <input
-                  type="text"
-                  name="username"
-                  class="form-control"
-                  id="signup-username"
-                  placeholder="Username"
-                />
-              </div>
-              <div class="form-group">
-                <label for="u_name">First Name</label>
-                <input
-                  type="text"
-                  name="firstname"
-                  class="form-control"
-                  id="signup-Firstname"
-                  placeholder=""
-                />
-              </div>
-              <div class="form-group">
-                <label for="u_name">Last Name</label>
-                <input
-                  type="text"
-                  name="lastname"
-                  class="form-control"
-                  id="signup-Lastname"
-                  placeholder=""
-                />
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="u_name">Last Name</label>
+                  <input
+                    type="text"
+                    name="lastname"
+                    class="form-control"
+                    id="signup-Lastname"
+                    placeholder=""
+                  />
+                </div>
               </div>
               <div class="form-group text-center">
                 <input type="submit" value="Sign Up" class="btn2" />
               </div>
             </form>
           </div>
+      </div>
           <div class="panel__left-footer text-center">
             <h6 style="color: #00192f;">Already have an account?</h6>
             <a href="login.html">Login</a>
