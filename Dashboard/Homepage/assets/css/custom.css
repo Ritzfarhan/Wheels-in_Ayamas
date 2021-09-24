@@ -20,4 +20,12 @@
 .footer-newsletter p{
   color: #00192f;
 }
+.log-out-btn{
+  font-size: 13px !important;
+  color: #fff;
+}
+.log-out-btn:hover{
+    /*background: #;*/
+    color: #b52217;
+}
 
