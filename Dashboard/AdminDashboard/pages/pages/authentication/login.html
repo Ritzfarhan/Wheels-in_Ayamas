@@ -1,86 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <!-- Page Title -->
-    <title>Wheels - In Ayamas</title>
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="../../../assets/img/wia.png">
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../assets/css/login.css">
-    <link rel="stylesheet" href="../../../assets/css/custom.css">
-    <title>Document</title>
-</head>
-
-<body>
-
-    <div class="session">
-        <div class="left">
-            <?xml version="1.0" encoding="UTF-8"?>
-            <svg enable-background="new 0 0 300 302.5" version="1.1" viewBox="0 0 300 302.5" xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg">
-                <style type="text/css">
-                    .st0 {
-                        fill: #fff;
-                    }
-                </style>
-                <path class="st0"
-                    d="m126 302.2c-2.3 0.7-5.7 0.2-7.7-1.2l-105-71.6c-2-1.3-3.7-4.4-3.9-6.7l-9.4-126.7c-0.2-2.4 1.1-5.6 2.8-7.2l93.2-86.4c1.7-1.6 5.1-2.6 7.4-2.3l125.6 18.9c2.3 0.4 5.2 2.3 6.4 4.4l63.5 110.1c1.2 2 1.4 5.5 0.6 7.7l-46.4 118.3c-0.9 2.2-3.4 4.6-5.7 5.3l-121.4 37.4zm63.4-102.7c2.3-0.7 4.8-3.1 5.7-5.3l19.9-50.8c0.9-2.2 0.6-5.7-0.6-7.7l-27.3-47.3c-1.2-2-4.1-4-6.4-4.4l-53.9-8c-2.3-0.4-5.7 0.7-7.4 2.3l-40 37.1c-1.7 1.6-3 4.9-2.8 7.2l4.1 54.4c0.2 2.4 1.9 5.4 3.9 6.7l45.1 30.8c2 1.3 5.4 1.9 7.7 1.2l52-16.2z" />
-            </svg>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>devcoy | PetShop</title>
+    <!--custom style-->
+    <link rel="stylesheet" href="/AdminDashboard/assets/css/login3.css" />
+    <!--bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="px-4 px-lg-0">
+    <div class="panel col-12 col-lg-6 offset-lg-3">
+      <div class="row">
+        <div class="panel__left col-12 col-lg-7 py-4 px-4">
+          <div class="panel__left-title text-center">            
+            <svg class="panel__left-title-logo img-fluid"><?xml version="1.0" encoding="iso-8859-1"?>
+              <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+              <!--<path style="fill:#F5DCB4;" d="M437.677,45.419h-82.581C325.161,57.29,318.525,37.161,256,37.161s-69.161,20.129-99.097,8.258
+                h-82.58L63.312,252.904c6.882,81.548,57.462,125.935,97.377,142.107h190.623c39.914-16.172,90.495-60.559,97.377-142.107
+                L437.677,45.419z"/>
+              <path style="fill:#965A50;" d="M355.097,45.419C448.078,73.25,397.46,216.774,457.33,278.813c8.595,8.906,23.781,4.95,27.368-6.895
+                c4.74-15.651,9.474-40.411,8.721-75.789C492.387,147.613,512,144.517,512,144.517S487.226,28.903,412.903,28.903
+                C388.129,28.903,355.097,45.419,355.097,45.419z"/>
+              <path style="fill:#4B3F4E;" d="M169.29,260.129L169.29,260.129c-15.897,0-28.903-13.006-28.903-28.903v-16.516
+                c0-15.897,13.006-28.903,28.903-28.903l0,0c15.897,0,28.903,13.006,28.903,28.903v16.516
+                C198.194,247.124,185.187,260.129,169.29,260.129z"/>
+              <path style="fill:#5D5360;" d="M169.29,185.806c-1.413,0-2.769,0.221-4.129,0.419v40.871c0,9.121,7.395,16.516,16.516,16.516
+                c9.122,0,16.516-7.395,16.516-16.516v-12.386C198.194,198.814,185.187,185.806,169.29,185.806z"/>
+              <circle style="fill:#FFFFFF;" cx="169.29" cy="206.451" r="12.387"/>
+              <path style="fill:#4B3F4E;" d="M342.71,260.129L342.71,260.129c-15.897,0-28.903-13.006-28.903-28.903v-16.516
+                c0-15.897,13.006-28.903,28.903-28.903l0,0c15.897,0,28.903,13.006,28.903,28.903v16.516
+                C371.613,247.124,358.606,260.129,342.71,260.129z"/>
+              <path style="fill:#5D5360;" d="M342.71,185.806c-1.413,0-2.769,0.221-4.129,0.419v40.871c0,9.121,7.395,16.516,16.516,16.516
+                c9.122,0,16.516-7.395,16.516-16.516v-12.386C371.613,198.814,358.606,185.806,342.71,185.806z"/>
+              <circle style="fill:#FFFFFF;" cx="342.71" cy="206.451" r="12.387"/>
+              <path style="fill:#824641;" d="M457.33,278.814c8.595,8.906,23.781,4.95,27.368-6.896c2.718-8.976,5.399-21.06,7.08-36.313
+                c-16.234-8.092-30.092-33.91-38.617-77.669C437.677,78.452,416,34.065,355.097,45.419C448.078,73.25,397.46,216.775,457.33,278.814z
+                "/>
+              <path style="fill:#E7C9A5;" d="M160.689,395.011h39.141c0,0-68.732-46.107-80.087-127.656
+                C97.654,108.712,139.7,61.247,176.067,49.135c-5.761,0.195-11.745-0.774-19.163-3.715H74.323L63.312,252.904
+                C70.194,334.452,120.774,378.839,160.689,395.011z"/>
+              <path style="fill:#965A50;" d="M156.903,45.419C63.922,73.25,114.541,216.775,54.67,278.813c-8.595,8.906-23.781,4.95-27.368-6.895
+                c-4.74-15.651-9.474-40.411-8.721-75.789C19.613,147.613,0,144.517,0,144.517S24.774,28.903,99.097,28.903
+                C123.871,28.903,156.903,45.419,156.903,45.419z"/>
+              <path style="fill:#824641;" d="M154.139,44.104c-8.38-3.888-34.516-15.201-55.042-15.201C24.774,28.903,0,144.517,0,144.517
+                s19.613,3.097,18.581,51.613c-0.014,0.648,0.005,1.231-0.005,1.872C66.097,17.715,139.119,37.773,154.139,44.104z"/>
+              <ellipse style="fill:#BC8E78;" cx="256" cy="400.52" rx="90.84" ry="66.06"/>
+              <path style="fill:#FF8087;" d="M214.71,400.516v41.29c0,22.804,18.486,41.29,41.29,41.29s41.29-18.486,41.29-41.29v-41.29H214.71z"
+                />
+              <path style="fill:#E6646E;" d="M214.71,432.768c11.941-1.496,23.208-5.129,33.032-10.622v11.402c0,4.56,3.698,8.258,8.258,8.258
+                s8.258-3.698,8.258-8.258v-11.507c9.729,5.552,21.026,9.225,33.032,10.73v-32.256h-82.58V432.768z"/>
+              <path style="fill:#D4AF91;" d="M309.677,326.194H202.323c-34.206,0-61.935,20.335-61.935,45.419s27.73,45.419,61.935,45.419
+                c17.225,0,32.782-5.169,43.995-13.498c2.839-2.108,6.262-3.162,9.679-3.162c3.423,0,6.846,1.053,9.685,3.162
+                c11.213,8.329,26.77,13.498,43.995,13.498c34.206,0,61.935-20.335,61.935-45.419C371.613,346.529,343.883,326.194,309.677,326.194z"
+                />
+              <path style="fill:#5D5360;" d="M256,293.161c27.365,0,49.548,14.789,49.548,33.032c0,17.594-20.824,26.858-35.853,33.708
+                c-8.712,3.971-18.68,3.971-27.392,0c-15.029-6.85-35.853-16.114-35.853-33.708C206.452,307.951,228.635,293.161,256,293.161z"/>
+              <path style="fill:#4B3F4E;" d="M230.968,317.161c-1.155-10.393,6.166-21.507,6.166-21.507
+                c-18.003,4.949-30.682,16.751-30.682,30.539c0,17.593,20.824,26.857,35.853,33.708c8.711,3.97,18.68,3.97,27.392,0
+                c3.232-1.473,6.732-3.069,10.235-4.824C259.613,351.484,233.29,338.065,230.968,317.161z"/>-->
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              </svg>
+              </svg>
+            <span class="login_title"><b>Log in</b></span>
+          </div>
+          <div class="panel__left-body">
+            <form action="#" id="login-form">
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  id="login-email"
+                  placeholder="@gmail.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="passwd">Password</label>
+                <input
+                  type="password"
+                  name="passwd"
+                  class="form-control"
+                  id="login-password"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group text-center">
+                <input type="submit" value="Log in" class="btn btn-primary" />
+              </div>
+            </form>
+          </div>
+          <div class="panel__left-footer text-center">
+            <a href="forget-pass.html">Forgot Password?</a>
+          </div>
         </div>
-        <form action="#" id="login-form" class="log-in" autocomplete="off">
-            <h4>Welcome to <span>AYAMAS</span></h4>
-            <p>Welcome back! Log in to your account :</p>
-            <div class="floating-label">
-                <input placeholder="Email" type="text" name="email" id="login-email" autocomplete="off">
-                <label for="email">Email:</label>
-            </div>
-            <div class="floating-label">
-                <input placeholder="Password" type="password" name="password" id="login-password" autocomplete="off">
-                <label for="password">Password:</label>
-            </div>
-            <p class="error pink-text center-align"></p>
-            <button type="submit">Log in</button>
-            <a href="forget-pass.html" class="discrete" target="_blank">Forgot Password</a>
-        </form>
+        <div class="panel__right col-lg-5 d-none d-lg-block py-5 px-3">
+          <div class="panel__right-title text-center">
+            Welcome to Ayamas
+          </div>
+          <div class="panel__left-img text-center w-100">
+            <!--<img src="assets/img/business.svg" alt="shop">-->
+            <svg class="panel__left-img text-center w-100">
+              <?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<rect x="33.067" y="136.533" style="fill:#FFD15C;" width="444.8" height="330.667"/>
+<rect x="283.733" y="228.267" style="fill:#415A6B;" width="162.133" height="238.933"/>
+<rect x="299.733" y="244.267" style="fill:#8AD7F8;" width="130.133" height="206.933"/>
+<path style="fill:#F05540;" d="M0,102.4v48c0,28.8,22.4,51.2,51.2,51.2s51.2-22.4,51.2-51.2v-48H0z"/>
+<path style="fill:#E8EAE9;" d="M102.4,102.4v48c0,28.8,22.4,51.2,51.2,51.2s51.2-22.4,51.2-51.2v-48H102.4z"/>
+<path style="fill:#F05540;" d="M204.8,102.4v48c0,28.8,22.4,51.2,51.2,51.2c28.8,0,51.2-22.4,51.2-51.2v-48H204.8z"/>
+<path style="fill:#E8EAE9;" d="M307.2,102.4v48c0,28.8,22.4,51.2,51.2,51.2c28.8,0,51.2-22.4,51.2-51.2v-48H307.2z"/>
+<path style="fill:#F05540;" d="M409.6,102.4v48c0,28.8,22.4,51.2,51.2,51.2s51.2-22.4,51.2-51.2v-48H409.6z"/>
+<polygon style="fill:#F3705A;" points="124.8,0 37.333,0 0,102.4 102.4,102.4 "/>
+<polygon style="fill:#F3F3F3;" points="212.267,0 124.8,0 102.4,102.4 204.8,102.4 "/>
+<polygon style="fill:#F3705A;" points="299.733,0 212.267,0 204.8,102.4 307.2,102.4 "/>
+<polygon style="fill:#F3F3F3;" points="387.2,0 299.733,0 307.2,102.4 409.6,102.4 "/>
+<polygon style="fill:#F3705A;" points="474.667,0 387.2,0 409.6,102.4 512,102.4 "/>
+<rect y="467.2" style="fill:#CED6E0;" width="512" height="44.8"/>
+<g>
+	<circle style="fill:#415A6B;" cx="320" cy="347.733" r="13.867"/>
+	<rect x="65.067" y="228.267" style="fill:#415A6B;" width="180.267" height="162.133"/>
+</g>
+<rect x="81.067" y="244.267" style="fill:#8AD7F8;" width="148.267" height="130.133"/>
+<g>
+	<path style="fill:#55C0EB;" d="M158.933,264.533c-2.133-2.133-7.467-2.133-9.6,0L97.067,316.8c-2.133,2.133-2.133,7.467,0,9.6
+		s7.467,2.133,9.6,0l52.267-52.267C162.133,270.933,162.133,266.667,158.933,264.533z"/>
+	<path style="fill:#55C0EB;" d="M170.667,295.467c-2.133-2.133-7.467-2.133-9.6,0L128,328.533c-2.133,2.133-2.133,7.467,0,9.6
+		s7.467,2.133,9.6,0l33.067-33.067C173.867,301.867,173.867,297.6,170.667,295.467z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!--initialize firebase-->
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyAS1DsUK4USZG5MMG8kXjkJKjm5-gR8YB0",
-            authDomain: "authentication-8d6ac.firebaseapp.com",
-            projectId: "authentication-8d6ac",
-            storageBucket: "authentication-8d6ac.appspot.com",
-            messagingSenderId: "277365742255",
-            appId: "1:277365742255:web:c09e2d6a2a78b2ee6c125a",
-            measurementId: "G-FVM023WR2T"
-        };
-        firebase.initializeApp(config);
+    <!--boostrap-->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
 
-        // make auth and firestore references
-        const auth = firebase.auth();
-        const db = firebase.firestore();
-        const functions = firebase.functions();
+     <!--initialize firebase-->
+     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
+     <script>
+         // Initialize Firebase
+         var config = {
+             apiKey: "AIzaSyAS1DsUK4USZG5MMG8kXjkJKjm5-gR8YB0",
+             authDomain: "authentication-8d6ac.firebaseapp.com",
+             projectId: "authentication-8d6ac",
+             storageBucket: "authentication-8d6ac.appspot.com",
+             messagingSenderId: "277365742255",
+             appId: "1:277365742255:web:c09e2d6a2a78b2ee6c125a",
+             measurementId: "G-FVM023WR2T"
+         };
+         firebase.initializeApp(config);
+ 
+         // make auth and firestore references
+         const auth = firebase.auth();
+         const db = firebase.firestore();
+         const functions = firebase.functions();
+ 
+         // update firestore settings
+         db.settings({ timestampsInSnapshots: true });
+     </script>
 
-        // update firestore settings
-        db.settings({ timestampsInSnapshots: true });
-    </script>
-
-
-    <script src="../../../assets/js/auth.js"></script>
-    <script src="../../../assets/js/login.js"></script>
-
-</body>
-
+<script src="../../../assets/js/auth.js"></script>
+<script src="../../../assets/js/login.js"></script>
+  </body>
 </html>

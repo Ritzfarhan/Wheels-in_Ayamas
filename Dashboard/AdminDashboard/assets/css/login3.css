@@ -1,0 +1,75 @@
+html, 
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #f5f5f5 !important;  
+  display: flex;
+  align-items: center !important;    
+  background-image: url("/AdminDashboard/assets/img/bg2.jpg");
+  background-size: cover;
+}
+
+.panel   {
+  background-color: #fff;
+}
+
+/*.panel__left-title {
+text-align:left;
+  font-size: 2rem;
+  color: #bb3b0e;
+}*/
+
+.login_title{
+    padding-right: 1cm;
+    font-size: 2rem;
+    color: #bb3b0e;
+
+}
+.panel__left-title-logo {
+  width: 40px;
+  height: auto;
+  padding-right: 5px;
+}
+
+.panel__left-body {
+  padding: 30px 0px;  
+}
+.form-group label {  
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+input::placeholder {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+.btn-primary {
+  background-color: #ca5116 !important;
+  border: #ff5500 !important;
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+}
+
+.panel__left-footer a {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.panel__right {
+  background-color:  #caa476;
+}
+
+.panel__right-title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.panel__left-img {
+  position: absolute;
+  bottom: 1.8rem;
+  left: 0;
+}
+.panel__left-img svg {
+  width: 50%;
+  height: auto;
+}

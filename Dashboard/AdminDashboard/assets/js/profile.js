@@ -23,8 +23,10 @@ const setupUI = (user) => {
 
             const roles_profilehtml = `<p>${user.admin ? 'Admin of Ayamas' : user.staff ? 'Staff' : ''}</p>`;
             roles_profile.innerHTML = roles_profilehtml;
-            //const usernamehtml = `<h6>${doc.data().Username}<h6> `;
-            //username.innerHTML = usernamehtml;
+
+            const usernamehtml = `<h6>${doc.data().Username}<h6> `;
+            username.innerHTML = usernamehtml;
+            
             const roleshtml = `<h6 class='roles'>${user.admin ? 'Admin' : user.staff ? 'Staff' : ''}</h6>`;
             roles.innerHTML = roleshtml;
 
