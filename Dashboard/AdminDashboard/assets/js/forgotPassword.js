@@ -8,7 +8,12 @@ forgotForm.addEventListener('submit', (e) => {
         .then(() => {
             // Password reset email sent!
             // ..
-            window.location.href = "/AdminDashboard/pages/pages/authentication/login.html";
+            //document.getElementById("send-email").id = 'type-success2';
+
+            Swal.fire({ title: "SUCCESS", text: "Email has been sent!", type: "success", confirmButtonClass: "btn long", buttonsStyling: !1 });
+            setTimeout(function () {
+                window.location.href = "/AdminDashboard/pages/pages/authentication/login.html";
+            }, 3000);
             forgotForm.reset();
             forgotForm.querySelector('.error').innerHTML = '';
 
