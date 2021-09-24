@@ -1232,10 +1232,10 @@ button {
 /*--------------------------------------------------------------
 # Chefs
 --------------------------------------------------------------*/
+
 .chefs .member {
   text-align: center;
   margin-bottom: 20px;
-  background: #deb887;
   position: relative;
   overflow: hidden;
 }
@@ -1404,7 +1404,7 @@ button {
   border-color: #cda45e;
 }
 .contact .php-email-form input {
-  height: 44px;
+  height: 50px;
 }
 .contact .php-email-form textarea {
   padding: 10px 12px;
@@ -1442,6 +1442,7 @@ button, input, optgroup, select, textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  background-color: #b52217;
 }
 
 *, ::after, ::before {
