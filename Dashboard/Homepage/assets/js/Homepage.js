@@ -29,6 +29,7 @@ const logout = document.querySelector('#logout');
 logout.addEventListener('click', (e) => {
     e.preventDefault();
     auth.signOut()
-    window.location.href = "/AdminDashboard/pages/pages/authentication/logout.html";
+    Swal.fire({ title: "Logged out", text: "You are logged out", type: "warning", confirmButtonClass: "btn long", buttonsStyling: !1 });
+    window.location.href = "/Homepage/index.html";
 });
 

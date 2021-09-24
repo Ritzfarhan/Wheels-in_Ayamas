@@ -540,6 +540,8 @@ table.table-inverse th, table.table-inverse td, .theme-input-style.style--four, 
 
 .c1-bg, ::selection, .btn, #example-vertical > .actions ul li a[href="#next"], #example-vertical > .actions ul li a[href="#finish"], .light-btn.c2-bg:hover, .theme-input-group input, .theme-input-group button.btn.style--three, .theme-input-group > a.btn.style--three, .theme-input-group.input-wrap > a, .aside-body li a:after, .chat_aside .aside-header, .chat-footer div .submit {
   background-color: #B52217;
+
+ 
 }
 
 .c1-bo {
@@ -5950,7 +5952,11 @@ body.sidebar-folded.open-sidebar-folded .header .main-header {
 }
 
 .main-header-user .user-profile .user-avatar {
-  margin-right: 40px;
+  margin-right: 35%;
+  margin-left: 20%;
+ /* margin-right: ;*/
+
+  
 }
 
 .main-header-user .user-profile img {
@@ -5960,6 +5966,7 @@ body.sidebar-folded.open-sidebar-folded .header .main-header {
 
 .main-header-user .user-profile .user-info .user-name {
   margin-bottom: 3px;
+  
 }
 
 .main-header-user .user-profile .user-info .user-email {
