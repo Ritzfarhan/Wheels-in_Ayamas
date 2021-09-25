@@ -24,7 +24,12 @@ loginForm.addEventListener('submit', (e) => {
 
         loginForm.reset();
         loginForm.querySelector('.error').innerHTML = '';
-        setupPage(user);
+        Swal.fire({ title: "YAY!", text: "You're Logged in", type: "success", confirmButtonClass: "btn long", buttonsStyling: !1 });
+
+        setTimeout(function () {
+          setupPage(user);
+        }, 1500);
+        //setupPage(user);
     }).catch(err => {
         loginForm.querySelector('.error').innerHTML = err.message;
     });
