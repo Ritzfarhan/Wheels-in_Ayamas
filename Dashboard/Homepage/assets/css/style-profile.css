@@ -162,8 +162,8 @@ body {
   --------------------------------------------------------------*/
   #header {
     /*background: rgba(12, 11, 9, 0.6);*/
-    background-color: #ffe75c;
-    border-bottom: 1px solid #ffe75c;
+    background-color: #dbae48;
+    border-bottom:1px solid #d89d13;
     transition: all 0.5s;
     z-index: 997;
     padding: 15px 0;
@@ -1618,15 +1618,11 @@ body {
   font-size: 18px;
 }
 
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
+.w3-container {
   padding: 8px;
   color: white;
   background-color: #865846;
   text-align: center;
-  cursor: pointer;
   width: 100%;
   font-size: 18px;
 }
