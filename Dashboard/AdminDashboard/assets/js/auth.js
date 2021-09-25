@@ -24,9 +24,15 @@ auth.onAuthStateChanged(user => {
     user.getIdTokenResult().then(idTokenResult => {
       user.admin = idTokenResult.claims.admin;
       user.staff = idTokenResult.claims.staff;
-      setupPage(user);
+
+      Swal.fire({ title: "YAY!", text: "You're Logged in", type: "success", confirmButtonClass: "btn long", buttonsStyling: !1 });
+
+        setTimeout(function () {
+          setupPage(user);
+        }, 1500);
+      
     });
-    window.alert("You are Logged in");
+    //window.alert("You are Logged in");
   } else {
     console.log('user logged out');
   }
