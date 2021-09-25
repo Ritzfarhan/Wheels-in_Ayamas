@@ -2,13 +2,15 @@
 
 /* BODY COLOR */
 .main-header, .main-wrapper {
-    background-color: #ffe75C;
+    background-color: #ffd900a1;
 }
 
-.sidebar-body, .sidebar-header, .main-header, .mobile-logo {
-    background-color: #F9EF82;
+.sidebar-body, .sidebar-header  {
+    background-color: #101820FF;
 }
-
+.main-header, .mobile-logo {
+    background-color: #fee715ff;
+}
 /* HEADER */
 .menu-icon span {
     width: 4px;
@@ -67,7 +69,7 @@
     left: 0;
     top: 7px;
     font-size: 18px;
-    color: #00192f;
+    color: #FEE715FF;
 }
 
 .c1-bg, ::selection, .btn, #example-vertical > .actions ul li a[href="#next"], #example-vertical > .actions ul li a[href="#finish"], .light-btn.c2-bg:hover, .theme-input-group input, .theme-input-group button.btn.style--three, .theme-input-group > a.btn.style--three, .theme-input-group.input-wrap > a, .aside-body li a:after, .chat_aside .aside-header, .chat-footer div .submit {
@@ -130,3 +132,7 @@ table tr:not(:last-child) td {
     
 }
 
+.sidebar .sidebar-body li.nav-category, .sidebar .sidebar-body li a, .sidebar .sidebar-body li.active > a.disabled, 
+.sidebar .sidebar-body li:hover > a.disabled {
+    color: #FEE715FF;
+}

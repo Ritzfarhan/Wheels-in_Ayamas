@@ -427,8 +427,7 @@ table.invoice-list-table td, table.contact-list-table td, table.invoice-list th,
 .ProgressBar-wrap .ProgressBar-percentage, .ProgressBar-wrap2 .ProgressBar-percentage, .progress-info div, 
 .process-bar-wrapper .process-name, .process-bar-wrapper .process-width, .country-performance 
 .process-bar-wrapper .process-name, .custom-select.style--two .theme-input-style, 
-.sidebar .sidebar-body li.nav-category, .sidebar .sidebar-body li a, .sidebar .sidebar-body li.active > a.disabled, 
-.sidebar .sidebar-body li:hover > a.disabled, .aside-body li a, .aside-body li.fc-event a, 
+ .aside-body li a, .aside-body li.fc-event a, 
 .aside-body li.fc-event a:hover, .cart-collaterals .shop_table .order-total th, 
 .cart-collaterals .shop_table .order-total td, .cart-collaterals .shop_table.style-two th, 
 .cart-collaterals .shop_table.style-two td, .cart-collaterals .shop_table.style-two .order-total th, 
@@ -6196,7 +6195,7 @@ body.sidebar-folded.open-sidebar-folded .header .main-header {
   left: 0;
   top: 90px;
   z-index: 2;
-  background-color: #F9EF82;
+  background-color: #101820FF;
   z-index: 1029;
 }
 
