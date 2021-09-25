@@ -14,10 +14,10 @@ const setupUI = (user) => {
             //const usernamehtml = `<h6>${doc.data().Username}<h6> `;
             //username.innerHTML = usernamehtml;
 
-            const f_namehtml = `<span>First Name :</span> ${doc.data().f_name}`;
+            const f_namehtml = `<br><h6>First Name : ${doc.data().f_name}</h6>`;
             f_name.innerHTML = f_namehtml;
 
-            const l_namehtml = `<span>Last Name :</span> ${doc.data().l_name}`;
+            const l_namehtml = `<h6>Last Name : ${doc.data().l_name}</h6>`;
             l_name.innerHTML = l_namehtml;
 
         });
