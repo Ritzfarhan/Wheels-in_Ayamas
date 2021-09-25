@@ -350,7 +350,7 @@
                         <li><a href="pages/pages/user-profile/gallery.html">Gallery</a></li>                        
                         <li><a href="pages/pages/user-profile/connection.html">Connections</a></li>
                         <li><a href="pages/pages/user-profile/profile-chat.html">Chat</a></li>-->
-                                <li class="active"><a href="edit-profile.html">View Profile</a></li>
+                        <li class="active"><a href="edit-profile.html">Edit Profile</a></li>
                                 <!--<li><a href="/Wheels-in_Ayamas/Dashboard/AdminDashboard/pages/pages/user-profile/user-dashboard.html">User Dashboard</a></li>-->
                             </ul>
                             <!-- End Sub Menu -->
@@ -444,17 +444,8 @@
                                             <div class="profile-pic mr-3">
                                                 <img src="../../../assets/img/media/profile-pic.jpg" alt="">
 
-                                                <!-- Upload Photo -->
-                                                <div class="upload-button">
-                                                    <img src="../../../assets/img/svg/gallery.svg" alt=""
-                                                        class="svg mr-2">
-                                                    <span>Upload Photo</span>
-                                                    <input class="file-input" type="file" id="fileUpload2"
-                                                        accept="image/*">
-                                                </div>
-                                                <!-- End Upload Photo -->
                                             </div>
-                                        <!--Profile Info -->
+                                            <!-- Profile Info -->
                                             <div>
                                                 <div class='user-name2 font-14'></div>
 
@@ -540,8 +531,7 @@
                                                                 <label for="edit-fname">First Name</label>
                                                             </div>
                                                             <div class="col-9">
-                                                                <input type="text" id="edit-fname" class="f-nameForm form-control"
-                                                                  value="Rizfarhan">
+                                                                <div  id="f_name" class="f-nameForm form-control f_name"></div>
 
 
                                                             </div>
@@ -554,8 +544,7 @@
                                                                 <label for="edit-lname">Last Name</label>
                                                             </div>
                                                             <div class="col-9">
-                                                                <input type="text" id="edit-lname" class="l-nameForm form-control"
-                                                                    value="Rosli">
+                                                                <div  id="l_name" class="f-nameForm form-control l_name"></div>
 
                                                             </div>
                                                         </div>
@@ -621,10 +610,8 @@
                                                                 <label for="edit-email">Email</label>
                                                             </div>
                                                             <div class="col-9">
-                                                                <input type="email" id="edit-email" class="form-control"
-                                                                    value="ritzfarhan@gmail.com">
-                                                                <span class="font-12 c4">**We'll never share your email
-                                                                    with anyone else.</span>
+                                                                <div  id="email" class="f-nameForm form-control email"></div>
+                                                                <span class="font-12 c4">**We'll never share your email with anyone else.</span>
                                                             </div>
                                                         </div>
                                                         <!-- End Form Group -->

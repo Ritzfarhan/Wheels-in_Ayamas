@@ -36,11 +36,15 @@ const setupUI = (user) => {
             // const l_nameForm_Html = ` ${doc.data().l_name}`;
             //l_nameForm.innerHTML = l_nameForm_Html;
 
-            const f_namehtml = `<span>First Name :</span> ${doc.data().f_name}`;
+            const f_namehtml = `${doc.data().f_name}`;
             f_name.innerHTML = f_namehtml;
 
-            const l_namehtml = `<span>Last Name :</span> ${doc.data().l_name}`;
+            const l_namehtml = `${doc.data().l_name} `;
             l_name.innerHTML = l_namehtml;
+
+            const emailhtml = `${user.email} `;
+            email.innerHTML = emailhtml;
+
 
         });
     } else {
