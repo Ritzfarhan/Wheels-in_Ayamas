@@ -113,5 +113,7 @@ table tr:not(:last-child) td {
     transform: translateX(-50%) rotate(0deg);
 }
 
-/* INVOICE BODY */
+.roles{
+    color:#B52217;
+}
 
