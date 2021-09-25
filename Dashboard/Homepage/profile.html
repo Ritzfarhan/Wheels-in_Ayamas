@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
   <title>Wheels in Ayamas </title>
   <meta content="" name="description">
@@ -50,13 +51,12 @@
 
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-phone d-flex align-items-center"><span>+603-5569 7783</span></i>
-        <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sat: 11AM - 23PM</span></i>
+        <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sat: 11AM - 8PM</span></i>
       </div>
 
       <div class="languages d-none d-md-flex align-items-center">
         <ul>
           <li>En</li>
-          <li><a href="#">My</a></li>
         </ul>
       </div>
     </div>
@@ -76,34 +76,29 @@
           <li><a class="nav-link scrollto " href="index.html">Home</a></li>
           <li><a class="nav-link scrollto active" href="#about">About</a></li>
           <li><a class="nav-link scrollto active" href="#menu">Menu</a></li>
-          <li><a class="nav-link scrollto active" href="#specials">Specials</a></li>
-          <li><a class="nav-link scrollto active" href="#events">Promotion</a></li>
-          <li><a class="nav-link scrollto active" href="#chefs">Chefs</a></li>
-          <li><a class="nav-link scrollto active" href="#gallery">Gallery</a></li>
+          <li><a class="nav-link scrollto active" href="#promotion">Promotion</a></li>
+          <li><a class="nav-link scrollto active" href="#events">Events</a></li>
+          <li><a class="nav-link scrollto active" href="#team">Team</a></li>
           <li><a class="nav-link scrollto active" href="#contact">Contact</a></li>
-          <li class="dropdown"><a href="#"><span>Others</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span style="color:white; ">Others</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown active"><a href="#"><span>Profile</span> <i class="bi bi-chevron-right"></i></a>
+              <li class="dropdown active"><a href="#"><span style="color:black; ">Profile</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Edit Profile</a></li>
-                  <li><a href="#">Forgot Password</a></li>
+                  <li><a href="#">View Profile</a></li>
                   <li><a href="#">Deep Drop Down 3</a></li>
                   <li><a href="#">Deep Drop Down 4</a></li>
                   <li><a href="#">Deep Drop Down 5</a></li>
                 </ul>
               </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a href="#book-a-parking" class="book-a-parking-btn scrollto d-none d-lg-flex">Book a parking</a>
-      <a href="#" id="logout" class="log-out-btn  scrollto d-none d-lg-flex">Log Out</a>
+      <a href="#book-a-parking" class="book-a-parking-btn scrollto d-none d-lg-flex logged-in"
+        style="display: none;">Book a parking</a>
+      <a href="#" id="logout" class="log-out-btn logged-in" >Log Out</a>
 
     </div>
   </header><!-- End Header -->
@@ -132,7 +127,7 @@
                     <h6>Last Name </h6>
                   </div>
                 </div>
-                <p class="button">View Profile</p>
+                <div class="w3-container w3-brown">View Profile</div>
               </div>
 
             </div>

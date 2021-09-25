@@ -27,7 +27,7 @@ const setupUI = (user) => {
             const usernamehtml = `<h6>${doc.data().Username}<h6> `;
             username.innerHTML = usernamehtml;
             
-            const roleshtml = `<h6 class='roles'>${user.admin ? 'Admin' : user.staff ? 'Staff' : ''}</h6>`;
+            const roleshtml = `<h6 class='roles'><center>${user.admin ? 'Admin' : user.staff ? 'Staff' : ''}</center></h6>`;
             roles.innerHTML = roleshtml;
 
             //const f_nameForm_Html = `value=${doc.data().f_name}`;

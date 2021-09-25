@@ -15,8 +15,7 @@ const setupUI = (user) => {
             username.innerHTML = html;
 
             const username2html = `<h3>&nbsp&nbsp&nbsp${doc.data().Username}</h3>
-                                   <p>&nbsp&nbsp&nbsp${user.email}</p>`;
-
+                                    <p>&nbsp&nbsp&nbsp${user.email}</p>`;
             username2.innerHTML = username2html;
 
             const roles_profilehtml = `<p>${user.admin ? 'Admin of Ayamas' : user.staff ? 'Staff of Ayamas' : ''}</p>`;

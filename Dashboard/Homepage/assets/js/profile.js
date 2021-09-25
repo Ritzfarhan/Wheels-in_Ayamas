@@ -14,7 +14,7 @@ const setupUI = (user) => {
             //const usernamehtml = `<h6>${doc.data().Username}<h6> `;
             //username.innerHTML = usernamehtml;
 
-            const f_namehtml = `<h6>First Name : ${doc.data().f_name}</h6>`;
+            const f_namehtml = `<br><h6>First Name : ${doc.data().f_name}</h6>`;
             f_name.innerHTML = f_namehtml;
 
             const l_namehtml = `<h6>Last Name : ${doc.data().l_name}</h6>`;
