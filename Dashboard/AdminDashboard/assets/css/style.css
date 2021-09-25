@@ -5952,7 +5952,11 @@ body.sidebar-folded.open-sidebar-folded .header .main-header {
 }
 
 .main-header-user .user-profile .user-avatar {
-  margin-right: 40px;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width : 40px;
 }
 
 .main-header-user .user-profile img {

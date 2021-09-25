@@ -12,7 +12,7 @@ const setupUI = (user) => {
     if (user) {
         // account info
         db.collection('users').doc(user.uid).get().then(doc => {
-            const html = `<center><h6>${doc.data().Username} </h6></center>`;
+            const html = `<br><br><center><h6>${doc.data().Username} </h6></center>`;
                           // ${user.email}
             username.innerHTML = html;
 
@@ -24,7 +24,7 @@ const setupUI = (user) => {
             const roles_profilehtml = `${user.admin ? 'Admin of Ayamas' : user.staff ? 'Staff of Ayamas' : ''}`;
             roles_profile.innerHTML = roles_profilehtml;
 
-            const usernamehtml = `<h6>${doc.data().Username}<h6> `;
+            const usernamehtml = `<br><br><h6>${doc.data().Username}<h6> `;
             username.innerHTML = usernamehtml;
             
             const roleshtml = `<h6 class='roles'><center>${user.admin ? 'Admin' : user.staff ? 'Staff' : ''}</center></h6>`;
@@ -45,7 +45,7 @@ const setupUI = (user) => {
         });
     } else {
         // clear account info
-        username.innerHTML = 'Not Logged in';
+        username.innerHTML = '<br><br>Not Logged in';
     }
 };
 
