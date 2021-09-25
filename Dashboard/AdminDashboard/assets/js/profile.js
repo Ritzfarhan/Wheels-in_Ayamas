@@ -1,6 +1,7 @@
 
 const username = document.querySelector('.user-name');
 const username2 = document.querySelector('.user-name2');
+const username3 = document.querySelector('.user-name3');
 const f_name = document.querySelector('.f_name');
 const l_name = document.querySelector('.l_name');
 const roles = document.querySelector('.roles');
@@ -36,6 +37,9 @@ const setupUI = (user) => {
             // const l_nameForm_Html = ` ${doc.data().l_name}`;
             //l_nameForm.innerHTML = l_nameForm_Html;
 
+            const username3html = `${doc.data().Username}`;
+            username3.innerHTML = username3html;
+            
             const f_namehtml = `${doc.data().f_name}`;
             f_name.innerHTML = f_namehtml;
 
