@@ -405,7 +405,7 @@ body.modal-open {
 }
 
 .text_color-bg, .comment-action-links .comment-action-link:not(:last-child):after, .btn-circle.style--three, .sidebar .sidebar-body ul.sub-menu li:before, .switch .control:after, .switch .check, .switch.dark input:checked ~ .control {
-  background-color: #00192f;
+  background-color: #fee715ee;
 }
 
 .text_color-bo {
@@ -4125,7 +4125,7 @@ table.hoverable tbody tr:hover {
 }
 
 table.cart_table thead th {
-  background-color: #F9EF82;
+  background-color: #fee715ee;
 }
 
 table.cart_table tr th, table.cart_table tr td {
@@ -4177,7 +4177,7 @@ table.cart_table tr td:nth-child(3) input {
 }
 
 table.cart_table tr:last-child th, table.cart_table tr:last-child td {
-  border-bottom: 1px solid #FFE75C;
+  border-bottom: 1px solid #101820FF;
 }
 
 table.style--four th, table.style--four td {
@@ -4328,7 +4328,7 @@ table.invoice-list-table.style-two td .tr-close .svg, table.style-two.contact-li
 }
 
 table.invoice-list-table.style-two thead, table.style-two.contact-list-table thead, table.invoice-list.style-two thead {
-  background-color: #FFE75C;
+  background-color: #fee715ee;
 }
 
 table.invoice-list-table.style-two tbody tr:hover, table.style-two.contact-list-table tbody tr:hover, table.invoice-list.style-two tbody tr:hover {
@@ -7084,7 +7084,7 @@ body.sidebar-folded .main-content {
 }
 
 .shipping-content {
-  border-bottom: 1px solid #FFE75C;
+  border-bottom: 1px solid #101820FF;
   padding-bottom: 30px;
 }
 
@@ -7126,7 +7126,7 @@ body.sidebar-folded .main-content {
 }
 
 .cart-collaterals .shop_table .order-total th, .cart-collaterals .shop_table .order-total td {
-  border-top: 1px solid #FFE75C;
+  border-top: 1px solid #101820ff;
   font-size: 24px;
   padding-top: 10px;
 }

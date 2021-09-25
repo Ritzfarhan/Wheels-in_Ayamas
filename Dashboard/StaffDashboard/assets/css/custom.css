@@ -2,10 +2,15 @@
 
 /* BODY COLOR */
 .main-header, .main-wrapper {
-    background-color: #B52217;
+    background-color: #b5221785;
 }
 
-.sidebar , .sidebar-body, .sidebar-header, .main-header, .mobile-logo {
+.sidebar , .sidebar-body, .sidebar-header {
+    background-color: #ddb380;   
+   
+}
+
+.main-header, .mobile-logo {
     background-color: #caa476;
 }
 

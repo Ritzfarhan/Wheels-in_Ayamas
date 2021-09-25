@@ -262,6 +262,9 @@ body {
   line-height: 1.466;
   color: #00192F;
   background-color: #d5b1e7;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/AdminDashboard/assets/img/bg2.jpg");
   -webkit-font-smoothing: antialiased;
 }
 
@@ -6414,7 +6417,7 @@ body.sidebar-open .header .header-toogle-pin {
   align-items: center;
   font-size: 14px;
   line-height: 1;
-  background-color: #B52217;
+  background-color: #caa476;
 }
 
 @media only screen and (max-width: 1024px) {

@@ -9,7 +9,7 @@
     background-color: #101820FF;
 }
 .main-header, .mobile-logo {
-    background-color: #fee715ff;
+    background-color: #B52217;
 }
 /* HEADER */
 .menu-icon span {
@@ -57,7 +57,7 @@
 
 /* SIDEBAR ICON */
 .c2, a:hover, .icofont-tack-pin, .dropdown-menu .dropdown-body a:hover .main-text, .dropdown-menu.style--two .dropdown-body a:hover .time, .dropdown-menu.style--two .dropdown-body a:hover .main-text, .btn.preview, #example-vertical > .actions ul li a.preview[href="#next"], #example-vertical > .actions ul li a.preview[href="#finish"], .btn.style--two, #example-vertical > .actions ul li a.style--two[href="#next"], #example-vertical > .actions ul li a.style--two[href="#finish"], .btn.s_alert, #example-vertical > .actions ul li a.s_alert[href="#next"], #example-vertical > .actions ul li a.s_alert[href="#finish"], .details-btn, .light-btn, table.table-condensed thead tr:nth-child(2) th, table.table-contextual .details-btn:hover, table.table-contextual .details-btn:hover i, .sidebar .sidebar-body li.active > a, .sidebar .sidebar-body li:hover > a, .fc-view > table thead th.fc-day-header, .notifications a:hover p, .news a:hover p, .icon:hover, .select2-container--default .select2-selection--multiple .select2-selection__choice, .p_nav-link, .about-nav-tab a.active, .iconwrap, .dragable-list > div.ui-sortable-helper i {
-    color: #B52217;
+    color: #c75249;
 }
 
 .sidebar .sidebar-body li.active i, .sidebar .sidebar-body li:hover i {
@@ -87,7 +87,7 @@
 }
 
 table tr:not(:last-child) td {
-    border-bottom: 1px solid #ffe75C;
+    border-bottom: 1px solid rgba(16, 24, 32, 0.534);
 }
 
 /* LOGIN BODY */
@@ -135,4 +135,8 @@ table tr:not(:last-child) td {
 .sidebar .sidebar-body li.nav-category, .sidebar .sidebar-body li a, .sidebar .sidebar-body li.active > a.disabled, 
 .sidebar .sidebar-body li:hover > a.disabled {
     color: #FEE715FF;
+}
+
+#date {
+    color: #Ffffff;
 }
