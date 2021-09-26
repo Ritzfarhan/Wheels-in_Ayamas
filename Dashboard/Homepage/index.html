@@ -74,13 +74,19 @@
           <li><a class="nav-link scrollto" href="#specials">Promotion</a></li>
           <li><a class="nav-link scrollto" href="#events">Events</a></li>
           <li><a class="nav-link scrollto" href="#chefs">Team</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li class="dropdown"><a href="#"><span>Others</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li class="dropdown"><a href="#"><span>Profile</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="profile.html">View Profile</a></li>  
-                </ul>
+          <li><a class="nav-link scrollto" href="#contact">Contact&nbsp;&nbsp;&nbsp;</a></li>
+          <li class="dropdown"><span><div class='user-name'></div>
+            
+            <!-- Profile Icon -->
+            <img class="icon-user" src="/AdminDashboard/assets/img/avatar/user1 (70x70).png"/>
+            <!-- End of Profile Icon -->
+            
+            Others</span><i class="bi bi-chevron-down"></i>
+              <ul>
+                <li class="dropdown"><a href="#"><span>Profile</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="profile.html">View Profile</a></li>  
+                  </ul>
                 <li><a href="/AdminDashboard/pages/pages/authentication/reset-pass.html"><span>Reset Password</span></i></a>
               </li>
             </ul>
@@ -1360,32 +1366,32 @@
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
-
+      
   <!--initialize firebase-->
   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
   <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyAS1DsUK4USZG5MMG8kXjkJKjm5-gR8YB0",
-      authDomain: "authentication-8d6ac.firebaseapp.com",
-      projectId: "authentication-8d6ac",
-      storageBucket: "authentication-8d6ac.appspot.com",
-      messagingSenderId: "277365742255",
-      appId: "1:277365742255:web:c09e2d6a2a78b2ee6c125a",
-      measurementId: "G-FVM023WR2T"
-    };
-    firebase.initializeApp(config);
+      // Initialize Firebase
+      var config = {
+          apiKey: "AIzaSyAS1DsUK4USZG5MMG8kXjkJKjm5-gR8YB0",
+          authDomain: "authentication-8d6ac.firebaseapp.com",
+          projectId: "authentication-8d6ac",
+          storageBucket: "authentication-8d6ac.appspot.com",
+          messagingSenderId: "277365742255",
+          appId: "1:277365742255:web:c09e2d6a2a78b2ee6c125a",
+          measurementId: "G-FVM023WR2T"
+      };
+      firebase.initializeApp(config);
 
-    // make auth and firestore references
-    const auth = firebase.auth();
-    const db = firebase.firestore();
-    const functions = firebase.functions();
+      // make auth and firestore references
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+      const functions = firebase.functions();
 
-    // update firestore settings
-    db.settings({ timestampsInSnapshots: true });
+      // update firestore settings
+      db.settings({ timestampsInSnapshots: true });
   </script>
 
   <!-- Vendor JS Files -->
@@ -1397,9 +1403,11 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Template Main JS File -->
+  
   <script src="assets/js/main.js"></script>
   <script src="assets/js/Homepage.js"></script>
   <script src="assets/js/index.js"></script>
+  <script src="assets/js/profile.js"></script>
   <script src="/AdminDashboard/assets/js/login.js"></script>
 
 
