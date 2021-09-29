@@ -1,4 +1,5 @@
 
+const username4 = document.querySelector('.user-name4');
 const username = document.querySelector('.user-name');
 const f_name = document.querySelector('.f_name');
 const l_name = document.querySelector('.l_name');
@@ -7,6 +8,7 @@ const setupUI = (user) => {
     if (user) {
         // account info
         db.collection('users').doc(user.uid).get().then(doc => {
+            
             const html = `<h3>${doc.data().Username}</h3>
                           <h6> ${user.email}</h6>`;
             username.innerHTML = html;
@@ -19,6 +21,10 @@ const setupUI = (user) => {
 
             const l_namehtml = `<h6>Last Name : ${doc.data().l_name}</h6>`;
             l_name.innerHTML = l_namehtml;
+
+            const username4html = `&nbsp;&nbsp;&nbsp;&nbsp;${doc.data().Username}`;
+                          // ${user.email}
+            username4.innerHTML = username4html;
 
         });
     } else {

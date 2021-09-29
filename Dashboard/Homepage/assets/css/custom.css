@@ -47,4 +47,14 @@
     outline: 0 !important;
   
 }
+.user-name4{
+  color: #B52217;
+}
+
+.bi-chevron-down{
+  color: #B52217;
+  position:fixed; 
+  left:60px;
+  top:-30px; 
+}
 

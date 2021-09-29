@@ -1663,6 +1663,13 @@ button:hover, a:hover {
   font-size: 13px;
 }
 
-.icon-user{
-  width: 32px;
+.user-name4{
+  color: #B52217;
+}
+
+.bi-chevron-down{
+  color: #B52217;
+  position:relative; 
+  left:60px;
+  top:-20px; 
 }
