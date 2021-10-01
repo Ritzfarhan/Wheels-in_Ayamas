@@ -1,4 +1,4 @@
-
+/*
 const username4 = document.querySelector('.user-name4');
 
 const setupUI = (user) => {
@@ -28,4 +28,4 @@ auth.onAuthStateChanged(user => {
         setupUI();
 
     }
-});
+});*/

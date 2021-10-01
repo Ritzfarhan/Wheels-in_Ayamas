@@ -1,4 +1,39 @@
-
+const setupUsername = (user) => {
+    if (user) {
+        if (user.admin) {
+            //adminItems.forEach(item => item.style.display = 'block');
+        }
+        if (user.staff) {
+            //staffItems.forEach(item => item.style.display = 'block');
+        }
+        // account info
+        /*db.collection('users').doc(user.uid).get().then(doc => {
+            const html = `
+          <div>Logged in as ${user.email}</div>
+          <div>${doc.data().bio}</div>
+          <div class="pink-text">${user.admin ? 'Admin' : ''}</div>
+          <div class="pink-text">${user.staff ? 'Staff' : ''}</div>
+        `;
+            //accountDetails.innerHTML = html;
+        });*/
+        db.collection('users').doc(user.uid).get().then(doc => {
+            
+           
+            const usernamehtml = `<a>${doc.data().Username}<a> `;
+            usernameHomepage.innerHTML = usernamehtml;
+        });
+        // toggle user UI elements
+        loggedInLinks.forEach(item => item.style.display = 'block');
+        loggedOutLinks.forEach(item => item.style.display = 'none');
+    } else {
+        // clear account info
+        //accountDetails.innerHTML = '';
+        // toggle user elements
+        //adminItems.forEach(item => item.style.display = 'none');
+        loggedInLinks.forEach(item => item.style.display = 'none');
+        loggedOutLinks.forEach(item => item.style.display = 'block');
+    }
+};
 
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
@@ -7,6 +42,8 @@ auth.onAuthStateChanged(user => {
             user.admin = idTokenResult.claims.admin;
             user.staff = idTokenResult.claims.staff;
             setupUI(user);
+            setupUsername(user);
+            
         });
     } else {
         setupUI();
