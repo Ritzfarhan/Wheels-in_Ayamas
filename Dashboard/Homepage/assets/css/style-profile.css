@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom:1px solid #d89d13;
   transition: all 0.5s;
   z-index: 997;
-  padding: 15px 0;
+  padding: 1px 0;
   top: 40px;
 }
 #header.header-scrolled {
@@ -1668,8 +1668,6 @@ button:hover, a:hover {
 }
 
 .bi-chevron-down{
-  color: #B52217;
-  position:relative; 
-  left:60px;
-  top:-20px; 
+  color: #dbae48;
+  visibility: hidden; 
 }
