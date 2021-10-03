@@ -34,12 +34,17 @@ exports.addStaffRole = functions.https.onCall((data, context) => {
   if (context.auth.token.admin !== true) {
     return { error: "Only admins can add other staff" }
   }
+
+
   // get user and add admin custom claim
   return admin.auth().getUserByEmail(data.email).then(user => {
     return admin.auth().setCustomUserClaims(user.uid, {
       staff: true,
     })
+
+    
   }).then(() => {
+    
     return {
       message: `Success! ${data.email} has been made as Staff.`
     }
@@ -48,14 +53,14 @@ exports.addStaffRole = functions.https.onCall((data, context) => {
   });
 });
 
-exports.newUserSignUp = functions.auth.user().onCreate(user => {
-  // for background triggers you must return a value/promise
-  return admin.firestore().collection('users').doc(user.uid).set({
-    email: user.email,
-    roles: customer
-  });
-});
-
+//exports.newUserSignUp = functions.auth.user().onCreate(user => {
+//  // for background triggers you must return a value/promise
+//  return admin.firestore().collection('users').doc(user.uid).set({
+//    email: user.email,
+//    roles: customer
+//  });
+//});
+//
 exports.userDeleted = functions.auth.user().onDelete(user => {
   const doc = admin.firestore().collection('users').doc(user.uid);
   return doc.delete();

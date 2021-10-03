@@ -59,7 +59,8 @@ signupForm.addEventListener('submit', (e) => {
         return db.collection('users').doc(cred.user.uid).set({
             Username: signupForm['signup-username'].value,
             f_name: signupForm['signup-Firstname'].value,
-            l_name: signupForm['signup-Lastname'].value
+            l_name: signupForm['signup-Lastname'].value,
+            email: signupForm['signup-email'].value
         });
 
     }).then(() => {
