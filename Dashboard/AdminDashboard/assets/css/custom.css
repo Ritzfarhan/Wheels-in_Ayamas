@@ -140,3 +140,30 @@ table tr:not(:last-child) td {
 #date {
     color: #Ffffff;
 }
+
+/*ADD ACCOUNT */
+.modal-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #F9EF82;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+
+.textbg {
+    border-radius: 6px !important;
+    background-color: #FFFFFF !important;
+}
+
+.btn3 {
+    border-radius: 6px;
+    height: 1.05cm !important;
+    background-color: #c75249 !important;
+}
