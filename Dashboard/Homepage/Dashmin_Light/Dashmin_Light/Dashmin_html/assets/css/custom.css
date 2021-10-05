@@ -1,0 +1,126 @@
+
+.sidenav {
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    background:burlywood;
+    overflow-x: hidden;
+    padding: 8px 0;
+    margin-top: 120px;
+  }
+  
+
+  
+.tasks_aside, .aside {
+    width: 240px;
+    height: 100%;
+    margin-right: 15px;
+    margin-left: 15px;
+    background: burlywood;
+    padding: 8px 0;
+}
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  background: #f8f2ac;
+  width: 900px;
+  margin-top: -40px;
+  margin-bottom: -40px;
+  margin-left: 30px;
+}
+.footer {
+    height: 80px;
+    padding-left: 290px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1;
+    background-color: #cda45e;
+    color: #00192f;
+    margin-top: 30px;
+}
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #865846;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    margin-bottom: 90px;
+}
+.cart-list {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 30px;
+    width: 900px;
+    margin-top: -10px;
+    margin-bottom: 50px;
+}
+#header {
+    /*background: rgba(12, 11, 9, 0.6);*/
+    background-color: #dbae48;
+    border-bottom:1px solid #d89d13;
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 15px 0;
+    top: 40px;
+  }
+  #header.header-scrolled {
+    top: 0;
+    background: rgba(0, 0, 0, 0.85);
+    border-bottom: 1px solid #37332a;
+  }
+  #header .logo {
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+  }
+  #header .logo a {
+    color: #fff;
+  }
+  #header .logo img {
+    max-height: 65px;
+  }
+  button, button[type="submit"], input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    -webkit-appearance: button;
+    background: #caa476;
+    -moz-appearance: button;
+}
+.soft-pink, .follow-btn.soft-pink, .link-btn.soft-pink, .close-btn, .close-btn:hover {
+  color: #b52217;
+}
+.c1, a, .dashboard-date.style--six input, .pagination ul li, .follow-btn, .link-btn, .theme-input-group button:hover, .theme-input-group > a:hover, .header-toogle-menu, .sidebar .sidebar-header .sidebar-toogle-pin, .aside-body li a.active, .aside-body li:hover a, .aside-body li.active a, .product-details-content .woocommerce-Price-amount, .mail-compose .form-group .input-wrap span, .modal-body .form-group .input-wrap span, .mail-compose .form-group .input-wrap input, .modal-body .form-group .input-wrap input {
+  color: #b52217;
+}
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: -10px;
+  border-radius: 10px;
+}
