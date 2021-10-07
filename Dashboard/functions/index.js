@@ -1,6 +1,7 @@
 
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
+const { firebaseConfig } = require("firebase-functions");
 admin.initializeApp();
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
@@ -37,20 +38,26 @@ exports.addStaffRole = functions.https.onCall((data, context) => {
 
 
   // get user and add admin custom claim
-  return admin.auth().getUserByEmail(data.email).then(user => {
-    return admin.auth().setCustomUserClaims(user.uid, {
-      staff: true,
+  return admin.auth().getUserByEmail(data.email)
+    .then(user => {
+      return admin.auth().setCustomUserClaims(user.uid, { staff: true, })
     })
+    .then(user => {
 
-    
-  }).then(() => {
-    
-    return {
-      message: `Success! ${data.email} has been made as Staff.`
-    }
-  }).catch(err => {
-    return err;
-  });
+
+      return firebase.firestore().collection(`users/${user.uid}`).add(
+        {
+          roles: "staff"
+        }
+      )
+    })
+    .then(() => {
+      return {
+        message: `Success! ${data.email} has been made as Staff.`
+      }
+    }).catch(err => {
+      return err;
+    });
 });
 
 //exports.newUserSignUp = functions.auth.user().onCreate(user => {
