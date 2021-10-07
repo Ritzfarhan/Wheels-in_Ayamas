@@ -134,14 +134,14 @@
                                                     <!-- Form Group -->
                                                     <div class="form-group mb-20">
                                                         <label for="userName" class="mb-2 font-14 bold black">User Name</label>
-                                                        <input type="text" id="userName" class="theme-input-style" placeholder="Type Here">
+                                                        <input type="text" id="user-name-edit" class="theme-input-style" placeholder="Type Here">
                                                     </div>
                                                     <!-- End Form Group -->
 
                                                     <!-- Form Group -->
                                                     <div class="form-group mb-20">
                                                         <label for="email" class="mb-2 font-14 bold black">Email</label>
-                                                        <input type="email" id="email" class="theme-input-style" placeholder="Type Here">
+                                                        <input type="email" id="email-edit" class="theme-input-style" placeholder="Type Here">
                                                     </div>
                                                     <!-- End Form Group -->
                                                 </div>
@@ -149,14 +149,14 @@
                                                     <!-- Form Group -->
                                                     <div class="form-group mb-20">
                                                         <label for="name" class="mb-2 font-14 bold black">Name</label>
-                                                        <input type="text" id="name" class="theme-input-style" placeholder="Type Here">
+                                                        <input type="text" id="f-name-edit" class="theme-input-style" placeholder="Type Here">
                                                     </div>
                                                     <!-- End Form Group -->
 
                                                     <!-- Form Group -->
                                                     <div class="form-group mb-20">
                                                         <label for="company" class="mb-2 font-14 bold black">Company</label>
-                                                        <input type="text" id="company" class="theme-input-style" placeholder="Type Here">
+                                                        <input type="text" id="l-name-edit" class="theme-input-style" placeholder="Type Here">
                                                     </div>
                                                     <!-- End Form Group -->
                                                 </div>
@@ -182,7 +182,7 @@
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="button-group mt-30 mt-xl-n5">
-                                                        <button type="submit" class="btn">Save Changes</button>
+                                                        <button id="updateBtn" type="submit" class="btn">Save Changes</button>
                                                         <button type="button" class="link-btn bg-transparent ml-3 soft-pink">Cancel</button>
                                                     </div>
                                                 </div>
@@ -497,6 +497,72 @@
         <!-- End Footer -->
     </div>
     <!-- End wrapper -->
+
+        <!--initialize firebase-->    
+        <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
+        
+        <script type="module">
+            import {initializeApp} from "https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js";
+           // Initialize Firebase
+           var config = {
+              apiKey: "AIzaSyAS1DsUK4USZG5MMG8kXjkJKjm5-gR8YB0",
+              authDomain: "authentication-8d6ac.firebaseapp.com",
+              projectId: "authentication-8d6ac",
+              storageBucket: "authentication-8d6ac.appspot.com",
+              messagingSenderId: "277365742255",
+              appId: "1:277365742255:web:c09e2d6a2a78b2ee6c125a",
+              measurementId: "G-FVM023WR2T"
+           };
+           firebase.initializeApp(config);
+    
+           import {
+               getFirestore, doc, getDoc, setDoc, collection, addDoc, updateDoc, deleteDOc, deleteField
+           }
+           from "https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js";
+    
+           const db = getFirestore();
+    
+           //References
+           let usernameBox = document.getElementById("user-name-edit");
+           let emailBox = document.getElementById("email-edit");
+           let f_nameBox = document.getElementById("f-name-edit");
+           let l_nameBox = document.getElementById("l-name-edit");
+           let updateBtn =  document.getElementById("UpdateBtn");
+    
+           //Update
+           async function UpdateFieldsInADocument(){
+               var ref = doc(db,"users", RollBox.value);
+               await updateDoc(
+                   ref, {
+                       Username : usernameBox.value,
+                       email : emailBox.value,
+                       f_name : f_nameBox.value,
+                       l_name : l_nameBox.value
+                   }
+               )
+               .then(()=>{
+                   alert("data updated succesfully");
+               })
+               .catch((error)=>{
+                   alert("Unsuccessful operation, error:" + error);
+               });
+           }
+             //Assign Events To Btn
+            updateBtn.addEventListener("click", UpdateFieldsInADocument);
+
+
+            // make auth and firestore references
+            const auth = firebase.auth();
+            const db = firebase.firestore();
+            const functions = firebase.functions();
+
+            // update firestore settings
+            db.settings({ timestampsInSnapshots: true });
+
+            </script>
     <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
