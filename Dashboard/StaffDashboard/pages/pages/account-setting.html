@@ -402,39 +402,32 @@
                                     <div class="tab-pane fade show active" id="general">
                                         <h4 class="mb-4">Account Settings</h4>
 
-                                        <form action="#">
+                                        <form action="#" id="update-form">
                                             <div class="row">
-                                                <div class="col-xl-4 col-lg-6">
-                                                    <!-- Form Group -->
-                                                    <div class="form-group mb-20">
-                                                        <label for="userName" class="mb-2 font-14 bold black">User Name</label>
-                                                        <input type="text" id="userName" class="theme-input-style" placeholder="Type Here">
-                                                    </div>
-                                                    <!-- End Form Group -->
-
-                                                    <!-- Form Group -->
-                                                    <div class="form-group mb-20">
-                                                        <label for="email" class="mb-2 font-14 bold black">Email</label>
-                                                        <input type="email" id="email" class="theme-input-style" placeholder="Type Here">
-                                                    </div>
-                                                    <!-- End Form Group -->
+                                            <div class="col-xl-4 col-lg-6">
+                                                <!-- Form Group -->
+                                                <div class="form-group mb-20">
+                                                    <label for="userName" class="mb-2 font-14 bold black">User Name</label>
+                                                    <input type="text" id="user-name-edit" class="theme-input-style" placeholder="Type Here">
                                                 </div>
-                                                <div class="col-xl-4 col-lg-6">
-                                                    <!-- Form Group -->
-                                                    <div class="form-group mb-20">
-                                                        <label for="name" class="mb-2 font-14 bold black">First Name</label>
-                                                        <input type="text" id="name" class="theme-input-style" placeholder="Type Here">
-                                                    </div>
-                                                    <!-- End Form Group -->
-
-                                                    <!-- Form Group -->
-                                                    <div class="form-group mb-20">
-                                                        <label for="company" class="mb-2 font-14 bold black">Last Name</label>
-                                                        <input type="text" id="company" class="theme-input-style" placeholder="Type Here">
-                                                    </div>
-                                                    <!-- End Form Group -->
+                                                <!-- End Form Group -->
+                                            </div>
+                                            <div class="col-xl-4 col-lg-6">
+                                                <!-- Form Group -->
+                                                <div class="form-group mb-20">
+                                                    <label for="name" class="mb-2 font-14 bold black">First Name</label>
+                                                    <input type="text" id="f-name-edit" class="theme-input-style" placeholder="Type Here">
                                                 </div>
-                                                <div class="col-xl-4">
+                                                <!-- End Form Group -->
+
+                                                <!-- Form Group -->
+                                                <div class="form-group mb-20">
+                                                    <label for="company" class="mb-2 font-14 bold black">Last Name</label>
+                                                    <input type="text"  id="l-name-edit" class="theme-input-style" placeholder="Type Here">
+                                                </div>
+                                                <!-- End Form Group -->
+                                            </div>
+                                            <div class="col-xl-4">
                                                     <div class="upload-avatar d-xl-flex align-items-center flex-column">
 
                                                         <div>
@@ -456,8 +449,9 @@
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="button-group mt-30 mt-xl-n5">
-                                                        <button type="submit" class="btn">Save Changes</button>
+                                                        <button id="UpdateBtn" type="submit" class="btn">Save Changes</button>
                                                         <button type="button" class="link-btn bg-transparent ml-3 soft-pink">Cancel</button>
+                                                        <p class="error pink-text center-align"></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -793,6 +787,7 @@
     <script src="../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="../../assets/js/script.js"></script>
     <script src="../../assets/js/profile.js"></script>
+    <script src="../../assets/js/edit-profile.js"></script>
     <script src="/AdminDashboard/assets/js/index.js"></script>
     <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
 
