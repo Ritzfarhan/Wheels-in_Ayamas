@@ -12380,4 +12380,9 @@ select#locale {
   line-height: 1.733;
 }
 
+.bi-chevron-left{
+  color: #dbae48;
+  visibility: hidden; 
+}
+
 /*# sourceMappingURL=style.css.map */
