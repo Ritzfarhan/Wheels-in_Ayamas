@@ -12385,4 +12385,8 @@ select#locale {
   visibility: hidden; 
 }
 
+.navbar {
+  -ms-flex-align: auto!important;
+  align-items: auto!important;
+}
 /*# sourceMappingURL=style.css.map */
