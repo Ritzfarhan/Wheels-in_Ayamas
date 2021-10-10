@@ -16,7 +16,7 @@ body {
 }
 
 a {
-  color: #00192F;
+  color: #ffF;
   text-decoration: none;
 }
 
@@ -124,6 +124,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   transition: all 0.5s;
   z-index: 996;
+  position: absolute;
 }
 #topbar.topbar-scrolled {
   top: -40px;
@@ -156,6 +157,7 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(255, 255, 255, 0.5);
   content: "/";
 }
+
 
 /*--------------------------------------------------------------
 # Header
@@ -195,7 +197,11 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 5px 0;
-  top: 40px;
+  top: 30px;
+  position: absolute;
+}
+#edit-header a{
+  padding-left: 20px;
 }
 
 #edit-header .logo {
