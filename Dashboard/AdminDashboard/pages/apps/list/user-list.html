@@ -206,8 +206,8 @@
                                     </div>
                                  </a>
                                  <div class="dropdown-menu">
-                                    <a href="#">My Profile</a>
-                                    <a href="#">Settings</a>
+                                    <a href="/AdminDashboard/pages/pages/user-profile/edit-profile.html">My Profile</a>
+                                    <a href="/AdminDashboard/pages/pages/account-setting.html">Settings</a>
                                     <a href="#" id="logout">Log Out</a>
                                  </div>
                               </div>
@@ -248,30 +248,51 @@
                         <i class="icofont-pie-chart"></i>
                         <span class="link-title">Dashboard</span>
                      </a>
-                     <!-- Sub Menu -->
+                        <!-- Sub Menu -->
+                        <ul class="nav sub-menu">
+                           <li class="active"><a href="/AdminDashboard/index.html">Order List</a></li>
+                           <li><a href="/AdminDashboard/editorderlist.html">Edit Order List</a></li>
+                        </ul>
+                  </li>
+
+                  <li>
+                     <a href="#">
+                           <i class="ti-notepad"></i>
+                           <span class="link-title">Menu</span>
+                     </a>
+                     <!--Sub Menu-->
                      <ul class="nav sub-menu">
-                        <li><a href="/AdminDashboard/index.html">Order List</a></li>
-                        <li><a href="/AdminDashboard/editorderlist.html">Edit Order List</a></li>
-                        <li class="sub-menu-opened">
-                           <a href="#">Menu</a>
-                           <ul class= "nav sub-menu">
-                              <li><a href="/AdminDashboard/pages/maindashboard/menu.html">Chicken Roaster</a></li>
-                              <li><a href="/AdminDashboard/pages/maindashboard/menu2.html">Meal For One</a></li>
-                              <li><a href="/AdminDashboard/pages/maindashboard/menu3.html">Meal For Two</a></li>
-                              <li><a href="/AdminDashboard/pages/maindashboard/menu4.html">Pasta Fiesta</a></li>
-                              <li><a href="/AdminDashboard/pages/maindashboard/menu5.html">Kids Meal</a></li>
-                              <li><a href="/AdminDashboard/pages/maindashboard/menu6.html">Chicken Curry Mee</a></li>
-                              <li><a href="/AdminDashboard/pages/maindashboard/menu7.html">Sides</a></li>
-                              <li><a href="/AdminDashboard/pages/maindashboard/menu8.html">Side Dishes</a></li>
-                              <li><a href="/AdminDashboard/pages/maindashboard/menu9.html">Drinks</a></li>
-
+                           <li><a href="#">Edit Menu</a>
+                           <ul>
+                              <li><a href="/AdminDashboard/pages/maindashboard/menu-details.html">Details</a></li>
+                              <li><a href="/AdminDashboard/pages/maindashboard/add-menu.html">Add</a></li>
                            </ul>
-                        </li>
-                        <li><a href="/AdminDashboard/pages/maindashboard/add-menu.html">Add Menu</a></li>
-                        <li><a href="/AdminDashboard/pages/maindashboard/cartlist.html">Cart List</a></li>
+                           </li>
+               
+                           <li><a href="/AdminDashboard/pages/maindashboard/menu.html">Chicken Roaster</a></li>
+                           <li><a href="/AdminDashboard/pages/maindashboard/menu2.html">Meal For One</a></li>
+                           <li><a href="/AdminDashboard/pages/maindashboard/menu3.html">Meal For Two</a></li>
+                           <li><a href="/AdminDashboard/pages/maindashboard/menu4.html">Pasta Fiesta</a></li>
+                           <li><a href="/AdminDashboard/pages/maindashboard/menu5.html">Kids Meal</a></li>
+                           <li><a href="/AdminDashboard/pages/maindashboard/menu6.html">Chicken Curry Mee</a></li>
+                           <li><a href="/AdminDashboard/pages/maindashboard/menu7.html">Sides</a></li>
+                           <li><a href="/AdminDashboard/pages/maindashboard/menu8.html">Side Dishes</a></li>
+                           <li><a href="/AdminDashboard/pages/maindashboard/menu9.html">Drinks</a></li>
                      </ul>
-                     <!-- End Sub Menu -->
+                  </li>
 
+                  <li>
+                     <a href="/AdminDashboard/pages/maindashboard/cartlist.html">
+                           <i class="icofont-shopping-cart"></i>
+                           <span class="link-title">Cart List</span>
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="/AdminDashboard/pages/maindashboard/order-status.html">
+                           <i class="ti-timer"></i>
+                           <span class="link-title">Order Status</span>
+                     </a>
                   </li>
                
                   <li class="nav-category">Apps</li>
@@ -279,12 +300,12 @@
                   <li>
                      <a href="#">
                         <i class="icofont-file-document"></i>
-                        <span class="link-title">Invoice</span>
+                        <span class="link-title">Sales</span>
                      </a>
 
                      <!-- Sub Menu -->
                      <ul class="nav sub-menu">
-                        <li><a href="/AdminDashboard/pages/apps/invoice/invoice-list.html">Invoice List</a></li>
+                        <li><a href="/AdminDashboard/pages/apps/sales/sales-history.html">History</a></li>
                         <li><a href="/AdminDashboard/pages/apps/invoice/invoice-details.html">Details</a></li>
                         <li><a href="/AdminDashboard/pages/apps/invoice/invoice-add-new.html">Add New</a></li>
                      </ul>
@@ -447,11 +468,6 @@
                                             </label>
                                             <!-- End Custom Checkbox -->
 
-                                            <!-- Star -->
-                                            <div class="star">
-                                                <a href="#"><img src="../../../assets/img/svg/star.svg" alt="" class="svg"></a>
-                                            </div>
-                                            <!-- End Star -->
                                         </th>
                                         <th>Username</th>
                                         <th>Email</th>

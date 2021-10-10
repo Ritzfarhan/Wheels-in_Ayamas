@@ -28,11 +28,6 @@ ref.onSnapshot(snapshot => {
     </label>
     <!-- End Custom Checkbox -->
 
-    <!-- Star -->
-    <div class="star">
-        <a href="#"><img src="../../../assets/img/svg/star.svg" alt="" class="svg"></a>
-    </div>
-    <!-- End Star -->
 </td>
 <td>
     <div class="d-flex align-items-center">
