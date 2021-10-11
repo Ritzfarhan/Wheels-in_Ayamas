@@ -263,6 +263,7 @@ body {
   color: #727272;
   background-color: #865846;
   -webkit-font-smoothing: antialiased;
+  left: -50px;
 }
 
 body.modal-open {
@@ -3839,7 +3840,7 @@ table td a {
 }
 
 table td a:hover {
-  color: #8280FD;
+  color: #b52217;
 }
 
 table tr:not(:last-child) td {
@@ -4819,7 +4820,7 @@ table.table-bordered th:last-child, table.table-bordered td:last-child {
 }
 
 .process-bar-wrapper.style--five.c2 .process-bar, a.process-bar-wrapper.style--five:hover .process-bar, .dropdown-menu .dropdown-body a:hover .process-bar-wrapper.style--five.main-text .process-bar, .dropdown-menu.style--two .dropdown-body a:hover .process-bar-wrapper.style--five.time .process-bar, .process-bar-wrapper.style--five.btn.preview .process-bar, #example-vertical > .actions ul li a.process-bar-wrapper.style--five.preview[href="#next"] .process-bar, #example-vertical > .actions ul li a.process-bar-wrapper.style--five.preview[href="#finish"] .process-bar, .process-bar-wrapper.style--five.btn.style--two .process-bar, #example-vertical > .actions ul li a.process-bar-wrapper.style--five.style--two[href="#next"] .process-bar, #example-vertical > .actions ul li a.process-bar-wrapper.style--five.style--two[href="#finish"] .process-bar, .process-bar-wrapper.style--five.btn.s_alert .process-bar, #example-vertical > .actions ul li a.process-bar-wrapper.style--five.s_alert[href="#next"] .process-bar, #example-vertical > .actions ul li a.process-bar-wrapper.style--five.s_alert[href="#finish"] .process-bar, .process-bar-wrapper.style--five.details-btn .process-bar, .process-bar-wrapper.style--five.light-btn .process-bar, table.table-condensed thead tr:nth-child(2) th.process-bar-wrapper.style--five .process-bar, table.table-contextual .details-btn:hover i.process-bar-wrapper.style--five .process-bar, .sidebar .sidebar-body li.active > a.process-bar-wrapper.style--five .process-bar, .sidebar .sidebar-body li:hover > a.process-bar-wrapper.style--five .process-bar, .fc-view > table thead th.process-bar-wrapper.style--five.fc-day-header .process-bar, .notifications a:hover p.process-bar-wrapper.style--five .process-bar, .news a:hover p.process-bar-wrapper.style--five .process-bar, .process-bar-wrapper.style--five.icon:hover .process-bar, .select2-container--default .select2-selection--multiple .process-bar-wrapper.style--five.select2-selection__choice .process-bar, .process-bar-wrapper.style--five.p_nav-link .process-bar, .about-nav-tab a.process-bar-wrapper.style--five.active .process-bar, .process-bar-wrapper.style--five.iconwrap .process-bar, .dragable-list > div.ui-sortable-helper i.process-bar-wrapper.style--five .process-bar {
-  background-color: #8280FD;
+  background-color: #b52217;
 }
 
 /* Home Social Media Process */
@@ -6891,7 +6892,7 @@ body.sidebar-folded .main-content {
   min-height: 1px;
   padding: 1.25rem;
   background: #f8f2ac;
-  width: 900px;
+  width: 800px;
   margin-top: 0px;
   margin-bottom: 20px;
   
@@ -6901,6 +6902,14 @@ body.sidebar-folded .main-content {
   .cart-list {
     padding: 20px 15px;
   }
+}
+.trans3, a, .ba, .btn-circle:after, .offcanvas-overlay, .aside-body li a:after, .chat_aside .aside-header .aside-header-bottom:after, .message:after, .todo-list .single-row:after, .board .board-cards .board-card:before, .dropdown-menu .dropdown-body .content .main-text, .dropdown-menu.style--two .dropdown-body .content .time, .dropdown-menu.style--two .dropdown-body .content .main-text, .list-button li, .pagination.style--two ul li svg path, .btn, #example-vertical > .actions ul li a[href="#next"], #example-vertical > .actions ul li a[href="#finish"], .follow-btn i, .link-btn i, .details-btn i, .details-btn svg, .light-btn, .change-card-btn, .remove-btn, table tr, table.style--three tr th, table.style--three tr td, .theme-input-style, .search-form .theme-input-group, .search-form .theme-input-group button, .search-form .theme-input-group.header-search, .search-form .theme-input-group.header-search.theme-input-group button, .header, .header .main-header, .header-toogle-menu, .header-icon, .sidebar, .sidebar .sidebar-header .sidebar-toogle-pin, .sidebar .sidebar-body ul.sub-menu li:before, .sidebar .sidebar-body li i, .sidebar .sidebar-body li.has-sub-item:after, .footer, .main-content, .aside-body li.less:after, .mail-list-item, .main-mail, .mail-list-item .mail-text .msg, .main-mail .mail-text .msg, .mail-compose .form-group .cc-btns .cc-btn, .modal-body .form-group .cc-btns .cc-btn, .message, .message p, .todo-list .single-row, .todo-list .single-row.border-bottom.change-border-color, .todo-list .todo-text .card-text, .assign_to .assign-content, .assign-tag, .assign-btn svg line, #projectTaskDetails .modal-content .checklist .checklist-item-wrap .checklist-item-details:after, #projectTaskDetails .modal-content .checklist .checklist-item-wrap .checklist-item-details .icon-delete, #projectTaskDetails .modal-content .checklist-new-item .checklist-add-controls .icon-close, .file-attachments .attachment .attachment-close, .file .dropdown-button, .notifications a p, .news a p, .icon, .price-box, .price-body, .profile-pic:after, .profile-pic .upload-button, .cover-img:after, .cover-img .upload-button, .p_overview-list li .dropdown-button, .p_work-list li .dropdown-button, .p_education-list li .dropdown-button, .add-work-form, .work-update-form, .post-footer .love svg path {
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.c1-bg, ::selection, .btn, #example-vertical > .actions ul li a[href="#next"], #example-vertical > .actions ul li a[href="#finish"], .light-btn.c2-bg:hover, .theme-input-group input, .theme-input-group button.btn.style--three, .theme-input-group > a.btn.style--three, .theme-input-group.input-wrap > a, .aside-body li a:after, .chat_aside .aside-header, .chat-footer div .submit {
+    background-color: #caa476;
 }
 
 .shipping-content {
@@ -7812,7 +7821,7 @@ body.sidebar-folded .main-content {
 }
 
 .assign-btn:hover svg line {
-  stroke: #6045E2;
+  stroke: #b52217;
 }
 
 /* Todo Priority */
@@ -12385,4 +12394,8 @@ select#locale {
   visibility: hidden; 
 }
 
+.navbar {
+  -ms-flex-align: auto!important;
+  align-items: auto!important;
+}
 /*# sourceMappingURL=style.css.map */

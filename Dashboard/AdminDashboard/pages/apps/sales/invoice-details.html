@@ -205,8 +205,8 @@
                                     </div>
                                  </a>
                                  <div class="dropdown-menu">
-                                    <a href="#">My Profile</a>
-                                    <a href="#">Settings</a>
+                                    <a href="/AdminDashboard/pages/pages/user-profile/edit-profile.html">My Profile</a>
+                                    <a href="/AdminDashboard/pages/pages/account-setting.html">Settings</a>
                                     <a href="#" id="logout">Log Out</a>
                                  </div>
                               </div>
@@ -247,30 +247,51 @@
                         <i class="icofont-pie-chart"></i>
                         <span class="link-title">Dashboard</span>
                      </a>
-                     <!-- Sub Menu -->
+                        <!-- Sub Menu -->
+                        <ul class="nav sub-menu">
+                           <li class="active"><a href="/AdminDashboard/index.html">Order List</a></li>
+                           <li><a href="/AdminDashboard/editorderlist.html">Edit Order List</a></li>
+                        </ul>
+                  </li>
+
+                  <li>
+                     <a href="#">
+                           <i class="ti-notepad"></i>
+                           <span class="link-title">Menu</span>
+                     </a>
+                     <!--Sub Menu-->
                      <ul class="nav sub-menu">
-                        <li><a href="/AdminDashboard/index.html">Order List</a></li>
-                        <li><a href="/AdminDashboard/editorderlist.html">Edit Order List</a></li>
-                        <li class="sub-menu-opened">
-                           <a href="#">Menu</a>
-                           <ul class= "nav sub-menu">
-                              <li><a href="/AdminDashboard/pages/maindashboard/menu.html">Chicken Roaster</a></li>
-                              <li><a href="/AdminDashboard/pages/maindashboard/menu2.html">Meal For One</a></li>
-                              <li><a href="/AdminDashboard/pages/maindashboard/menu3.html">Meal For Two</a></li>
-                              <li><a href="/AdminDashboard/pages/maindashboard/menu4.html">Pasta Fiesta</a></li>
-                              <li><a href="/AdminDashboard/pages/maindashboard/menu5.html">Kids Meal</a></li>
-                              <li><a href="/AdminDashboard/pages/maindashboard/menu6.html">Chicken Curry Mee</a></li>
-                              <li><a href="/AdminDashboard/pages/maindashboard/menu7.html">Sides</a></li>
-                              <li><a href="/AdminDashboard/pages/maindashboard/menu8.html">Side Dishes</a></li>
-                              <li><a href="/AdminDashboard/pages/maindashboard/menu9.html">Drinks</a></li>
-
+                           <li><a href="#">Edit Menu</a>
+                           <ul>
+                              <li><a href="/AdminDashboard/pages/maindashboard/menu-details.html">Details</a></li>
+                              <li><a href="/AdminDashboard/pages/maindashboard/add-menu.html">Add</a></li>
                            </ul>
-                        </li>
-                        <li><a href="/AdminDashboard/pages/maindashboard/add-menu.html">Add Menu</a></li>
-                        <li><a href="/AdminDashboard/pages/maindashboard/cartlist.html">Cart List</a></li>
+                           </li>
+               
+                           <li><a href="/AdminDashboard/pages/maindashboard/menu.html">Chicken Roaster</a></li>
+                           <li><a href="/AdminDashboard/pages/maindashboard/menu2.html">Meal For One</a></li>
+                           <li><a href="/AdminDashboard/pages/maindashboard/menu3.html">Meal For Two</a></li>
+                           <li><a href="/AdminDashboard/pages/maindashboard/menu4.html">Pasta Fiesta</a></li>
+                           <li><a href="/AdminDashboard/pages/maindashboard/menu5.html">Kids Meal</a></li>
+                           <li><a href="/AdminDashboard/pages/maindashboard/menu6.html">Chicken Curry Mee</a></li>
+                           <li><a href="/AdminDashboard/pages/maindashboard/menu7.html">Sides</a></li>
+                           <li><a href="/AdminDashboard/pages/maindashboard/menu8.html">Side Dishes</a></li>
+                           <li><a href="/AdminDashboard/pages/maindashboard/menu9.html">Drinks</a></li>
                      </ul>
-                     <!-- End Sub Menu -->
+                  </li>
 
+                  <li>
+                     <a href="/AdminDashboard/pages/maindashboard/cartlist.html">
+                           <i class="icofont-shopping-cart"></i>
+                           <span class="link-title">Cart List</span>
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="/AdminDashboard/pages/maindashboard/order-status.html">
+                           <i class="ti-timer"></i>
+                           <span class="link-title">Order Status</span>
+                     </a>
                   </li>
                
                   <li class="nav-category">Apps</li>
@@ -278,12 +299,12 @@
                   <li class="active sub-menu-opened">
                      <a href="#">
                         <i class="icofont-file-document"></i>
-                        <span class="link-title">Invoice</span>
+                        <span class="link-title">Sales</span>
                      </a>
 
                      <!-- Sub Menu -->
                      <ul class="nav sub-menu">
-                        <li><a href="invoice-list.html">Invoice List</a></li>
+                        <li><a href="sales-history.html">History</a></li>
                         <li class="active"><a href="invoice-details.html">Details</a></li>
                         <li><a href="invoice-add-new.html">Add New</a></li>
                      </ul>
@@ -383,11 +404,6 @@
                         </div>
 
                         <div class="invoice-header-right d-flex align-items-center justify-content-around justify-content-sm-end mt-3 mt-sm-0">
-                           <!-- Starred -->
-                           <div class="star mr-20">
-                              <a href="#"><img src="../../../assets/img/svg/star.svg" alt="" class="svg"></a>
-                           </div>
-                           <!-- End Starred -->
 
                            <!-- Delete Mail -->
                            <div class="delete_mail mr-20">
@@ -459,41 +475,7 @@
 
                      <!-- Invois Wrapper -->
                      <div class="bg-white invoice-pd">
-                        <div class="row">
-                           <div class="col-xl-4 col-md-6">
-                              <!-- Invoice Form -->
-                              <div class="invoice invoice-form">
-                                 <div class="invoice-title c4 bold font-14 mb-3">Invoice Form</div>
-      
-                                 <ul class="list-invoice">
-                                    <li class="user bold black font-17">Ritzfarhan Rosli</li>
-                                    <li class="location">84A-D, Jalan Tun Sambanthan, Brickfields,<br />
-                                       Kuala Lumpur, 50470</li>
-                                    <li class="call">
-                                       <a href="tel:+01234567891">012 3456 7891</a>
-                                    </li>
-                                    <li class="mail"><a href="mailto:xixori6360@vefblogg.com">farhan@email.com</a></li>
-                                 </ul>
-                              </div>
-                              <!-- End Invoice Form -->
-                           </div>
-                           <div class="col-xl-4 col-md-6">
-                              <!-- Invoice To -->
-                              <div class="invoice invoice-to mt-5 mt-md-0">
-                                 <div class="invoice-title c4 bold font-14 mb-3">Invoice To</div>
-      
-                                 <ul class="list-invoice">
-                                    <li class="user bold black font-17">Adam Hudson</li>
-                                    <li class="location">Jalan 3, Desa Jaya, Kepong,<br />
-                                       Kuala Lumpur, 52100</li>
-                                    <li class="call">
-                                       <a href="tel:+01234567891">012 3456 7891</a>
-                                    </li>
-                                    <li class="mail"><a href="mailto:xixori6360@vefblogg.com">adamhud@email.com</a></li>
-                                 </ul>
-                              </div>
-                              <!-- End Invoice To -->
-                           </div>
+                        <div class="row">      
                            <div class="col-xl-4 col-md-6">
                               <!-- Invoice Payment Details -->
                               <div class="invoice payment-details mt-5 mt-xl-0">
@@ -602,13 +584,7 @@
                                        </td>
                                     </tr>
                                  </tbody>
-                              </table>
-                     
-                              <div class="proceed-to-checkout d-flex align-items-center justify-content-end mr-20 mt-4">
-                                 <a href="#" class="download-btn mr-3"><img src="../../../assets/img/svg/download.svg" alt="" class="svg"></a>
-                                 <a href="#" class="print-btn mr-20"><img src="../../../assets/img/svg/print-yellow.svg" alt="" class="svg"></a>
-                                 <a href="#" class="btn" id="btn1">Order Now</a>
-                              </div>
+                              </table>                   
                            </div>
                         </div>
                         <!-- End Cart Collaterals -->
