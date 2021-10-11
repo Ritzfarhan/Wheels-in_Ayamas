@@ -19,14 +19,22 @@
 //    LastName: l_name
 //  });
 //}
+let file = {};
 
+function choosefile(e){
+  file = e.target.files[0];
+}
 
 const Updateform = document.querySelector('#update-form');
 Updateform.addEventListener('submit', (e) => {
   e.preventDefault();
 
+
+
   // sign up the user & add firestore data
   auth.onAuthStateChanged(user => {
+
+
     db.collection("users").doc(user.uid).update({
       Username:Updateform['user-name-edit'].value,
         f_name:Updateform['f-name-edit'].value,
@@ -47,8 +55,15 @@ Updateform.addEventListener('submit', (e) => {
       
   })
   
-
-
+});
+//firebase.auth().onAuthStateChanged(user =>{
+//  if(user){
+//    firebase.storage().ref('users/'+ user.uid + '/profile.jpg').getDownloadURL()
+//    .then(imgUrl => {
+//      img.src = imgUrl;
+//    })
+//  }
+//})
 
 
   //email: Updateform['signup-email'].value
@@ -65,7 +80,7 @@ Updateform.addEventListener('submit', (e) => {
   //}).catch(err => {
   //    console.log;
   //    signupForm.querySelector('.error').innerHTML = err.message;
-});
+
 
 
 

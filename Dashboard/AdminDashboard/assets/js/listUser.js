@@ -12,8 +12,6 @@ ref.onSnapshot(snapshot => {
     });
     console.log(requests);
 
-     let name = '';
-     let email = '';
      let list = '';
     requests.forEach(request => {
 

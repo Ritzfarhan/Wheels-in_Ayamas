@@ -42,18 +42,29 @@ exports.addStaffRole = functions.https.onCall((data, context) => {
     .then(user => {
       return admin.auth().setCustomUserClaims(user.uid, { staff: true, })
     })
-    .then(user => {
-
-
-      return firebase.firestore().collection(`users/${user.uid}`).add(
-        {
-          roles: "staff"
-        }
-      )
-    })
     .then(() => {
       return {
         message: `Success! ${data.email} has been made as Staff.`
+      }
+    }).catch(err => {
+      return err;
+    });
+});
+
+exports.addroles = functions.https.onCall((data, context) => {
+  // check request is made by an admin
+  if (context.auth.token.admin !== true) {
+    return { error: "Only admins can add other staff" }
+  }
+
+  return admin.auth().getUserByEmail(data.email)
+    .then(user => {
+      return db.collection("users").doc(user.uid).set({ roles: "staff" },
+        { merge: true })
+
+    }).then(() => {
+      return {
+        message: `Success! roles updated.`
       }
     }).catch(err => {
       return err;
