@@ -1,8 +1,15 @@
 
+
+let file = {};
+
+function choosefile(e) {
+  file = e.target.files[0];
+}
+
 const menuform = document.querySelector('#menu-form');
 menuform.addEventListener('submit', (e) => {
   e.preventDefault();
-
+    
   // sign up the user & add firestore data
  
     db.collection("Menu").add({
@@ -12,7 +19,7 @@ menuform.addEventListener('submit', (e) => {
        Description:menuform['menu-description'].value
 
       }).then(() => {
-    
+        
         menuform.reset();
         menuform.querySelector('.error').innerHTML = ''
         Swal.fire({ title: "Success!", text: "Menu added", allowOutsideClick: !0, confirmButtonClass: "btn long", buttonsStyling: !1 });
@@ -22,5 +29,12 @@ menuform.addEventListener('submit', (e) => {
         console.log;
          menuform.querySelector('.error').innerHTML = err.message;
     });
-      
+
+
+let name = menuform['menu-name'].value;
+    firebase.storage().ref('menu/' + name + '/profile.jpg').put(file).then( function() {
+      console.log('uploaded profile image')
+    }).catch(error =>{
+      console.log(error.message);
+    })
 });
