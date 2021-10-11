@@ -21,40 +21,53 @@
 //}
 let file = {};
 
-function choosefile(e){
+function choosefile(e) {
   file = e.target.files[0];
 }
+
+
+
 
 const Updateform = document.querySelector('#update-form');
 Updateform.addEventListener('submit', (e) => {
   e.preventDefault();
 
+  
 
 
   // sign up the user & add firestore data
   auth.onAuthStateChanged(user => {
 
 
+
     db.collection("users").doc(user.uid).update({
-      Username:Updateform['user-name-edit'].value,
-        f_name:Updateform['f-name-edit'].value,
-        l_name:Updateform['l-name-edit'].value
-      }).then(() => {
-        // close the signup modal & reset form
-        //const modal = document.querySelector('#modal-signup');
-        //M.Modal.getInstance(modal).close();
-        Updateform.reset();
-        Updateform.querySelector('.error').innerHTML = ''
-        Swal.fire({ title: "Success!", text: "Your Profile have been updated", allowOutsideClick: !0, confirmButtonClass: "btn long", buttonsStyling: !1 });
-        //setupPage(user);
-        window.location.href = "/AdminDashboard/pages/pages/user-profile/edit-profile.html";
+      Username: Updateform['user-name-edit'].value,
+      f_name: Updateform['f-name-edit'].value,
+      l_name: Updateform['l-name-edit'].value
+    }).then(() => {
+      // close the signup modal & reset form
+      //const modal = document.querySelector('#modal-signup');
+      //M.Modal.getInstance(modal).close();
+      Updateform.reset();
+      Updateform.querySelector('.error').innerHTML = ''
+      Swal.fire({ title: "Success!", text: "Your Profile have been updated", allowOutsideClick: !0, confirmButtonClass: "btn long", buttonsStyling: !1 });
+      //setupPage(user);
+      window.location.href = "/AdminDashboard/pages/pages/user-profile/edit-profile.html";
     }).catch(err => {
-        console.log;
-        Updateform.querySelector('.error').innerHTML = err.message;
+      console.log;
+      Updateform.querySelector('.error').innerHTML = err.message;
     });
-      
+
   })
-  
+
+auth.onAuthStateChanged(user => {
+    firebase.storage().ref('users/' + user.uid + '/profile.jpg').put(file).then( function() {
+      console.log('uploaded profile image')
+    }).catch(error =>{
+      console.log(error.message);
+    })
+  })
+
 });
 //firebase.auth().onAuthStateChanged(user =>{
 //  if(user){
