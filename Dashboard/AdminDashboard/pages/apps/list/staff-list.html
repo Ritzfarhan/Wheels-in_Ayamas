@@ -752,7 +752,7 @@
                            <div class="modal-content">
                               <!-- Modal Body -->
                               <div class="modal-body">
-                                 <form action="#">
+                                 <form class="staff-actions">
 
                                     <div class="media flex-column flex-sm-row">
                                        <!--<div class="modal-upload-avatar mr-0 mr-sm-3 mr-md-5 mb-5 mb-sm-0">
@@ -784,7 +784,7 @@
 
                                           <div class="mb-4">
                                              <label class="bold black mb-2" for="as_email">Email</label>
-                                             <input type="email" id="as_email" class="theme-input-style"
+                                             <input type="email" id="staff-email" class="theme-input-style"
                                                 placeholder="Type Here" required>
                                           </div>
 
@@ -813,8 +813,8 @@
                                           </div>-->
 
                                           <div class="">
-                                             <a href="#" class="btn mr-4">Save</a>
-                                             <a href="#" class="cancel font-14 bold" data-dismiss="modal">Cancel</a>
+                                             <button href="#" class="btn mr-4">Save</button>
+                                             <a href="#" class="cancel font-14 bold" data-dismiss="modal">Close</a>
                                           </div>
                                        </div>
                                     </div>
@@ -829,7 +829,7 @@
                      <!-- Contact Edit PopUp -->
                      <div id="contactEditModal" class="modal fade">
                         <div class="modal-dialog modal-dialog-centered">
-                           <div class="modal-content">
+                           <div class="modal-content" id="add-staff-modal">
                               <!-- Modal Body -->
                               <div class="modal-body">
                                  <form action="#">
@@ -956,9 +956,10 @@
    <script src="../../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
    <script src="../../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
    <script src="../../../assets/js/script.js"></script>
-   <script src="../../../assets/js/profile.js"></script>
    <script src="../../../assets/js/index.js"></script>
    <script src="../../../assets/js/listStaff.js"></script>
+   <script src="../../../assets/js/addStaff.js"></script>
+   <script src="../../../assets/js/profile.js"></script>
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
 
    <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
