@@ -1,3 +1,16 @@
+auth.onAuthStateChanged(user => {
+    if (user) {
+        console.log('user logged in: ', user);
+        user.getIdTokenResult().then(idTokenResult => {
+            user.admin = idTokenResult.claims.admin;
+            user.staff = idTokenResult.claims.staff;
+        });
+    } else {
+        console.log('user logged out');
+    }
+})
+
+
 const StaffForm = document.querySelector('.staff-actions');
 StaffForm.addEventListener('submit', (e) => {
     e.preventDefault();
