@@ -3981,7 +3981,7 @@ table {
 
 table th {
   color: #00192F;
-  border-bottom: 1px solid #FFE75C;
+  border-bottom: 1px solid rgba(16, 24, 32, 0.534);
 }
 
 table td {
