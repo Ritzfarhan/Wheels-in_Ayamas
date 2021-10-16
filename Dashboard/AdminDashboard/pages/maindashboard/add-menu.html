@@ -115,75 +115,6 @@
                            </li>
 
                            <li>
-                              <!-- Main Header Notification -->
-                              <div class="main-header-notification d-none d-md-block">
-                                <a href="#" class="header-icon notification-icon" data-toggle="dropdown">
-                                   <span class="count" data-bg-img="../../assets/img/circlee.png">22</span>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="font-size:20px;color:#B52217" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
-                                      <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
-                                    </svg>
-                                </a>
-                                <div class="dropdown-menu style--two dropdown-menu-right">
-                                    <!-- Dropdown Header -->
-                                    <div class="dropdown-header d-flex align-items-center justify-content-between">
-                                       <h5>5 New notifications</h5>
-                                       <a href="#" class="text-mute d-inline-block">Clear all</a>
-                                    </div>
-                                    <!-- End Dropdown Header -->
-
-                                    <!-- Dropdown Body -->
-                                    <div class="dropdown-body">
-                                       <!-- Item Single -->
-                                       <a href="#" class="item-single d-flex align-items-center">
-                                          <div class="content">
-                                             <div class="mb-2">
-                                                <p class="time">2 min ago</p>
-                                             </div>	
-                                             <p class="main-text">Donec dapibus mauris id odio ornare tempus amet.</p>
-                                          </div>
-                                       </a>
-                                       <!-- End Item Single -->
-
-                                       <!-- Item Single -->
-                                       <a href="#" class="item-single d-flex align-items-center">
-                                          <div class="content">
-                                             <div class="mb-2">
-                                                <p class="time">2 min ago</p>
-                                             </div>	
-                                             <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                          </div>
-                                       </a>
-                                       <!-- End Item Single -->
-
-                                       <!-- Item Single -->
-                                       <a href="#" class="item-single d-flex align-items-center">
-                                          <div class="content">
-                                             <div class="mb-2">
-                                                <p class="time">2 min ago</p>
-                                             </div>	
-                                             <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                          </div>
-                                       </a>
-                                       <!-- End Item Single -->
-
-                                       <!-- Item Single -->
-                                       <a href="#" class="item-single d-flex align-items-center">
-                                          <div class="content">
-                                             <div class="mb-2">
-                                                <p class="time">2 min ago</p>
-                                             </div>	
-                                             <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                          </div>
-                                       </a>
-                                       <!-- End Item Single -->
-                                    </div>
-                                    <!-- End Dropdown Body -->
-                                 </div>
-                              </div>
-                              <!-- End Main Header Notification -->
-                           </li>
-
-                           <li>
                               <!-- Main Header User -->
                               <div class="main-header-user">
                                  <a href="#" class="d-flex align-items-center" data-toggle="dropdown">
@@ -270,7 +201,7 @@
                      <ul class="nav sub-menu">
                         <li><a href="#">Edit Menu</a>
                            <ul>
-                              <li><a href="menu-details.html">Details</a></li>
+                              <li><a href="menu-list.html">Details</a></li>
                               <li class="active"><a href="add-menu.html">Add</a></li>
                            </ul>
                         </li>
@@ -403,106 +334,104 @@
                 <div class="row">
  
                     <div class="col-xl-12 mb-30 mb-xl-0">
-                            <!-- Form Element -->
-                            <div class="form-element py-30 mb-30" style="background-color: #f9ef82;">
+                           
 
-                                <h4 class="font-20 mb-4">Add Menu</h4>
-                                <!-- Repeater Html Start -->
-                                <form action="#" id="menu-form">
+                                <h4 class="font-20 mb-4" style="font-size: 1000px;">Add Menu</h4>
+                                 <!-- Base Control -->
+                                 <div class="form-element base-control mb-30" style="background-color: #f9ef82;">
+                                    <h4 class="font-20 mb-6"></h4>
 
-                                    <div class="row">
-                                        <!-- Form Group -->
-                                        <div class="form-group col-lg-6">
-                                            <label for="inputMenuName" class="bold mb-2">Menu Name</label>
-                                            <input type="text" class="form-control" id="menu-name" placeholder="GOLDEN ROASTER - Quarter Chicken">
-                                        </div>
-                                        <!-- End Form Group -->
-                                        
-                                        <!-- Form Group -->
-                                        <div class="form-group col-lg-6">
-                                            <label for="inputMobile2"class="bold mb-2">Category</label>
+                                    <!-- Form -->
+                                    <form action="#" method="POST">
 
-                                            <div class="theme-input-group style--two">
-                                                <input type="text"  id="menu-category" class="textbg form-control" placeholder="">
-                                                <div class="input-group-append">
-                                                    <button type="button" class="btn3 textbg" data-toggle="dropdown"><i class="icofont-simple-down"></i></button>
+                                       <!-- Form Group -->
+                                       <div class="form-group mb-4">
+                                          <label for="email1" class="mb-2 black bold">Menu Name</label>
+                                          <input type="email" class="theme-input-style" id="email1" placeholder="GOLDEN ROASTER - Whole Chicken">
+                                       </div>
+                                       <!-- End Form Group -->
 
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="#">Chicken Roaster</a>
-                                                        <a class="dropdown-item" href="#">Meal For One</a>
-                                                        <a class="dropdown-item" href="#">Meal For Two</a>
-                                                        <a class="dropdown-item" href="#">Pasta Fiesta</a>
-                                                        <a class="dropdown-item" href="#">Kids Meal</a>
-                                                        <a class="dropdown-item" href="#">Chicken Curry Meal</a>
-                                                        <a class="dropdown-item" href="#">Sides</a>
-                                                        <a class="dropdown-item" href="#">Side Dishes</a>
-                                                        <a class="dropdown-item" href="#">Drinks</a>
-
-                                                    </div>
-                                                </div>
+                                       <!-- Form Group -->
+                                       <div class="form-group mb-4">
+                                          <label for="addonEmail" class="mb-2 black bold">Price</label>
+  
+                                          <div class="input-group addon">
+                                            <div class="input-group-prepend">
+                                              <div class="input-group-text black bold">$</div>
                                             </div>
-                                        </div>
-                                        <!-- End Form Group -->
+                                            <input type="text" id="addonEmail" class="form-control" placeholder="19.00">
+                                          </div>
+                                      </div>
+                                       <!-- End Form Group -->
 
-                                        <!-- Form Group -->
-                                        <div class="form-group col-lg-6">
-                                            <label for="joint-addons"  class="bold mb-2">Price</label>
-                                            <div class="input-group addon">
-                                                <div class="input-group-prepend">
-                                                <span class="textbg input-group-text bold black">RM</span>
-                                                </div>
-                                                <input type="number" class="textbg form-control" id="menu-price">
-                                            </div>
-                                        </div>
-                                        <!-- End Form Group -->
+                                       <!-- Form Group -->
+                                       <div class="form-group mb-4">
+                                          <label for="exampleSelect1" class="mb-2 black bold d-block">Category</label>
+                                          <div class="custom-select style--two">
+                                                <select class="theme-input-style" id="exampleSelect1">
+                                                   <option value="Chicken Roaster">Chicken Roaster</option>
+                                                   <option value="Meal For One">Meal For One</option>
+                                                   <option value="Meal For Two">Meal For Two</option>
+                                                   <option value="Pasta Fiesta">Pasta Fiesta</option>
+                                                   <option value="Kids Meal">Kids Meal</option>
+                                                   <option value="Chicken Curry Meal">Chicken Curry Meal</option>
+                                                   <option value="Sides">Sides</option>
+                                                   <option value="Side Dishes">Side Dishes</option>
+                                                   <option value="Drinks">Drinks</option>
+                                                </select>
+                                          </div>
+                                       </div>
+                                       <!-- End Form Group -->
 
-                                        <!-- Form Group -->
-                                        <div class="form-group col-lg-6">
-                                            <label for="textarea1"  class="bold mb-22">Description</label>
-                                            <textarea id="menu-description"    class="textbg theme-input-style" placeholder="Type Here" ></textarea>
-                                            <p class="error pink-text center-align"></p>
-                                        </div>
-                                        <!-- End Form Group -->
+                                       <!-- Form Group 
+                                       <div class="form-group mb-4">
+                                          <label for="exampleSelect2" class="mb-2 black bold d-block">Example multiple select</label>
 
-                                        <div class="col-12 file-repeater mt-3">
-                                            <div data-repeater-list="repeater-list">
-                                                <div data-repeater-item>
-                                                    <div class="upload-avatar d-xl-flex align-items-center flex-column">
-                                                        <div>
-                                                            <div class="attach-file style--two rounded-0 align-items-end mb-3">
-                                                                <img src="../../assets/img/img-placeholder.png" class="profile-avatar" alt="">
-                                                                <div class="upload-button mb-20">
-                                                                   <img src="../../assets/img/svg/gallery.svg" alt="" class="svg mr-2">
-                                                                   <span>Upload Photo</span>
-                                                                   <input class="file-input" type="file" id="fileUpload" onchange="choosefile(event)">
-                                                                </div>
-                                                            </div>
-                                                            <div class="content">
-                                                                <h4 class="mb-2">Upload a Photo</h4>
-                                                                <p class="font-12 c4">Allowed JPG, GIF or PNG. Max size <br /> of 800kB</p>   
-                                                            </div>
-                                                           
+                                          <select class="theme-input-style multiple" id="exampleSelect2" multiple>
+                                                <option value="">You disposal strongly quitting his endeavor two settling him.</option>
+                                                <option value="">Manners ham him hearted hundred expense.</option>
+                                                <option value="">Get open game him what hour more part.</option>
+                                                <option value="">Adapted as smiling of females oh me journey exposed concern.</option>
+                                                <option value="">Met come add cold calm rose mile what.</option>
+                                                <option value="">Tiled manor court at built by place fanny.</option>
+                                          </select>
+                                       </div>
+                                           End Form Group -->
 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>  
-                                    <div class="d-flex align-items-center justify-content-end mr-20 mt-4">
-                                        <button type="submit" class="btn">Save Changes</button>
-                                     </div>
-                                    <div class="pt-2">
-                                        <!-- Repeater Add Btn -->
-                                        <a href="add-menu.html">
-                                          <button data-repeater-create type="button" class="repeater-add-btn btn-circle position-relative"> 
-                                              <img src="../../assets/img/svg/plus_white.svg" alt="" class="svg">
-                                          </button>
-                                          <span class="bold c2 ml-1">Add New</span>
-                                        </a> 
-                                    </div>
-                                </form>
-                            </div> 
+                                       <!-- Form Group -->
+                                       <div class="form-group mb-4">
+                                          <label for="exampleTextarea1" class="mb-2 black bold d-block">Description</label>
+                                          <textarea id="exampleTextarea1" class="theme-input-style" placeholder="Type Here"></textarea>
+                                       </div>
+                                       <!-- End Form Group -->
+                                       <div class="modal-upload-avatar mr-0 mr-sm-3 mr-md-5 mb-5 mb-sm-0">
+
+                                          <div class="attach-file style--two mb-3">
+                                             <img src="../../../assets/img/img-placeholder.png" class="profile-avatar" alt="">
+                                             <div class="upload-button">
+                                                <img src="../../../assets/img/svg/gallery.svg" alt="" class="svg mr-2">
+                                                <span>Upload Photo</span>
+                                                <input class="file-input" type="file" id="fileUpload" accept="image/*">
+                                             </div>
+                                          </div>
+
+                                          <div class="content">
+                                             <h4 class="mb-2">Upload a Photo</h4>
+                                             <p class="font-12 c4">Allowed JPG, GIF or PNG. Max size <br /> of 800kB</p>
+                                          </div>
+                                       </div>
+
+                                       <!-- Button Group -->
+                                       <div class="button-group pt-1">
+                                          <button type="submit" class="btn long">Add</button>
+                                          <button type="reset" class="link-btn bg-transparent ml-3 soft-pink">Cancel</button>
+                                       </div>
+                                       <!-- End Button Group -->
+                                    </form>
+                                    <!-- End Form -->
+                              </div>
+                              <!-- End Base Control -->
+                           
                             
                             
 

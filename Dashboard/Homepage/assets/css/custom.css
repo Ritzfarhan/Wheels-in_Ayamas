@@ -57,4 +57,33 @@
   left:60px;
   top:-30px; 
 }
-
+.btn.btn-info-menu{
+  display: inline-block;
+    font-weight: 1000;
+    line-height: 0.8;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    background: #caa476;
+    border: 2px solid black;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn.btn-info-menu:hover{
+  background:rgb(219, 174, 72);
+}
+img, svg {
+  vertical-align: middle;
+}
+#cart-list:hover{
+  color: #b52217;
+}
