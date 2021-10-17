@@ -24,7 +24,7 @@ menuform.addEventListener('submit', (e) => {
     menuform.querySelector('.error').innerHTML = ''
     Swal.fire({ title: "Success!", text: "Menu added", allowOutsideClick: !0, confirmButtonClass: "btn long", buttonsStyling: !1 }); 
     //setupPage(user);
-    window.location.href = "/AdminDashboard/pages/maindashboard/menu-list.html";
+    
   }).catch(err => {
     console.log;
     menuform.querySelector('.error').innerHTML = err.message;
@@ -36,6 +36,7 @@ menuform.addEventListener('submit', (e) => {
     console.log('uploaded profile image')
   }).then(() => {
     run(2000).then(() => { getMenu(name); });
+    window.location.href = "/AdminDashboard/pages/maindashboard/menu-list.html";
   }).catch(error => {
     console.log(error.message);
   })
