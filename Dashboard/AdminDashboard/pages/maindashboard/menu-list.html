@@ -385,7 +385,7 @@
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class="menu-list">
                                     <tr>
                                        <td>
                                             <!-- Custom Checkbox -->
@@ -643,16 +643,16 @@
                            <div class="modal-content">
                               <!-- Modal Body -->
                               <div class="modal-body">
-                                 <form action="#">
+                                 <form action="#" id="update-menu-form">
                                     <div class="media flex-column flex-sm-row">
                                        <div class="modal-upload-avatar mr-0 mr-sm-3 mr-md-5 mb-5 mb-sm-0">
 
                                              <div class="attach-file style--two mb-3">
                                                 <img src="../../assets/img/product/pg2.png" class="profile-avatar" alt="">
-                                                <<div class="upload-button">
+                                                <div class="upload-button">
                                                    <img src="../../../assets/img/svg/gallery.svg" alt="" class="svg mr-2">
                                                    <span>Upload Photo</span>
-                                                   <input class="file-input" type="file" id="fileUpload2" accept="image/*">
+                                                   <input class="file-input" type="file" id="fileUpload2" onchange="choosefile(event)" accept="image/*">
                                                 </div>
                                              </div>
 
@@ -669,7 +669,7 @@
 
                                           <div class="mb-4">
                                              <label class="bold black mb-2" for="as_name2">Menu Name</label>
-                                             <label type="text" id="as_name2" class="theme-input-style" value="AirilIsham" required></label>
+                                             <input type="text" id="menu-name" class="theme-input-style" value="AirilIsham" required></input>
                                           </div>
                                           
                                           <div class="form-group mb-4">
@@ -679,14 +679,14 @@
                                                <div class="input-group-prepend">
                                                  <div class="input-group-text black bold">$</div>
                                                </div>
-                                               <input type="text" id="addonEmail" class="form-control" placeholder="19.00">
+                                               <input type="number" type="any" id="menu-price" class="form-control" placeholder="19.00">
                                              </div>
                                          </div>
                                           
                                           <div class="mb-4">
                                              <label for="exampleSelect1" class="mb-2 black bold d-block">Category</label>
                                              <div>
-                                                   <select class="theme-input-style" id="exampleSelect1">
+                                                   <select class="theme-input-style" id="menu-category">
                                                       <option value="Chicken Roaster">Chicken Roaster</option>
                                                       <option value="Meal For One">Meal For One</option>
                                                       <option value="Meal For Two">Meal For Two</option>
@@ -702,7 +702,7 @@
                                           
                                           <div class="form-group mb-4">
                                              <label for="exampleTextarea1" class="mb-2 black bold d-block">Description</label>
-                                             <textarea id="exampleTextarea1" class="theme-input-style" placeholder="Type Here"></textarea>
+                                             <textarea id="menu-description" class="theme-input-style" placeholder="Type Here"></textarea>
                                           </div>                                       
                                           
                                          <!-- <div class="mb-4">
@@ -720,7 +720,7 @@
                                           </div>-->
 
                                           <div class="">
-                                             <a href="#" class="btn mr-4">Save</a>
+                                             <button type="submit" href="#" class="btn mr-4">Save</button>
                                              <a href="#" class="cancel font-14 bold" data-dismiss="modal">Cancel</a>
                                           </div>
                                        </div>
@@ -753,6 +753,7 @@
    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-storage.js"></script>
    <script>
       // Initialize Firebase
       var config = {
@@ -782,6 +783,7 @@
    <script src="../../assets/js/script.js"></script>
    <script src="../../assets/js/profile.js"></script>
    <script src="../../assets/js/index.js"></script>
+   <script src="../../assets/js/listMenu.js"></script>
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
 
    <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
