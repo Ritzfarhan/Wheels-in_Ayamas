@@ -345,7 +345,7 @@
                                  <th>Total</th>
                               </tr>
                            </thead>
-                           <tbody>
+                           <tbody class="cart-items">
                               <tr>
                                  <td>#01</td>
                                  <td><a href="#">Meal For One</a></td>
@@ -472,7 +472,7 @@
                                     <td>Tax (5%)</td>
                                     <td>
                                        <span class="Price-amount amount">
-                                          <span class="Price-currencySymbol">RM</span>2.00</span>
+                                          <span class="Price-currencySymbol">RM</span><span class="total-cost-number">3103.31</span></span>
                                     </td>
                                  </tr>
                   
@@ -480,8 +480,7 @@
                                     <td>Total</td>
                                     <td>
                                        <strong>
-                                          <span class="Price-amount amount"><span class="Price-currencySymbol">RM</span>52.10</span>
-                                       </strong> 
+                                          <span class="Price-amount amount"><span class="Price-currencySymbol">RM</span ><span class="total-cost">3103.31</span></span>                                       </strong> 
                                     </td>
                                  </tr>
                               </tbody>
@@ -515,6 +514,7 @@
       <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
       <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
       <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-storage.js"></script>
       <script>
          // Initialize Firebase
          var config = {
@@ -538,12 +538,15 @@
       </script>
 
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
+   <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+
    <script src="../../assets/js/jquery.min.js"></script>
    <script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
    <script src="../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
    <script src="../../assets/js/script.js"></script>
    <script src="../../assets/js/profile.js"></script>
    <script src="../../assets/js/index.js"></script>
+   <script src="../../assets/js/cartlist.js"></script>
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
 
       <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->

@@ -1,5 +1,6 @@
+
 function getMenu() {
-    db.collection("Menu").where("Category", "==", "Chicken Roaster").onSnapshot(snapshot => {
+    db.collection("Menu").where("Category", "==", "Pasta Fiesta").onSnapshot(snapshot => {
         console.log();
         let items = [];
         snapshot.forEach((doc) => {
