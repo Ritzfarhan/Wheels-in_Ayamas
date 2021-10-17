@@ -82,7 +82,8 @@ function EditItem(menuId) {
             console.log('uploaded profile image')
         }).then(() => {
             run(2000).then(() => { getMenu(name); });
-            // window.location.href = "/AdminDashboard/pages/maindashboard/menu-list.html";
+            run(3000).then(() => { window.location.href = "/AdminDashboard/pages/maindashboard/menu-list.html"; });
+            //window.location.href = "/AdminDashboard/pages/maindashboard/menu-list.html";
             menuform.reset();
             menuform.querySelector('.error').innerHTML = ''
             Swal.fire({ title: "Success!", text: "Your menu have been updated", allowOutsideClick: !0, confirmButtonClass: "btn long", buttonsStyling: !1 });

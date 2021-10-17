@@ -36,7 +36,7 @@ menuform.addEventListener('submit', (e) => {
     console.log('uploaded profile image')
   }).then(() => {
     run(2000).then(() => { getMenu(name); });
-    window.location.href = "/AdminDashboard/pages/maindashboard/menu-list.html";
+    run(3000).then(() => { window.location.href = "/AdminDashboard/pages/maindashboard/menu-list.html"; });
   }).catch(error => {
     console.log(error.message);
   })
