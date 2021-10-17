@@ -21,16 +21,16 @@ menuform.addEventListener('submit', (e) => {
       Description: menuform['menu-description'].value
     }).then(() => {
       // close the signup modal & reset form
-      //const modal = document.querySelector('#modal-signup');
+      //const modal = document.querySelector('#edit-menu-modal');
       //M.Modal.getInstance(modal).close();
-      Updateform.reset();
-     // Updateform.querySelector('.error').innerHTML = ''
-      Swal.fire({ title: "Success!", text: "Your Profile have been updated", allowOutsideClick: !0, confirmButtonClass: "btn long", buttonsStyling: !1 });
+      menuform.reset();
+      menuform.querySelector('.error').innerHTML = ''
+      Swal.fire({ title: "Success!", text: "Your menu have been updated", allowOutsideClick: !0, confirmButtonClass: "btn long", buttonsStyling: !1 });
       //setupPage(user);
-      //window.location.href = "/AdminDashboard/pages/pages/user-profile/edit-profile.html";
+      window.location.href = "/AdminDashboard/pages/maindashboard/menu-list.html";
     }).catch(err => {
       console.log;
-     // Updateform.querySelector('.error').innerHTML = err.message;
+      menuform.querySelector('.error').innerHTML = err.message;
     });
 
       // link menu pic with firestore

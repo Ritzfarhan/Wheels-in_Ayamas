@@ -22,10 +22,9 @@ menuform.addEventListener('submit', (e) => {
 
     menuform.reset();
     menuform.querySelector('.error').innerHTML = ''
-    Swal.fire({ title: "Success!", text: "Menu added", allowOutsideClick: !0, confirmButtonClass: "btn long", buttonsStyling: !1 });
-   
+    Swal.fire({ title: "Success!", text: "Menu added", allowOutsideClick: !0, confirmButtonClass: "btn long", buttonsStyling: !1 }); 
     //setupPage(user);
-
+    window.location.href = "/AdminDashboard/pages/maindashboard/menu-list.html";
   }).catch(err => {
     console.log;
     menuform.querySelector('.error').innerHTML = err.message;
