@@ -24,6 +24,10 @@
    <link rel="stylesheet" href="../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.css">
    <!-- ======= END BEGIN GLOBAL MANDATORY STYLES ======= -->
 
+   <!-- ======= BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
+   <link rel="stylesheet" href="../../assets/fonts/themify-icons/themify-icons.css">
+   <!-- ======= END BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
+
    <!-- ======= MAIN STYLES ======= -->
    <link rel="stylesheet" href="../../assets/css/style.css">
    <link rel="stylesheet" href="../../assets/css/custom.css">
@@ -108,75 +112,6 @@
                            </li>
 
                            <li>
-                              <!-- Main Header Notification -->
-                              <div class="main-header-notification d-none d-md-block">
-                                 <a href="#" class="header-icon notification-icon" data-toggle="dropdown">
-                                    <span class="count" data-bg-img="../../assets/img/circlee.png">22</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="font-size:20px;color:#B52217" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
-                                       <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
-                                     </svg>
-                                 </a>
-                                 <div class="dropdown-menu style--two dropdown-menu-right">
-                                    <!-- Dropdown Header -->
-                                    <div class="dropdown-header d-flex align-items-center justify-content-between">
-                                       <h5>5 New notifications</h5>
-                                       <a href="#" class="text-mute d-inline-block">Clear all</a>
-                                    </div>
-                                    <!-- End Dropdown Header -->
-
-                                    <!-- Dropdown Body -->
-                                    <div class="dropdown-body">
-                                       <!-- Item Single -->
-                                       <a href="#" class="item-single d-flex align-items-center">
-                                          <div class="content">
-                                             <div class="mb-2">
-                                                <p class="time">2 min ago</p>
-                                             </div>	
-                                             <p class="main-text">Donec dapibus mauris id odio ornare tempus amet.</p>
-                                          </div>
-                                       </a>
-                                       <!-- End Item Single -->
-
-                                       <!-- Item Single -->
-                                       <a href="#" class="item-single d-flex align-items-center">
-                                          <div class="content">
-                                             <div class="mb-2">
-                                                <p class="time">2 min ago</p>
-                                             </div>	
-                                             <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                          </div>
-                                       </a>
-                                       <!-- End Item Single -->
-
-                                       <!-- Item Single -->
-                                       <a href="#" class="item-single d-flex align-items-center">
-                                          <div class="content">
-                                             <div class="mb-2">
-                                                <p class="time">2 min ago</p>
-                                             </div>	
-                                             <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                          </div>
-                                       </a>
-                                       <!-- End Item Single -->
-
-                                       <!-- Item Single -->
-                                       <a href="#" class="item-single d-flex align-items-center">
-                                          <div class="content">
-                                             <div class="mb-2">
-                                                <p class="time">2 min ago</p>
-                                             </div>	
-                                             <p class="main-text">Donec dapibus mauris id odio ornare tempus. Duis sit amet accumsan justo.</p>
-                                          </div>
-                                       </a>
-                                       <!-- End Item Single -->
-                                    </div>
-                                    <!-- End Dropdown Body -->
-                                 </div>
-                              </div>
-                              <!-- End Main Header Notification -->
-                           </li>
-
-                           <li>
                               <!-- Main Header User -->
                               <div class="main-header-user">
                                  <a href="#" class="d-flex align-items-center" data-toggle="dropdown">
@@ -193,20 +128,20 @@
                                        </div>
                                        <!-- End User Avatar -->
 
-                                        <!-- User Info -->
-                                        <div class="user-info ">
+                                       <!-- User Info -->
+                                       <div class="user-info ">
                                           <div class='user-name'></div>
                                           <center>
                                              <div class='roles'></div>
                                           </center>
                                        </div>
                                        <!-- End User Info -->
-
                                     </div>
                                  </a>
                                  <div class="dropdown-menu">
-                                    <a href="#">My Profile</a>
-                                    <a href="#">Settings</a>
+                                    <a href="/StaffDashboard/pages/pages/user-profile/edit-profile.html">My Profile</a>
+                                    <a href="/Homepage/index.html">Homepage</a>
+                                    <a href="/StaffDashboard/pages/pages/account-setting.html">Settings</a>
                                     <a href="#" id="logout">Log Out</a>
                                  </div>
                               </div>
@@ -242,66 +177,82 @@
                <!-- Nav -->
                <ul class="nav">
                   <li class="nav-category">Main</li>
-                  <li class="active sub-menu-opened">
+                  <li>
                      <a href="#">
                         <i class="icofont-pie-chart"></i>
                         <span class="link-title">Dashboard</span>
                      </a>
                      <!-- Sub Menu -->
                      <ul class="nav sub-menu">
-                        <li><a href="../../index.html">Order List</a></li>
-                        <li><a href="../../editorderlist.html">Edit Order List</a></li>
-                        <li class="active sub-menu-opened">
-                           <a href="#">Menu</a>
-                           <ul class= "nav sub-menu">
-                              <li class="active"><a href="menu.html">Chicken Roaster</a></li>
-                              <li><a href="menu2.html">Meal For One</a></li>
-                              <li><a href="menu3.html">Meal For Two</a></li>
-                              <li><a href="menu4.html">Pasta Fiesta</a></li>
-                              <li><a href="menu5.html">Kids Meal</a></li>
-                              <li><a href="menu6.html">Chicken Curry Mee</a></li>
-                              <li><a href="menu7.html">Sides</a></li>
-                              <li><a href="menu8.html">Side Dishes</a></li>
-                              <li><a href="menu9.html">Drinks</a></li>
-
-                           </ul>
-                        </li>
-                        <!--<li><a href="menu-details.html">Menu Details</a></li>-->
-                        <li><a href="cartlist.html">Cart List</a></li>
+                        <li><a href="/StaffDashboard/index.html">Order List</a></li>
+                        <!--<li><a href="/StaffDashboard/editorderlist.html">Edit Order List</a></li>-->
                      </ul>
-                     <!-- End Sub Menu -->
-
                   </li>
+
+                  <li class="sub-menu-opened">
+                     <a href="#">
+                        <i class="ti-notepad"></i>
+                        <span class="link-title">Menu</span>
+                     </a>
+                     <!--Sub Menu-->
+                     <ul class="nav sub-menu">
+                        <!--<li><a href="#">Edit Menu</a>
+                           <ul>
+                              <li><a href="menu-list.html">Details</a></li>
+                              <li><a href="add-menu.html">Add</a></li>
+                           </ul>
+                        </li>-->
                
+                        <li class="active"><a href="menu.html">Chicken Roaster</a></li>
+                        <li><a href="menu2.html">Meal For One</a></li>
+                        <li><a href="menu3.html">Meal For Two</a></li>
+                        <li><a href="menu4.html">Pasta Fiesta</a></li>
+                        <li><a href="menu5.html">Kids Meal</a></li>
+                        <li><a href="menu6.html">Chicken Curry Mee</a></li>
+                        <li><a href="menu7.html">Sides</a></li>
+                        <li><a href="menu8.html">Side Dishes</a></li>
+                        <li><a href="menu9.html">Drinks</a></li>
+                     </ul>
+                  </li>
+
+                  <li>
+                     <a href="cartlist.html">
+                        <i class="icofont-shopping-cart"></i>
+                        <span class="link-title">Cart List</span>
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="/StaffDashboard/pages/maindashboard/order-status.html">
+                           <i class="ti-timer"></i>
+                           <span class="link-title">Order Status</span>
+                     </a>
+                  </li>
+
                   <li class="nav-category">Apps</li>
  
                   <li>
                      <a href="#">
                         <i class="icofont-file-document"></i>
-                        <span class="link-title">Invoice</span>
+                        <span class="link-title">Sales</span>
                      </a>
 
                      <!-- Sub Menu -->
                      <ul class="nav sub-menu">
-                        <li><a href="/StaffDashboard/pages/apps/invoice/invoice-list.html">Invoice List</a></li>
-                        <li><a href="/StaffDashboard/pages/apps/invoice/invoice-details.html">Details</a></li>
-                        <li><a href="/StaffDashboard/pages/apps/invoice/invoice-add-new.html">Add New</a></li>
+                        <li><a href="/StaffDashboard/pages/apps/sales/sales-history.html">History</a></li>
+                        <li><a href="/StaffDashboard/pages/apps/sales/invoice-details.html">Details</a></li>
+                        <li><a href="/StaffDashboard/pages/apps/sales/invoice-add-new.html">Add New</a></li>
                      </ul>
                      <!-- End Sub Menu -->
                   </li>
-                  <!--<li>
-                     <a href="#">
-                        <i class="icofont-contact-add"></i>
-                        <span class="link-title">Contact</span>
-                     </a>-->
 
-                     <!-- Sub Menu -->
-                     <!--<ul class="nav sub-menu">
-                        <li><a href="pages/apps/contact/contact-list.html">List View</a></li>
-                        <li><a href="pages/apps/contact/contact-grid.html">Grid View</a></li>
-                     </ul>-->
-                     <!-- End Sub Menu -->
-                  <!--</li>-->
+                  <li>
+                     <a href="/StaffDashboard/pages/apps/list/staff-list.html">
+                        <i class="ti-list"></i>
+                        <span class="link-title">Staff List</span>
+                     </a>
+
+                  </li>
 
                   <li class="nav-category">Pages</li>
                   <li>
@@ -329,37 +280,23 @@
                         <span class="link-title">Account Settings</span>
                      </a>
                   </li>
-                  <li>
-                     <a href="#">
-                        <i class="icofont-check-circled"></i>
-                        <span class="link-title">Authentication</span>
-                     </a>
-
-                     <!-- Sub Menu -->
-                     <ul class="nav sub-menu">
-                        <!--<li><a href="/StaffDashboard/pages/pages/authentication/login.html">Log In</a></li>-->
-                        <!--<li><a href="/Wheels-in_Ayamas/Dashboard/AdminDashboard/pages/pages/authentication/register.html">Register</a></li>-->
-                        <li><a href="/AdminDashboard/pages/pages/authentication/forget-pass.html">Forget Password</a></li>
-                        <li><a href="/AdminDashboard/pages/pages/authentication/reset-pass.html">Reset Password</a></li>
-                     </ul>
-                     <!-- End Sub Menu -->
-                  </li>
+                  
                   <!--<li>
                      <a href="#">
                         <i class="icofont-exclamation-tringle"></i>
                         <span class="link-title">Miscellaneous</span>
                      </a>-->
 
-                     <!-- Sub Menu 
-                     <ul class="nav sub-menu">
+                     <!-- Sub Menu -->
+                     <!--<ul class="nav sub-menu">
                         <li><a href="/Wheels-in_Ayamas/Dashboard/AdminDashboard/pages/pages/miscellaneous/comming-soon.html">Coming Soon</a></li>
                         <li><a href="/Wheels-in_Ayamas/Dashboard/AdminDashboard/pages/pages/miscellaneous/404.html">404 Error</a></li>
                         <li><a href="/Wheels-in_Ayamas/Dashboard/AdminDashboard/pages/pages/miscellaneous/500.html">500 Error</a></li>
                         <li><a href="/Wheels-in_Ayamas/Dashboard/AdminDashboard/pages/pages/miscellaneous/page-not-authorized.html">Not Authorized</a></li>
                         <li><a href="/Wheels-in_Ayamas/Dashboard/AdminDashboard/pages/pages/miscellaneous/maintenance.html">Maintenance</a></li>
                         <li><a href="/Wheels-in_Ayamas/Dashboard/AdminDashboard/pages/pages/miscellaneous/session-timeout.html">Session Timeout</a></li>
-                     </ul>
-                         End Sub Menu -->
+                     </ul>-->
+                     <!-- End Sub Menu -->
                </ul>
                <!-- End Nav -->
             </div>
@@ -371,11 +308,11 @@
          <div class="main-content">
             <div class="container-fluid">
                 <!-- Card -->
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="pt-2 mb-4">Menu </h4>
+                <div class="row card">
+                  
+                    <div class="card-body">                     
+                        <h4 class="pt-2 mb-4">Menu </h4>                      
                         <h6 class="pt-2 mb-4">Chicken Roaster </h6>
-        
                         <!-- Product Grid -->
                         <div class="product-grid pt-2">
                             <div class="row">
@@ -533,7 +470,6 @@
                                     <!-- End Product Grid Item -->
                                 </div>
     
-                                
                                 <div class="col-xl-12">
                                     <!-- Pagination -->
                                     <div class="pagination pagination-sm d-flex flex-column align-items-center mb-10">
@@ -550,6 +486,9 @@
                                        </ul>
                                     </div>
                                     <!-- End Pagination -->
+                                    <div class="d-flex align-items-center justify-content-end mr-20 mt-4">
+                                       <a href="menu-details.html" class="btn">Edit Menu</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -571,32 +510,32 @@
    </div>
    <!-- End wrapper -->
 
-       <!--initialize firebase-->
-       <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
-       <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
-       <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
-       <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
-       <script>
-          // Initialize Firebase
-          var config = {
-             apiKey: "AIzaSyAS1DsUK4USZG5MMG8kXjkJKjm5-gR8YB0",
-             authDomain: "authentication-8d6ac.firebaseapp.com",
-             projectId: "authentication-8d6ac",
-             storageBucket: "authentication-8d6ac.appspot.com",
-             messagingSenderId: "277365742255",
-             appId: "1:277365742255:web:c09e2d6a2a78b2ee6c125a",
-             measurementId: "G-FVM023WR2T"
-          };
-          firebase.initializeApp(config);
-    
-          // make auth and firestore references
-          const auth = firebase.auth();
-          const db = firebase.firestore();
-          const functions = firebase.functions();
-    
-          // update firestore settings
-          db.settings({ timestampsInSnapshots: true });
-       </script>
+      <!--initialize firebase-->
+      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
+      <script>
+         // Initialize Firebase
+         var config = {
+            apiKey: "AIzaSyAS1DsUK4USZG5MMG8kXjkJKjm5-gR8YB0",
+            authDomain: "authentication-8d6ac.firebaseapp.com",
+            projectId: "authentication-8d6ac",
+            storageBucket: "authentication-8d6ac.appspot.com",
+            messagingSenderId: "277365742255",
+            appId: "1:277365742255:web:c09e2d6a2a78b2ee6c125a",
+            measurementId: "G-FVM023WR2T"
+         };
+         firebase.initializeApp(config);
+   
+         // make auth and firestore references
+         const auth = firebase.auth();
+         const db = firebase.firestore();
+         const functions = firebase.functions();
+   
+         // update firestore settings
+         db.settings({ timestampsInSnapshots: true });
+      </script>
 
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
    <script src="../../assets/js/jquery.min.js"></script>
@@ -604,14 +543,14 @@
    <script src="../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
    <script src="../../assets/js/script.js"></script>
    <script src="../../assets/js/profile.js"></script>
-
+   <script src="../../assets/js/index.js"></script>
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
-
-     <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
-     <script src="/AdminDashboard/assets/plugins/sweetalert2/sweetalert2.all.min.js"></script>
-     <script src="/AdminDashboard/assets/plugins/sweetalert2/sweetalerts.js"></script>
-     <!-- ======= End BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
-   
+      <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
+      <script src="/AdminDashboard/assets/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+      <script src="/AdminDashboard/assets/plugins/sweetalert2/sweetalerts.js"></script>
+      <!-- ======= End BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
+  </body>
+  
 </body>
 
 </html>

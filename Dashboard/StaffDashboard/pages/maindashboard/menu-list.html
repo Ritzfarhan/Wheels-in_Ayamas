@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+   <!-- Page Title -->
+   <title>Wheels - In Ayamas</title>
+
+   <!-- Meta Data -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="../../assets/img/wia.png">
+
+   <!-- Web Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+   
+   <!-- ======= BEGIN GLOBAL MANDATORY STYLES ======= -->
+   <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="../../assets/fonts/icofont/icofont.min.css">
+   <link rel="stylesheet" href="../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.css">
+   <!-- ======= END BEGIN GLOBAL MANDATORY STYLES ======= -->
+   
+   <!-- ======= BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
+   <link rel="stylesheet" href="../../assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css">
+   <link rel="stylesheet" href="../../assets/fonts/themify-icons/themify-icons.css">
+   <!-- ======= END BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
+
+   <!-- ======= MAIN STYLES ======= -->
+   <link rel="stylesheet" href="../../assets/css/style.css">
+   <link rel="stylesheet" href="../../assets/css/custom.css">
+   <!-- ======= END MAIN STYLES ======= -->
+
+</head>
+
+<body>
+
+   <!-- Offcanval Overlay -->
+   <div class="offcanvas-overlay"></div>
+   <!-- Offcanval Overlay -->
+
+   <!-- Wrapper -->
+   <div class="wrapper">
+      <!-- Header -->
+      <header class="header white-bg fixed-top d-flex align-content-center flex-wrap">
+         <!-- Logo -->
+         <div class="logo">
+            <a href="../../index.html" class="default-logo"><img src="../../assets/img/WIAAA.png" alt=""></a>
+            <a href="../../index.html" class="mobile-logo"><img src="../../assets/img/WIAAA.png" alt=""></a>
+         </div>
+         <!-- End Logo -->
+
+         <!-- Main Header -->
+         <div class="main-header">
+            <div class="container-fluid">
+               <div class="row justify-content-between">
+                  <div class="col-3 col-lg-1 col-xl-4">
+                     <!-- Header Left -->
+                     <div class="main-header-left h-100 d-flex align-items-center">
+
+                        <!-- Main Header Menu -->
+                        <div class="main-header-menu d-block d-lg-none">
+                           <div class="header-toogle-menu">
+                              <!-- <i class="icofont-navigation-menu"></i> -->
+                              <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" color= "#00192F" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                               </svg>
+                           </div>
+                        </div>
+                        <!-- End Main Header Menu -->
+
+                     </div>
+                     <!-- End Header Left -->
+                  </div>
+                  <div class="col-9 col-lg-11 col-xl-8">
+                     <!-- Header Right -->
+                     <div class="main-header-right d-flex justify-content-end">
+                        <ul class="nav">
+
+                           <li class="d-none d-md-block d-lg-flex">
+                              <!-- Main Header Time -->
+                              <div class="main-header-date-time text-right">
+                                 <h3 class="time">
+                                    <span id="hours"></span>
+                                    <span id="point">:</span>
+                                    <span id="min"></span>
+                                 </h3>
+                                 <span class="date"><span id="date"></span></span>
+                              </div>
+                              <!-- End Main Header Time -->
+                           </li>
+
+                           <li class="order-2 order-sm-0">
+                              <!-- Main Header Search -->
+                              <div class="main-header-search d-none d-md-block">
+                                 <form action="#" class="search-form">
+                                    <div class="theme-input-group header-search">
+                                       <input type="text" class="theme-input-style" placeholder="Search Here">
+
+                                       <button type="submit">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="font-size:20px;color:#B52217" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                           </svg>
+                                       </button>
+
+                                    </div>
+                                 </form>
+                              </div>
+                              <!-- End Main Header Search -->
+                           </li>
+
+                           <li>
+                              <!-- Main Header User -->
+                              <div class="main-header-user">
+                                 <a href="#" class="d-flex align-items-center" data-toggle="dropdown">
+                                    <div class="menu-icon d-none">
+                                       <span></span>
+                                       <span></span>
+                                       <span></span>
+                                    </div>
+
+                                    <div class="user-profile d-xl-flex align-items-center d-none d-md-block">
+                                       <!-- User Avatar -->
+                                       <div class="user-avatar d-flex justify-content-end">
+                                          <img src="/AdminDashboard/assets/img/avatar/user1 (70x70).png" alt="">
+                                       </div>
+                                       <!-- End User Avatar -->
+
+                                       <!-- User Info -->
+                                       <div class="user-info ">
+                                          <div class='user-name'></div>
+                                       </div>
+                                       <!-- End User Info -->
+                                    </div>
+                                 </a>
+                                 <div class="dropdown-menu">
+                                    <a href="/AdminDashboard/pages/pages/user-profile/edit-profile.html">My Profile</a>
+                                    <a href="/AdminDashboard/pages/pages/account-setting.html">Settings</a>
+                                    <a href="#" id="logout">Log Out</a>
+                                 </div>
+                              </div>
+                              <!-- End Main Header User -->
+                           </li>
+                        </ul>
+                     </div>
+                     <!-- End Header Right -->
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- End Main Header -->
+      </header>
+      <!-- End Header -->
+
+      <!-- Main Wrapper -->
+      <div class="main-wrapper">
+         <!-- Sidebar -->
+         <nav class="sidebar" data-trigger="scrollbar">
+            <!-- Sidebar Header -->
+            <div class="sidebar-header d-none d-lg-block">
+               <!-- Sidebar Toggle Pin Button -->
+               <div class="sidebar-toogle-pin">
+                  <i class="icofont-tack-pin"></i>
+               </div>
+               <!-- End Sidebar Toggle Pin Button -->
+            </div>
+            <!-- End Sidebar Header -->
+
+            <!-- Sidebar Body -->
+            <div class="sidebar-body">
+               <!-- Nav -->
+               <ul class="nav">
+                  <li class="nav-category">Main</li>
+                  <li>
+                     <a href="#">
+                        <i class="icofont-pie-chart"></i>
+                        <span class="link-title">Dashboard</span>
+                     </a>
+                        <!-- Sub Menu -->
+                        <ul class="nav sub-menu">
+                           <li><a href="/AdminDashboard/">Order List</a></li>
+                           <li><a href="/AdminDashboard/editorderlist.html">Edit Order List</a></li>
+                        </ul>
+                  </li>
+
+                  <li class="sub-menu-opened">
+                     <a href="#">
+                           <i class="ti-notepad"></i>
+                           <span class="link-title">Menu</span>
+                     </a>
+                     <!--Sub Menu-->
+                     <ul class="nav sub-menu">
+                        <li><a href="#">Edit Menu</a>
+                           <ul>
+                              <li class="active sub-menu"><a href="menu-list.html">Details</a></li>
+                              <li><a href="add-menu.html">Add</a></li>
+                           </ul>
+                        </li>
+               
+                        <li><a href="menu.html">Chicken Roaster</a></li>
+                        <li><a href="menu2.html">Meal For One</a></li>
+                        <li><a href="menu3.html">Meal For Two</a></li>
+                        <li><a href="menu4.html">Pasta Fiesta</a></li>
+                        <li><a href="menu5.html">Kids Meal</a></li>
+                        <li><a href="menu6.html">Chicken Curry Mee</a></li>
+                        <li><a href="menu7.html">Sides</a></li>
+                        <li><a href="menu8.html">Side Dishes</a></li>
+                        <li><a href="menu9.html">Drinks</a></li>
+                     </ul>
+                  </li>
+
+                  <li>
+                     <a href="/AdminDashboard/pages/maindashboard/cartlist.html">
+                           <i class="icofont-shopping-cart"></i>
+                           <span class="link-title">Cart List</span>
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="/AdminDashboard/pages/maindashboard/order-status.html">
+                           <i class="ti-timer"></i>
+                           <span class="link-title">Order Status</span>
+                     </a>
+                  </li>
+               
+                  <li class="nav-category">Apps</li>
+ 
+                  <li>
+                     <a href="#">
+                        <i class="icofont-file-document"></i>
+                        <span class="link-title">Sales</span>
+                     </a>
+
+                     <!-- Sub Menu -->
+                     <ul class="nav sub-menu">
+                        <li><a href="/AdminDashboard/pages/apps/sales/sales-history.html">History</a></li>
+                        <li><a href="/AdminDashboard/pages/apps/invoice/invoice-details.html">Details</a></li>
+                        <li><a href="/AdminDashboard/pages/apps/invoice/invoice-add-new.html">Add New</a></li>
+                     </ul>
+                     <!-- End Sub Menu -->
+                  </li>
+                  <li>
+                     <a href="#">
+                        <i class="ti-list"></i>
+                        <span class="link-title">Lists</span>
+                     </a>
+
+                     <!-- Sub Menu -->
+                     <ul class="nav sub-menu">
+                        <li><a href="/AdminDashboard/pages/apps/list/user-list.html">User List</a></li>
+                        <li><a href="/AdminDashboard/pages/apps/list/staff-list.html">Staff List</a></li>
+                     </ul>
+                     <!-- End Sub Menu -->
+                  </li>
+
+                  <li class="nav-category">pages</li>
+                  <li>
+                     <a href="#">
+                        <i class="icofont-ui-user"></i>
+                        <span class="link-title">User Profile</span>
+                     </a>
+
+                     <!-- Sub Menu -->
+                     <ul class="nav sub-menu">
+                        <!--<li><a href="pages/pages/user-profile/news-feed.html">News Feed</a></li>
+                        <li><a href="pages/pages/user-profile/about.html">About</a></li>
+                        <li><a href="pages/pages/user-profile/gallery.html">Gallery</a></li>                        
+                        <li><a href="pages/pages/user-profile/connection.html">Connections</a></li>
+                        <li><a href="pages/pages/user-profile/profile-chat.html">Chat</a></li>-->
+                        <li><a href="/AdminDashboard/pages/pages/user-profile/edit-profile.html">View Profile</a></li>
+                        <!--<li><a href="/Wheels-in_Ayamas/Dashboard/AdminDashboard/pages/pages/user-profile/user-dashboard.html">User Dashboard</a></li>-->
+                     </ul>
+                     <!-- End Sub Menu -->
+                  </li>
+
+                  <li>
+                     <a href="/AdminDashboard/pages/pages/account-setting.html">
+                        <i class="icofont-settings-alt"></i>
+                        <span class="link-title">Account Settings</span>
+                     </a>
+                  </li>
+                  
+                  <!--<li>
+                     <a href="#">
+                        <i class="icofont-exclamation-tringle"></i>
+                        <span class="link-title">Miscellaneous</span>
+                     </a>-->
+
+                     <!-- Sub Menu -->
+                     <!--<ul class="nav sub-menu">
+                        <li><a href="/AdminDashboard/pages/pages/miscellaneous/comming-soon.html">Coming Soon</a></li>
+                        <li><a href="/AdminDashboard/pages/pages/miscellaneous/404.html">404 Error</a></li>
+                        <li><a href="/AdminDashboard/pages/pages/miscellaneous/500.html">500 Error</a></li>
+                        <li><a href="/AdminDashboard/pages/pages/miscellaneous/page-not-authorized.html">Not Authorized</a></li>
+                        <li><a href="/AdminDashboard/pages/pages/miscellaneous/maintenance.html">Maintenance</a></li>
+                        <li><a href="/AdminDashboard/pages/pages/miscellaneous/session-timeout.html">Session Timeout</a></li>
+                     </ul>-->
+                     <!-- End Sub Menu -->
+               </ul>
+               <!-- End Nav -->
+            </div>
+            <!-- End Sidebar Body -->
+         </nav>
+         <!-- End Sidebar -->
+
+         <!-- Main Content -->
+         <div class="main-content d-flex flex-column flex-md-row">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-12">
+                    <!-- Card -->
+                    <div class="card bg-transparent">
+                        <!-- Contact Header -->
+                        <div class="contact-header d-flex align-items-sm-center media flex-column flex-sm-row bg-white mb-30">
+                           <div class="contact-header-left media-body d-flex align-items-center mr-4">
+                                 <!-- Add New Contact Btn -->
+                                 <div class="add-new-contact mr-20">
+                                       <a href="add-menu.html" class="btn-circle">
+                                          <img src="../../assets/img/svg/plus_white.svg" alt="" class="svg">
+                                       </a>
+                                 </div>
+                                 <!-- End Add New Contact Btn -->
+
+                                 <!-- Search Form -->
+                                 <form action="#" class="search-form flex-grow">
+                                    <div class="theme-input-group style--two">
+                                    <input type="text" class="theme-input-style" placeholder="Search Here">
+
+                                    <button type="submit"><img src="../../assets/img/svg/search-icon.svg" alt=""
+                                          class="svg"></button>
+                                    </div>
+                                 </form>
+                                 <!-- End Search Form -->
+                           </div>
+
+                           <div class="contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0">
+
+                              <!-- Delete Mail -->
+                              <div class="delete_mail">
+                                 <a href="#"><img src="../../assets/img/svg/delete.svg" alt="" class="svg"></a>
+                              </div>
+                              <!-- End Delete Mail -->
+
+                              <!-- Pagination -->
+                              <div class="pagination style--two d-flex flex-column align-items-center ml-n2">
+                                 <ul class="list-inline d-inline-flex align-items-center">
+                                 <li><a href="#">
+                                       <img src="../../assets/img/svg/left-angle.svg" alt="" class="svg">
+                                 </a></li>
+                                 <li><a href="#" class="current">
+                                       <img src="../../assets/img/svg/right-angle.svg" alt="" class="svg">
+                                 </a></li>
+                                 </ul>
+                              </div>
+                              <!-- End Pagination -->
+                           </div>
+                        </div>
+                        <!-- End Contact Header -->
+
+
+                        <div class="table-responsive">
+                            <!-- Invoice List Table -->
+                            <table class="contact-list-table text-nowrap bg-white">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <!-- Custom Checkbox -->
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <!-- End Custom Checkbox -->
+
+                                        </th>
+                                        <th>Menu Name</th>
+                                        <th>Category</th>
+                                        <th>Price</th>
+                                        <!--<th>Last Name</th>-->
+                                        <!--<th>Post</th>
+                                        <th>Joining Date</th>
+                                        <th>Salary</th>-->
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                       <td>
+                                            <!-- Custom Checkbox -->
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <!-- End Custom Checkbox -->
+                             
+                                       </td>
+                                       <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="img mr-20">
+                                                    <img src="../../assets/img/avatar/m16.png" class="img-40" alt="">
+                                                </div>
+                                                <div class="name bold">PEPPER ROASTER - Half Chicken</div>
+                                            </div>
+                                       </td>
+                                       <td>Chicken Roaster</td>
+                                       <td>RM16.00</td>
+                                       <!--<td>UX Researcher</td>
+                                       <td>June 20, 2015</td>
+                                       <td>$26253.0</td>-->
+                                       <td class="actions">
+                                            <span class="contact-edit" data-toggle="modal" data-target="#contactEditModal">
+                                                <img src="../../assets/img/svg/c-edit.svg" alt="" class="svg">
+                                            </span>
+                                            <span class="contact-close">
+                                                <img src="../../assets/img/svg/c-close.svg" alt="" class="svg">
+                                            </span>
+                                       </td>
+                                    </tr>
+
+                                    <tr class="selected">
+                                       <td>
+                                            <!-- Custom Checkbox -->
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <!-- End Custom Checkbox -->
+
+                                       </td>
+                                       <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="img mr-20">
+                                                    <img src="../../assets/img/avatar/m20.png" class="img-40" alt="">
+                                                </div>
+                                                <div class="name bold">COMBO BEEFBALLS BOLOGNAISE</div>
+                                           </div>
+                                       </td>
+                                       <td>Pasta Fiesta</td>
+                                       <td>RM14.90</td>
+                                       <!--<td>UX Researcher</td>
+                                       <td>June 20, 2015</td>
+                                       <td>$26253.0</td>-->
+                                        <td class="actions">
+                                            <span class="contact-edit" data-toggle="modal" data-target="#contactEditModal">
+                                                <img src="../../assets/img/svg/c-edit.svg" alt="" class="svg">
+                                            </span>
+                                            <span class="contact-close">
+                                                <img src="../../assets/img/svg/c-close.svg" alt="" class="svg">
+                                            </span>
+                                        </td>
+                                    </tr>  
+
+                                    <tr class="selected">
+                                       <td>
+                                           <!-- Custom Checkbox -->
+                                           <label class="custom-checkbox">
+                                               <input type="checkbox" checked>
+                                               <span class="checkmark"></span>
+                                           </label>
+                                           <!-- End Custom Checkbox -->
+
+                                       </td>
+                                       <td>
+                                           <div class="d-flex align-items-center">
+                                               <div class="img mr-20">
+                                                   <img src="../../assets/img/avatar/m20.png" class="img-40" alt="">
+                                               </div>
+                                               <div class="name bold">COMBO BEEFBALLS BOLOGNAISE</div>
+                                          </div>
+                                      </td>
+                                      <td>Pasta Fiesta</td>
+                                      <td>RM14.90</td>
+                                      <!--<td>UX Researcher</td>
+                                      <td>June 20, 2015</td>
+                                      <td>$26253.0</td>-->
+                                       <td class="actions">
+                                           <span class="contact-edit" data-toggle="modal" data-target="#contactEditModal">
+                                               <img src="../../assets/img/svg/c-edit.svg" alt="" class="svg">
+                                           </span>
+                                           <span class="contact-close">
+                                               <img src="../../assets/img/svg/c-close.svg" alt="" class="svg">
+                                           </span>
+                                       </td>
+                                   </tr> 
+                                    
+                                    <tr>
+                                       <td>
+                                          <!-- Custom Checkbox -->
+                                          <label class="custom-checkbox">
+                                             <input type="checkbox">
+                                             <span class="checkmark"></span>
+                                          </label>
+                                          <!-- End Custom Checkbox -->
+                           
+                                       </td>
+                                       <td>
+                                          <div class="d-flex align-items-center">
+                                             <div class="img mr-20">
+                                                   <img src="../../assets/img/avatar/m16.png" class="img-40" alt="">
+                                             </div>
+                                             <div class="name bold">PEPPER ROASTER - Half Chicken</div>
+                                          </div>
+                                       </td>
+                                       <td>Chicken Roaster</td>
+                                       <td>RM16.00</td>
+                                       <!--<td>UX Researcher</td>
+                                       <td>June 20, 2015</td>
+                                       <td>$26253.0</td>-->
+                                       <td class="actions">
+                                          <span class="contact-edit" data-toggle="modal" data-target="#contactEditModal">
+                                             <img src="../../assets/img/svg/c-edit.svg" alt="" class="svg">
+                                          </span>
+                                          <span class="contact-close">
+                                             <img src="../../assets/img/svg/c-close.svg" alt="" class="svg">
+                                          </span>
+                                       </td>
+                                 </tr>
+
+                                 <tr>
+                                    <td>
+                                       <!-- Custom Checkbox -->
+                                       <label class="custom-checkbox">
+                                          <input type="checkbox">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                       <!-- End Custom Checkbox -->
+                        
+                                    </td>
+                                    <td>
+                                       <div class="d-flex align-items-center">
+                                          <div class="img mr-20">
+                                                <img src="../../assets/img/avatar/m16.png" class="img-40" alt="">
+                                          </div>
+                                          <div class="name bold">PEPPER ROASTER - Half Chicken</div>
+                                       </div>
+                                    </td>
+                                    <td>Chicken Roaster</td>
+                                    <td>RM16.00</td>
+                                    <!--<td>UX Researcher</td>
+                                    <td>June 20, 2015</td>
+                                    <td>$26253.0</td>-->
+                                    <td class="actions">
+                                       <span class="contact-edit" data-toggle="modal" data-target="#contactEditModal">
+                                          <img src="../../assets/img/svg/c-edit.svg" alt="" class="svg">
+                                       </span>
+                                       <span class="contact-close">
+                                          <img src="../../assets/img/svg/c-close.svg" alt="" class="svg">
+                                       </span>
+                                    </td>
+                                 </tr>
+
+                              </tbody>
+                           </table>
+                           <!-- End Invoice List Table -->
+                        </div>
+                    </div>
+                    <!-- End Card -->
+
+                    <!-- Staff Add New PopUp -->
+                     <div id="contactAddModal" class="modal fade">
+                        <div class="modal-dialog modal-dialog-centered">
+                           <div class="modal-content">
+                              <!-- Modal Body -->
+                              <div class="modal-body">
+                                 <form action="#">
+
+                                    <div class="media flex-column flex-sm-row">
+                                       <!--<div class="modal-upload-avatar mr-0 mr-sm-3 mr-md-5 mb-5 mb-sm-0">
+
+                                          <div class="attach-file style--two mb-3">
+                                             <img src="../../../assets/img/img-placeholder.png" class="profile-avatar" alt="">
+                                             <div class="upload-button">
+                                                <img src="../../../assets/img/svg/gallery.svg" alt="" class="svg mr-2">
+                                                <span>Upload Photo</span>
+                                                <input class="file-input" type="file" id="fileUpload" accept="image/*">
+                                             </div>
+                                          </div>
+
+                                          <div class="content">
+                                             <h4 class="mb-2">Upload a Photo</h4>
+                                             <p class="font-12 c4">Allowed JPG, GIF or PNG. Max size <br /> of 800kB</p>
+                                          </div>
+                                       </div>-->
+            
+            
+                                       <div class="contact-account-setting media-body">
+
+                                          <h4 class="mb-4">Add Staff Account</h4>
+
+                                          <!--<div class="mb-4">
+                                             <label class="bold black mb-2" for="as_name">Username</label>
+                                             <input type="text" id="as_name" class="theme-input-style" placeholder="Type Here" required>
+                                          </div>-->
+                                          
+                                          <div class="mb-4">
+                                             <label class="bold black mb-2" for="as_email">Email</label>
+                                             <input type="email" id="as_email" class="theme-input-style" placeholder="Type Here" required>
+                                          </div>
+                                          
+                                          <!--<div class="mb-4">
+                                             <label class="bold black mb-2"  for="as_phone">First Name</label>
+                                             <input type="number" id="" class="theme-input-style" placeholder="Type Here" required>
+                                          </div>
+                                          
+                                          <div class="mb-4">
+                                             <label class="bold black mb-2" for="as_age">Last Name</label>
+                                             <input type="text" id="" class="theme-input-style" placeholder="Type Here" required>
+                                          </div>-->
+                                          
+                                          <!--<div class="mb-4">
+                                             <label class="bold black mb-2" for="as_post">Post</label>
+                                             <input type="text" id="as_post" class="theme-input-style" placeholder="Type Here" required>
+                                          </div>
+                                          
+                                          <div class="mb-30">
+                                             <label class="bold black mb-2">Joining Date</label>
+                                             
+                                             <div class="date datepicker dashboard-date style--two" id="datePickerExample">
+                                                <span class="input-group-addon mr-0"><img src="../../../assets/img/svg/calender.svg" alt="" class="svg"></span>
+                                                <input type="text" class="pl-2" required>
+                                             </div>
+                                          </div>-->
+
+                                          <div class="">
+                                             <a href="#" class="btn mr-4">Save</a>
+                                             <a href="#" class="cancel font-14 bold" data-dismiss="modal">Cancel</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </form>
+                              </div>
+                              <!-- End Modal Body -->
+                           </div>
+                        </div>
+                     </div>
+                     <!-- End Contact Add New PopUp -->
+
+                     <!-- Contact Edit PopUp -->
+                     <div id="contactEditModal" class="modal fade">
+                        <div class="modal-dialog modal-dialog-centered">
+                           <div class="modal-content">
+                              <!-- Modal Body -->
+                              <div class="modal-body">
+                                 <form action="#">
+                                    <div class="media flex-column flex-sm-row">
+                                       <div class="modal-upload-avatar mr-0 mr-sm-3 mr-md-5 mb-5 mb-sm-0">
+
+                                             <div class="attach-file style--two mb-3">
+                                                <img src="../../assets/img/product/pg2.png" class="profile-avatar" alt="">
+                                                <<div class="upload-button">
+                                                   <img src="../../../assets/img/svg/gallery.svg" alt="" class="svg mr-2">
+                                                   <span>Upload Photo</span>
+                                                   <input class="file-input" type="file" id="fileUpload2" accept="image/*">
+                                                </div>
+                                             </div>
+
+                                             <div class="content">
+                                                <h4 class="mb-2" style="text-align: center;">Menu Photo</h4>
+                                                <!--<p class="font-12 c4">Allowed JPG, GIF or PNG. Max size <br /> of 800kB</p>-->
+                                             </div>
+                                       </div>
+            
+            
+                                       <div class="contact-account-setting media-body">
+
+                                          <h4 class="mb-4">Edit Menu</h4>
+
+                                          <div class="mb-4">
+                                             <label class="bold black mb-2" for="as_name2">Menu Name</label>
+                                             <label type="text" id="as_name2" class="theme-input-style" value="AirilIsham" required></label>
+                                          </div>
+                                          
+                                          <div class="form-group mb-4">
+                                             <label for="addonEmail" class="mb-2 black bold">Price</label>
+     
+                                             <div class="input-group">
+                                               <div class="input-group-prepend">
+                                                 <div class="input-group-text black bold">$</div>
+                                               </div>
+                                               <input type="text" id="addonEmail" class="form-control" placeholder="19.00">
+                                             </div>
+                                         </div>
+                                          
+                                          <div class="mb-4">
+                                             <label for="exampleSelect1" class="mb-2 black bold d-block">Category</label>
+                                             <div>
+                                                   <select class="theme-input-style" id="exampleSelect1">
+                                                      <option value="Chicken Roaster">Chicken Roaster</option>
+                                                      <option value="Meal For One">Meal For One</option>
+                                                      <option value="Meal For Two">Meal For Two</option>
+                                                      <option value="Pasta Fiesta">Pasta Fiesta</option>
+                                                      <option value="Kids Meal">Kids Meal</option>
+                                                      <option value="Chicken Curry Meal">Chicken Curry Meal</option>
+                                                      <option value="Sides">Sides</option>
+                                                      <option value="Side Dishes">Side Dishes</option>
+                                                      <option value="Drinks">Drinks</option>
+                                                   </select>
+                                             </div>
+                                          </div>
+                                          
+                                          <div class="form-group mb-4">
+                                             <label for="exampleTextarea1" class="mb-2 black bold d-block">Description</label>
+                                             <textarea id="exampleTextarea1" class="theme-input-style" placeholder="Type Here"></textarea>
+                                          </div>                                       
+                                          
+                                         <!-- <div class="mb-4">
+                                             <label class="bold black mb-2" for="as_post2">Post</label>
+                                             <input type="text" id="as_post2" class="theme-input-style" value="UX Researcher" required>
+                                          </div>
+                                          
+                                          <div class="mb-30">
+                                             <label class="bold black mb-2">Joining Date</label>
+                                             
+                                             <div class="date datepicker dashboard-date style--two" id="datePickerExample2">
+                                                <span class="input-group-addon mr-0"><img src="../../../assets/img/svg/calender.svg" alt="" class="svg"></span>
+                                                <input type="text" class="pl-2" required>
+                                             </div>
+                                          </div>-->
+
+                                          <div class="">
+                                             <a href="#" class="btn mr-4">Save</a>
+                                             <a href="#" class="cancel font-14 bold" data-dismiss="modal">Cancel</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </form>
+                              </div>
+                              <!-- End Modal Body -->
+                           </div>
+                        </div>
+                     </div>
+                     <!-- End Contact Edit PopUp -->
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- End Main Content -->
+      </div>
+      <!-- End Main Wrapper -->
+
+      <!-- Footer -->
+      <footer class="footer">
+         Wheels - In Ayamas © 2021 created by G6_39
+      </footer>
+      <!-- End Footer -->
+   </div>
+   <!-- End wrapper -->
+   
+   <!--initialize firebase-->
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
+   <script>
+      // Initialize Firebase
+      var config = {
+         apiKey: "AIzaSyAS1DsUK4USZG5MMG8kXjkJKjm5-gR8YB0",
+         authDomain: "authentication-8d6ac.firebaseapp.com",
+         projectId: "authentication-8d6ac",
+         storageBucket: "authentication-8d6ac.appspot.com",
+         messagingSenderId: "277365742255",
+         appId: "1:277365742255:web:c09e2d6a2a78b2ee6c125a",
+         measurementId: "G-FVM023WR2T"
+      };
+      firebase.initializeApp(config);
+
+      // make auth and firestore references
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+      const functions = firebase.functions();
+
+      // update firestore settings
+      db.settings({ timestampsInSnapshots: true });
+   </script>
+
+   <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
+   <script src="../../assets/js/jquery.min.js"></script>
+   <script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+   <script src="../../assets/js/script.js"></script>
+   <script src="../../assets/js/profile.js"></script>
+   <script src="../../assets/js/index.js"></script>
+   <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
+
+   <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
+   <script src="../../assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+   <script src="../../assets/plugins/bootstrap-datepicker/custom-datepicker.js"></script>
+   <!-- ======= End BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
+
+   <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
+   <script src="/AdminDashboard/assets/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+   <script src="/AdminDashboard/assets/plugins/sweetalert2/sweetalerts.js"></script>
+   <!-- ======= End BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
+</body>
+
+</html>

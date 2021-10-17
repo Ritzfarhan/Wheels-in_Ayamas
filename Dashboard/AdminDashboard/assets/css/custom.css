@@ -168,8 +168,6 @@ table tr:not(:last-child) td {
     background-color: #c75249 !important;
 }
 
-
-
 .row-menu {
     display: -ms-flexbox;
     display: flex;
@@ -177,4 +175,20 @@ table tr:not(:last-child) td {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+}
+
+.button1 {
+    padding: 10px 20px !important;
+    margin-top: 10px !important;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    text-transform: capitalize;
+    outline: 0 !important;
+    -webkit-box-shadow: 0 5px 10px rgba(4, 0, 252, 0.2) !important;
+    box-shadow: 0 5px 10px rgba(4, 0, 252, 0.2) !important;
 }
