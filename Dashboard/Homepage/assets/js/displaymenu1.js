@@ -69,7 +69,7 @@ function generateItems(items) {
 //
         let doc = document.createElement("div");
         doc.classList.add("col-lg-6", "menu-item", "filter-chicken");
-        doc.style = document.querySelector(".menu");
+       // doc.style = document.querySelector(".menu");
         doc.style.position = "absolute";
         //posx = col*50; posy=row*50;
         //doc.style.left ="auto";
@@ -107,7 +107,7 @@ function generateItems(items) {
         doc.appendChild(addToCartEl);
         
         //document.querySelector(".row-menu").appendChild(doc);
-        document.querySelector(".chicken-roaster").appendChild(doc);
+        document.querySelector(".row-menu").appendChild(doc);
        
 
 
