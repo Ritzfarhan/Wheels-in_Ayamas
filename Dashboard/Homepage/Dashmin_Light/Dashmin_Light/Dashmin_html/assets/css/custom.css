@@ -10,6 +10,18 @@
     padding: 8px 0;
     margin-top: 120px;
   }
+  .sidenav-1 {
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    top: 30px;
+    left: 100px;
+    background:burlywood;
+    overflow-x: hidden;
+    padding: 8px 0;
+    margin-top: 120px;
+    height: 300px;
+  }
   
 
   
@@ -154,6 +166,7 @@ p {
   border: 1px solid rgba(0,0,0,.125);
   border-radius: .25rem;
   margin-right: 500px;
+  margin-top: 1px;
   
 }
 .cart-list {
