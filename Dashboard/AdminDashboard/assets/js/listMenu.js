@@ -1,102 +1,146 @@
 const ref = firebase.firestore().collection('Menu');
 
-function deleteItem(itemId){
-    db.collection("Menu").doc(itemId).delete();
+function deleteItem(itemId) {
+    //db.collection("Menu").doc(itemId).delete();
+    //firebase.storage().ref('menu/' + name + '/profile.jpg').
+
+    function getMenu(itemId) {
+        //let name = menuform['menu-name'].value;
+        db.collection("Menu").where("id", "==", itemId).onSnapshot(snapshot => {
+            console.log();
+            
+            let items = [];
+            snapshot.forEach((doc) => {
+                items.push({ ...doc.data(), id: doc.id })
+
+            });
+           
+            deletepic(items)
+            
+            //console.log(items);
+        });
+        db.collection("Menu").doc(itemId).delete();
+    }
+
+    function deletepic(items) {
+
+
+
+        //let itemsHTML = "";
+        items.forEach((item) => {
+
+            var desertRef = storageRef.child('menu/' + item.Name + 'profile.jpg');
+
+           desertRef.delete()
+            .then(() => {
+
+                console.log("deleted successfully");
+              }).catch((error) => {
+                // Uh-oh, an error occurred!
+              });
+              
+
+
+
+        })
+    }
+
+    getMenu(itemId);
 }
 let file = {};
 
 function choosefile(e) {
-  file = e.target.files[0];
+    file = e.target.files[0];
 }
 
 
-function EditItem(menuId){
-   
-const menuform = document.querySelector('#update-menu-form');
-menuform.addEventListener('submit', (e) => {
-  e.preventDefault();
+function EditItem(menuId) {
 
-    db.collection("Menu").doc(menuId).update({
-      Name: menuform['menu-name'].value,
-      Category: menuform['menu-category'].value,
-      Price: menuform['menu-price'].value,
-      Description: menuform['menu-description'].value
-    }).then(() => {
-      // close the signup modal & reset form
-      //const modal = document.querySelector('#edit-menu-modal');
-      //M.Modal.getInstance(modal).close();
+    const menuform = document.querySelector('#update-menu-form');
+    menuform.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-      //setupPage(user);
-    }).catch(err => {
-      console.log;
-      menuform.querySelector('.error').innerHTML = err.message;
-    });
+        db.collection("Menu").doc(menuId).update({
+            Name: menuform['menu-name'].value,
+            Category: menuform['menu-category'].value,
+            Price: menuform['menu-price'].value,
+            Description: menuform['menu-description'].value
+        }).then(() => {
+            // close the signup modal & reset form
+            //const modal = document.querySelector('#edit-menu-modal');
+            //M.Modal.getInstance(modal).close();
 
-      // link menu pic with firestore
-  let name = menuform['menu-name'].value;
-  firebase.storage().ref('menu/' + name + '/profile.jpg').put(file).then(function () {
-    console.log('uploaded profile image')
-  }).then(() => {
-    run(2000).then(() => { getMenu(name); });
-   // window.location.href = "/AdminDashboard/pages/maindashboard/menu-list.html";
-   menuform.reset();
-      menuform.querySelector('.error').innerHTML = ''
-      Swal.fire({ title: "Success!", text: "Your menu have been updated", allowOutsideClick: !0, confirmButtonClass: "btn long", buttonsStyling: !1 });
-      
-  }).catch(error => {
-    console.log(error.message);
-  })
-//////////////////////////////////////////////////////////
-  function run(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-  function getMenu(name) {
-    //let name = menuform['menu-name'].value;
-    db.collection("Menu").where("Name", "==", name).onSnapshot(snapshot => {
-        console.log();
-        let items = [];
-        snapshot.forEach((doc) => {
-            items.push({
-                id: doc.id,
-                Name: doc.data().Name,
-                Category: doc.data().Category,
-                Price: doc.data().Price,
-                Description: doc.data().Description,
-                ImageUrl: doc.data().ImageUrl
-  
-            })
-  
+            //setupPage(user);
+        }).catch(err => {
+            console.log;
+            menuform.querySelector('.error').innerHTML = err.message;
         });
-        generateItems(items)
-        console.log(items);
-    });
-  }
+
+        // link menu pic with firestore
+        let name = menuform['menu-name'].value;
+        firebase.storage().ref('menu/' + name + '/profile.jpg').put(file).then(function () {
+            console.log('uploaded profile image')
+        }).then(() => {
+            run(2000).then(() => { getMenu(name); });
+            // window.location.href = "/AdminDashboard/pages/maindashboard/menu-list.html";
+            menuform.reset();
+            menuform.querySelector('.error').innerHTML = ''
+            Swal.fire({ title: "Success!", text: "Your menu have been updated", allowOutsideClick: !0, confirmButtonClass: "btn long", buttonsStyling: !1 });
+
+        }).catch(error => {
+            console.log(error.message);
+        })
+        //////////////////////////////////////////////////////////
+        function run(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        function getMenu(name) {
+            //let name = menuform['menu-name'].value;
+            db.collection("Menu").where("Name", "==", name).onSnapshot(snapshot => {
+                console.log();
+                let items = [];
+                snapshot.forEach((doc) => {
+                    items.push({
+                        id: doc.id,
+                        Name: doc.data().Name,
+                        Category: doc.data().Category,
+                        Price: doc.data().Price,
+                        Description: doc.data().Description,
+                        ImageUrl: doc.data().ImageUrl
+
+                    })
+
+                });
+                generateItems(items)
+                console.log(items);
+            });
+        }
 
 
 
 
-  
-  function generateItems(items) {
-  
-  
-  
-    //let itemsHTML = "";
-    items.forEach((item) => {
-  
-        firebase.storage().ref('menu/' + item.Name + '/profile.jpg').getDownloadURL()
-            .then(imgUrl => {
-                db.collection("Menu").doc(item.id).update({
-                    ImageUrl: imgUrl
-  
-                })
+
+        function generateItems(items) {
+
+
+
+            //let itemsHTML = "";
+            items.forEach((item) => {
+
+                firebase.storage().ref('menu/' + item.Name + '/profile.jpg').getDownloadURL()
+                    .then(imgUrl => {
+                        db.collection("Menu").doc(item.id).update({
+                            ImageUrl: imgUrl
+
+                        })
+                    })
+
+
+
             })
-  
-        
-  
-    })
-  }
+        }
 
-});
+    });
 
 }
 ref.onSnapshot(snapshot => {
@@ -104,16 +148,16 @@ ref.onSnapshot(snapshot => {
 
     let requests = [];
     snapshot.forEach(doc => {
-        requests.push({ ...doc.data(), id: doc.id  });
+        requests.push({ ...doc.data(), id: doc.id });
     });
     console.log(requests);
 
-     let list = '';
+    let list = '';
     requests.forEach(request => {
 
-    list += 
+        list +=
 
-`                                 <tr>
+            `                                 <tr>
 <td>
      <!-- Custom Checkbox -->
      <label class="custom-checkbox">
@@ -146,14 +190,14 @@ ref.onSnapshot(snapshot => {
 </td>
 </tr>`
 
-      //name += `<td>${request.Username}</td>`
-      //email += `<li>${request.text}</li>`
+        //name += `<td>${request.Username}</td>`
+        //email += `<li>${request.text}</li>`
     });
-    
-     document.querySelector('.menu-list').innerHTML = list;
-     createEventListeners();
-     //document.querySelector('.name').innerHTML = name;
-     //document.querySelector('.email').innerHTML = email;
+
+    document.querySelector('.menu-list').innerHTML = list;
+    createEventListeners();
+    //document.querySelector('.name').innerHTML = name;
+    //document.querySelector('.email').innerHTML = email;
 });
 
 function createEventListeners() {
@@ -161,19 +205,19 @@ function createEventListeners() {
     let deleteButtons = document.querySelectorAll(".delete");
     let EditButtons = document.querySelectorAll(".edit-menu");
 
-    deleteButtons.forEach((button)=>{
-        button.addEventListener("click", function(){
+    deleteButtons.forEach((button) => {
+        button.addEventListener("click", function () {
             console.log("clicked");
             deleteItem(button.dataset.id)
-            
+
         })
     })
 
-    EditButtons.forEach((button)=>{
-        button.addEventListener("click", function(){
-            console.log("clicked edit");
+    EditButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            console.log("clicked edit " + button.dataset.id);
             EditItem(button.dataset.id)
-            
+
         })
     })
 
