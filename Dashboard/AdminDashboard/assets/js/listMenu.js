@@ -1,4 +1,8 @@
 const ref = firebase.firestore().collection('Menu');
+
+function deleteItem(itemId){
+    db.collection("Menu").doc(itemId).delete();
+}
 let file = {};
 
 function choosefile(e) {
@@ -7,8 +11,6 @@ function choosefile(e) {
 
 
 function EditItem(menuId){
-
-
    
 const menuform = document.querySelector('#update-menu-form');
 menuform.addEventListener('submit', (e) => {
@@ -67,6 +69,10 @@ menuform.addEventListener('submit', (e) => {
         console.log(items);
     });
   }
+
+
+
+
   
   function generateItems(items) {
   
@@ -133,7 +139,7 @@ ref.onSnapshot(snapshot => {
          <img src="../../assets/img/svg/c-edit.svg" alt="" class="svg">
      </span>
      <span class="contact-close">
-         <img src="../../assets/img/svg/c-close.svg" alt="" class="svg">
+         <img class="delete" data-id="${request.id}" src="../../assets/img/svg/c-close.svg" alt="" class="svg">
      </span>
 </td>
 </tr>`
