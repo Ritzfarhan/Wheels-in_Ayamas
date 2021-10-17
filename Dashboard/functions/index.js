@@ -74,3 +74,20 @@ exports.userDeleted = functions.auth.user().onDelete(user => {
   const doc = admin.firestore().collection('users').doc(user.uid);
   return doc.delete();
 });
+
+
+
+exports.deleteUser = functions.https.onCall((data, context) => {
+  if (context.auth.token.admin !== true) {
+    return { error: "Only admins can add other staff" }
+  }
+
+ 
+  return admin.auth().deleteUser(data.uid)
+  .then(() => {
+    console.log('Successfully deleted user');
+  })
+  .catch((error) => {
+    console.log('Error deleting user:', error);
+  });
+});

@@ -1,6 +1,19 @@
 const ref = firebase.firestore().collection('users');
 
 
+function deleteItem(userId){
+    const deleteUser = functions.httpsCallable('deleteUser');
+   // db.collection("cart-items").doc(itemId).delete();
+
+   deleteUser({uid: userId})
+   .then(result =>{
+       console.log(result);
+   })
+   .catch(err =>{
+       console.log(err.message);
+   })
+
+}
 
 
 ref.onSnapshot(snapshot => {
@@ -46,7 +59,7 @@ ref.onSnapshot(snapshot => {
         <img src="../../../assets/img/svg/c-edit.svg" alt="" class="svg">
     </span>
     <span class="contact-close">
-        <img src="../../../assets/img/svg/c-close.svg" alt="" class="svg">
+        <img class="delete" data-id="${request.id}" src="../../../assets/img/svg/c-close.svg" alt="" class="svg">
     </span>
 </td>
 </tr>`
@@ -54,7 +67,23 @@ ref.onSnapshot(snapshot => {
       //name += `<td>${request.Username}</td>`
       //email += `<li>${request.text}</li>`
     });
+    
      document.querySelector('.list').innerHTML = list;
+     createEventListeners();
      //document.querySelector('.name').innerHTML = name;
      //document.querySelector('.email').innerHTML = email;
 });
+
+function createEventListeners() {
+
+    let deleteButtons = document.querySelectorAll(".delete");
+
+    deleteButtons.forEach((button)=>{
+        button.addEventListener("click", function(){
+            console.log("clicked");
+            deleteItem(button.dataset.id)
+            
+        })
+    })
+
+}

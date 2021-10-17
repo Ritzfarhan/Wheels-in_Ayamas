@@ -111,12 +111,12 @@
                                  <th>&nbsp; &nbsp;#</th>
                                  <th>&nbsp; &nbsp; &nbsp; &nbsp;Description</th>
                                  <th>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Quantity</th>
-                                 <th>&nbsp; &nbsp; &nbsp; Unit Cost</th>
+                                 <th>&nbsp; &nbsp; &nbsp; Price</th>
                                  <th>&nbsp; &nbsp; &nbsp;Total</th>
                               </tr>
                            </thead>
-                           <tbody>
-                              <tr>
+                           <tbody class="cart-items">
+                              <!--<tr>
                                  <td>#01</td>
                                  <td><a href="#">Golden Roaster Whole</a></td>
                                  <td><a href="#"><img src="../../assets/img/svg/minus.svg" class="svg" alt="">&nbsp;<input type="number" value="26">&nbsp<img src="../../assets/img/svg/plus.svg" class="svg" alt=""></td>
@@ -144,7 +144,7 @@
                                     <td><span>RM17.0</span></td>
                                  <td><span>RM442.0</span> <a href="#"><img src="../../assets/img/svg/table-colse.svg" class="svg" alt=""></a></td>
                                  
-                              </tr>
+                              </tr>-->
                            </tbody>
                         </table>
                         <div class="proceed-to-checkout mt-4 text-right">                                   
@@ -259,7 +259,7 @@
                                     <td>Total</td>
                                     <td>
                                        <strong>
-                                          <span class="Price-amount amount"><span class="Price-currencySymbol">RM</span>3103.31</span>
+                                          <span class="Price-amount amount"><span class="Price-currencySymbol">RM</span ><span class="total-cost-number">3103.31</span></span>
                                        </strong> 
                                     </td>
                                  </tr>
@@ -334,6 +334,7 @@
       </script>
 
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
+   <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
    <script src="../../assets/js/jquery.min.js"></script>
    <script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
    <script src="../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
@@ -342,6 +343,7 @@
    <script src="/Homepage/assets/js/index.js"></script>
    <script src="/Homepage/assets/js/Homepage.js"></script>
    <script src="/Homepage/assets/js/main.js"></script>
+   <script src="/Homepage/assets/js/cartlist.js"></script>
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
            
    <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
