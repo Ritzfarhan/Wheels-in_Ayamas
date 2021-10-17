@@ -21,9 +21,9 @@ menuform.addEventListener('submit', (e) => {
       Description: menuform['menu-description'].value
     }).then(() => {
       // close the signup modal & reset form
-      //const modal = document.querySelector('#edit-menu-modal');
+      //const modal = document.querySelector('#modal-signup');
       //M.Modal.getInstance(modal).close();
-      menuform.reset();
+      Updateform.reset();
      // Updateform.querySelector('.error').innerHTML = ''
       Swal.fire({ title: "Success!", text: "Your Profile have been updated", allowOutsideClick: !0, confirmButtonClass: "btn long", buttonsStyling: !1 });
       //setupPage(user);
