@@ -38,6 +38,12 @@ const setupUsername = (user) => {
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
     if (user) {
+        firebase.storage().ref('users/'+ user.uid + '/profile.jpg').getDownloadURL()
+        .then(imgUrl => 
+        {
+            profilepic.src = imgUrl;
+            avatar.src = imgUrl;
+        })
         user.getIdTokenResult().then(idTokenResult => {
             user.admin = idTokenResult.claims.admin;
             user.staff = idTokenResult.claims.staff;
