@@ -894,7 +894,7 @@ section {
   position: relative;
   z-index: 3;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 17px;
   color: #fff;
   transition: 0.3s;
 }
@@ -906,7 +906,8 @@ section {
   position: relative;
   z-index: 3;
   padding: 0 10px;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 17px;
   color: #fff;
   height: fit-content;
 }

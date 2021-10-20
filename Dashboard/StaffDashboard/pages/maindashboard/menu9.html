@@ -122,19 +122,27 @@
                                     </div>
 
                                     <div class="user-profile d-xl-flex align-items-center d-none d-md-block">
-                                       <!-- User Avatar -->
-                                       <div class="user-avatar d-flex justify-content-end">
-                                          <img src="../../assets/img/avatar/user1 (70x70).png" alt="">
-                                       </div>
-                                       <!-- End User Avatar -->
+                                       <div class="user-profile d-xl-flex align-items-center d-none d-md-block">
+                                          <!-- User Avatar -->
+                                          <div class="user-avatar d-flex justify-content-end">
 
-                                       <!-- User Info -->
-                                       <div class="user-info ">
-                                          <div class='user-name'></div>
-                                       </div>
-                                       <!-- End User Info -->
-                                    </div>
-                                 </a>
+                                              <img src="../../../assets/img/avatar/user1 (70x70).png"
+                                                  alt="" id="profilepic">
+
+
+                                          </div>
+                                          <!-- End User Avatar -->
+
+                                          <!-- User Info -->
+                             <div class="user-info ">
+                              <div class='user-name'></div>
+                                  <div class='roles'></div>
+                          </div>
+                          <!-- End User Info -->
+
+
+                                      </div>
+                                  </a>
                                  <div class="dropdown-menu">
                                     <a href="/StaffDashboard/pages/pages/user-profile/edit-profile.html">My Profile</a>
                                     <a href="/Homepage/index.html">Homepage</a>
@@ -567,6 +575,8 @@
    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-storage.js"></script>
+
    <script>
       // Initialize Firebase
       var config = {

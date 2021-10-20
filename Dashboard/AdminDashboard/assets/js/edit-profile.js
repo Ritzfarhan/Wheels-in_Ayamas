@@ -37,9 +37,6 @@ Updateform.addEventListener('submit', (e) => {
 
   // sign up the user & add firestore data
   auth.onAuthStateChanged(user => {
-
-
-
     db.collection("users").doc(user.uid).update({
       Username: Updateform['user-name-edit'].value,
       f_name: Updateform['f-name-edit'].value,
