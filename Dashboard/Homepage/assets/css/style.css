@@ -235,6 +235,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   letter-spacing: 1px;
   transition: 0.3s;
+  margin-right: -40px;
 }
 .book-a-parking-btn:hover {
   background: #cda45e;
@@ -368,7 +369,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(255, 246, 246, 0.9);
   transition: 0.3s;
   z-index: 999;
 }

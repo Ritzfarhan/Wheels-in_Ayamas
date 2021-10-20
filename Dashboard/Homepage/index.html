@@ -78,13 +78,12 @@
           <li><a class="nav-link scrollto" href="#events">Events</a></li>
           <li><a class="nav-link scrollto" href="#chefs">Team</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a id="cart-list" class="nav-link scrollto" href="/Homepage/Dashmin_Light/Dashmin_Light/Dashmin_html/pages/ecommerce/cartlist.html">
-            <i class="fa fa-cart-plus" style="font-size:24px"></i></a></li>
-          <li class="dropdown">
-            <!--&nbsp;&nbsp;&nbsp;&nbsp;-->
+          <!--<li><a id="cart-list" class="nav-link scrollto" href="/Homepage/Dashmin_Light/Dashmin_Light/Dashmin_html/pages/ecommerce/cartlist.html">
+            <i class="fa fa-cart-plus" style="font-size:24px"></i></a></li>-->
+          <!--<li class="dropdown">
             <a class='user-name-homepage'>User</a><i class="bi bi-chevron-down"></i>
             <ul>
-              <li class="dropdown"><a href="#"><span>Profile</span><i class="bi bi-chevron-right"></i></a>
+              <li class="dropdown 'user-name-homepage"><a href="#"><span>Profile</span><i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="profile.html">View Profile</a></li>
                   <li><a href="Dashmin_Light/Dashmin_Light/Dashmin_html/pages/pages/account-setting.html">Edit Profile</a></li>
@@ -93,20 +92,47 @@
                     Password</span></i></a>
               </li>
             </ul>
-          </li>
+          </li>-->
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav>
 
       <a href="#book-a-parking" class="book-a-parking-btn scrollto d-none d-lg-flex logged-in"
         style="display: none;">Book a parking</a>
       <!--<a href="#" id="logout" class="log-out-btn logged-in"style="display: none;">Log Out</a> -->
-      <a href="#" id="logout" class="log-out-btn logged-in" style="display: none;">Log Out</a>
+      <!--<a href="#" id="logout" class="log-out-btn logged-in" style="display: none;">Log Out</a>
       <a href="/AdminDashboard/pages/pages/authentication/login.html" class="log-out-btn logged-out"
         style="display: none;">Log In</a>
       <a href="/AdminDashboard/pages/pages/authentication/register.html" class="log-out-btn logged-out"
-        style="display: none;">Sign Up</a>
+        style="display: none;">Sign Up</a>-->
+        
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        
+          <li class="dropdown edit1">
+            <a class="user-name-homepage">User</a><i class="bi bi-chevron-down"></i>
+            <ul>
+              <li class="dropdown user-name-homepage"><a href="#"><span>Profile</span><i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="profile.html">View Profile</a></li>
+                  <li><a href="Dashmin_Light/Dashmin_Light/Dashmin_html/pages/pages/account-setting.html">Edit Profile</a></li>
+                  <li><a href="/AdminDashboard/pages/pages/authentication/reset-pass.html"><span>Reset Password</span></i></a></li>
+                  <li><a href="#" id="logout" class="log-out-btn logged-in" style="display: none;">Log Out</a></li>
+                  <li><a href="/AdminDashboard/pages/pages/authentication/login.html" class="log-out-btn logged-out" style="display: none;">Log In</a></li>
+                  <!--<a href="#" id="logout" class="log-out-btn logged-in"style="display: none;">Log Out</a> -->
+                  <li><a href="/AdminDashboard/pages/pages/authentication/register.html" class="log-out-btn logged-out" style="display: none;">Sign Up</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <ul>
+            <li class=" icon1">
+              <a id="cart-list" class="nav-link scrollto" href="/Homepage/Dashmin_Light/Dashmin_Light/Dashmin_html/pages/ecommerce/cartlist.html"></a>
+              <i class="fa fa-cart-plus"></i>
+            </li>
+          </ul>
+      </nav>
       <!-- ======= BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
       <link rel="stylesheet" href="/AdminDashboard/assets/plugins/sweetalert2/sweetalert2.min.css">
       <!-- ======= END BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
