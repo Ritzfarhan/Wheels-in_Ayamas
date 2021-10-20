@@ -19,7 +19,11 @@
 //    LastName: l_name
 //  });
 //}
+let file = {};
 
+function choosefile(e) {
+  file = e.target.files[0];
+}
 
 const Updateform = document.querySelector('#update-form');
 Updateform.addEventListener('submit', (e) => {
@@ -47,7 +51,15 @@ Updateform.addEventListener('submit', (e) => {
       
   })
   
+  auth.onAuthStateChanged(user => {
+    firebase.storage().ref('users/' + user.uid + '/profile.jpg').put(file).then( function() {
+      console.log('uploaded profile image')
+    }).catch(error =>{
+      console.log(error.message);
+    })
+  })
 
+});
 
 
 
@@ -65,7 +77,6 @@ Updateform.addEventListener('submit', (e) => {
   //}).catch(err => {
   //    console.log;
   //    signupForm.querySelector('.error').innerHTML = err.message;
-});
 
 
 

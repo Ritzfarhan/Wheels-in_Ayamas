@@ -13,8 +13,9 @@
   color: #00192f;
 }
 .menu-comment{
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 4px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .about p{
   color: #00192f;
@@ -96,4 +97,25 @@ img, svg {
   margin-top: calc(var(--bs-gutter-y) * -1);
   margin-right: calc(var(--bs-gutter-x) * -.5);
   margin-left: calc(var(--bs-gutter-x) * -.5);
+}
+
+.icon1 {
+  font-size:24px; 
+  margin-bottom: 19px; 
+  margin-left: 5px;
+  margin-right: -10px;
+  color: #fff;
+}
+
+.edit1 {
+  margin-bottom: 15px;
+  margin-right: 10px;
+}
+
+::marker {
+  color: #00000000;
+}
+
+.text1 {
+  text-align: justify;
 }

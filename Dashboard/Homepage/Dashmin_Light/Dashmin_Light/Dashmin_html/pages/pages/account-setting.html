@@ -127,13 +127,13 @@
                                     <div class="tab-pane fade show active" id="general">
                                         <h4 class="mb-4">Edit Profile</h4>
 
-                                        <form action="#"  id="update-form">
+                                        <form action="#" id="update-form">
                                             <div class="row">
                                                 <div class="col-xl-4 col-lg-6">
                                                     <!-- Form Group -->
                                                     <div class="form-group mb-20">
                                                         <label for="userName" class="mb-2 font-14 bold black">User Name</label>
-                                                        <input type="text" id="user-name-edit" class="theme-input-style" placeholder="Type Here">
+                                                        <input type="text" id="user-name-edit" class="theme-input-style" placeholder="Type Here" required>
                                                     </div>
                                                     <!-- End Form Group -->
                                                 </div>
@@ -141,14 +141,14 @@
                                                     <!-- Form Group -->
                                                     <div class="form-group mb-20">
                                                         <label for="name" class="mb-2 font-14 bold black">First Name</label>
-                                                        <input type="text" id="f-name-edit" class="theme-input-style" placeholder="Type Here">
+                                                        <input type="text" id="f-name-edit" class="theme-input-style" placeholder="Type Here" required>
                                                     </div>
                                                     <!-- End Form Group -->
 
                                                     <!-- Form Group -->
                                                     <div class="form-group mb-20">
                                                         <label for="company" class="mb-2 font-14 bold black">Last Name</label>
-                                                        <input type="text"  id="l-name-edit" class="theme-input-style" placeholder="Type Here">
+                                                        <input type="text"  id="l-name-edit" class="theme-input-style" placeholder="Type Here" required>
                                                     </div>
                                                     <!-- End Form Group -->
                                                 </div>
@@ -161,7 +161,7 @@
                                                                 <div class="upload-button mb-20">
                                                                    <img src="../../assets/img/svg/gallery.svg" alt="" class="svg mr-2">
                                                                    <span>Upload Photo</span>
-                                                                   <input class="file-input" type="file" id="fileUpload" accept="image/*">
+                                                                   <input class="file-input" type="file" id="fileUpload" onchange="choosefile(event)" >
                                                                 </div>
                                                              </div>
              
@@ -177,13 +177,13 @@
                                                         <button id="UpdateBtn" type="submit" class="btn">Save Changes</button>
                                                         <button type="button" class="link-btn bg-transparent ml-3 soft-pink">Cancel</button>
                                                         <p class="error pink-text center-align"></p>
-                                                     </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </form>
                                     </div>
 
-
+                                    
                                     <div class="tab-pane fade" id="info">
                                         <h4 class="mb-4">Informations</h4>
 
@@ -465,7 +465,8 @@
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
-    
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-storage.js"></script>
+        
     <script>
        // import {initializeApp} from "https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js";
        // Initialize Firebase
