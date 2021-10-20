@@ -55,6 +55,12 @@ const setupUI = (user) => {
 
 auth.onAuthStateChanged(user => {
     if (user) {
+        firebase.storage().ref('users/'+ user.uid + '/profile.jpg').getDownloadURL()
+        .then(imgUrl => 
+        {
+            profilepic.src = imgUrl;
+            avatar.src = imgUrl;
+        })
         user.getIdTokenResult().then(idTokenResult => {
             user.admin = idTokenResult.claims.admin;
             setupUI(user);
