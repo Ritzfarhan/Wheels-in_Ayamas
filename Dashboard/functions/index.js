@@ -91,3 +91,54 @@ exports.deleteUser = functions.https.onCall((data, context) => {
     console.log('Error deleting user:', error);
   });
 });
+
+exports.updateStatus = functions.https.onCall((data, context) => {
+
+  const order = admin.firestore().collection('Order Status').doc(data.id);
+  if(data.count <= 1){
+    return order.update({
+      status: 1,
+      order : "Unpaid"
+    }).then(() =>{
+      console.log('status = unpaid')
+    }).catch((error) => {
+      console.log('Error ', error);
+    });
+    
+  }
+  else if(data.count=2){
+    return order.update({
+      status: 2,
+      order : "On Hold"
+    }).then(() =>{
+      console.log('status = On Hold')
+    }).catch((error) => {
+      console.log('Error ', error);
+    });
+
+  }
+  else if(data.count = 3){
+    return order.update({
+      status: 3,
+      order : "Paid"
+    }).then(() =>{
+      console.log('status = Paid')
+    }).catch((error) => {
+      console.log('Error ', error);
+    });
+    
+  
+  }else{
+    return order.update({
+      status: 0,
+      order : "Preparing"
+    }).then(() =>{
+      console.log('status = preparing')
+    }).catch((error) => {
+      console.log('Error ', error);
+    });
+  }
+  
+
+  
+});

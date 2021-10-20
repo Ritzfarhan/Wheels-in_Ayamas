@@ -1,4 +1,4 @@
- function getMenu() {
+function getMenu() {
     db.collection("Menu").where("Category", "==", "Chicken Roaster").onSnapshot(snapshot => {
         console.log();
         let items = [];
@@ -50,7 +50,20 @@ function AddtoCart(item) {
     })
 }
 
+function deleteItem(itemId) {
+    console.log(itemId);
+    const product_title = document.querySelector('.product_title');
+    db.collection("Menu").doc(itemId).get().then(doc => {
 
+        const title = `<h4 class="product_title">${doc.data().Name} </h4>`;
+
+        product_title.innerHTML = title;
+
+
+
+
+    });
+}
 
 function generateItems(items) {
 
@@ -59,74 +72,67 @@ function generateItems(items) {
     //let itemsHTML = "";
     items.forEach((item) => {
 
-       // firebase.storage().ref('menu/' + item.Name + '/profile.jpg').getDownloadURL()
-       //     .then(imgUrl => {
-       //         db.collection("Menu").doc(item.id).update({
-       //             ImageUrl: imgUrl
-//
-       //         })
-       //     })
-//
+        // firebase.storage().ref('menu/' + item.Name + '/profile.jpg').getDownloadURL()
+        //     .then(imgUrl => {
+        //         db.collection("Menu").doc(item.id).update({
+        //             ImageUrl: imgUrl
+        //
+        //         })
+        //     })
+        //
         let doc = document.createElement("div");
-        doc.classList.add("col-lg-6", "menu-item", "filter-chicken");
-        doc.style = document.querySelector(".menu");
-        doc.style.position = "absolute";
-        //posx = col*50; posy=row*50;
-        //doc.style.left ="auto";
-        //doc.style.top = "auto";
-        //doc.style.marginTop = "50px";
-        //doc.style.width =  document.querySelector(".row-menu");;
-       // doc.style.height = document.querySelector(".row-menu");;
-
+        doc.classList.add("col-xl-2", "col-lg-3", "col-md-4", "col-sm-6", "col-12");
         doc.innerHTML = `
        
-        <img src="${item.ImageUrl}" class="menu-img" alt="">
-            <div class="menu-content">
-              <a href="/Homepage/Dashmin_Light/Dashmin_Light/Dashmin_html/pages/ecommerce/golden-roaster-whole.html">${item.Name}</a><span>RM ${item.Price}  &nbsp; <div id="add"></div></span>
+        <!-- Product Grid Item -->
+        <div class="product-grid-item mb-30">
+            <div class="product-img mb-3">
+                 <a data-id="${item.id}" class="menu-details" href="menu-details.html"> 
+                 <img src="${item.ImageUrl}" class=" w-100" alt="" id="menupic">
+                 </a>
             </div>
-            <div class="menu-ingredients">
-            ${item.Description} &nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="product-content">
+                <h6 class="mb-10">RM${item.Price}</h6>
+                 <a data-id="${item.id}" href="menu-details.html">
+                    <p class="black">${item.Name}</p>
+                 </a>
             </div>
+           
+        </div>
+        <!-- End Product Grid Item -->
  
         `
-
-         let addToCartEl = document.createElement("button");
-         addToCartEl.classList.add("btn-info-menu", "btn");
-        
-         //addToCartEl.style.left = String(posx)+"px";
-         //addToCartEl.style.top = String(posy)+"px";
-         //addToCartEl.style.width = "50px";
-         //addToCartEl.style.height = "50px";
-         //
-         addToCartEl.innerText = "add to cart";
-         addToCartEl.addEventListener("click", function(){
+        let addToCartEl = document.createElement("button");
+        addToCartEl.classList.add("single_add_to_cart_button", "btn", "button", "button1", "btn-fill");
+        addToCartEl.innerText = "Add To Cart";
+        addToCartEl.addEventListener("click", function(){
             AddtoCart(item)
          })
-         //let addbtn = document.getElementById("add").appendChild(addToCartEl);
-        // document.querySelector(".price").appendChild(addToCartEl);
+        // let addToCartEl = document.createElement("div");
+        // addToCartEl.classList.add("hover:bg-yellow-600", "cursor-pointer", "product-add", "h-8", "w-28", "rounded", "bg-yellow-500", "text-white", "text-md", "flex", "justify-center", "items-center");
+        // addToCartEl.innerText = "Add to cart";
+        // addToCartEl.addEventListener("click", function(){
+        //     addToCart(item)
+        // })
         doc.appendChild(addToCartEl);
-        
-        //document.querySelector(".row-menu").appendChild(doc);
-        document.querySelector(".chicken-roaster").appendChild(doc);
-       
-
+        document.querySelector(".row-menu").appendChild(doc);
+        createEventListeners();
 
     })
-    createEventListeners();
 }
 
+
+
+
 function createEventListeners() {
-    let AddtocartButtons = document.querySelectorAll(".addtocart");
-    
 
-   
+    let menudetails = document.querySelectorAll(".menu-details");
 
-    AddtocartButtons.forEach((button) => {
-        button.addEventListener("click", function(){
-            AddtoCart(button.dataset.id);
+    menudetails.forEach((button) => {
+        button.addEventListener("click", function () {
+            deleteItem(button.dataset.id)
         })
     })
-
 }
 
 getMenu();

@@ -414,8 +414,8 @@
                                     <th>Actions</th>
                                  </tr>
                               </thead>
-                              <tbody>
-                                 <tr>
+                              <tbody id="app">
+                                 <tr v-for="request in requests">
                                     <td>
                                        <!-- Custom Checkbox -->
                                        <label class="custom-checkbox">
@@ -425,22 +425,22 @@
                                        <!-- End Custom Checkbox -->
 
                                     </td>
-                                    <td>$658</td>
-                                    <td>July 14 2019</td>
-                                    <td>Prudence Kirlin</td>
-                                    <td><button type="button" class="status-btn un_paid">Unpaid</button></td>
+                                    <td>{{ request.Amount }}</td>
+                                    <td>{{ request.Date.toDate().toDateString()}}</td>
+                                    <td>{{ request.Name }}</td>
+                                    <td><button id="status" onclick="updateorder()" type="button" class="status-btn un_paid" v-on:click="updateStatus(request.id)">Unpaid</button></td>
                                     <td><a href="invoice-details.html" class="details-btn">Details <i
                                              class="icofont-arrow-right"></i></a></td>
                                  </tr>
 
-                                 <tr>
+                                 <!--<tr>
                                     <td>
-                                       <!-- Custom Checkbox -->
+                                      
                                        <label class="custom-checkbox">
                                           <input type="checkbox">
                                           <span class="checkmark"></span>
                                        </label>
-                                       <!-- End Custom Checkbox -->
+                                     
 
                                     </td>
                                     <td>$76</td>
@@ -453,12 +453,12 @@
 
                                  <tr>
                                     <td>
-                                       <!-- Custom Checkbox -->
+                                      
                                        <label class="custom-checkbox">
                                           <input type="checkbox">
                                           <span class="checkmark"></span>
                                        </label>
-                                       <!-- End Custom Checkbox -->
+                                     
 
                                     </td>
                                     <td>$598</td>
@@ -471,13 +471,12 @@
 
                                  <tr>
                                     <td>
-                                       <!-- Custom Checkbox -->
+                                      
                                        <label class="custom-checkbox">
                                           <input type="checkbox">
                                           <span class="checkmark"></span>
                                        </label>
-                                       <!-- End Custom Checkbox -->
-
+                                    
                                     </td>
                                     <td>$76</td>
                                     <td>September 14, 2017</td>
@@ -489,12 +488,12 @@
 
                                  <tr class="selected">
                                     <td>
-                                       <!-- Custom Checkbox -->
+                                      
                                        <label class="custom-checkbox">
                                           <input type="checkbox" checked>
                                           <span class="checkmark"></span>
                                        </label>
-                                       <!-- End Custom Checkbox -->
+                                      
 
                                     </td>
                                     <td>$365</td>
@@ -507,12 +506,12 @@
 
                                  <tr class="selected">
                                     <td>
-                                       <!-- Custom Checkbox -->
+                                     
                                        <label class="custom-checkbox">
                                           <input type="checkbox" checked>
                                           <span class="checkmark"></span>
                                        </label>
-                                       <!-- End Custom Checkbox -->
+                                      
 
                                     </td>
                                     <td>$398</td>
@@ -525,12 +524,12 @@
 
                                  <tr>
                                     <td>
-                                       <!-- Custom Checkbox -->
+                                   
                                        <label class="custom-checkbox">
                                           <input type="checkbox">
                                           <span class="checkmark"></span>
                                        </label>
-                                       <!-- End Custom Checkbox -->
+                                   
 
                                     </td>
                                     <td>$45</td>
@@ -543,12 +542,12 @@
 
                                  <tr>
                                     <td>
-                                       <!-- Custom Checkbox -->
+                                   
                                        <label class="custom-checkbox">
                                           <input type="checkbox">
                                           <span class="checkmark"></span>
                                        </label>
-                                       <!-- End Custom Checkbox -->
+                                     
 
                                     </td>
                                     <td>$634</td>
@@ -561,12 +560,12 @@
 
                                  <tr>
                                     <td>
-                                       <!-- Custom Checkbox -->
+                                     
                                        <label class="custom-checkbox">
                                           <input type="checkbox">
                                           <span class="checkmark"></span>
                                        </label>
-                                       <!-- End Custom Checkbox -->
+                                       
 
                                     </td>
                                     <td>$458</td>
@@ -579,12 +578,12 @@
 
                                  <tr>
                                     <td>
-                                       <!-- Custom Checkbox -->
+                                     
                                        <label class="custom-checkbox">
                                           <input type="checkbox">
                                           <span class="checkmark"></span>
                                        </label>
-                                       <!-- End Custom Checkbox -->
+                                     
 
                                     </td>
                                     <td>$1658</td>
@@ -594,6 +593,7 @@
                                     <td><a href="invoice-details.html" class="details-btn">Details <i
                                              class="icofont-arrow-right"></i></a></td>
                                  </tr>
+                              -->
                               </tbody>
                            </table>
                            <!-- End Invoice List Table -->
@@ -615,6 +615,7 @@
       <!-- End Footer -->
    </div>
    <!-- End wrapper -->
+   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
    <!--initialize firebase-->
    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
@@ -649,6 +650,7 @@
    <script src="../../assets/js/script.js"></script>
    <script src="../../assets/js/profile.js"></script>
    <script src="../../assets/js/index.js"></script>
+   <script src="../../assets/js/orderstatus.js"></script>
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
 
    <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
