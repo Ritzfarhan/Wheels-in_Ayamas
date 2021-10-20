@@ -115,3 +115,7 @@ img, svg {
 ::marker {
   color: #00000000;
 }
+
+.text1 {
+  text-align: justify;
+}
