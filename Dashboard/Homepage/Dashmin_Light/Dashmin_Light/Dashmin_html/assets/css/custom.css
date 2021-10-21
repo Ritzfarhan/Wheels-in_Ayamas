@@ -229,3 +229,12 @@ p {
   font-size: 20px;
   color: #fff;
 }
+
+::marker {
+  color: #744b1a00;
+}
+
+.edit1 {
+  margin-bottom: 15px;
+  margin-right: 10px;
+}

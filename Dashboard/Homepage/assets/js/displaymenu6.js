@@ -1,5 +1,5 @@
 function getMenu() {
-    db.collection("Menu").where("Category", "==", "Chicken Curry Mee").onSnapshot(snapshot => {
+    db.collection("Menu").where("Category", "==", "Chicken Curry Meal").onSnapshot(snapshot => {
         console.log();
         let items = [];
         snapshot.forEach((doc) => {
@@ -81,7 +81,7 @@ function generateItems(items) {
         //     })
         //
         let doc = document.createElement("div");
-        doc.classList.add("col-xl-2", "col-lg-3", "col-md-4", "col-sm-6", "col-12");
+        doc.classList.add("col-xl-2");
         doc.innerHTML = `
        
         <!-- Product Grid Item -->
