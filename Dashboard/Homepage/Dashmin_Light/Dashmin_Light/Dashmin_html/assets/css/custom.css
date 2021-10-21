@@ -143,8 +143,9 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: -15px;
-  margin-left: -15px;
+  margin-left: 15px;
   margin-top: -10px;
+  margin-bottom: 20px;
   border-radius: 10px;
 }
 .product-details-content {
