@@ -436,7 +436,7 @@
                                     <td>{{ request.Amount }}</td>
                                     <td>{{ request.Date.toDate().toDateString()}}</td>
                                     <td>{{ request.Name }}</td>
-                                    <td><button id="status" onclick="updateorder()" type="button" class="status-btn un_paid" v-on:click="updateStatus(request.id)">Unpaid</button></td>
+                                    <td><button id="status"  type="button" class="status-btn " v-on:click="updateStatus(request.id, request.status)">Unpaid</button></td>
                                     <td><a href="invoice-details.html" class="details-btn">Details <i
                                              class="icofont-arrow-right"></i></a></td>
                                  </tr>
@@ -660,7 +660,7 @@
    <script src="../../assets/js/script.js"></script>
    <script src="../../assets/js/profile.js"></script>
    <script src="../../assets/js/index.js"></script>
-   <script src="../../assets/js/orderstatus.js"></script>
+y   <script src="../../assets/js/orderstatusvue.js"></script>
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
 
    <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
