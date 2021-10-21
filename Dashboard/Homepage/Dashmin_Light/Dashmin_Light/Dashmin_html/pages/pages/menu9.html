@@ -76,23 +76,26 @@
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>&nbsp;&nbsp;&nbsp;</a></li>
           <li class="dropdown">&nbsp;&nbsp;&nbsp;&nbsp;
             <a class='user-name-homepage'>User</a><a></a>
-            <ul>
-              <li class="dropdown"><a href="#"><span>Profile</span><i class="bi bi-chevron-left" ></i></a>
-                <ul>
-                    <li><a href="/Homepage/profile.html">View Profile</a></li>  
-                    <li><a href="/Homepage/Dashmin_Light/Dashmin_Light/Dashmin_html/pages/pages/account-setting.html">Edit Profile</a></li>  
-                  </ul>
-                <li><a href="/AdminDashboard/pages/pages/authentication/reset-pass.html"><span>Reset Password</span></i></a>
-              </li>
-            </ul>
-          </li>
+           <ul>
+             <li class="dropdown"><a href="#"><span>Profile</span><i class="bi bi-chevron-left" ></i></a>
+               <ul>
+                   <li><a href="/Homepage/profile.html">View Profile</a></li>  
+                   <li><a href="/Homepage/Dashmin_Light/Dashmin_Light/Dashmin_html/pages/pages/account-setting.html">Edit Profile</a></li>  
+                 </ul>
+                 <li><a href="/AdminDashboard/pages/pages/authentication/reset-pass.html"><span>Reset Password</span></i></a></li>
+                 <li><a href="#" id="logout" class="log-out-btn logged-in" style="display: none;">Log Out</a></li>
+                 <li><a href="/AdminDashboard/pages/pages/authentication/login.html" class="log-out-btn logged-out" style="display: none;">Log In</a></li>
+                 <!--<a href="#" id="logout" class="log-out-btn logged-in"style="display: none;">Log Out</a> -->
+                 <li><a href="/AdminDashboard/pages/pages/authentication/register.html" class="log-out-btn logged-out" style="display: none;">Sign Up</a></li>
+             </li>
+           </ul>
+         </li>
 
-        </ul>
+       </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
       <a href="#book-a-parking" class="book-a-parking-btn scrollto d-none d-lg-flex logged-in"
         style="display: none;">Book a parking</a>
-      <a href="#" id="logout" class="log-out-btn logged-in" >Log Out</a>
     </div>
     <link rel="stylesheet" href="/Homepage/assets/css/style.css">
 
@@ -414,6 +417,7 @@
       <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
       <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
       <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-storage.js"></script>
       
       <script>
          // import {initializeApp} from "https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js";
