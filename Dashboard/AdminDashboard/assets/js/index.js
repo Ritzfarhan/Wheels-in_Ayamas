@@ -23,7 +23,7 @@ logout.addEventListener('click', (e) => {
     Swal.fire({
         title: "Logged out",
         html: "Redirecting to Homepage in <strong></strong> seconds.",
-        timer: 2000,
+        timer: 1000,
         confirmButtonClass: "btn long",
         buttonsStyling: !1,
         onBeforeOpen: function () {
