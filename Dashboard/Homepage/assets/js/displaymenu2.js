@@ -92,9 +92,9 @@ function generateItems(items) {
                  </a>
             </div>
             <div class="product-content">
-                <h6 class="mb-10">RM${item.Price}</h6>
+                <h6 class="mb-101">RM${item.Price}</h6>
                  <a data-id="${item.id}" href="meal4one-set-c.html">
-                    <p class="black">${item.Name}</p>
+                    <p>${item.Name}</p>
                  </a>
             </div>
            
