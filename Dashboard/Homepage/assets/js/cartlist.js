@@ -13,14 +13,22 @@ function getCartItems() {
 }
 
 function getTotalCost(items){
-    let totalCost = 0;
+    let totalCost1 = 0;
+    let totalCost2 = 0;
+    let servicetax = 0;
+    let tax = 0;
     items.forEach((item)=>{
-        totalCost += (item.Price * item.quantity);
+        totalCost1 += (item.Price * item.quantity);
+        servicetax += 0.3*totalCost1;
+        tax += 0.5*totalCost1;
+        totalCost2 += totalCost1 + servicetax + tax;
         console.log(item);
     })
     
-    document.querySelector(".total-cost-number").innerText = numeral(totalCost).format(' 0,0.00');
-}
+    document.querySelector(".subtotal").innerText = numeral(totalCost1).format(' 0,0.00');
+    document.querySelector(".service-tax").innerText = numeral(servicetax).format(' 0,0.00');
+    document.querySelector(".tax").innerText = numeral(tax).format(' 0,0.00');
+    document.querySelector(".total-cost").innerText = numeral(totalCost2).format(' 0,0.00');}
 
 function decreaseCount(itemId) {
     let cartItem = db.collection("cart-items").doc(itemId);

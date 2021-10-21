@@ -13,9 +13,9 @@ admin.initializeApp();
 
 exports.addAdminRole = functions.https.onCall((data, context) => {
   // check request is made by an admin
-  if (context.auth.token.admin !== true) {
-    return { error: "Only admins can add other admins" }
-  }
+  //if (context.auth.token.admin !== true) {
+  //  return { error: "Only admins can add other admins" }
+  //}
   // get user and add admin custom claim
   return admin.auth().getUserByEmail(data.email).then(user => {
     return admin.auth().setCustomUserClaims(user.uid, {
