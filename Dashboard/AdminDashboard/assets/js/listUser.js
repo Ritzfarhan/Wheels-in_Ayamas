@@ -42,6 +42,7 @@ ref.onSnapshot(snapshot => {
     snapshot.forEach(doc => {
         requests.push({ ...doc.data(), id: doc.id  });
     });
+    insertPicUrl(requests);
     console.log(requests);
 
      let list = '';

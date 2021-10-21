@@ -13,7 +13,26 @@ function deleteItem(userId) {
         })
 
 }
-
+function insertPicUrl(items) {
+  
+  
+  
+    //let itemsHTML = "";
+    items.forEach((item) => {
+  
+        firebase.storage().ref('users/' + item.id + '/profile.jpg').getDownloadURL()
+            .then(imgUrl => {
+                db.collection("users").doc(item.id).update({
+                    ImageUrl: imgUrl
+  
+                })
+            })
+  
+        
+  
+    })
+  }
+  
 ref.onSnapshot(snapshot => {
     // console.log(snapshot);
 
@@ -21,6 +40,7 @@ ref.onSnapshot(snapshot => {
     snapshot.forEach(doc => {
         requests.push({ ...doc.data(), id: doc.id });
     });
+    insertPicUrl(requests);
     console.log(requests);
 
     let list = '';
