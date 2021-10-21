@@ -87,13 +87,13 @@ function generateItems(items) {
         <!-- Product Grid Item -->
         <div class="product-grid-item mb-30">
             <div class="product-img mb-3">
-                 <a data-id="${item.id}" class="menu-details" href="menu-details.html"> 
+                 <a data-id="${item.id}" class="menu-details" href="combo-carbonara.html"> 
                  <img src="${item.ImageUrl}" class=" w-100" alt="" id="menupic">
                  </a>
             </div>
             <div class="product-content">
                 <h6 class="mb-10">RM${item.Price}</h6>
-                 <a data-id="${item.id}" href="menu-details.html">
+                 <a data-id="${item.id}" href="combo-carbonara.html">
                     <p class="black">${item.Name}</p>
                  </a>
             </div>
