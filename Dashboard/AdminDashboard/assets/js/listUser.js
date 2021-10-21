@@ -15,7 +15,26 @@ function deleteItem(userId){
 
 }
 
-
+function insertPicUrl(items) {
+  
+  
+  
+    //let itemsHTML = "";
+    items.forEach((item) => {
+  
+        firebase.storage().ref('users/' + item.id + '/profile.jpg').getDownloadURL()
+            .then(imgUrl => {
+                db.collection("users").doc(item.id).update({
+                    ImageUrl: imgUrl
+  
+                })
+            })
+  
+        
+  
+    })
+  }
+  
 ref.onSnapshot(snapshot => {
     // console.log(snapshot);
 
@@ -43,7 +62,7 @@ ref.onSnapshot(snapshot => {
 <td>
     <div class="d-flex align-items-center">
         <div class="img mr-20">
-            <img src="../../../assets/img/avatar/m16.png" class="img-40" alt="">
+            <img src="${request.ImageUrl}" class="img-40" alt="">
         </div>
         <div class="name bold">${request.Username}</div>
     </div>
