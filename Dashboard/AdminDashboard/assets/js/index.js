@@ -40,6 +40,6 @@ logout.addEventListener('click', (e) => {
     });
     setTimeout(function () {
         window.location.href = "/Homepage/index.html";
-    }, 2000);
+    }, 1000);
     //window.location.href = "/AdminDashboard/pages/pages/authentication/logout.html";
 });

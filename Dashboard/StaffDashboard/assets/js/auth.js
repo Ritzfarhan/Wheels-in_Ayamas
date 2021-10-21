@@ -66,7 +66,7 @@ auth.onAuthStateChanged(user => {
     });
     setTimeout(function () {
         window.location.href = "/Homepage/index.html";
-    }, 2000);
+    }, 1000);
   });
   
   
