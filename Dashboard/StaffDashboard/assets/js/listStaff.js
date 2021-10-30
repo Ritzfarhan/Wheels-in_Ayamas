@@ -73,9 +73,7 @@ ref.onSnapshot(snapshot => {
 <td>June 20, 2015</td>
 <td>$26253.0</td>-->
 <td class="actions">
-    <span class="contact-edit" data-toggle="modal" data-target="#contactEditModal">
-        <img src="../../../assets/img/svg/c-edit.svg" alt="" class="svg">
-    </span>
+
 </td>
 </tr>`
 
