@@ -87,8 +87,9 @@ ref.onSnapshot(snapshot => {
         //name += `<td>${request.Username}</td>`
         //email += `<li>${request.text}</li>`
     });
-    createEventListeners();
+    
     document.querySelector('.list').innerHTML = list;
+    createEventListeners();
     //document.querySelector('.name').innerHTML = name;
     //document.querySelector('.email').innerHTML = email;
 });
