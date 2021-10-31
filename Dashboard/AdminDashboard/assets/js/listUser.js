@@ -64,7 +64,7 @@ function EditUser(UserId) {
             //window.location.href = "/AdminDashboard/pages/maindashboard/menu-list.html";
             Updateform.reset();
             Updateform.querySelector('.error').innerHTML = ''
-            Swal.fire({ title: "Success!", text: "Your menu have been updated", allowOutsideClick: !0, confirmButtonClass: "btn long", buttonsStyling: !1 });
+            Swal.fire({ title: "Success!", text: "User have been updated", allowOutsideClick: !0, confirmButtonClass: "btn long", buttonsStyling: !1 });
             run(500).then(() => { window.location.href = "/AdminDashboard/pages/apps/list/user-list.html"; });
 
         }).catch(error => {

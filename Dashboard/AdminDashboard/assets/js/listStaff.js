@@ -1,3 +1,9 @@
+let file = {};
+
+function choosefile(e) {
+  file = e.target.files[0];
+}
+
 const ref = firebase.firestore().collection('users').where("roles", "==", "staff");
 
 function deleteItem(userId) {
@@ -35,6 +41,42 @@ function deleteItem(userId) {
   
     })
   }
+
+  function EditStaff(UserId) {
+
+    const Updateform = document.querySelector('#update-staff-form');
+    Updateform.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        db.collection("users").doc(UserId).update({    
+            Username: Updateform['user-name-editStaff'].value,
+            f_name: Updateform['f-name-editStaff'].value,
+            l_name: Updateform['l-name-editStaff'].value
+        }).catch(err => {
+            console.log;
+            Updateform.querySelector('.error').innerHTML = err.message;
+        });
+
+        // link menu pic with firestore
+        firebase.storage().ref('users/' + UserId + '/profile.jpg').put(file).then( function() {
+            console.log('uploaded profile image')
+          }).then(() => {
+            
+            //window.location.href = "/AdminDashboard/pages/maindashboard/menu-list.html";
+            Updateform.reset();
+            Updateform.querySelector('.error').innerHTML = ''
+            Swal.fire({ title: "Success!", text: "Staff have been updated", allowOutsideClick: !0, confirmButtonClass: "btn long", buttonsStyling: !1 });
+            run(500).then(() => { window.location.href = "/AdminDashboard/pages/apps/list/staff-list.html"; });
+
+        }).catch(error => {
+            console.log(error.message);
+        })
+        //////////////////////////////////////////////////////////
+        function run(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+    });
+}  
 
 ref.onSnapshot(snapshot => {
     // console.log(snapshot);
@@ -75,7 +117,7 @@ ref.onSnapshot(snapshot => {
 <td>June 20, 2015</td>
 <td>$26253.0</td>-->
 <td class="actions">
-    <span class="contact-edit" data-toggle="modal" data-target="#contactEditModal">
+    <span class="contact-edit" data-id="${request.id}" data-toggle="modal" data-target="#contactEditModal">
         <img src="../../../assets/img/svg/c-edit.svg" alt="" class="svg">
     </span>
     <span class="contact-close">
@@ -97,11 +139,20 @@ ref.onSnapshot(snapshot => {
 function createEventListeners() {
 
     let deleteButtons = document.querySelectorAll(".deleteStaff");
+    let EditButtons = document.querySelectorAll(".contact-edit");
 
     deleteButtons.forEach((button) => {
         button.addEventListener("click", function () {
             console.log("clicked");
             deleteItem(button.dataset.id)
+        })
+    })
+
+    EditButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            console.log("clicked edit " + button.dataset.id);
+            EditStaff(button.dataset.id)
+
         })
     })
 
