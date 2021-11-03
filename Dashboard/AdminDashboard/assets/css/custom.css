@@ -192,3 +192,16 @@ table tr:not(:last-child) td {
     -webkit-box-shadow: 0 5px 10px rgba(4, 0, 252, 0.2) !important;
     box-shadow: 0 5px 10px rgba(4, 0, 252, 0.2) !important;
 }
+.contact-box 
+.contact-head {
+    padding: 15px;
+    background-color: #b52217;
+    position: relative;
+}
+.c2{
+    color: #f9ef82; 
+}
+
+.status-wdth{
+    width: 130px;
+}
