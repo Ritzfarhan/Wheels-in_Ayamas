@@ -28,27 +28,30 @@ function getMenu() {
 }
 
 function AddtoCart(item) {
-    console.log(item);
-    let cartItem = db.collection("cart-items").doc(item.id);
-    cartItem.get()
-    .then(function(doc){
-        if(doc.exists){
-            cartItem.update({
-                quantity: doc.data().quantity + 1
-            })
-        } else {
-            cartItem.set({
-                id: item.id,
-                Name: item.Name,
-                Category: item.Category,
-                Price: item.Price,
-                Description: item.Description,
-                ImageUrl:item.ImageUrl,
-                quantity: 1
-            })
-        }
-        
-    })
+    auth.onAuthStateChanged(user => {
+        console.log(item);
+        let cartItem = db.collection("cart-items").doc(item.id);
+        cartItem.get()
+        .then(function(doc){
+            if(doc.exists){
+                cartItem.update({
+                    quantity: doc.data().quantity + 1
+                })
+            } else {
+                cartItem.set({
+                    id: item.id,
+                    Name: item.Name,
+                    Category: item.Category,
+                    Price: item.Price,
+                    Description: item.Description,
+                    ImageUrl:item.ImageUrl,
+                    quantity: 1,
+                    user: user.uid
+                })
+            }
+            
+        })
+        })
 }
 
 function deleteItem(itemId) {

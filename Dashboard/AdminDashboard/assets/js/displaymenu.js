@@ -27,6 +27,7 @@ function getMenu() {
 }
 
 function AddtoCart(item) {
+    auth.onAuthStateChanged(user => {
     console.log(item);
     let cartItem = db.collection("cart-items").doc(item.id);
     cartItem.get()
@@ -43,10 +44,12 @@ function AddtoCart(item) {
                 Price: item.Price,
                 Description: item.Description,
                 ImageUrl:item.ImageUrl,
-                quantity: 1
+                quantity: 1,
+                user: user.uid
             })
         }
         
+    })
     })
 }
 

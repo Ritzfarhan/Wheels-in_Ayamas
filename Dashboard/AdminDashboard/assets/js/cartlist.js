@@ -1,5 +1,8 @@
 function getCartItems() {
-    db.collection("cart-items").onSnapshot((snapshot) => {
+    auth.onAuthStateChanged(user => {
+   
+    
+    db.collection("cart-items").where("user", "==", user.uid ).onSnapshot((snapshot) => {
         let cartItems = [];
         snapshot.docs.forEach((doc) => {
             cartItems.push({
@@ -10,6 +13,7 @@ function getCartItems() {
         generateCartItems(cartItems);
         getTotalCost(cartItems);
     })
+})
 }
 
 function getTotalCost(items){
@@ -19,9 +23,9 @@ function getTotalCost(items){
     let tax = 0;
     items.forEach((item)=>{
         totalCost1 += (item.Price * item.quantity);
-       servicetax += 0.3*totalCost1;
-       tax += 0.5*totalCost1;
-       totalCost2 += totalCost1 + servicetax + tax;
+       servicetax = 0.3*totalCost1;
+       tax = 0.5*totalCost1;
+       totalCost2 = totalCost1 + servicetax + tax;
         console.log(item);
     })
     document.querySelector(".subtotal").innerText = numeral(totalCost1).format(' 0,0.00');

@@ -19,9 +19,9 @@ function getTotalCost(items){
     let tax = 0;
     items.forEach((item)=>{
         totalCost1 += (item.Price * item.quantity);
-        servicetax += 0.3*totalCost1;
-        tax += 0.5*totalCost1;
-        totalCost2 += totalCost1 + servicetax + tax;
+        servicetax = 0.3*totalCost1;
+        tax = 0.5*totalCost1;
+        totalCost2 = totalCost1 + servicetax + tax;
         console.log(item);
     })
     
