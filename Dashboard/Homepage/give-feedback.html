@@ -30,8 +30,8 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style-profile.css" rel="stylesheet">
-  <link href="assets/css/custom.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/custom-feedback.css" rel="stylesheet">
 
   <!-- ======= BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
   <link rel="stylesheet" href="/AdminDashboard/assets/plugins/sweetalert2/sweetalert2.min.css">
@@ -70,7 +70,7 @@
       <!--<h1 class="logo me-auto me-lg-0"><a href="index.html">Wheels in Ayamas</a></h1>-->
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo-icon.png" alt=""
+      <a href="/Homepage/index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo-icon.png" alt=""
           class="img-fluid"></a>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -122,40 +122,38 @@
     </div> 
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="1000">
-      <div class="row">
-        <div class="col-lg-8">
-          <br>
-          <div class="solehah-row">
-            <div class="leftcolumn">
-              <div class="card" style="background-color:#d9ba85;">
-                <!-- User Avatar -->
-                <br>
-                <div class="user-profile d-xl-flex align-items-center d-none d-md-block"></div>
-                <div class="user-avatar d-flex justify-content-center">
-                  <img src="/StaffDashboard/assets/img/avatar/user1 (70x70).png" width="100px;" alt="" id="profilepic">                </div>
-                <!-- End User Avatar -->
-                <div style="margin: 24px 0;">
-                  <div class='user-name'></div>
-                  <div class='f_name'>
-                    <h6></h6>
-                  </div>
-                  <div class='l_name'>
-                    <h6></h6>
-                  </div>
-                </div>
-                <div class="w3-container w3-brown">View Profile</div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
+  <div style="background-color:#caa476;" class="container-feedback">
+    <form action="action_page.php">
+  
+    <h2><b>Feedback Form</b></h2>
+    <br><br>
+      <label for="fname">Name</label>
+      <input style="background-color:white;" type="text" id="fname" name="firstname" placeholder="Your name..">
+      <br>
+      <label for="phone">Phone</label>
+      <input style="background-color:white;" type="text" id="phone" name="phone" placeholder="Your phone number..">
+      <br><br>
+      <label for="rating">Rating Service</label>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <label style="color:black;">Value: <span id="demo"></label></p>
       </div>
-  </section><!-- End Hero -->
-
+      <br>
+      <label for="feedback">Feedback</label>
+      <textarea style="background-color:white;" id="feedback" name="feedback" placeholder="Write your feedback.." style="height:200px"></textarea>
+      <br><br><br><br>
+      <input type="submit" value="Submit">
+        </form>
+  </div><br><br><br>
+  <script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+    
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }
+    </script>
   <main id="main">
 
   </main><!-- End #main -->
