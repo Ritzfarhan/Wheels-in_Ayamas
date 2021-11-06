@@ -35,6 +35,7 @@ function deleteItem(itemId) {
             .then(() => {
 
                 console.log("deleted successfully");
+
               }).catch((error) => {
                 // Uh-oh, an error occurred!
               });
