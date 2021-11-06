@@ -33,6 +33,9 @@
    <link rel="stylesheet" href="../../assets/css/custom.css">
    <!-- ======= END MAIN STYLES ======= -->
 
+    <!--initialize stripe-->
+    <script src="https://js.stripe.com/v3/"></script>
+
 </head>
 
 <body>
@@ -486,7 +489,7 @@
                            </table>
                   
                            <div class="proceed-to-checkout mt-4 text-center">
-                              <a href="/AdminDashboard/pages/maindashboard/booking-status.html" class="btn btn-w">Order Now</a>
+                              <button  id="orderButton" class="btn btn-w">Order Now</button>
                            </div>
                         </div>
                      </div>
@@ -537,6 +540,7 @@
       </script>
 
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
+   <!--numeral functions-->
    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
 
    <script src="../../assets/js/jquery.min.js"></script>
@@ -546,6 +550,7 @@
    <script src="../../assets/js/profile.js"></script>
    <script src="../../assets/js/index.js"></script>
    <script src="../../assets/js/cartlist.js"></script>
+  
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
 
       <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
