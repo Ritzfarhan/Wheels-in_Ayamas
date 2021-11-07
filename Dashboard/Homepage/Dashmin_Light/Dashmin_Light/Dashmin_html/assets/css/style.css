@@ -726,7 +726,8 @@ body,
 
 .cover-img {
   background-color: #f0f0f0;
-  width: 100%;
+  width: 120%;
+  right: 50px;
 }
 
 /* Others */
@@ -6917,6 +6918,18 @@ body.sidebar-folded .main-content {
   margin-bottom: 20px;
   
 }
+.order-history {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  background: #f8f2ac;
+  width: 900px;
+  margin-top: 160px;
+  margin-bottom: 20px;
+  margin-left: 200px;
+}
+
 
 @media only screen and (max-width: 479px) {
   .cart-list {
