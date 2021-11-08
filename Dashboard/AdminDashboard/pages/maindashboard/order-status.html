@@ -445,8 +445,16 @@
                                        </select>
                                        <!--<button id="status"  type="button" class="status-btn " v-on:click="updateStatus(request.id, request.status)">Unpaid</button>-->
                                     </td>
-                                    <td><a href="#" class="details-btn" data-toggle="modal" data-target="#contactAddModal">Details <i
-                                             class="icofont-arrow-right"></i></a></td>
+
+                                    <td class="actions">
+                                       <span class="contact-edit" data-toggle="modal" data-target="#contactAddModal">
+                                           <img src="/AdminDashboard/assets/img/svg/menuicon.svg" alt="" class="svg">
+                                       </span>
+                                       <span class="contact-close" data-toggle="modal" data-target="#contactEditModal" style="margin-left: 10px;">
+                                          <img src="/AdminDashboard/assets/img/svg/car2.svg" alt="" class="svg">
+                                       </span>
+                                   </td>
+                                    
                                  </tr>
                               </tbody>
                            </table>
@@ -454,127 +462,203 @@
                         </div>
 
                         <!-- Menu Detail PopUp -->
-                     <div id="contactAddModal" class="modal fade">
-                        <div class="modal-dialog modal-dialog-centered">
-                           <div class="modal-content">
-                              <!-- Modal Body -->
-                              <div class="modal-body">
-                                 <form action="#">
-
-                                    <div class="media flex-column flex-sm-row">
-                                       <!--<div class="modal-upload-avatar mr-0 mr-sm-3 mr-md-5 mb-5 mb-sm-0">
-
-                                          <div class="attach-file style--two mb-3">
-                                             <img src="../../../assets/img/img-placeholder.png" class="profile-avatar" alt="">
-                                             <div class="upload-button">
-                                                <img src="../../../assets/img/svg/gallery.svg" alt="" class="svg mr-2">
-                                                <span>Upload Photo</span>
-                                                <input class="file-input" type="file" id="fileUpload" accept="image/*">
-                                             </div>
-                                          </div>
-
-                                          <div class="content">
-                                             <h4 class="mb-2">Upload a Photo</h4>
-                                             <p class="font-12 c4">Allowed JPG, GIF or PNG. Max size <br /> of 800kB</p>
-                                          </div>
-                                       </div>-->
-                       
-                                       <div class="contact-account-setting media-body">
-          
-                                          <!-- Invoice Details List Wrapper -->
-                                          <div class="bg-white details-list-wrap">
-                                             <div class="table-responsive">
-                                                <!-- Invoice List Table -->
-                                                <h4 class="mb-4">Menu Details</h4>
-
-                                                <table class="invoice-list-table style-two some-center text-nowrap">
-                                                   <thead>
-                                                      <tr>
-                                                         <th>#</th>
-                                                         <th>Description</th>
-                                                         <th>Quantity</th>
-                                                         <th>Price</th>
-                                                         <th>Amount</th>
-                                                      </tr>
-                                                   </thead>
-
-                                                   <tbody class="bg-white">
-                                                      <tr>
-                                                         <td class="bold">#01</td>
-                                                         <td>Meal For 1 Set C</td>
-                                                         <td>2</td>
-                                                         <td>RM15.90</td>
-                                                         <td>RM31.80</td>
-                                                      </tr>
-
-                                                      <tr>
-                                                         <td class="bold">#01</td>
-                                                         <td>Combo Kids C</td>
-                                                         <td>1</td>
-                                                         <td>RM10.90</td>
-                                                         <td>RM10.90</td>
-                                                      </tr>                       
-                                                   </tbody>
-                                                </table>
-                                                <!-- End Invoice List Table -->
-                                             </div>
-
-                                             <!-- Cart Collaterals -->
-                                             <div class="cart-collaterals">
-                                                <div class="cart_totals calculated_shipping">
-                                                   <table class="shop_table">
-                                                      <tbody>
-                                                         <tr class="cart-subtotal">
-                                                            <th>Subtotal</th>
-                                                            <th>
-                                                               <span class="Price-amount amount">
-                                                                  <span class="Price-currencySymbol">RM</span><span class="subtotal"></span></span>
-                                                            </th>
-                                                         </tr>
-                                                         <tr class="cart-tax">
-                                                            <td>Service Tax (3%)</td>
-                                                            <td>
-                                                               <span class="Price-amount amount">
-                                                                  <span class="Price-currencySymbol">RM</span><span class="service-tax"></span></span>
-                                                            </td>
-                                                         </tr>
-                                                         <tr class="cart-tax">
-                                                            <td>tax (5%)</td>
-                                                            <td>
-                                                               <span class="Price-amount amount">
-                                                                  <span class="Price-currencySymbol">RM</span><span class="tax"></span></span>
-                                                            </td>
-                                                         </tr>
-                                                      
-                                                         <tr class="order-total">
-                                                            <td>Total</td>
-                                                            <td>
-                                                               <strong>
-                                                                  <span class="Price-amount amount"><span class="Price-currencySymbol">RM</span ><span class="total-cost"></span></span>
-                                                               </strong> 
-                                                            </td>
-                                                         </tr>
-                                                      </tbody>
-                                                   </table>
-                                             
-                                                   <div class="proceed-to-checkout d-flex align-items-center justify-content-end mr-20 mt-4">
-                                                      <a href="#" class="btn" data-dismiss="modal">Close</a>
-                                                   </div>
+                        <div id="contactAddModal" class="modal fade">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <!-- Modal Body -->
+                                 <div class="modal-body">
+                                    <form action="#">
+                                    
+                                       <div class="media flex-column flex-sm-row">
+                                          <!--<div class="modal-upload-avatar mr-0 mr-sm-3 mr-md-5 mb-5 mb-sm-0">
+                                          
+                                             <div class="attach-file style--two mb-3">
+                                                <img src="../../../assets/img/img-placeholder.png" class="profile-avatar" alt="">
+                                                <div class="upload-button">
+                                                   <img src="../../../assets/img/svg/gallery.svg" alt="" class="svg mr-2">
+                                                   <span>Upload Photo</span>
+                                                   <input class="file-input" type="file" id="fileUpload" accept="image/*">
                                                 </div>
                                              </div>
-                                             <!-- End Cart Collaterals -->
+                                          
+                                             <div class="content">
+                                                <h4 class="mb-2">Upload a Photo</h4>
+                                                <p class="font-12 c4">Allowed JPG, GIF or PNG. Max size <br /> of 800kB</p>
+                                             </div>
+                                          </div>-->
+                                       
+                                          <div class="contact-account-setting media-body">
+                                          
+                                             <!-- Invoice Details List Wrapper -->
+                                             <div class="bg-white details-list-wrap">
+                                                <div class="table-responsive">
+                                                   <!-- Invoice List Table -->
+                                                   <h4 class="mb-4">Menu Details</h4>
+                                                
+                                                   <table class="invoice-list-table style-two some-center text-nowrap">
+                                                      <thead>
+                                                         <tr>
+                                                            <th>#</th>
+                                                            <th>Description</th>
+                                                            <th>Quantity</th>
+                                                            <th>Price</th>
+                                                            <th>Amount</th>
+                                                         </tr>
+                                                      </thead>
+                                                   
+                                                      <tbody class="bg-white">
+                                                         <tr>
+                                                            <td class="bold">#01</td>
+                                                            <td>Meal For 1 Set C</td>
+                                                            <td>2</td>
+                                                            <td>RM15.90</td>
+                                                            <td>RM31.80</td>
+                                                         </tr>
+                                                      
+                                                         <tr>
+                                                            <td class="bold">#01</td>
+                                                            <td>Combo Kids C</td>
+                                                            <td>1</td>
+                                                            <td>RM10.90</td>
+                                                            <td>RM10.90</td>
+                                                         </tr>                       
+                                                      </tbody>
+                                                   </table>
+                                                   <!-- End Invoice List Table -->
+                                                </div>
+                                             
+                                                <!-- Cart Collaterals -->
+                                                <div class="cart-collaterals">
+                                                   <div class="cart_totals calculated_shipping">
+                                                      <table class="shop_table">
+                                                         <tbody>
+                                                            <tr class="cart-subtotal">
+                                                               <th>Subtotal</th>
+                                                               <th>
+                                                                  <span class="Price-amount amount">
+                                                                     <span class="Price-currencySymbol">RM</span><span class="subtotal"></span></span>
+                                                               </th>
+                                                            </tr>
+                                                            <tr class="cart-tax">
+                                                               <td>Service Tax (3%)</td>
+                                                               <td>
+                                                                  <span class="Price-amount amount">
+                                                                     <span class="Price-currencySymbol">RM</span><span class="service-tax"></span></span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr class="cart-tax">
+                                                               <td>tax (5%)</td>
+                                                               <td>
+                                                                  <span class="Price-amount amount">
+                                                                     <span class="Price-currencySymbol">RM</span><span class="tax"></span></span>
+                                                               </td>
+                                                            </tr>
+                                                         
+                                                            <tr class="order-total">
+                                                               <td>Total</td>
+                                                               <td>
+                                                                  <strong>
+                                                                     <span class="Price-amount amount"><span class="Price-currencySymbol">RM</span ><span class="total-cost"></span></span>
+                                                                  </strong> 
+                                                               </td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   
+                                                      <div class="proceed-to-checkout d-flex align-items-center justify-content-end mr-20 mt-4">
+                                                         <a href="#" class="btn" data-dismiss="modal">Close</a>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <!-- End Cart Collaterals -->
+                                             </div>
+                                             <!-- End Invoice Details List Wrapper -->
+                                          
                                           </div>
-                                          <!-- End Invoice Details List Wrapper -->
-                         
                                        </div>
-                                    </div>
-                                 </form>
+                                    </form>
+                                 </div>
+                                 <!-- End Modal Body -->
                               </div>
-                              <!-- End Modal Body -->
                            </div>
                         </div>
-                     </div>
-                     <!-- End Menu Details PopUp -->
+                        <!-- End Menu Details PopUp -->
+
+                        <!--Car Details PopUp-->
+                        <div id="contactEditModal" class="modal fade">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <!-- Modal Body -->
+                                 <div class="modal-body">
+                                    <form action="#">
+                                    
+                                       <div class="media flex-column flex-sm-row">
+                                          <!--<div class="modal-upload-avatar mr-0 mr-sm-3 mr-md-5 mb-5 mb-sm-0">
+                                          
+                                             <div class="attach-file style--two mb-3">
+                                                <img src="../../../assets/img/img-placeholder.png" class="profile-avatar" alt="">
+                                                <div class="upload-button">
+                                                   <img src="../../../assets/img/svg/gallery.svg" alt="" class="svg mr-2">
+                                                   <span>Upload Photo</span>
+                                                   <input class="file-input" type="file" id="fileUpload" accept="image/*">
+                                                </div>
+                                             </div>
+                                          
+                                             <div class="content">
+                                                <h4 class="mb-2">Upload a Photo</h4>
+                                                <p class="font-12 c4">Allowed JPG, GIF or PNG. Max size <br /> of 800kB</p>
+                                             </div>
+                                          </div>-->
+                                       
+                                          <div class="contact-account-setting media-body">
+                                          
+                                             <!-- Invoice Details List Wrapper -->
+                                             <div class="bg-white details-list-wrap">
+                                                <div class="table-responsive">
+                                                   <!-- Invoice List Table -->
+                                                   <h4 class="mb-4">Car Details</h4>
+                                                
+                                                   <table class="invoice-list-table style-two some-center text-nowrap">
+                                                      <thead>
+                                                         <tr>
+                                                            <th>#</th>
+                                                            <th>Parking Slot</th>
+                                                            <th>Plate Number</th>
+                                                            <th>Car Model</th>
+                                                         </tr>
+                                                      </thead>
+                                                   
+                                                      <tbody class="bg-white">
+                                                         <tr>
+                                                            <td class="bold">#01</td>
+                                                            <td>01</td>
+                                                            <td>WTB 9290</td>
+                                                            <td>Toyota Wish</td>
+                                                         </tr>
+                                                      
+                                                         <tr>
+                                                            <td class="bold">#02</td>
+                                                            <td>04</td>
+                                                            <td>WDR 5678</td>
+                                                            <td>Perodua Myvi</td>
+                                                         </tr>                       
+                                                      </tbody>
+                                                   </table>
+                                                   <!-- End Invoice List Table -->
+                                                </div>
+                                                                                            
+                                             </div>
+                                             <!-- End Invoice Details List Wrapper -->
+                                          
+                                          </div>
+                                       </div>
+                                    </form>
+                                 </div>
+                                 <!-- End Modal Body -->
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End Car Details PopUp -->
 
                      </div>
                      <!-- End Card -->
