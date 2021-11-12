@@ -56,7 +56,20 @@ function choosefile(e) {
 
 
 function EditItem(menuId) {
+    const idmenuName = document.querySelector(".idmenuName");
+    const idmenuPrice = document.querySelector(".idmenuPrice");
+    const idmenuDescription = document.querySelector(".idmenuDescription");
 
+    db.collection('Menu').doc(menuId).get().then(doc => {
+        const name = `${doc.data().Name}`
+        idmenuName.value =  name;
+
+        const price = `${doc.data().Price}`
+        idmenuPrice.value =  price;
+
+        const Desc = `${doc.data().Description}`
+        idmenuDescription.innerHTML =  Desc;
+    });
     const menuform = document.querySelector('#update-menu-form');
     menuform.addEventListener('submit', (e) => {
         e.preventDefault();
