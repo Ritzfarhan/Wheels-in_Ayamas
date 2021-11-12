@@ -59,6 +59,7 @@ function EditItem(menuId) {
     const idmenuName = document.querySelector(".idmenuName");
     const idmenuPrice = document.querySelector(".idmenuPrice");
     const idmenuDescription = document.querySelector(".idmenuDescription");
+    const idmenuCategory = document.querySelector(".idmenuCategory");
 
     db.collection('Menu').doc(menuId).get().then(doc => {
         const name = `${doc.data().Name}`
@@ -69,6 +70,9 @@ function EditItem(menuId) {
 
         const Desc = `${doc.data().Description}`
         idmenuDescription.innerHTML =  Desc;
+
+        const Category = `${doc.data().Category}`
+        idmenuCategory.value =  Category;
     });
     const menuform = document.querySelector('#update-menu-form');
     menuform.addEventListener('submit', (e) => {
