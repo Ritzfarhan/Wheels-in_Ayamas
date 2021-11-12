@@ -8,6 +8,7 @@ const roles = document.querySelector('.roles');
 const roles_profile = document.querySelector('.roles-profile');
 const f_nameForm = document.getElementById('.edit-fname');
 const l_nameForm = document.getElementById('.edit-lname');
+const accountUsername = document.querySelector(".accUsername");
 
 const setupUI = (user) => {
     if (user) {
@@ -16,6 +17,8 @@ const setupUI = (user) => {
             const html = `<br><br><center><h6>${doc.data().Username} </h6></center>`;
                           // ${user.email}
             username.innerHTML = html;
+
+           
 
             const username2html = `<h3>${doc.data().Username}</h3>
                                     ${user.email}`;
@@ -49,6 +52,8 @@ const setupUI = (user) => {
             const emailhtml = `${user.email} `;
             email.innerHTML = emailhtml;
 
+            
+
 
         });
     } else {
@@ -63,7 +68,7 @@ auth.onAuthStateChanged(user => {
         .then(imgUrl => 
         {
             profilepic.src = imgUrl;
-            avatar.src = imgUrl;
+           avatar.src = imgUrl;
         })
         user.getIdTokenResult().then(idTokenResult => {
             user.admin = idTokenResult.claims.admin;

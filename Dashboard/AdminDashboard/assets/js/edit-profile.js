@@ -66,6 +66,28 @@ auth.onAuthStateChanged(user => {
   })
 
 });
+
+auth.onAuthStateChanged(user => {
+
+  const accountUsername = document.querySelector(".accUsername");
+  const accountFname = document.querySelector(".accFname");
+  const accountLname = document.querySelector(".accLname");
+
+  db.collection('users').doc(user.uid).get().then(doc => {
+    const accUsername = `${doc.data().Username}`
+    accountUsername.value =  accUsername;
+
+    const accFname = `${doc.data().f_name}`
+    accountFname.value =  accFname;
+
+    const accLname = `${doc.data().l_name}`
+    accountLname.value =  accLname;
+
+
+  });
+})
+
+
 //firebase.auth().onAuthStateChanged(user =>{
 //  if(user){
 //    firebase.storage().ref('users/'+ user.uid + '/profile.jpg').getDownloadURL()
