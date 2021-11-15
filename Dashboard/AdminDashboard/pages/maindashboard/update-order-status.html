@@ -239,8 +239,8 @@
                      </a>
                      <!-- Sub Menu -->
                      <ul class="nav sub-menu">
-                         <li class="active"><a href="/AdminDashboard/pages/maindashboard/order-status.html">User Order Status</a></li>
-                         <li><a href="/AdminDashboard/pages/maindashboard/update-order-status.html">Update Order Status</a></li>
+                         <li><a href="/AdminDashboard/pages/maindashboard/order-status.html">User Order Status</a></li>
+                         <li class="active"><a href="/AdminDashboard/pages/maindashboard/update-order-status.html">Update Order Status</a></li>
                      </ul>
                  </li>
 
@@ -437,13 +437,13 @@
                                     <td>{{ request.Date.toDate().toDateString()}}</td>
                                     <td>{{ request.Name }}</td>
                                     <td>
-                                       <!--<select class="custom-select status-wdth">
+                                       <select class="custom-select status-wdth">
                                           <option value="order_placed">Order Placed</option>
                                           <option value="preparing_order">Preparing Order</option>
                                           <option value="on_the_way">On The Way</option>
                                           <option value="completed">Completed</option>
-                                       </select>-->
-                                       <button id="status"  type="button" class="status-btn " v-on:click="updateStatus(request.id, request.status)">Unpaid</button>
+                                       </select>
+                                       <!--<button id="status"  type="button" class="status-btn " v-on:click="updateStatus(request.id, request.status)">Unpaid</button>-->
                                     </td>
 
                                     <td class="actions">
