@@ -200,7 +200,7 @@ ref.onSnapshot(snapshot => {
                 <div class="contact-body">
                    <p>Topic : ${request.Topic}</p><br>
                    <p>Rate &nbsp;: ${request.Rating}</p><br>
-                   <p><b>Comment</b><p></p>${request.Comment}</p>
+                   <p><b>Comment/Suggestion</b><p></p>${request.Comment}</p>
                 </div>
             </div>
            </div></div> `
