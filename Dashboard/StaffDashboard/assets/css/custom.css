@@ -162,3 +162,22 @@ table tr:not(:last-child) td {
     border-radius: .3rem;
     outline: 0;
 }
+
+.btn1 {
+    background-color: #dbae4b;
+    color: #FFFFFF;
+}
+
+.status-wdth{
+    height: 30px !important;
+}
+
+.custom-select2 {
+    background-color: #ffffff;
+    height: auto;
+    color: #00192f;
+}
+
+.shdw {
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%) !important;
+}
