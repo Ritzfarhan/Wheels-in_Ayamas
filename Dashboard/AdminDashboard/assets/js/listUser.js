@@ -42,7 +42,29 @@ function insertPicUrl(items) {
   }
 
 function EditUser(UserId) {
+  /*  const accountUser = document.querySelector(".accountUsername");
+    const accountFname = document.querySelector(".accountFname");
+    const accountLname = document.querySelector(".accountLname");
+  
+    db.collection('users').doc(UserId).get().then(doc => {
+      const accUser = `${doc.data().Username}`
+      accountUser.value =  accUser;
+  
+      const accFname = `${doc.data().f_name}`
+      accountFname.value =  accFname;
+  
+      const accLname = `${doc.data().l_name}`
+      accountLname.value =  accLname;
+  
+  
+    });
 
+    firebase.storage().ref('users/'+ UserId + '/profile.jpg').getDownloadURL()
+        .then(imgUrl => 
+        {
+            modalpic.src = imgUrl;
+           
+        })*/
     const Updateform = document.querySelector('#update-user-form');
     Updateform.addEventListener('submit', (e) => {
         e.preventDefault();

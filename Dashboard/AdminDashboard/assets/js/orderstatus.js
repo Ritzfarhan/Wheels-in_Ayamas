@@ -110,7 +110,7 @@ ref.onSnapshot(snapshot => {
                <!-- End Custom Checkbox -->
 
             </td>
-            <td>${request.Amount}</td>
+            <td>RM${request.Amount}</td>
             <td>${request.Date.toDate().toDateString()}</td>
             <td>${request.Name}</td>
             <td><button id="status" data-id="${request.id}" onclick="updateorder()" type="button" class="status-btn un_paid" >Unpaid</button></td>

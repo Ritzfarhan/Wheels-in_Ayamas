@@ -83,6 +83,11 @@ var app = new Vue({
       }
     }
   },
+  watch: {
+      changeStatus(id,value){
+
+      }
+  },
   mounted() {
     const ref = firebase.firestore().collection('Order Status');
     ref.onSnapshot(snapshot => {

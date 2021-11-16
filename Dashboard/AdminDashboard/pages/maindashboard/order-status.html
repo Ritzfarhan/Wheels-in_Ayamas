@@ -417,7 +417,7 @@
                                     <th>Actions</th>
                                  </tr>
                               </thead>
-                              <tbody id="app">
+                              <tbody class="status-list" id="app">
                                  <tr v-for="request in requests">
                                     <td>
                                        <!-- Custom Checkbox -->
@@ -428,17 +428,114 @@
                                        <!-- End Custom Checkbox -->
 
                                     </td>
-                                    <td>{{ request.Amount }}</td>
+                                    <td>RM{{ request.Amount }}</td>
                                     <td>{{ request.Date.toDate().toDateString()}}</td>
                                     <td>{{ request.Name }}</td>
                                     <td>
-                                       <select class="custom-select status-wdth">
+                                       <select class="custom-select status-wdth" id="status" v-on:watch="changeStatus(request.id, request.status)" data-toggle="modal" data-target="#contactUpdateStatus" >
                                           <option value="order_placed">Order Placed</option>
                                           <option value="preparing_order">Preparing Order</option>
                                           <option value="on_the_way">On The Way</option>
                                           <option value="completed">Completed</option>
                                        </select>
                                        <!--<button id="status"  type="button" class="status-btn " v-on:click="updateStatus(request.id, request.status)">Unpaid</button>-->
+                                    </td>
+                                    <td>
+                                         <!-- Contact Edit PopUp -->
+                     <div id="contactUpdateStatus" class="modal fade">
+                        <div class="modal-dialog modal-dialog-centered">
+                           <div class="modal-content">
+                              <!-- Modal Body -->
+                              <div class="modal-body">
+                                 <form action="#" id="update-menu-form" >
+                                    <div class="media flex-column flex-sm-row">
+                                       <div class="modal-upload-avatar mr-0 mr-sm-3 mr-md-5 mb-5 mb-sm-0">
+
+                                             <div class="attach-file style--two mb-3">
+                                                <img src="../../assets/img/product/pg2.png" class="profile-avatar" alt="">
+                                                <div class="upload-button">
+                                                   <img src="../../../assets/img/svg/gallery.svg" alt="" class="svg mr-2">
+                                                   <span>Upload Photo</span>
+                                                   <input class="file-input" type="file" id="fileUpload2" onchange="choosefile(event)" accept="image/*">
+                                                </div>
+                                             </div>
+
+                                             <div class="content">
+                                                <h4 class="mb-2" style="text-align: center;">Menu Photo</h4>
+                                                <!--<p class="font-12 c4">Allowed JPG, GIF or PNG. Max size <br /> of 800kB</p>-->
+                                             </div>
+                                       </div>
+            
+            
+                                       <div class="contact-account-setting media-body">
+
+                                          <h4 class="mb-4">Edit Menu</h4>
+
+                                          <div class="mb-4">
+                                             <label class="bold black mb-2" for="as_name2">Menu Name</label>
+                                             <input type="text" id="menu-name" class="theme-input-style" value="AirilIsham" required></input>
+                                          </div>
+                                          
+                                          <div class="form-group mb-4">
+                                             <label for="addonEmail" class="mb-2 black bold">Price</label>
+     
+                                             <div class="input-group">
+                                               <div class="input-group-prepend">
+                                                 <div class="input-group-text black bold">$</div>
+                                               </div>
+                                               <input type="text" id="menu-price" class="form-control" placeholder="19.00">
+                                             </div>
+                                         </div>
+                                          
+                                          <div class="mb-4">
+                                             <label for="exampleSelect1" class="mb-2 black bold d-block">Category</label>
+                                             <div>
+                                                   <select class="theme-input-style idmenuCategory" id="menu-category" >
+                                                      <option value="Chicken Roaster">Chicken Roaster</option>
+                                                      <option value="Meal For One">Meal For One</option>
+                                                      <option value="Meal For Two">Meal For Two</option>
+                                                      <option value="Pasta Fiesta">Pasta Fiesta</option>
+                                                      <option value="Kids Meal">Kids Meal</option>
+                                                      <option value="Chicken Curry Meal">Chicken Curry Meal</option>
+                                                      <option value="Sides">Sides</option>
+                                                      <option value="Side Dishes">Side Dishes</option>
+                                                      <option value="Drinks">Drinks</option>
+                                                   </select>
+                                             </div>
+                                          </div>
+                                          
+                                          <div class="form-group mb-4">
+                                             <label for="exampleTextarea1" class="mb-2 black bold d-block">Description</label>
+                                             <textarea id="menu-description" class="theme-input-style" placeholder="Type Here"></textarea>
+                                          </div>                                       
+                                          
+                                         <!-- <div class="mb-4">
+                                             <label class="bold black mb-2" for="as_post2">Post</label>
+                                             <input type="text" id="as_post2" class="theme-input-style" value="UX Researcher" required>
+                                          </div>
+                                          
+                                          <div class="mb-30">
+                                             <label class="bold black mb-2">Joining Date</label>
+                                             
+                                             <div class="date datepicker dashboard-date style--two" id="datePickerExample2">
+                                                <span class="input-group-addon mr-0"><img src="../../../assets/img/svg/calender.svg" alt="" class="svg"></span>
+                                                <input type="text" class="pl-2" required>
+                                             </div>
+                                          </div>-->
+
+                                          <div class="">
+                                             <button  type="submit" href="#" class="btn mr-4" >Save</button>
+                                             <a href="#" class="cancel font-14 bold" data-dismiss="modal">Cancel</a>
+                                             <p class="error pink-text center-align"></p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </form>
+                              </div>
+                              <!-- End Modal Body -->
+                           </div>
+                        </div>
+                     </div>
                                     </td>
 
                                     <td class="actions">
@@ -501,7 +598,7 @@
                                                          </tr>
                                                       </thead>
                                                    
-                                                      <tbody class="bg-white">
+                                                      <tbody class="bg-white menudetails">
                                                          <tr>
                                                             <td class="bold">#01</td>
                                                             <td>Meal For 1 Set C</td>
@@ -538,7 +635,7 @@
                                                                <td>Service Tax (3%)</td>
                                                                <td>
                                                                   <span class="Price-amount amount">
-                                                                     <span class="Price-currencySymbol">RM</span><span class="service-tax"></span></span>
+                                                                     <span class="Price-currencySymbol ">RM</span><span class="service-tax"></span></span>
                                                                </td>
                                                             </tr>
                                                             <tr class="cart-tax">
@@ -626,17 +723,17 @@
                                                       <tbody class="bg-white">
                                                          <tr>
                                                             <td class="bold">#01</td>
-                                                            <td>01</td>
-                                                            <td>WTB 9290</td>
-                                                            <td>Toyota Wish</td>
+                                                            <td class="slot"></td>
+                                                            <td class="plate"></td>
+                                                            <td class="model"></td>
                                                          </tr>
                                                       
-                                                         <tr>
+                                                         <!--<tr>
                                                             <td class="bold">#02</td>
                                                             <td>04</td>
                                                             <td>WDR 5678</td>
                                                             <td>Perodua Myvi</td>
-                                                         </tr>                       
+                                                         </tr>   -->                    
                                                       </tbody>
                                                    </table>
                                                    <!-- End List Table -->
@@ -704,7 +801,7 @@
       // update firestore settings
       db.settings({ timestampsInSnapshots: true });
    </script>
-
+ <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
    <script src="../../assets/js/jquery.min.js"></script>
    <script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -712,7 +809,7 @@
    <script src="../../assets/js/script.js"></script>
    <script src="../../assets/js/profile.js"></script>
    <script src="../../assets/js/index.js"></script>
-y   <script src="../../assets/js/orderstatusvue.js"></script>
+   <script src="../../assets/js/orderstatusNew.js"></script>
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
 
    <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->

@@ -100,6 +100,10 @@ function generateItems(items) {
                     <p class="black">${item.Name}</p>
                  </a>
             </div>
+
+    
+
+
            
         </div>
         <!-- End Product Grid Item -->

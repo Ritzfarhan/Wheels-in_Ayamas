@@ -1,5 +1,6 @@
 function getCartItems() {
-    db.collection("cart-items").onSnapshot((snapshot) => {
+    auth.onAuthStateChanged(user => {
+    db.collection("cart-items").where("user", "==", user.uid ).onSnapshot((snapshot) => {
         let totalCount = 0;
         snapshot.docs.forEach((doc)=>{
             totalCount += doc.data().quantity;
@@ -7,6 +8,7 @@ function getCartItems() {
         console.log(totalCount);
         setCartCounter(totalCount);
     })
+})
 }
 
 function setCartCounter(totalCount) {
