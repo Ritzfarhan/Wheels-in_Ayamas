@@ -9,6 +9,7 @@ feedbackform.addEventListener('submit', (e) => {
   db.collection("Feedback").add({
     Name: feedbackform['feedback-name'].value,
     Phone: feedbackform['feedback-phone'].value,
+    Topic: feedbackform['feedback-topic'].value,
     Rating: feedbackform['feedback-myRange'].value,
     Comment: feedbackform['feedback-comment'].value
 
@@ -55,6 +56,7 @@ function getFeedback(name) {
               id: doc.id,
               Name: doc.data().Name,
               Phone: doc.data().Phone,
+              Topic: doc.data().Topic,
               Rating: doc.data().Rating,
               Comment: doc.data().Comment
 

@@ -49,18 +49,14 @@ function deleteItem(itemId) {
 
 
 function EditItem(feedbackId) {
-    const idfeedbackName = document.querySelector(".idfeedbackName");
-    const idfeedbackphone = document.querySelector(".idfeedbackphone");
-    const idfeedbackTopic = document.querySelector(".idfeedbackTopic");
-    const idfeedbackmyRange = document.querySelector(".idfeedbackmyRange");
-    const idfeedbackComment = document.querySelector(".idfeedbackComment");
+    const idfeedbackName = document.querySelector(".idfeedbackName1");
+    const idfeedbackphone = document.querySelector(".idfeedbackphone1");
+    const idfeedbackmyRange = document.querySelector(".idfeedbackmyRange1");
+    const idfeedbackComment = document.querySelector(".idfeedbackComment1");
 
     db.collection('Feedback').doc(feedbackId).get().then(doc => {
         const name = `${doc.data().Name}`
         idfeedbackName.value =  name;
-
-        const topic = `${doc.data().Topic}`
-        idfeedbackTopic.value =  topic;
 
         const phone = `${doc.data().Phone}`
         idfeedbackphone.value =  phone;
@@ -78,7 +74,6 @@ function EditItem(feedbackId) {
         db.collection("Feedback").doc(feedbackId).update({
             Name: feedbackform['feedback-name'].value,
             Phone: feedbackform['feedback-phone'].value,
-            Topic: feedbackform['feedback-topic'].value,
             Rating: feedbackform['feedback-myRange'].value,
             Comment: feedbackform['feedback-comment'].value
 
@@ -122,7 +117,6 @@ function EditItem(feedbackId) {
                         id: doc.id,
                         Name: doc.data().Name,
                         Phone: doc.data().Phone,
-                        Topic: doc.data().Topic,
                         Rating: doc.data().Rating,
                         Comment: doc.data().Comment
 
@@ -198,8 +192,7 @@ ref.onSnapshot(snapshot => {
                      </div>
                 </div>
                 <div class="contact-body">
-                   <p>Topic : ${request.Topic}</p><br>
-                   <p>Rate &nbsp;: ${request.Rating}</p><br>
+                   <p>Rate : ${request.Rating}</p><br>
                    <p><b>Comment</b><p></p>${request.Comment}</p>
                 </div>
             </div>
