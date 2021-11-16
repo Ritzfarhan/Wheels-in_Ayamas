@@ -123,40 +123,47 @@
       <link rel="stylesheet" href="/Homepage/assets/css/style.css">
     </div> 
   </header><!-- End Header -->
-
+  <main id="main">
   <div style="background-color:#f8f2ac;" class="container-feedback">
-    <form action="action_page.php">
+    <form action="#" id="feedback-form" method="">
   
     <h2><b>Feedback Form</b></h2>
     <br><br>
+      <div>
       <label for="fname">Name</label>
-      <input style="background-color:white;" type="text" id="fname" name="firstname" placeholder="Your name..">
+      <input style="background-color:white;" type="text" id="feedback-name" name="feedback-name" placeholder="Your name.." required>
+      </div>
+
       <br>
-      <label for="phone">Phone</label>
-      <input style="background-color:white;" type="text" id="phone" name="phone" placeholder="Your phone number..">
-      <br><br>
+
+      <div>
+        <label for="phone">Phone</label>
+      <input style="background-color:white;" type="text" id="feedback-phone" name="feedback-phone" placeholder="Your phone number..">
+    </div>
+
+    <br><br>
+
       <label for="rating">Rating Service</label>
+      <p style="color:black;">Please range our services 1 to 10 </p>
       <div class="slidecontainer">
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <input type="range" min="0" max="10" value="5" class="slider" id="feedback-myRange">
         <label style="color:black;">Value: <span id="demo"></label></p>
       </div>
+
       <br>
-      <label for="feedback">Feedback</label>
-      <textarea style="background-color:white;" id="feedback" name="feedback" placeholder="Write your feedback.." style="height:200px"></textarea>
-      <br><br><br><br>
+
+      <div class="form-group mb-4">
+        <label for="exampleTextarea1" class="mb-2 black bold d-block">Feedback</label>
+        <textarea style="background-color:white;" id="feedback-comment" class="theme-input-style" placeholder="Type Here"></textarea>
+     </div>
+     <div class="button-group pt-1">
       <input type="submit" value="Submit">
-        </form>
-  </div><br><br><br>
-  <script>
-    var slider = document.getElementById("myRange");
-    var output = document.getElementById("demo");
-    output.innerHTML = slider.value;
-    
-    slider.oninput = function() {
-      output.innerHTML = this.value;
-    }
-    </script>
-  <main id="main">
+      <p class="error pink-text center-align"></p>
+       </div>
+  
+
+     </form>
+</div><br><br><br>
 
   </main><!-- End #main -->
 
@@ -244,6 +251,16 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
+      <script>
+        var slider = document.getElementById("feedback-myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+        
+        slider.oninput = function() {
+          output.innerHTML = this.value;
+        }
+        </script>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -295,7 +312,10 @@
   <!--<script src="assets/js/navbar-profile.js"></script>-->
   <script src="assets/js/Homepage.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="/Homepage/assets/js/givefeedback.js"></script>
   <script src="assets/js/cartnumber.js"></script>
+  
+
   <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
 
   <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
