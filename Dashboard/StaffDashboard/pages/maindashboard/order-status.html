@@ -152,7 +152,7 @@
                                     <a href="/StaffDashboard/pages/pages/user-profile/edit-profile.html">My Profile</a>
                                     <a href="/Homepage/index.html">Homepage</a>
                                     <a href="/StaffDashboard/pages/pages/account-setting.html">Settings</a>
-                                    <a href="#" id="logout">Log Out</a>
+                                    <a href="#" id=logout>Log Out</a>
                                  </div>
                               </div>
                               <!-- End Main Header User -->
@@ -195,46 +195,50 @@
                         <!-- Sub Menu -->
                         <ul class="nav sub-menu">
                            <li class="active"><a href="/StaffDashboard/index.html">Order List</a></li>
-                           <!--<li><a href="/AdminDashboard/editorderlist.html">Edit Order List</a></li>-->
                         </ul>
                   </li>
 
                   <li>
                      <a href="#">
-                           <i class="ti-notepad"></i>
-                           <span class="link-title">Menu</span>
+                        <i class="ti-notepad"></i>
+                        <span class="link-title">Menu</span>
                      </a>
                      <!--Sub Menu-->
                      <ul class="nav sub-menu">
-               
-                           <li><a href="/StaffDashboard/pages/maindashboard/menu.html">Chicken Roaster</a></li>
-                           <li><a href="/StaffDashboard/pages/maindashboard/menu2.html">Meal For One</a></li>
-                           <li><a href="/StaffDashboard/pages/maindashboard/menu3.html">Meal For Two</a></li>
-                           <li><a href="/StaffDashboard/pages/maindashboard/menu4.html">Pasta Fiesta</a></li>
-                           <li><a href="/StaffDashboard/pages/maindashboard/menu5.html">Kids Meal</a></li>
-                           <li><a href="/StaffDashboard/pages/maindashboard/menu6.html">Chicken Curry Mee</a></li>
-                           <li><a href="/StaffDashboard/pages/maindashboard/menu7.html">Sides</a></li>
-                           <li><a href="/StaffDashboard/pages/maindashboard/menu8.html">Side Dishes</a></li>
-                           <li><a href="/StaffDashboard/pages/maindashboard/menu9.html">Drinks</a></li>
+
+                        <li><a href="menu.html">Chicken Roaster</a></li>
+                        <li><a href="menu2.html">Meal For One</a></li>
+                        <li><a href="menu3.html">Meal For Two</a></li>
+                        <li><a href="menu4.html">Pasta Fiesta</a></li>
+                        <li><a href="menu5.html">Kids Meal</a></li>
+                        <li><a href="menu6.html">Chicken Curry Mee</a></li>
+                        <li><a href="menu7.html">Sides</a></li>
+                        <li><a href="menu8.html">Side Dishes</a></li>
+                        <li><a href="menu9.html">Drinks</a></li>
                      </ul>
                   </li>
 
                   <li>
-                     <a href="/StaffDashboard/pages/maindashboard/cartlist.html">
-                           <i class="icofont-shopping-cart"></i>
-                           <span class="link-title">Cart List</span>
+                     <a href="cartlist.html">
+                        <i class="icofont-shopping-cart"></i>
+                        <span class="link-title">Cart List</span>
                      </a>
                   </li>
 
-                  <li class="active">
-                     <a href="/StaffDashboard/pages/maindashboard/order-status.html">
-                           <i class="ti-timer"></i>
-                           <span class="link-title">Order Status</span>
+                  <li class="nav sub-menu-opened">
+                     <a href="#">
+                         <i class="ti-timer"></i>
+                         <span class="link-title">Order Status</span>
                      </a>
-                  </li>
-
+                     <!-- Sub Menu -->
+                     <ul class="nav sub-menu">
+                         <li class="active"><a href="/StaffDashboard/pages/maindashboard/order-status.html">User Order Status</a></li>
+                         <li><a href="/StaffDashboard/pages/maindashboard/update-order-status.html">Update Order Status</a></li>
+                     </ul>
+                 </li>
+               
                   <li class="nav-category">Apps</li>
-
+ 
                   <li>
                      <a href="#">
                         <i class="icofont-file-document"></i>
@@ -244,8 +248,8 @@
                      <!-- Sub Menu -->
                      <ul class="nav sub-menu">
                         <li><a href="/StaffDashboard/pages/apps/sales/sales-history.html">History</a></li>
-                        <li><a href="/StaffDashboard/pages/apps/invoice/invoice-details.html">Details</a></li>
-                        <li><a href="/StaffDashboard/pages/apps/invoice/invoice-add-new.html">Add New</a></li>
+                        <li><a href="/StaffDashboard/pages/apps/sales/invoice-details.html">Details</a></li>
+                        <li><a href="/StaffDashboard/pages/apps/sales/invoice-add-new.html">Add New</a></li>
                      </ul>
                      <!-- End Sub Menu -->
                   </li>
@@ -333,12 +337,7 @@
                            <!-- Invoice Header -->
                            <div class="invoice-header d-flex align-items-sm-center media flex-column flex-sm-row">
                               <div class="invoice-header-left d-flex align-items-center position-relative">
-                                 <div class="">
-                                    <a href="invoice-add-new.html" class="btn-circle">
-                                       <img src="../../assets/img/svg/plus_white.svg" alt="" class="svg">
-                                    </a>
-                                 </div>
-
+                                
                                  <!-- Delete Mail -->
                                  <div class="delete_mail">
                                     <a href="#"><img src="../../assets/img/svg/delete.svg" alt="" class="svg"></a>
@@ -409,8 +408,8 @@
                                     <th>Actions</th>
                                  </tr>
                               </thead>
-                              <tbody>
-                                 <tr>
+                              <tbody id="app">
+                                 <tr v-for="request in requests">
                                     <td>
                                        <!-- Custom Checkbox -->
                                        <label class="custom-checkbox">
@@ -420,179 +419,236 @@
                                        <!-- End Custom Checkbox -->
 
                                     </td>
-                                    <td>$658</td>
-                                    <td>July 14 2019</td>
-                                    <td>Prudence Kirlin</td>
-                                    <td><button type="button" class="status-btn un_paid">Unpaid</button></td>
-                                    <td><a href="invoice-details.html" class="details-btn">Details <i
-                                             class="icofont-arrow-right"></i></a></td>
-                                 </tr>
-
-                                 <tr>
+                                    <td>{{ request.Amount }}</td>
+                                    <td>{{ request.Date.toDate().toDateString()}}</td>
+                                    <td>{{ request.Name }}</td>
                                     <td>
-                                       <!-- Custom Checkbox -->
-                                       <label class="custom-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                       </label>
-                                       <!-- End Custom Checkbox -->
-
+                                       <!--<select class="custom-select status-wdth">
+                                          <option value="order_placed">Order Placed</option>
+                                          <option value="preparing_order">Preparing Order</option>
+                                          <option value="on_the_way">On The Way</option>
+                                          <option value="completed">Completed</option>
+                                       </select>-->
+                                       <button id="status"  type="button" class="status-btn " v-on:click="updateStatus(request.id, request.status)">Unpaid</button>
                                     </td>
-                                    <td>$76</td>
-                                    <td>November 11, 2018</td>
-                                    <td>Hester Blanda</td>
-                                    <td><button type="button" class="status-btn on_hold">On Hold</button></td>
-                                    <td><a href="invoice-details.html" class="details-btn">Details <i
-                                             class="icofont-arrow-right"></i></a></td>
-                                 </tr>
 
-                                 <tr>
-                                    <td>
-                                       <!-- Custom Checkbox -->
-                                       <label class="custom-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                       </label>
-                                       <!-- End Custom Checkbox -->
-
-                                    </td>
-                                    <td>$598</td>
-                                    <td>September 7, 2016</td>
-                                    <td>Zena Strosin</td>
-                                    <td><button type="button" class="status-btn paid">Paid</button></td>
-                                    <td><a href="invoice-details.html" class="details-btn">Details <i
-                                             class="icofont-arrow-right"></i></a></td>
-                                 </tr>
-
-                                 <tr>
-                                    <td>
-                                       <!-- Custom Checkbox -->
-                                       <label class="custom-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                       </label>
-                                       <!-- End Custom Checkbox -->
-
-                                    </td>
-                                    <td>$76</td>
-                                    <td>September 14, 2017</td>
-                                    <td>Kay Daniel</td>
-                                    <td><button type="button" class="status-btn completed">Completed</button></td>
-                                    <td><a href="invoice-details.html" class="details-btn">Details <i
-                                             class="icofont-arrow-right"></i></a></td>
-                                 </tr>
-
-                                 <tr class="selected">
-                                    <td>
-                                       <!-- Custom Checkbox -->
-                                       <label class="custom-checkbox">
-                                          <input type="checkbox" checked>
-                                          <span class="checkmark"></span>
-                                       </label>
-                                       <!-- End Custom Checkbox -->
-
-                                    </td>
-                                    <td>$365</td>
-                                    <td>January 30, 2016</td>
-                                    <td>Miss Colton Cartwright</td>
-                                    <td><button type="button" class="status-btn draft">Draft</button></td>
-                                    <td><a href="invoice-details.html" class="details-btn">Details <i
-                                             class="icofont-arrow-right"></i></a></td>
-                                 </tr>
-
-                                 <tr class="selected">
-                                    <td>
-                                       <!-- Custom Checkbox -->
-                                       <label class="custom-checkbox">
-                                          <input type="checkbox" checked>
-                                          <span class="checkmark"></span>
-                                       </label>
-                                       <!-- End Custom Checkbox -->
-
-                                    </td>
-                                    <td>$398</td>
-                                    <td>January 30, 2016</td>
-                                    <td>Dayana Franecki</td>
-                                    <td><button type="button" class="status-btn paid">Paid</button></td>
-                                    <td><a href="invoice-details.html" class="details-btn">Details <i
-                                             class="icofont-arrow-right"></i></a></td>
-                                 </tr>
-
-                                 <tr>
-                                    <td>
-                                       <!-- Custom Checkbox -->
-                                       <label class="custom-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                       </label>
-                                       <!-- End Custom Checkbox -->
-
-                                    </td>
-                                    <td>$45</td>
-                                    <td>February 15, 2017</td>
-                                    <td>Oceane Nader</td>
-                                    <td><button type="button" class="status-btn paid">Paid</button></td>
-                                    <td><a href="invoice-details.html" class="details-btn">Details <i
-                                             class="icofont-arrow-right"></i></a></td>
-                                 </tr>
-
-                                 <tr>
-                                    <td>
-                                       <!-- Custom Checkbox -->
-                                       <label class="custom-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                       </label>
-                                       <!-- End Custom Checkbox -->
-
-                                    </td>
-                                    <td>$634</td>
-                                    <td>May 20, 2018</td>
-                                    <td>Chad Oberbrunner</td>
-                                    <td><button type="button" class="status-btn paid">Paid</button></td>
-                                    <td><a href="invoice-details.html" class="details-btn">Details <i
-                                             class="icofont-arrow-right"></i></a></td>
-                                 </tr>
-
-                                 <tr>
-                                    <td>
-                                       <!-- Custom Checkbox -->
-                                       <label class="custom-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                       </label>
-                                       <!-- End Custom Checkbox -->
-
-                                    </td>
-                                    <td>$458</td>
-                                    <td>November 8, 2018</td>
-                                    <td>Kassandra Schroeder</td>
-                                    <td><button type="button" class="status-btn paid">Paid</button></td>
-                                    <td><a href="invoice-details.html" class="details-btn">Details <i
-                                             class="icofont-arrow-right"></i></a></td>
-                                 </tr>
-
-                                 <tr>
-                                    <td>
-                                       <!-- Custom Checkbox -->
-                                       <label class="custom-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                       </label>
-                                       <!-- End Custom Checkbox -->
-
-                                    </td>
-                                    <td>$1658</td>
-                                    <td>April 8, 2019</td>
-                                    <td>Lucinda Hills</td>
-                                    <td><button type="button" class="status-btn paid">Paid</button></td>
-                                    <td><a href="invoice-details.html" class="details-btn">Details <i
-                                             class="icofont-arrow-right"></i></a></td>
+                                    <td class="actions">
+                                       <span class="contact-edit" data-toggle="modal" data-target="#contactAddModal">
+                                           <img src="/AdminDashboard/assets/img/svg/menuicon.svg" alt="" class="svg">
+                                       </span>
+                                       <span class="contact-close" data-toggle="modal" data-target="#contactEditModal" style="margin-left: 10px;">
+                                          <img src="/AdminDashboard/assets/img/svg/car2.svg" alt="" class="svg">
+                                       </span>
+                                   </td>
+                                    
                                  </tr>
                               </tbody>
                            </table>
                            <!-- End Invoice List Table -->
                         </div>
+
+                        <!-- Menu Detail PopUp -->
+                        <div id="contactAddModal" class="modal fade">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <!-- Modal Body -->
+                                 <div class="modal-body">
+                                    <form action="#">
+                                    
+                                       <div class="media flex-column flex-sm-row">
+                                          <!--<div class="modal-upload-avatar mr-0 mr-sm-3 mr-md-5 mb-5 mb-sm-0">
+                                          
+                                             <div class="attach-file style--two mb-3">
+                                                <img src="../../../assets/img/img-placeholder.png" class="profile-avatar" alt="">
+                                                <div class="upload-button">
+                                                   <img src="../../../assets/img/svg/gallery.svg" alt="" class="svg mr-2">
+                                                   <span>Upload Photo</span>
+                                                   <input class="file-input" type="file" id="fileUpload" accept="image/*">
+                                                </div>
+                                             </div>
+                                          
+                                             <div class="content">
+                                                <h4 class="mb-2">Upload a Photo</h4>
+                                                <p class="font-12 c4">Allowed JPG, GIF or PNG. Max size <br /> of 800kB</p>
+                                             </div>
+                                          </div>-->
+                                       
+                                          <div class="contact-account-setting media-body">
+                                          
+                                             <!-- Invoice Details List Wrapper -->
+                                             <div class="bg-white details-list-wrap">
+                                                <div class="table-responsive">
+                                                   <!-- Invoice List Table -->
+                                                   <h4 class="mb-4">Menu Details</h4>
+                                                
+                                                   <table class="invoice-list-table style-two some-center text-nowrap">
+                                                      <thead>
+                                                         <tr>
+                                                            <th>#</th>
+                                                            <th>Description</th>
+                                                            <th>Quantity</th>
+                                                            <th>Price</th>
+                                                            <th>Amount</th>
+                                                         </tr>
+                                                      </thead>
+                                                   
+                                                      <tbody class="bg-white">
+                                                         <tr>
+                                                            <td class="bold">#01</td>
+                                                            <td>Meal For 1 Set C</td>
+                                                            <td>2</td>
+                                                            <td>RM15.90</td>
+                                                            <td>RM31.80</td>
+                                                         </tr>
+                                                      
+                                                         <tr>
+                                                            <td class="bold">#01</td>
+                                                            <td>Combo Kids C</td>
+                                                            <td>1</td>
+                                                            <td>RM10.90</td>
+                                                            <td>RM10.90</td>
+                                                         </tr>                       
+                                                      </tbody>
+                                                   </table>
+                                                   <!-- End Invoice List Table -->
+                                                </div>
+                                             
+                                                <!-- Cart Collaterals -->
+                                                <div class="cart-collaterals">
+                                                   <div class="cart_totals calculated_shipping">
+                                                      <table class="shop_table">
+                                                         <tbody>
+                                                            <tr class="cart-subtotal">
+                                                               <th>Subtotal</th>
+                                                               <th>
+                                                                  <span class="Price-amount amount">
+                                                                     <span class="Price-currencySymbol">RM</span><span class="subtotal"></span></span>
+                                                               </th>
+                                                            </tr>
+                                                            <tr class="cart-tax">
+                                                               <td>Service Tax (3%)</td>
+                                                               <td>
+                                                                  <span class="Price-amount amount">
+                                                                     <span class="Price-currencySymbol">RM</span><span class="service-tax"></span></span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr class="cart-tax">
+                                                               <td>tax (5%)</td>
+                                                               <td>
+                                                                  <span class="Price-amount amount">
+                                                                     <span class="Price-currencySymbol">RM</span><span class="tax"></span></span>
+                                                               </td>
+                                                            </tr>
+                                                         
+                                                            <tr class="order-total">
+                                                               <td>Total</td>
+                                                               <td>
+                                                                  <strong>
+                                                                     <span class="Price-amount amount"><span class="Price-currencySymbol">RM</span ><span class="total-cost"></span></span>
+                                                                  </strong> 
+                                                               </td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   
+                                                      <div class="proceed-to-checkout d-flex align-items-center justify-content-end mr-20 mt-4">
+                                                         <a href="#" class="btn" data-dismiss="modal">Close</a>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <!-- End Cart Collaterals -->
+                                             </div>
+                                             <!-- End Invoice Details List Wrapper -->
+                                          
+                                          </div>
+                                       </div>
+                                    </form>
+                                 </div>
+                                 <!-- End Modal Body -->
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End Menu Details PopUp -->
+
+                        <!--Car Details PopUp-->
+                        <div id="contactEditModal" class="modal fade">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <!-- Modal Body -->
+                                 <div class="modal-body">
+                                    <form action="#">
+                                    
+                                       <div class="media flex-column flex-sm-row">
+                                          <!--<div class="modal-upload-avatar mr-0 mr-sm-3 mr-md-5 mb-5 mb-sm-0">
+                                          
+                                             <div class="attach-file style--two mb-3">
+                                                <img src="../../../assets/img/img-placeholder.png" class="profile-avatar" alt="">
+                                                <div class="upload-button">
+                                                   <img src="../../../assets/img/svg/gallery.svg" alt="" class="svg mr-2">
+                                                   <span>Upload Photo</span>
+                                                   <input class="file-input" type="file" id="fileUpload" accept="image/*">
+                                                </div>
+                                             </div>
+                                          
+                                             <div class="content">
+                                                <h4 class="mb-2">Upload a Photo</h4>
+                                                <p class="font-12 c4">Allowed JPG, GIF or PNG. Max size <br /> of 800kB</p>
+                                             </div>
+                                          </div>-->
+                                       
+                                          <div class="contact-account-setting media-body">
+                                          
+                                             <!-- Invoice Details List Wrapper -->
+                                             <div class="bg-white details-list-wrap">
+                                                <div class="table-responsive">
+                                                   <!-- Invoice List Table -->
+                                                   <h4 class="mb-4">Car Details</h4>
+                                                
+                                                   <table class="invoice-list-table style-two some-center text-nowrap">
+                                                      <thead>
+                                                         <tr>
+                                                            <th>#</th>
+                                                            <th>Parking Slot</th>
+                                                            <th>Plate Number</th>
+                                                            <th>Car Model</th>
+                                                         </tr>
+                                                      </thead>
+                                                   
+                                                      <tbody class="bg-white">
+                                                         <tr>
+                                                            <td class="bold">#01</td>
+                                                            <td>01</td>
+                                                            <td>WTB 9290</td>
+                                                            <td>Toyota Wish</td>
+                                                         </tr>
+                                                      
+                                                         <tr>
+                                                            <td class="bold">#02</td>
+                                                            <td>04</td>
+                                                            <td>WDR 5678</td>
+                                                            <td>Perodua Myvi</td>
+                                                         </tr>                       
+                                                      </tbody>
+                                                   </table>
+                                                   <!-- End List Table -->
+                                                   <div class="proceed-to-checkout d-flex align-items-center justify-content-end mr-20 mt-4">
+                                                      <a href="#" class="btn" data-dismiss="modal">Close</a>
+                                                   </div>
+                                                </div>
+                                                                                            
+                                             </div>
+                                             <!-- End Invoice Details List Wrapper -->
+                                          
+                                          </div>
+                                       </div>
+                                    </form>
+                                 </div>
+                                 <!-- End Modal Body -->
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End Car Details PopUp -->
+
                      </div>
                      <!-- End Card -->
                   </div>
@@ -610,6 +666,7 @@
       <!-- End Footer -->
    </div>
    <!-- End wrapper -->
+   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
    <!--initialize firebase-->
    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
@@ -646,6 +703,7 @@
    <script src="../../assets/js/script.js"></script>
    <script src="../../assets/js/profile.js"></script>
    <script src="../../assets/js/index.js"></script>
+y   <script src="../../assets/js/orderstatusvue.js"></script>
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
 
    <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
