@@ -613,7 +613,7 @@ body,
   border-radius: 0 !important;
 }
 
-.border-0, .color-pic input, .card, table.style--two thead th, table.order-list-table thead th, table.cart_table thead th, table.cart_table tr td:nth-child(3) input, table.style--four th, table.style--four td, table.style--five th, table.style--five td, table.invoice-list-table.style-two th, table.style-two.contact-list-table th, table.invoice-list.style-two th, .form-control, .custom-select, .input-group-text, .chat_aside .aside-header .aside-header-bottom .nav-tabs, .mail-compose .form-group .input-wrap input, .modal-body .form-group .input-wrap input, #search-tab ~ #search-box input, .fc-bg table tbody, .fc-bg table tbody td, .fc-bg table tbody td.fc-day, .fc-view > table thead th.fc-day-header, .fc-view > table tbody td, .fc-view > table thead td, .fc-button, #createEventModal .modal-content, #projectTaskDetails .modal-content, #projectTaskDetails .modal-content .project-main-title textarea, #projectTaskDetails .modal-content .edit-actions textarea, #projectMemberModal .modal-content, #projectLabelModal .modal-content, #projectChecklistModal .modal-content, #projectMoveModal .modal-content, #projectCopyModal .modal-content, #projectShareModal .modal-content, .project-board-select-wrap select, #shareModal .modal-content, .input-group.addon .input-group-prepend .input-group-text,
+.border-0, .color-pic input, .card, table.style--two thead th, table.order-list-table thead th, table.cart_table thead th,table.cart_table_booking thead th, table.cart_table tr td:nth-child(3) input, table.style--four th, table.style--four td, table.style--five th, table.style--five td, table.invoice-list-table.style-two th, table.style-two.contact-list-table th, table.invoice-list.style-two th, .form-control, .custom-select, .input-group-text, .chat_aside .aside-header .aside-header-bottom .nav-tabs, .mail-compose .form-group .input-wrap input, .modal-body .form-group .input-wrap input, #search-tab ~ #search-box input, .fc-bg table tbody, .fc-bg table tbody td, .fc-bg table tbody td.fc-day, .fc-view > table thead th.fc-day-header, .fc-view > table tbody td, .fc-view > table thead td, .fc-button, #createEventModal .modal-content, #projectTaskDetails .modal-content, #projectTaskDetails .modal-content .project-main-title textarea, #projectTaskDetails .modal-content .edit-actions textarea, #projectMemberModal .modal-content, #projectLabelModal .modal-content, #projectChecklistModal .modal-content, #projectMoveModal .modal-content, #projectCopyModal .modal-content, #projectShareModal .modal-content, .project-board-select-wrap select, #shareModal .modal-content, .input-group.addon .input-group-prepend .input-group-text,
 .input-group.addon .input-group-append .input-group-text, .input-group.addon .form-control, .input-group.bootstrap-touchspin button.btn, .input-group.bootstrap-touchspin .input-group-text, #smartwizard, #smartwizard .nav, .select2-container--default.select2-container--focus .select2-selection--multiple,
 .select2-container--default .select2-selection--multiple, .select2-container--default .select2-selection--multiple .select2-selection__choice, .select2-container--default .select2-selection--multiple .select2-selection__choice button {
   border: 0 !important;
@@ -3458,11 +3458,11 @@ a.text-dark:hover {
 }
 
 .pagination.style--two ul li svg path {
-  stroke: #E9E7FF;
+  stroke: #b52217
 }
 
 .pagination.style--two ul li a.current svg path {
-  stroke: #8280FD;
+  stroke: #b52217;
 }
 
 /* ************************
@@ -6925,9 +6925,22 @@ body.sidebar-folded .main-content {
   padding: 1.25rem;
   background: #f8f2ac;
   width: 900px;
-  margin-top: 160px;
+  margin-top: 70px;
   margin-bottom: 20px;
   margin-left: 200px;
+  text-align: center;
+}
+.booking-history {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  background: #f8f2ac;
+  width: 900px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  margin-left: 200px;
+  text-align: center;
 }
 
 
