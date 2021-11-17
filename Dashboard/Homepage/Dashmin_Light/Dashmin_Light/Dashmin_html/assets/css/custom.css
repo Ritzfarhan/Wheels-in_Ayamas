@@ -258,6 +258,8 @@ p {
   align-content: center;
   margin-left: 40px;
   color: #fff;
+}
+
 table.cart_table tr th:nth-child(2), table.cart_table tr td:nth-child(2) {
   width: 30%;
 }
