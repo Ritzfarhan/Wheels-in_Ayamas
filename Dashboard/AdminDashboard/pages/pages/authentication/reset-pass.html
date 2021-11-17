@@ -64,13 +64,13 @@
             <span class="login_title"><b>Change Password</b></span>
           </div>
           <div class="panel__left-body">
-            <form action="#" id="changepassword">
+            <form action="#" id="changepassword" method="POST">
               <div class="form-group">
                 <label for="oldpassword">Old Password</label>
                 <input
                   type="password"
                   name="oldpassword"
-                  class="form-control"
+                  class="form-control oldpassword"
                   id="oldpassword"
                   placeholder="password"
                 />
@@ -90,14 +90,15 @@
                 <input
                   type="password"
                   name="confirmpassword"
-                  class="form-control"
+                  class="form-control confirmpassword"
                   id="confirmpassword"
                   placeholder="password"
+                  value=""
                 />
                 <span id='message'></span>
               </div>
               <div class="form-group text-center">
-                <button id="edit">Submit</button>
+                <button type="submit" id="edit">Submit</button>
               </div>
             </form>
           </div>
@@ -219,7 +220,7 @@
        firebase.initializeApp(config);
 
        // make auth and firestore references
-      // const auth = firebase.auth();
+       const auth = firebase.auth();
        const db = firebase.firestore();
        const functions = firebase.functions();
 
@@ -231,6 +232,7 @@
     <script src="../../../assets/js/jquery.min.js"></script>
 
     <script src="../../../assets/js/change-password.js"></script>
+    <script src="../../../assets/js/index.js"></script>
 
 
     <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->

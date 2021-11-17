@@ -1,4 +1,4 @@
-//firebase.auth()
+
 
       //  .signInWithEmailAndPassword('email', 'o_password')
     //    .then(function(user) {
@@ -33,35 +33,44 @@
  //   changePassword.querySelector('.error').innerHTML = err.message;
 //  })
 
-//const changepasswordform = document.querySelector('#changepassword');
+const changepasswordform = document.querySelector('#changepassword');
 const mailField = document.getElementById('.mail');
 const passwordField = document.getElementById('.password');
 const labels = document.getElementById('.label');
 const editButton = document.getElementById('.edit');
-const auth = firebase.auth();
+//const auth = firebase.auth();
+const newpasswordField = document.querySelector('.confirmpassword');
+const oldpasswordField = document.querySelector('.oldpassword');
 
-auth.onAuthStateChanged(user => {
-  console.log(user);
-})
 
-const editInformation = () => {
-    const newEmail = mailField.value;
-    const newPassword = newpasswordfield.value;
 
-    const credential = createCredential(user);
-    changePassword(user, credential ,newPassword);
-} 
 
-const createCredential = user => {
-  const password = prompt('Password:');
+//const editInformation = () => {
+//    //const newEmail = mailField.value;
+//    const newPassword = newpasswordField.value;
+//
+//    //const credential = createCredential(user);
+//    //changePassword(user, credential ,newPassword);
+//
+//    if(newPassword) { //run if the new password is filled
+//      const credential = createCredential(user);
+//      changePassword(user, credential, newPassword);
+//  }
+//} 
+
+function createCredential(user) {
+  const password = oldpasswordField.value;//use the oldpassword field
   const credential = firebase.auth.EmailAuthProvider.credential(
     user.email,
     password
   );
+  console.log(credential);
   return credential;
 }
 
-const changePassword = (user, credential, newPassword) => {
+
+
+function changePassword(user, credential, newPassword) {
   user.reauthenticateWithCredential(credential)
   .then(() => {
     user.updatePassword(newPassword);
@@ -72,9 +81,41 @@ const changePassword = (user, credential, newPassword) => {
   })
 }
 
-editButton.addEventListener('click', editInformation);
+
+//editButton.addEventListener('click', editInformation);
 
 
 
+
+const changeform = document.querySelector('#changepassword');
+
+changeform.addEventListener('submit', (e) => {
+  e.preventDefault();
+  auth.onAuthStateChanged(user => {
+    console.log(user);
+    const newPassword = newpasswordField.value;
+  const credential = createCredential(user);
+  changePassword(user, credential, newPassword);
+ 
+  })
+  
+})
+
+//let user = firebase.auth().currentUser;
+////const newPassword = document.getElementById('.confirmpassword');
+//const newPassword =changeform['confirmpassword'].value;
+//
+//const credential = promptForCredentials();
+//user.reauthenticateWithCredential(credential).then(() => {
+//  // User re-authenticated.
+//  user.updatePassword(newPassword).then(() => {
+//    console.log("successsfully changed password")
+//  }).catch(function(error) {
+//    // An error happened.
+//    console.log(error);
+//  });
+//}).catch((error) => {
+//  console.log(error)
+//});
 
      
