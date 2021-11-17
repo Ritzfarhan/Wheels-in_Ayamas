@@ -8,11 +8,14 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "dist/Homepage",
+    "public": "/Dashboard/Homepage/index.html",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ]
+  },
+  "storage": {
+    "rules": "storage.rules"
   }
 }
