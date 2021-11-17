@@ -238,3 +238,14 @@ p {
   margin-bottom: 15px;
   margin-right: 10px;
 }
+
+.menualign {
+  text-align: center;
+}
+
+.navalign {
+  align-content: center;
+  margin-left: 40px;
+  color: #fff;
+}
+

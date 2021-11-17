@@ -6273,11 +6273,11 @@ body.sidebar-folded.open-sidebar-folded .footer {
    ********************* */
 .main-content {
   min-height: calc(100vh - 190px);
-  margin-left: 250px;
+  margin-left: 160px;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; 
   width: 110%;
-  max-width: 100%;
+  max-width: 500%; 
   margin-top: 150px;
 }
 .main-content-1 {
