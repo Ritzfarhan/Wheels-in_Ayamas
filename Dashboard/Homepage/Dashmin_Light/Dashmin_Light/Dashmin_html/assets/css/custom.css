@@ -44,6 +44,17 @@
   margin-bottom: -40px;
   margin-left: 30px;
 }
+.card-history {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  background: #f8f2ac;
+  width: 900px;
+  margin-top: -40px;
+  margin-bottom: -40px;
+  margin-left: 200px;
+}
 .footer {
     height: 80px;
     padding-left: 290px;
@@ -238,3 +249,27 @@ p {
   margin-bottom: 15px;
   margin-right: 10px;
 }
+
+.menualign {
+  text-align: center;
+}
+
+.navalign {
+  align-content: center;
+  width: 1000px;
+  color: #fff;
+}
+
+table.cart_table tr th:nth-child(2), table.cart_table tr td:nth-child(2) {
+  width: 30%;
+}
+table.cart_table_booking tr th:nth-child(2), table.cart_table_booking tr td:nth-child(2) {
+  width: 17%;
+}
+table.cart_table_booking tr th:nth-child(5), table.cart_table_booking tr td:nth-child(5) {
+  width: 10%;
+}
+table.cart_table_booking thead th {
+    background-color: khaki;
+}
+

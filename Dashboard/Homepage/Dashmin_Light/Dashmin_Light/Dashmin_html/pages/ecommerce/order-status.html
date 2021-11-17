@@ -120,101 +120,54 @@
 
          <!-- Main Content -->
          <br><br>
-      <!-- Card -->
-         <br><br><br><br><br><br><br><br><div class="card-history bg-chocolate mb-30">
-<!-- Invoice Header -->
-<div class="invoice-header d-flex align-items-sm-center media flex-column flex-sm-row">
-   <div class="invoice-header-left d-flex align-items-center position-relative">
-     
-      <!-- Delete Mail -->
-      <div class="delete_mail">
-         <a href="#"><img src="../../assets/img/svg/delete.svg" alt="" class="svg"></a>
-      </div>
-      <!-- End Delete Mail -->
-
-      <!-- Dropdown Button -->
-      <!--<div class="dropdown-button">
-         <a href="#" class="d-flex align-items-center" data-toggle="dropdown">Monthly <i
-               class="icofont-rounded-down"></i></a>
-         <div class="dropdown-menu">
-            <a href="#">Daily</a>
-            <a href="#">Sort By</a>
-            <a href="#">Monthly</a>
-         </div>
-      </div> -->
-      <!-- End Dropdown Button -->
-   </div>
-
-   <div
-      class="invoice-header-right d-flex align-items-center justify-content-end media-body mt-3 mt-sm-0">
-      <!-- Search Form -->
-      <form action="#" class="search-form">
-         <div class="theme-input-group">
-            <input type="text" class="theme-input-style" placeholder="Search Here">
-
-            <button type="submit"><img src="../../assets/img/svg/search-icon.svg" alt=""
-                  class="svg"></button>
-         </div>
-      </form>
-      <!-- End Search Form -->
-
-      <!-- Pagination -->
-      <div class="pagination style--two d-flex flex-column align-items-center ml-3">
-         <ul class="list-inline d-inline-flex align-items-center">
-            <li><a href="#">
-                  <img src="../../assets/img/svg/left-angle.svg" alt="" class="svg">
-               </a></li>
-            <li><a href="#" class="current">
-                  <img src="../../assets/img/svg/right-angle.svg" alt="" class="svg">
-               </a></li>
-         </ul>
-      </div>
-      <!-- End Pagination -->
-   </div>
-</div>
-<!-- End Invoice Header -->
-</div>
                <!-- Card -->
+               <br><br>
                   <div class="order-history">
-                     <h4 class="font-20 mb-4">My Order History </h4>
-
+                     <h4 class="font-20 mb-4">My Order Status </h4>
+                  
                      <!-- List -->
                      <div class="table-responsive pt-1">
                         <table class="cart_table text-nowrap table-centered">
                            <thead>
                               <tr>
-                                 <th>&nbsp; &nbsp;#</th>
-                                 <th>&nbsp; &nbsp; &nbsp; &nbsp;Description</th>
-                                 <th>&nbsp; &nbsp; &nbsp; &nbsp;Date</th>
-                                 <th>&nbsp; &nbsp; &nbsp;Amount</th>
-                                 <th></th>
+                                 <th>#</th>
+                                 <th>Description</th>
+                                 <th>Quantity</th>
+                                 <th>Status</th>
                               </tr>
                            </thead>
                            <tbody class="cart-items">
                               <tr>
                                  <td>#01</td>
                                  <td><a href="#">Golden Roaster Whole</a></td>
-                                 <td>Tue 16 Nov 2021</td>
-                                 <td><span>RM751.4</span></td><td><a href="../pages/menu.html" class="btn btn-w">reorder</a></td>
+                                 <td><a href="#"><input type="number" value="26"></td>
+                                 <td>
+                                     <button type="button" class="status-btn completed">Completed</button>
+                                 </td>                              
                               </tr>
                               <tr>
                                  <td>#02</td>
                                  <td><a href="#">Pepper Roaster Whole</a></td>
-                                 <td>Fri 1 Oct 2021 </td>
-                                 <td><span>RM751.4</span> </td><td><a href="../pages/menu.html" class="btn btn-w">reorder</a></td>
-                              </tr>
+                                 <td><a href="#"><input type="number" value="26"></td>
+                                    <td>
+                                       <button id="status"  type="button" class="status-btn " v-on:click="updateStatus(request.id, request.status)">On The Way</button>
+                                    </td>                              
+                                 </tr>
                               <tr>
                                  <td>#03</td>
                                  <td><a href="#">Percik Roaster Whole</a></td>
-                                 <td>Sat 25 Oct 2021</td>
-                                 <td><span>RM777.4</span> </td><td><a href="../pages/menu.html" class="btn btn-w">reorder</a></td>
-                              </tr>
+                                 <td><a href="#"><input type="number" value="26"></td>
+                                    <td>
+                                       <button type="button" class="status-btn paid">Preparing Order</button>
+                                    </td>                              
+                                 </tr>
                               <tr>
                                  <td>#04</td>
                                  <td><a href="#">Percik Roaster Half</a></td>
-                                 <td>Thu 16 Oct 2021</td>
-                                 <td><span>RM442.0</span> </td><td><a href="../pages/menu.html" class="btn btn-w">reorder</a></td>
-                                 
+                                 <td><a href="#"><input type="number" value="26">&nbsp</td>
+                                    <td>
+                                       <button type="button" class="status-btn on_hold">Order Placed</button>
+                                    </td>                                 
                               </tr>
                            </tbody>
                         </table>
