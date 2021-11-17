@@ -40,6 +40,7 @@ function getTotalCost(items){
     document.querySelector(".tax").innerText = numeral(tax).format(' 0,0.00');
     document.querySelector(".total-cost").innerText = numeral(totalCost2).format(' 0,0.00');
     document.querySelector(".paypal-total").value = numeral(MyrtoUSD).format(' 0,0.00');
+    document.querySelector(".paypal-desc").value = "Recipient";
     //document.querySelector(".paypal-item").value = itemquantity;
 }
 
@@ -179,7 +180,9 @@ function getItems() {
                 Name:  doc.data().Username,
                 order: "on Hold",
                 status:1,
-                user:user.uid
+                user:user.uid,
+                completion:"",
+                model:"undefined"
              }).then(function(docRef){
                 db.collection("cart-items").where("user", "==", user.uid ).onSnapshot((snapshot) => {
                     let cartItems = [];

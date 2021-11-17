@@ -63,7 +63,7 @@ function updateOrder(id) {
              db.collection("parking slot").doc(slot).update({
                  Enable: 1
                }).then(()=>{
-                window.location.href = "/AdminDashboard/pages/maindashboard/order-status.html";
+                window.location.href = "/Homepage/index.html";
                })
                
           }).catch(err => {

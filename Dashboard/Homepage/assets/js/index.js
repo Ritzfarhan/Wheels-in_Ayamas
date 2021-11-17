@@ -1,11 +1,11 @@
-const loggedOutLinks = document.querySelectorAll('.logged-out');
+//const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
 const username4 = document.querySelector('.user-name4');
 const usernameHomepage = document.querySelector('.user-name-homepage');
 const username = document.querySelector('.user-name');
 const f_name = document.querySelector('.f_name');
 const l_name = document.querySelector('.l_name');
-const loggedInLinks = document.querySelectorAll('.logged-in');
+//const loggedInLinks = document.querySelectorAll('.logged-in');
 const adminItems = document.querySelectorAll('.admin');
 
 

@@ -149,16 +149,16 @@
                                                         <p>Please book your parking before it full !!</p>
                                                     </div>
                                                 </div>
-                                                <form>
+                                                <form action="#" id="booking-form" method="POST"> 
                                                     <div class="form-group">
                                                         <span class="form-label">Parking Slot</span>
-                                                        <select class="form-control" required>
-                                                            <option value="" selected hidden>Select parking slot</option>
+                                                        <select id="slot" class="form-control parkingslots" required>
+                                                            <option  value="" selected hidden>Select parking slot</option>
                                                                     <option>01</option>
                                                                     <option>02</option>
                                                                     <option>03</option>
                                                                     <option>04</option>
-                                                                    <option disabled>05</option>
+                                                                    <option style="display: none;">05</option>
                                                                     <option>06</option>
                                                                     <option>07</option>
                                                                     <option>08</option>
@@ -175,14 +175,14 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <span class="form-label">Plate Number</span>
-                                                        <input class="form-control" type="text" required>
+                                                        <input  id="plate" class="form-control" type="text" required>
                                                     </div>
                                                     <div class="form-group">
                                                         <span class="form-label">Car Model</span>
-                                                        <input class="form-control" type="text" required>
+                                                        <input  id="model" class="form-control" type="text" required>
                                                     </div>
                                                     <div class="form-btn">
-                                                        <button class="submit-btn">Proceed to Payment</button>
+                                                        <button class="submit-btn">Proceed</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -260,16 +260,16 @@
       </script>
 
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
+   <script src="/Homepage/assets/js/booking.js"></script>
    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
    <script src="../../assets/js/jquery.min.js"></script>
    <script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
    <script src="../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
    <script src="/Homepage/assets/js/profile.js"></script>
    <script src="../../assets/js/script.js"></script>
-   <script src="/Homepage/assets/js/index.js"></script>
    <script src="/Homepage/assets/js/Homepage.js"></script>
-   <script src="/Homepage/assets/js/main.js"></script>
    <script src="/Homepage/assets/js/cartnumber.js"></script>
+   
 
 
 

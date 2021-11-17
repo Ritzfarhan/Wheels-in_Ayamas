@@ -1476,7 +1476,7 @@ button, input, optgroup, select, textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  background-color: #b52217;
+  background-color: #eee;
 }
 
 *, ::after, ::before {

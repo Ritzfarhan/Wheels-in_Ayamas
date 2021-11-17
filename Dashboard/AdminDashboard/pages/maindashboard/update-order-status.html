@@ -422,7 +422,7 @@
                                     <th>Actions</th>
                                  </tr>
                               </thead>
-                              <tbody id="app">
+                              <tbody class="status-list" id="app">
                                  <tr v-for="request in requests">
                                     <td>
                                        <!-- Custom Checkbox -->
@@ -436,14 +436,10 @@
                                     <td>{{ request.Amount }}</td>
                                     <td>{{ request.Date.toDate().toDateString()}}</td>
                                     <td>{{ request.Name }}</td>
-                                    <td>
-                                       <select class="custom-select status-wdth">
-                                          <option value="order_placed">Order Placed</option>
-                                          <option value="preparing_order">Preparing Order</option>
-                                          <option value="on_the_way">On The Way</option>
-                                          <option value="completed">Completed</option>
-                                       </select>
-                                       <!--<button id="status"  type="button" class="status-btn " v-on:click="updateStatus(request.id, request.status)">Unpaid</button>-->
+                                    <td class="actions">
+                                       <span class="contact-close" data-toggle="modal" data-target="#contactUpdateModal">
+                                          <button id="status"  type="button" class="status-btn btn1 statusbutton" >Update</button>
+                                       </span>                     
                                     </td>
 
                                     <td class="actions">
@@ -460,7 +456,48 @@
                            </table>
                            <!-- End Invoice List Table -->
                         </div>
+<!--Status Update PopUp-->
+<div id="contactUpdateModal" class="modal fade">
+   <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+         <!-- Modal Body -->
+         <div class="modal-body">
+            <form action="#" id="update-status-form">
+            
+               <div class="media flex-column flex-sm-row">
+                                                         
+                  <div class="contact-account-setting media-body">
+                  
+                     <!-- Invoice Details List Wrapper -->
+                     <div class="bg-white details-list-wrap">
+                        <div class="table-responsive">
+                           <!-- Invoice List Table -->
+                           <h4 class="mb-4">Update  Status</h4>
+                        
+                             <select class="custom-select custom-select2 status-wdth" id="status">
+                                 <option value="order placed">Order Placed</option>
+                                 <option value="preparing order">Preparing Order</option>
+                                 <option value="on the way">On The Way</option>
+                                 <option value="completed">Completed</option>
+                              </select>
+                           <!-- End List Table -->
+                           <div class="proceed-to-checkout d-flex align-items-center justify-content-end mr-20 mt-4">
+                              <button href="#" type="submit" class="btn shdw" >Update</button>
 
+                           
+                           </div>
+                        </div>
+                                                                    
+                     </div>
+                     <!-- End Invoice Details List Wrapper -->
+                  
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
                         <!-- Menu Detail PopUp -->
                         <div id="contactAddModal" class="modal fade">
                            <div class="modal-dialog modal-dialog-centered">
@@ -506,7 +543,7 @@
                                                          </tr>
                                                       </thead>
                                                    
-                                                      <tbody class="bg-white">
+                                                      <tbody class="bg-white menudetails">
                                                          <tr>
                                                             <td class="bold">#01</td>
                                                             <td>Meal For 1 Set C</td>
@@ -514,14 +551,7 @@
                                                             <td>RM15.90</td>
                                                             <td>RM31.80</td>
                                                          </tr>
-                                                      
-                                                         <tr>
-                                                            <td class="bold">#01</td>
-                                                            <td>Combo Kids C</td>
-                                                            <td>1</td>
-                                                            <td>RM10.90</td>
-                                                            <td>RM10.90</td>
-                                                         </tr>                       
+                                                          
                                                       </tbody>
                                                    </table>
                                                    <!-- End Invoice List Table -->
@@ -630,18 +660,13 @@
                                                    
                                                       <tbody class="bg-white">
                                                          <tr>
-                                                            <td class="bold">#01</td>
-                                                            <td>01</td>
-                                                            <td>WTB 9290</td>
-                                                            <td>Toyota Wish</td>
+                                                            <td class="bold"></td> class="bold">#01</td>
+                                                            <td class="slot"></td>>01</td>
+                                                            <td class="plate">WTB 9290</td>
+                                                            <td class="model">Toyota Wish</td>
                                                          </tr>
                                                       
-                                                         <tr>
-                                                            <td class="bold">#02</td>
-                                                            <td>04</td>
-                                                            <td>WDR 5678</td>
-                                                            <td>Perodua Myvi</td>
-                                                         </tr>                       
+                                                                      
                                                       </tbody>
                                                    </table>
                                                    <!-- End List Table -->
@@ -717,8 +742,9 @@
    <script src="../../assets/js/script.js"></script>
    <script src="../../assets/js/profile.js"></script>
    <script src="../../assets/js/index.js"></script>
-y   <script src="../../assets/js/orderstatusvue.js"></script>
+y   <script src="../../assets/js/orderstatusNew.js"></script>
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
+   <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
 
    <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
    <script src="/AdminDashboard/assets/plugins/sweetalert2/sweetalert2.all.min.js"></script>

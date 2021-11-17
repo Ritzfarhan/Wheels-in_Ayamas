@@ -507,7 +507,7 @@
                            </div>-->
                            <!--Paypal-------------------------------------------------------------------->
                            <div id="smart-button-container">
-                              <div style="text-align: center"><span for="description" class="Price-amount amount">Name </span><input type="text" name="descriptionInput" id="description" maxlength="127" value=""></div>
+                              <div style="text-align: center; display: none; "><span for="description" class="Price-amount amount">Name </span><input class="paypal-desc " type="text" name="descriptionInput" id="description" maxlength="127" value=""></div>
                                 <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
                                      </strong> 
 
@@ -632,7 +632,7 @@
                                    // })
                                     //Or go to another URL: 
                                      //actions.redirect('/AdminDashboard/pages/maindashboard/booking-status.html');
-                                     //run(2000).then(() =>{window.location.href = "/AdminDashboard/pages/maindashboard/booking-status.html"}); 
+                                     run(1000).then(() =>{window.location.href = "/AdminDashboard/pages/maindashboard/booking-status.html"}); 
                                     
                                   });
                                 },

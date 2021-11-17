@@ -205,3 +205,8 @@ table tr:not(:last-child) td {
 .status-wdth{
     width: 130px;
 }
+
+.btn1 {
+    background-color: #dbae4b;
+    color: #FFFFFF;
+}

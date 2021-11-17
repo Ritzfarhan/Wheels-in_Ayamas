@@ -249,7 +249,7 @@ function Carbutton(id) {
            order: "order placed",
            status:1
           }).then(()=>{
-            run(100).then(() => { window.location.href = "/AdminDashboard/pages/maindashboard/update-order-status.html"; });
+            run(100).then(() => { window.location.href = "/StaffDashboard/pages/maindashboard/update-order-status.html"; });
           })
       }
       else if(statusform['status'].value == "preparing order"){
@@ -257,7 +257,7 @@ function Carbutton(id) {
            order: "preparing order",
            status:2
           }).then(()=>{
-            run(100).then(() => { window.location.href = "/AdminDashboard/pages/maindashboard/update-order-status.html"; });
+            run(100).then(() => { window.location.href = "/StaffDashboard/pages/maindashboard/update-order-status.html"; });
           })
       }
       else if(statusform['status'].value == "on the way"){
@@ -265,7 +265,7 @@ function Carbutton(id) {
         order: "on the way",
         status:3
        }).then(()=>{
-        run(100).then(() => { window.location.href = "/AdminDashboard/pages/maindashboard/update-order-status.html"; });
+        run(100).then(() => { window.location.href = "/StaffDashboard/pages/maindashboard/update-order-status.html"; });
       })
    }
    else{
@@ -278,7 +278,7 @@ function Carbutton(id) {
                db.collection("parking slot").doc(doc.data().slot).update({
                    Enable: 0
                }).then(()=>{
-                run(100).then(() => { window.location.href = "/AdminDashboard/pages/maindashboard/update-order-status.html"; });
+                run(100).then(() => { window.location.href = "/StaffDashboard/pages/maindashboard/order-status.html"; });
               })
            });
           

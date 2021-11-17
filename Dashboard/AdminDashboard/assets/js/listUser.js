@@ -10,7 +10,26 @@ const ref = firebase.firestore().collection('users');
 function deleteItem(userId){
     const deleteUser = functions.httpsCallable('deleteUser');
    // db.collection("cart-items").doc(itemId).delete();
-
+   var t;
+   Swal.fire({
+       title: "Deleting",
+       html: "Please Wait <strong></strong> seconds.",
+       timer: 5000,
+       confirmButtonClass: "btn long",
+       buttonsStyling: !1,
+       onBeforeOpen: function () {
+           Swal.showLoading(),
+               (t = setInterval(function () {
+                   Swal.getContent().querySelector("strong").textContent = Swal.getTimerLeft();
+               }, 100));
+       },
+       onClose: function () {
+           clearInterval(t);
+       },
+   }).then(function (t) {
+       t.dismiss === Swal.DismissReason.timer && console.log("I was closed by the timer");
+   });
+   
    deleteUser({uid: userId})
    .then(result =>{
        console.log(result);
