@@ -59,42 +59,45 @@
               </g>
               </svg>
               </svg>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <span class="login_title"><b>Change Password</b></span>
           </div>
           <div class="panel__left-body">
-            <form action="#" id="login-form">
+            <form action="#" id="changepassword">
               <div class="form-group">
-                <label for="o_password">Old Password</label>
+                <label for="oldpassword">Old Password</label>
                 <input
                   type="password"
-                  name="o_password"
+                  name="oldpassword"
                   class="form-control"
-                  id="o_password"
+                  id="oldpassword"
                   placeholder="password"
                 />
               </div>
               <div class="form-group">
-                <label for="n_password">New Password</label>
+                <label for="password">New Password</label>
                 <input
                   type="password"
-                  name="n_password"
+                  name="password"
                   class="form-control"
-                  id="n_password"
-                  placeholder="password"
+                  id="password"
+                   placeholder="password"
                 />
               </div>
               <div class="form-group">
-                <label for="c_password">Confirm Password</label>
+                <label for="confirmpassword">Confirm Password</label>
                 <input
                   type="password"
-                  name="c_password"
+                  name="confirmpassword"
                   class="form-control"
-                  id="c_password"
+                  id="confirmpassword"
                   placeholder="password"
                 />
+                <span id='message'></span>
               </div>
               <div class="form-group text-center">
-                <input type="submit" value="Change" class="btn2" />
+                <button id="edit">Submit</button>
               </div>
             </form>
           </div>
@@ -174,13 +177,62 @@
     </div>
 
     <!--boostrap-->
+<script>$('#password, #confirmpassword').on('keyup', function () {
+  if ($('#password').val() == $('#confirmpassword').val()) {
+    $('#message').html('Password matching').css('color', 'green');
+  } else 
+    $('#message').html('Password not matching').css('color', 'red');
+});</script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"
+  ></script>
 
+   <!--initialize firebase-->
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-init.js"></script>-->
+   <script>
+       // Initialize Firebase
+       var config = {
+           apiKey: "AIzaSyAS1DsUK4USZG5MMG8kXjkJKjm5-gR8YB0",
+           authDomain: "authentication-8d6ac.firebaseapp.com",
+           projectId: "authentication-8d6ac",
+           storageBucket: "authentication-8d6ac.appspot.com",
+           messagingSenderId: "277365742255",
+           appId: "1:277365742255:web:c09e2d6a2a78b2ee6c125a",
+           measurementId: "G-FVM023WR2T"
+       };
+       firebase.initializeApp(config);
+
+       // make auth and firestore references
+      // const auth = firebase.auth();
+       const db = firebase.firestore();
+       const functions = firebase.functions();
+
+       // update firestore settings
+       db.settings({ timestampsInSnapshots: true });
+   </script>
 
     <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
     <script src="../../../assets/js/jquery.min.js"></script>
-    <script src="../../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="../../../assets/js/script.js"></script>
+
+    <script src="../../../assets/js/change-password.js"></script>
+
+
     <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
 
     <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
