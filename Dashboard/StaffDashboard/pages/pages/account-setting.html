@@ -403,34 +403,46 @@
                                     <div class="tab-pane fade" id="c_pass">
                                         <h4 class="mb-4">Change Password</h4>
 
-                                        <form action="#">
-                                            <!-- Form Group -->
-                                            <div class="form-group mb-20">
-                                                <label for="oldPassword" class="mb-2 font-14 bold black">Old Password</label>
-                                                <input type="password" id="oldPassword" class="theme-input-style" placeholder="Type Here">
+                                        <form action="#" id="changepassword" method="POST">
+                                            <div class="form-group">
+                                                <label for="oldpassword" class="mb-2 font-14 bold black">Old Password</label>
+                                              <input
+                                                type="password"
+                                                name="oldpassword"
+                                                class="form-control oldpassword"
+                                                id="oldpassword"
+                                                placeholder="password"
+                                              />
                                             </div>
-                                            <!-- End Form Group -->
-
-                                            <!-- Form Group -->
-                                            <div class="form-group mb-20">
-                                                <label for="newPassword" class="mb-2 font-14 bold black">New Password</label>
-                                                <input type="password" id="newPassword" class="theme-input-style" placeholder="Type Here">
+                                            <div class="form-group">
+                                                <label for="password" class="mb-2 font-14 bold black">New Password</label>                                              <input
+                                                type="password"
+                                                name="password"
+                                                class="form-control"
+                                                id="password"
+                                                 placeholder="password"
+                                              />
                                             </div>
-                                            <!-- End Form Group -->
-
-                                            <!-- Form Group -->
-                                            <div class="form-group mb-20">
-                                                <label for="retypePassword" class="mb-2 font-14 bold black">Retype Password</label>
-                                                <input type="password" id="retypePassword" class="theme-input-style" placeholder="Type Here">
+                                            <div class="form-group">
+                                                <label for="confirmpassword" class="mb-2 font-14 bold black">Confrim Password</label>
+                                              <input
+                                                type="password"
+                                                name="confirmpassword"
+                                                class="form-control confirmpassword"
+                                                id="confirmpassword"
+                                                placeholder="password"
+                                                value=""
+                                              />
+                                              <span id='message'></span>
                                             </div>
-                                            <!-- End Form Group -->
-
-                                            <div class="button-group mt-30">
+                                            <div class="form-group text-left">
                                                 <button type="submit" class="btn">Save Changes</button>
-                                                <button type="button" class="link-btn bg-transparent ml-3 soft-pink">Cancel</button>
+                                              <p class="error pink-text center-align" ></p>
                                             </div>
-                                        </form>
+                                          </form>
                                     </div>
+
+                                    
 
                                     <div class="tab-pane fade" id="info">
                                         <h4 class="mb-4">Informations</h4>
@@ -694,7 +706,14 @@
         <!-- End Footer -->
     </div>
     <!-- End wrapper -->
-     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+<script>$('#password, #confirmpassword').on('keyup', function () {
+    if ($('#password').val() == $('#confirmpassword').val()) {
+      $('#message').html('Password matching').css('color', 'green');
+    } else 
+      $('#message').html('Password not matching').css('color', 'red');
+  });</script>
+
     <!--initialize firebase-->    
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
@@ -775,6 +794,8 @@
     <script src="../../assets/js/edit-profile.js"></script>
     <script src="../../assets/js/index.js"></script>
     <script src="../../assets/js/auth.js"></script>
+    <script src="../../assets/js/change-password.js"></script>
+
     <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
 
     <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->

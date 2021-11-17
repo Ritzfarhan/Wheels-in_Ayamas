@@ -65,7 +65,6 @@ function createCredential(user) {
     password
   );
   console.log(credential);
-
   return credential;
 }
 
@@ -82,7 +81,6 @@ function changePassword(user, credential, newPassword) {
   })
   .catch(error => {
     console.error(error);
-
   })
 }
 
