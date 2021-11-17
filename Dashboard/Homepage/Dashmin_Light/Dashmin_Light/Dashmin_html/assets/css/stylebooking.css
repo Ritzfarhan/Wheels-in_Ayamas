@@ -59,8 +59,9 @@
 }
 
 .booking-form>form {
-	margin-left: 425px;
+	margin-left: 460px;
 	padding: 30px;
+	width: 400px;
 }
 
 .booking-form .form-header {

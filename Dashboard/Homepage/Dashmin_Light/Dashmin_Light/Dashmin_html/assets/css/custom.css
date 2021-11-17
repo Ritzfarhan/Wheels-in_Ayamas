@@ -256,7 +256,7 @@ p {
 
 .navalign {
   align-content: center;
-  margin-left: 40px;
+  width: 1000px;
   color: #fff;
 }
 
