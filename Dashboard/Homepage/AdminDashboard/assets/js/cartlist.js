@@ -29,8 +29,8 @@ function getTotalCost(items) {
     items.forEach((item) => {
         totalCost1 += (item.Price * item.quantity);
         itemquantity += item.quantity;
-        servicetax = 0.3 * totalCost1;
-        tax = 0.5 * totalCost1;
+        servicetax = 0.03 * totalCost1;
+        tax = 0.05 * totalCost1;
         totalCost2 = totalCost1 + servicetax + tax;
         MyrtoUSD = totalCost2 * 0.23838;
         console.log(item);
@@ -165,8 +165,8 @@ function insertOrder(cartItems) {
     cartItems.forEach((item) => {
         totalCost1 += (item.Price * item.quantity);
         itemquantity += item.quantity;
-        servicetax = 0.3 * totalCost1;
-        tax = 0.5 * totalCost1;
+        servicetax = 0.03 * totalCost1;
+        tax = 0.05 * totalCost1;
         totalCost2 = totalCost1 + servicetax + tax;
         MyrtoUSD = totalCost2 * 0.23838;
         console.log(item);

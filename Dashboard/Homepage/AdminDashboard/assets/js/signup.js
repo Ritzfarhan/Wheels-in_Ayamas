@@ -70,7 +70,7 @@ signupForm.addEventListener('submit', (e) => {
         signupForm.reset();
         signupForm.querySelector('.error').innerHTML = ''
         //setupPage(user);
-        window.location.href = "/Homepage/index.html";
+        window.location.href = "/index.html";
     }).catch(err => {
         console.log;
         signupForm.querySelector('.error').innerHTML = err.message;
