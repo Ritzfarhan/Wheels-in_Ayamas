@@ -1,5 +1,5 @@
 function getMenu() {
-    db.collection("Menu").where("Category", "==", "Chicken Roaster").onSnapshot(snapshot => {
+    db.collection("Menu").where("Category", "==", "Chicken Curry Meal").onSnapshot(snapshot => {
         console.log();
         let items = [];
         snapshot.forEach((doc) => {
@@ -121,7 +121,7 @@ function generateItems(items) {
         // addToCartEl.addEventListener("click", function(){
         //     addToCart(item)
         // })
-        doc.appendChild(addToCartEl);
+        //doc.appendChild(addToCartEl);
         document.querySelector(".row-menu").appendChild(doc);
         createEventListeners();
 

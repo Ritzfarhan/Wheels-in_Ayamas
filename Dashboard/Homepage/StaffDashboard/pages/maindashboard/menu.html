@@ -19,8 +19,8 @@
    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
    
    <!-- ======= BEGIN GLOBAL MANDATORY STYLES ======= -->
-   <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
-   <link rel="stylesheet" href="../../assets/fonts/icofont/icofont.min.css">
+   <link rel="stylesheet" href="/StaffDashboard/assets/bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="/StaffDashboard/assets/fonts/icofont/icofont.min.css">
    <link rel="stylesheet" href="../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.css">
    <!-- ======= END BEGIN GLOBAL MANDATORY STYLES ======= -->
 
@@ -29,8 +29,8 @@
    <!-- ======= END BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
 
    <!-- ======= MAIN STYLES ======= -->
-   <link rel="stylesheet" href="../../assets/css/style.css">
-   <link rel="stylesheet" href="../../assets/css/custom.css">
+   <link rel="stylesheet" href="/StaffDashboard/assets/css/style.css">
+   <link rel="stylesheet" href="/StaffDashboard/assets/css/custom.css">
    <!-- ======= END MAIN STYLES ======= -->
 
 </head>
@@ -41,8 +41,8 @@
    <div class="offcanvas-overlay"></div>
    <!-- Offcanval Overlay -->
 
-   <!-- Wrapper -->
-   <div class="wrapper">
+    <!-- Wrapper -->
+    <div class="wrapper">
       <!-- Header -->
       <header class="header white-bg fixed-top d-flex align-content-center flex-wrap">
          <!-- Logo -->
@@ -144,7 +144,7 @@
                                   </a>
                                  <div class="dropdown-menu">
                                     <a href="/StaffDashboard/pages/pages/user-profile/edit-profile.html">My Profile</a>
-                                    <a href="/Homepage/index.html">Homepage</a>
+                                    <a href="/index.html">Homepage</a>
                                     <a href="/StaffDashboard/pages/pages/account-setting.html">Settings</a>
                                     <a href="#" id="logout">Log Out</a>
                                  </div>
@@ -182,15 +182,7 @@
                <ul class="nav">
                   <li class="nav-category">Main</li>
                   <li>
-                     <a href="#">
-                        <i class="icofont-pie-chart"></i>
-                        <span class="link-title">Dashboard</span>
-                     </a>
-                     <!-- Sub Menu -->
-                     <ul class="nav sub-menu">
-                        <li><a href="/StaffDashboard/index.html">Order List</a></li>
-                        <!--<li><a href="/StaffDashboard/editorderlist.html">Edit Order List</a></li>-->
-                     </ul>
+                     
                   </li>
 
                   <li class="sub-menu-opened">
@@ -200,12 +192,6 @@
                      </a>
                      <!--Sub Menu-->
                      <ul class="nav sub-menu">
-                        <!--<li><a href="#">Edit Menu</a>
-                           <ul>
-                              <li><a href="menu-list.html">Details</a></li>
-                              <li><a href="add-menu.html">Add</a></li>
-                           </ul>
-                        </li>-->
                
                         <li class="active"><a href="menu.html">Chicken Roaster</a></li>
                         <li><a href="menu2.html">Meal For One</a></li>
@@ -237,13 +223,13 @@
                          <li><a href="/StaffDashboard/pages/maindashboard/update-order-status.html">Update Order Status</a></li>
                      </ul>
                  </li>
-
+               
                   <li class="nav-category">Apps</li>
  
                   <li>
                      <a href="#">
                         <i class="icofont-file-document"></i>
-                        <span class="link-title">Sales</span>
+                        <span class="link-title">Sales History</span>
                      </a>
 
                      <!-- Sub Menu -->
@@ -256,11 +242,10 @@
                   </li>
 
                   <li>
-                     <a href="/StaffDashboard/pages/apps/list/staff-list.html">
+                     <a href="StaffDashboard/pages/apps/list/staff-list.html">
                         <i class="ti-list"></i>
                         <span class="link-title">Staff List</span>
                      </a>
-
                   </li>
 
                   <li class="nav sub-menu">
@@ -329,188 +314,29 @@
                     <div class="card-body">                     
                         <h4 class="pt-2 mb-4">Menu </h4>                      
                         <h6 class="pt-2 mb-4">Chicken Roaster </h6>
-                        <!-- Product Grid -->
+                      
                         <div class="product-grid pt-2">
-                            <div class="row">
-                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
-                                    <div class="product-grid-item mb-30">
-                                        <div class="product-img mb-3">
-                                             <a href="menu-details.html"> 
-                                                <img src="../../assets/img/MenuPicture/GoldenRoasterWhole.png" class="w-100" alt="">
-                                             </a>
-                                        </div>
-                                        <div class="product-content">
-                                            <h6 class="mb-10">RM28.90</h6>
-                                             <a href="menu-details.html">
-                                                <p class="black">GOLDER ROASTER - Whole Chicken</p>
-                                             </a>
-                                        </div>
-                                       <!-- Add to Cart Button 
-                                       <button type="submit" class="single_add_to_cart_button button btn button1 btn-fill">Add To Cart</button>
-                                        End Add to Cart Button -->
-                                   
-                                    </div>
-                                    <!-- End Product Grid Item -->
-                                </div>
-                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
-                                    <div class="product-grid-item mb-30">
-                                       <div class="product-img mb-3">
-                                          <a href="menu-details.html">
-                                             <img src="../../assets/img/MenuPicture/GoldenRoasterHalf.png" class="w-100" alt="">
-                                          </a>
-                                       </div>
-                                       <div class="product-content">
-                                          <h6 class="mb-10">RM16.00</h6>
-                                          <a href="menu-details.html">
-                                             <p class="black">GOLDEN ROASTER - Half Chicken</p>
-                                          </a>
-                                       </div>
-                                    </div>
-                                    <!-- End Product Grid Item -->
-                                </div>
-                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
-                                    <div class="product-grid-item mb-30">
-                                        <div class="product-img mb-3">
-                                          <a href="menu-details.html">
-                                             <img src="../../assets/img/MenuPicture/GoldenRoasterQuarter.png" class="w-100" alt="">
-                                          </a>
-                                        </div>
-                                        <div class="product-content">
-                                            <h6 class="mb-10">RM9.00</h6>
-                                            <a href="menu-details.html">
-                                               <p class="black">GOLDEN ROASTER - Quarter Chicken</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- End Product Grid Item -->
-                                </div>
-                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
-                                    <div class="product-grid-item mb-30">
-                                       <div class="product-img mb-3">
-                                       <a href="menu-details.html">
-                                          <img src="../../assets/img/MenuPicture/PepperRoasterWhole.png" class="w-100" alt="">
-                                       </a>
-                                       </div>
-                                       <div class="product-content">
-                                          <h6 class="mb-10">RM28.90</h6>
-                                          <a href="menu-details.html">
-                                             <p class="black">PEPPER ROASTER - Whole Chicken </p>
-                                          </a>
-                                       </div>
-                                    </div>
-                                    <!-- End Product Grid Item -->
-                                </div>
-                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
-                                    <div class="product-grid-item mb-30">
-                                       <div class="product-img mb-3">
-                                          <a href="menu-details.html">
-                                             <img src="../../assets/img/MenuPicture/PepperRoasterHalf.png" class="w-100" alt="">
-                                          </a>
-                                       </div>
-                                       <div class="product-content">
-                                          <h6 class="mb-10">RM16.00</h6>
-                                          <a href="menu-details.html">
-                                             <p class="black">PEPPER ROASTER - Half Chicken</p>
-                                          </a>
-                                       </div>
-                                    </div>
-                                    <!-- End Product Grid Item -->
-                                </div>
-                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
-                                    <div class="product-grid-item mb-30">
-                                       <div class="product-img mb-3">
-                                       <a href="menu-details.html">
-                                          <img src="../../assets/img/MenuPicture/PepperRoasterQuater.png" class="w-100" alt="">
-                                       </a>
-                                       </div>
-                                       <div class="product-content">
-                                          <h6 class="mb-10">RM9.00</h6>
-                                          <a href="menu-details.html">
-                                             <p class="black">PEPPER ROASTER - Quarter Chicken</p>
-                                          </a>
-                                       </div>
-                                    </div>
-                                    <!-- End Product Grid Item -->
-                                </div>
-                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
-                                    <div class="product-grid-item mb-30">
-                                       <div class="product-img mb-3">
-                                          <a href="menu-details.html">
-                                             <img src="../../assets/img/MenuPicture/PercikRoasterWhole.png" class="w-100" alt="">
-                                          </a>
-                                       </div>
-                                       <div class="product-content">
-                                          <h6 class="mb-10">RM29.90</h6>
-                                          <a href="menu-details.html">
-                                             <p class="black">PERCIK ROASTER - Whole Chicken</p>
-                                          </a>
-                                       </div>
-                                    </div>
-                                    <!-- End Product Grid Item -->
-                                </div>
-                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
-                                    <div class="product-grid-item mb-30">
-                                       <div class="product-img mb-3">
-                                          <a href="menu-details.html">
-                                             <img src="../../assets/img/MenuPicture/PercikRoasterHalf.png" class="w-100" alt="">
-                                          </a>
-                                       </div>
-                                       <div class="product-content">
-                                          <h6 class="mb-10">RM17.00</h6>
-                                          <a href="menu-details.html">
-                                             <p class="black">PERCIK ROASTER - Half Chicken</p>
-                                          </a>
-                                       </div>
-                                    </div>
-                                    <!-- End Product Grid Item -->
-                                </div>
-                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <!-- Product Grid Item -->
-                                    <div class="product-grid-item mb-30">
-                                       <div class="product-img mb-3">
-                                          <a href="menu-details.html">
-                                             <img src="../../assets/img/MenuPicture/PercikRoasterQuarter.png" class="w-100" alt="">
-                                          </a>
-                                       </div>
-                                       <div class="product-content">
-                                          <h6 class="mb-10">RM10.00</h6>
-                                          <a href="menu-details.html">
-                                             <p class="black">PERCIK ROASTER - Quarter Chicken</p>
-                                          </a>
-                                       </div>
-                                    </div>
-                                    <!-- End Product Grid Item -->
-                                </div>
-    
-                                <div class="col-xl-12">
-                                    <!-- Pagination -->
-                                    <div class="pagination pagination-sm d-flex flex-column align-items-center mb-10">
-                                       <ul class="list-inline d-inline-flex align-items-center mb-2">
-                                          <li class="disabled"><a href="menu.html">1</a></li>
-                                          <li><a href="menu2.html">2</a></li>
-                                          <li><a href="menu3.html">3</a></li>
-                                          <li><a href="menu4.html">4</a></li>
-                                          <li><a href="menu5.html">5</a></li>
-                                          <li><a href="menu6.html">6</a></li>
-                                          <li><a href="menu7.html">7</a></li>
-                                          <li><a href="menu8.html">8</a></li>
-                                          <li><a href="menu9.html">9</a></li>                            
-                                       </ul>
-                                    </div>
-                                    <!-- End Pagination -->
-                                    <div class="d-flex align-items-center justify-content-end mr-20 mt-4">
-                                       <a href="menu-details.html" class="btn">Edit Menu</a>
-                                    </div>
-                                </div>
+                            <div class="row-menu">
+                               
+                                
                             </div>
+                            <div class="col-xl-12">
+                              <!-- Pagination -->
+                              <div class="pagination pagination-sm d-flex flex-column align-items-center mb-10">
+                                 <ul class="list-inline d-inline-flex align-items-center mb-2">
+                                    <li class="disabled"><a href="menu.html">1</a></li>
+                                    <li><a href="menu2.html">2</a></li>
+                                    <li><a href="menu3.html">3</a></li>
+                                    <li><a href="menu4.html">4</a></li>
+                                    <li><a href="menu5.html">5</a></li>
+                                    <li><a href="menu6.html">6</a></li>
+                                    <li><a href="menu7.html">7</a></li>
+                                    <li><a href="menu8.html">8</a></li>
+                                    <li><a href="menu9.html">9</a></li>                            
+                                 </ul>
+                              </div>
+                              <!-- End Pagination -->
+                          </div>
                         </div>
                         <!-- End Product Grid -->
                     </div>
@@ -536,7 +362,6 @@
       <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
       <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
       <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-storage.js"></script>
-
       <script>
          // Initialize Firebase
          var config = {
@@ -566,13 +391,12 @@
    <script src="../../assets/js/script.js"></script>
    <script src="../../assets/js/profile.js"></script>
    <script src="../../assets/js/index.js"></script>
+   <script src="/StaffDashboard/assets/js/displaymenu.js"></script>
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
       <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
       <script src="/AdminDashboard/assets/plugins/sweetalert2/sweetalert2.all.min.js"></script>
       <script src="/AdminDashboard/assets/plugins/sweetalert2/sweetalerts.js"></script>
       <!-- ======= End BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
   </body>
-  
-</body>
 
 </html>

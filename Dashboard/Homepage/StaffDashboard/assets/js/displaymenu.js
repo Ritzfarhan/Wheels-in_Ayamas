@@ -121,7 +121,7 @@ function generateItems(items) {
         // addToCartEl.addEventListener("click", function(){
         //     addToCart(item)
         // })
-        doc.appendChild(addToCartEl);
+        //doc.appendChild(addToCartEl);
         document.querySelector(".row-menu").appendChild(doc);
         createEventListeners();
 

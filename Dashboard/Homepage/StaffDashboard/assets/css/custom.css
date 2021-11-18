@@ -181,3 +181,12 @@ table tr:not(:last-child) td {
 .shdw {
     box-shadow: 0 5px 10px rgb(0 0 0 / 20%) !important;
 }
+
+.row-menu {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}

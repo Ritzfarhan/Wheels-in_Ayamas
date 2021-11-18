@@ -1,5 +1,5 @@
 function getMenu() {
-    db.collection("Menu").where("Category", "==", "Chicken Roaster").onSnapshot(snapshot => {
+    db.collection("Menu").where("Category", "==", "Sides").onSnapshot(snapshot => {
         console.log();
         let items = [];
         snapshot.forEach((doc) => {
@@ -28,29 +28,29 @@ function getMenu() {
 
 function AddtoCart(item) {
     auth.onAuthStateChanged(user => {
-    console.log(item);
-    let cartItem = db.collection("cart-items").doc(item.id);
-    cartItem.get()
-    .then(function(doc){
-        if(doc.exists){
-            cartItem.update({
-                quantity: doc.data().quantity + 1
-            })
-        } else {
-            cartItem.set({
-                id: item.id,
-                Name: item.Name,
-                Category: item.Category,
-                Price: item.Price,
-                Description: item.Description,
-                ImageUrl:item.ImageUrl,
-                quantity: 1,
-                user: user.uid
-            })
-        }
-        
-    })
-    })
+        console.log(item);
+        let cartItem = db.collection("cart-items").doc(item.id);
+        cartItem.get()
+        .then(function(doc){
+            if(doc.exists){
+                cartItem.update({
+                    quantity: doc.data().quantity + 1
+                })
+            } else {
+                cartItem.set({
+                    id: item.id,
+                    Name: item.Name,
+                    Category: item.Category,
+                    Price: item.Price,
+                    Description: item.Description,
+                    ImageUrl:item.ImageUrl,
+                    quantity: 1,
+                    user: user.uid
+                })
+            }
+            
+        })
+        })
 }
 
 function deleteItem(itemId) {
@@ -96,14 +96,10 @@ function generateItems(items) {
             </div>
             <div class="product-content">
                 <h6 class="mb-10">RM${item.Price}</h6>
-                 <a data-id="${item.id}" >
+                 <a data-id="${item.id}>
                     <p class="black">${item.Name}</p>
                  </a>
             </div>
-
-    
-
-
            
         </div>
         <!-- End Product Grid Item -->
@@ -121,7 +117,7 @@ function generateItems(items) {
         // addToCartEl.addEventListener("click", function(){
         //     addToCart(item)
         // })
-        doc.appendChild(addToCartEl);
+       // doc.appendChild(addToCartEl);
         document.querySelector(".row-menu").appendChild(doc);
         createEventListeners();
 
