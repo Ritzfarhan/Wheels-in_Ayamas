@@ -28,29 +28,43 @@ function getMenu() {
 
 function AddtoCart(item) {
     auth.onAuthStateChanged(user => {
-    console.log(item);
-    let cartItem = db.collection("cart-items").doc(item.id);
-    cartItem.get()
-    .then(function(doc){
-        if(doc.exists){
-            cartItem.update({
-                quantity: doc.data().quantity + 1
-            })
-        } else {
-            cartItem.set({
-                id: item.id,
-                Name: item.Name,
-                Category: item.Category,
-                Price: item.Price,
-                Description: item.Description,
-                ImageUrl:item.ImageUrl,
-                quantity: 1,
-                user: user.uid
-            })
-        }
-        
-    })
-    })
+        console.log(item);
+        let cartItem = db.collection("cart-items").doc(item.id);
+        cartItem.get()
+        .then(function(doc){
+            if(doc.exists){
+                if(doc.data().user == user.uid){
+                    cartItem.update({
+                        quantity: doc.data().quantity + 1
+                    })
+                }
+                else {
+                    cartItem.set({
+                        id: item.id,
+                        Name: item.Name,
+                        Category: item.Category,
+                        Price: item.Price,
+                        Description: item.Description,
+                        ImageUrl:item.ImageUrl,
+                        quantity: 1,
+                        user: user.uid
+                    })
+                }
+            } else {
+                cartItem.set({
+                    id: item.id,
+                    Name: item.Name,
+                    Category: item.Category,
+                    Price: item.Price,
+                    Description: item.Description,
+                    ImageUrl:item.ImageUrl,
+                    quantity: 1,
+                    user: user.uid
+                })
+            }
+            
+        })
+        })
 }
 
 function deleteItem(itemId) {
