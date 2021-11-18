@@ -171,6 +171,7 @@ ref.onSnapshot(snapshot => {
 
             `
             <div>
+            
             <div class="col-xl-2 col-md-12">
              
             <div class="contact-box mb-30">

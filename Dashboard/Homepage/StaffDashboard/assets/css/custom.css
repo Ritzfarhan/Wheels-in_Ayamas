@@ -190,4 +190,9 @@ table tr:not(:last-child) td {
     margin-right: -15px;
     margin-left: -15px;
 }
+.headerfont {
+    font-size: 20px;
+    color: #00192f;
+}
+
 
