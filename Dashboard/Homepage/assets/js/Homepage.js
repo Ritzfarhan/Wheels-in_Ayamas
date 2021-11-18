@@ -159,7 +159,7 @@ logout.addEventListener('click', (e) => {
         t.dismiss === Swal.DismissReason.timer && console.log("I was closed by the timer");
     });
     setTimeout(function () {
-        window.location.href = "/Homepage/index.html";
+        window.location.href = "/index.html";
     }, 1000);
 });
 
