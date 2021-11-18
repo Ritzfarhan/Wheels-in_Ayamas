@@ -1,15 +1,5 @@
 
-.sidenav {
-    width: 150px;
-    position: fixed;
-    z-index: 1;
-    top: 30px;
-    left: 100px;
-    background:burlywood;
-    overflow-x: hidden;
-    padding: 8px 0;
-    margin-top: 120px;
-  }
+
   .sidenav-1 {
     width: 150px;
     position: fixed;
@@ -286,4 +276,16 @@ table.invoice-list-table.style-two th, table.style-two.contact-list-table th, ta
 table.invoice-list-table.style-two td, table.style-two.contact-list-table td, table.invoice-list.style-two td {
   padding: 26px 20px;
   background: #f8f2ac;
+}
+
+.sidenav {
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 60px;
+  left: 42px;
+  background: burlywood;
+  overflow-x: hidden;
+  padding: 8px 0;
+  margin-top: 120px;
 }
