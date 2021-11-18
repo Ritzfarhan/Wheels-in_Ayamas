@@ -88,7 +88,7 @@ function generateItems(items) {
         doc.innerHTML = `
        
         <!-- Product Grid Item -->
-        <div class="product-grid-item mb-30">
+        <div class="product-grid-item mb-30" style="margin-bottom: 140px;">
             <div class="product-img mb-3">
                  <a data-id="${item.id}" class="menu-details"> 
                  <img src="${item.ImageUrl}" class=" w-100" alt="" id="menupic">
