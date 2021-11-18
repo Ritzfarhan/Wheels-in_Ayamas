@@ -5,7 +5,7 @@ body {
   background-color: #f5f5f5 !important;  
   display: flex;
   align-items: center !important;    
-  background-image: url("/Homepage/AdminDashboard/assets/img/bg2.jpg");
+  background-image: url("/AdminDashboard/assets/img/bg2.jpg");
   background-size: cover;
 }
 
