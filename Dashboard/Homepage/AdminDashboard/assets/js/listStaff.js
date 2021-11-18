@@ -13,7 +13,7 @@ function deleteItem(userId) {
         Swal.fire({
             title: "Deleting",
             html: "Please Wait <strong></strong> seconds.",
-            timer: 5000,
+            timer: 3500,
             confirmButtonClass: "btn long",
             buttonsStyling: !1,
             onBeforeOpen: function () {

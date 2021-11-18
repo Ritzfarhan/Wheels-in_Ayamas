@@ -49,7 +49,7 @@ Updateform.addEventListener('submit', (e) => {
       Updateform.querySelector('.error').innerHTML = ''
       Swal.fire({ title: "Success!", text: "Your Profile have been updated", allowOutsideClick: !0, confirmButtonClass: "btn long", buttonsStyling: !1 });
       //setupPage(user);
-      window.location.href ="/Homepage/profile.html";
+      window.location.href ="/profile.html";
     }).catch(err => {
       console.log;
       Updateform.querySelector('.error').innerHTML = err.message;
