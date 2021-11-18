@@ -210,3 +210,8 @@ table tr:not(:last-child) td {
     background-color: #dbae4b;
     color: #FFFFFF;
 }
+
+.headerfont {
+    font-size: 20px;
+    color: #00192f;
+}

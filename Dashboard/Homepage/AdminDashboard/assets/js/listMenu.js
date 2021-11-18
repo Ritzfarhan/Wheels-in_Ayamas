@@ -178,15 +178,6 @@ ref.onSnapshot(snapshot => {
 
             `                                 <tr>
 <td>
-     <!-- Custom Checkbox -->
-     <label class="custom-checkbox">
-         <input type="checkbox">
-         <span class="checkmark"></span>
-     </label>
-     <!-- End Custom Checkbox -->
-
-</td>
-<td>
      <div class="d-flex align-items-center">
          <div class="img mr-20">
              <img src="${request.ImageUrl}" class="img-40" alt="">
