@@ -200,13 +200,13 @@ function Carbutton(id) {
 
       db.collection('Order Status').doc(id).get().then(doc => {
 
-        const sub = `${(doc.data().Amount-((0.5*doc.data().Amount)+(0.3*doc.data().Amount))).toFixed(2)}`
+        const sub = `${(doc.data().Amount-((0.05*doc.data().Amount)+(0.03*doc.data().Amount))).toFixed(2)}`
         subtotal.innerHTML =  sub;
 
-        const service = `${(0.3*doc.data().Amount).toFixed(2)}`
+        const service = `${(0.03*doc.data().Amount).toFixed(2)}`
         servicetax.innerHTML =  service;
     
-        const totaltax = `${(0.5*doc.data().Amount).toFixed(2)}`
+        const totaltax = `${(0.05*doc.data().Amount).toFixed(2)}`
         tax.innerHTML =  totaltax;
     
         const totalAmount = `${doc.data().Amount}`
