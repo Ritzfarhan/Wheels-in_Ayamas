@@ -4,7 +4,7 @@ const setupPage = (user) => {
     window.location.href = admindashboard;
   }
   else if (user.staff) {
-    const staffdashboard = "/StaffDashboard/index.html";
+    const staffdashboard = "/StaffDashboard/pages/maindashboard/update-order-status.html";
     window.location.href = staffdashboard;
   }
   else {

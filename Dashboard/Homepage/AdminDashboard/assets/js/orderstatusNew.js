@@ -1,5 +1,5 @@
 const ref = firebase.firestore().collection('Order Status').orderBy('status', 'desc');
-const refdisplay = firebase.firestore().collection('Order Status').where("completion", "==", "")
+//const refdisplay = firebase.firestore().collection('Order Status').where("completion", "==", "")
 //function changeStatus(id,status){
 //    const orderstatus = document.querySelector('.status');
 //

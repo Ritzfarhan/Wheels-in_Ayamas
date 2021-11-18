@@ -7,6 +7,7 @@ const f_name = document.querySelector('.f_name');
 const l_name = document.querySelector('.l_name');
 //const loggedInLinks = document.querySelectorAll('.logged-in');
 const adminItems = document.querySelectorAll('.admin');
+const staffItems = document.querySelectorAll('.staff');
 
 
 const setupUI = (user) => {
@@ -15,7 +16,7 @@ const setupUI = (user) => {
             adminItems.forEach(item => item.style.display = 'block');
         }
         if (user.staff) {
-            //staffItems.forEach(item => item.style.display = 'block');
+            staffItems.forEach(item => item.style.display = 'block');
         }
         // account info
         /*db.collection('users').doc(user.uid).get().then(doc => {

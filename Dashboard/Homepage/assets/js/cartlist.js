@@ -180,7 +180,7 @@ function getItems() {
                 Date: firebase.firestore.Timestamp.now(),
                 Name:  doc.data().Username,
                 order: "on Hold",
-                status:1,
+                status:0,
                 user:user.uid,
                 completion:"",
                 model:"undefined"
