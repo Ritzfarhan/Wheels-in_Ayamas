@@ -3,36 +3,36 @@
 
 function getCartItems() {
     auth.onAuthStateChanged(user => {
-   
-    
-    db.collection("cart-items").where("user", "==", user.uid ).onSnapshot((snapshot) => {
-        let cartItems = [];
-        snapshot.docs.forEach((doc) => {
-            cartItems.push({
-                id: doc.id, 
-                ...doc.data()
+
+
+        db.collection("cart-items").where("user", "==", user.uid).onSnapshot((snapshot) => {
+            let cartItems = [];
+            snapshot.docs.forEach((doc) => {
+                cartItems.push({
+                    id: doc.id,
+                    ...doc.data()
+                })
             })
+            generateCartItems(cartItems);
+            getTotalCost(cartItems);
         })
-        generateCartItems(cartItems);
-        getTotalCost(cartItems);
     })
-})
 }
 
-function getTotalCost(items){
+function getTotalCost(items) {
     let totalCost1 = 0;
     let totalCost2 = 0;
     let servicetax = 0;
     let itemquantity = 0;
     let tax = 0;
-    let MyrtoUSD =0;
-    items.forEach((item)=>{
+    let MyrtoUSD = 0;
+    items.forEach((item) => {
         totalCost1 += (item.Price * item.quantity);
         itemquantity += item.quantity;
-       servicetax = 0.3*totalCost1;
-       tax = 0.5*totalCost1;
-       totalCost2 = totalCost1 + servicetax + tax;
-       MyrtoUSD = totalCost2 * 0.23838;
+        servicetax = 0.3 * totalCost1;
+        tax = 0.5 * totalCost1;
+        totalCost2 = totalCost1 + servicetax + tax;
+        MyrtoUSD = totalCost2 * 0.23838;
         console.log(item);
     })
     document.querySelector(".subtotal").innerText = numeral(totalCost1).format(' 0,0.00');
@@ -40,13 +40,13 @@ function getTotalCost(items){
     document.querySelector(".tax").innerText = numeral(tax).format(' 0,0.00');
     document.querySelector(".total-cost").innerText = numeral(totalCost2).format(' 0,0.00');
     document.querySelector(".paypal-total").value = numeral(MyrtoUSD).format(' 0,0.00');
-    document.querySelector(".paypal-desc").value = "Recipient";
+    //document.querySelector(".paypal-desc").value = "";
     //document.querySelector(".paypal-item").value = itemquantity;
 }
 
 function decreaseCount(itemId) {
     let cartItem = db.collection("cart-items").doc(itemId);
-    cartItem.get().then(function(doc) {
+    cartItem.get().then(function (doc) {
         if (doc.exists) {
             if (doc.data().quantity > 1) {
                 cartItem.update({
@@ -57,9 +57,9 @@ function decreaseCount(itemId) {
     })
 }
 
-function increaseCount(itemId){
+function increaseCount(itemId) {
     let cartItem = db.collection("cart-items").doc(itemId);
-    cartItem.get().then(function(doc) {
+    cartItem.get().then(function (doc) {
         if (doc.exists) {
             if (doc.data().quantity > 0) {
                 cartItem.update({
@@ -70,7 +70,7 @@ function increaseCount(itemId){
     })
 }
 
-function deleteItem(itemId){
+function deleteItem(itemId) {
     db.collection("cart-items").doc(itemId).delete();
 }
 
@@ -102,19 +102,19 @@ function createEventListeners() {
     let deleteButtons = document.querySelectorAll(".cart-item-delete");
 
     decreaseButtons.forEach((button) => {
-        button.addEventListener("click", function(){
+        button.addEventListener("click", function () {
             decreaseCount(button.dataset.id);
         })
     })
 
     increaseButtons.forEach((button) => {
-        button.addEventListener("click", function() {
+        button.addEventListener("click", function () {
             increaseCount(button.dataset.id)
         })
     })
 
-    deleteButtons.forEach((button)=>{
-        button.addEventListener("click", function(){
+    deleteButtons.forEach((button) => {
+        button.addEventListener("click", function () {
             deleteItem(button.dataset.id)
         })
     })
@@ -138,23 +138,23 @@ getCartItems();
 
 function getItems() {
     auth.onAuthStateChanged(user => {
-    
-    
-    db.collection("cart-items").where("user", "==", user.uid ).onSnapshot((snapshot) => {
-       let cartItems = [];
-       snapshot.docs.forEach((doc) => {
-             cartItems.push({
-                id: doc.id, 
-                ...doc.data()
-             })
-       })
-       insertOrder(cartItems);
 
+
+        db.collection("cart-items").where("user", "==", user.uid).onSnapshot((snapshot) => {
+            let cartItems = [];
+            snapshot.docs.forEach((doc) => {
+                cartItems.push({
+                    id: doc.id,
+                    ...doc.data()
+                })
+            })
+            insertOrder(cartItems);
+
+        })
     })
- })
- }
+}
 
- function insertOrder(cartItems) {
+function insertOrder(cartItems) {
 
     let totalCost1 = 0;
     let totalCost2 = 0;
@@ -162,71 +162,70 @@ function getItems() {
     let itemquantity = 0;
     let tax = 0;
 
-    cartItems.forEach((item)=>{
-       totalCost1 += (item.Price * item.quantity);
-       itemquantity += item.quantity;
-       servicetax = 0.3*totalCost1;
-       tax = 0.5*totalCost1;
-       totalCost2 = totalCost1 + servicetax + tax;
-       MyrtoUSD = totalCost2 * 0.23838;
-       console.log(item);
+    cartItems.forEach((item) => {
+        totalCost1 += (item.Price * item.quantity);
+        itemquantity += item.quantity;
+        servicetax = 0.3 * totalCost1;
+        tax = 0.5 * totalCost1;
+        totalCost2 = totalCost1 + servicetax + tax;
+        MyrtoUSD = totalCost2 * 0.23838;
+        console.log(item);
     })
 
     auth.onAuthStateChanged(user => {
-       db.collection('users').doc(user.uid).get().then(doc => {
-             db.collection("Order Status").add({
+        db.collection('users').doc(user.uid).get().then(doc => {
+            db.collection("Order Status").add({
                 Amount: totalCost2.toFixed(2),
                 Date: firebase.firestore.Timestamp.now(),
-                Name:  doc.data().Username,
+                Name: doc.data().Username,
                 order: "on Hold",
-                status:1,
-                user:user.uid,
-                completion:"",
-                model:"undefined"
-             }).then(function(docRef){
-                db.collection("cart-items").where("user", "==", user.uid ).onSnapshot((snapshot) => {
+                status: 1,
+                user: user.uid,
+                completion: "",
+                model: "undefined"
+            }).then(function (docRef) {
+                db.collection("cart-items").where("user", "==", user.uid).onSnapshot((snapshot) => {
                     let cartItems = [];
                     snapshot.docs.forEach((doc) => {
                         cartItems.push({
-                            id: doc.id, 
+                            id: doc.id,
                             ...doc.data()
                         })
                     })
                     console.log(docRef.id);
-                    insertCartItems(cartItems,docRef.id);
+                    insertCartItems(cartItems, docRef.id);
                 })
 
-                 
-             })
 
-       });
+            })
 
-       
+        });
 
 
-    
-    
- })
- }
 
- function insertCartItems(cartItems ,docRef) {
-    
-   
+
+
+
+    })
+}
+
+function insertCartItems(cartItems, docRef) {
+
+
     cartItems.forEach((item) => {
         db.collection("Order Status").doc(docRef)
-        .collection('cart-items').doc(item.id).set({
+            .collection('cart-items').doc(item.id).set({
                 id: item.id,
                 Name: item.Name,
                 Category: item.Category,
                 Price: item.Price,
                 Description: item.Description,
-                ImageUrl:item.ImageUrl,
+                ImageUrl: item.ImageUrl,
                 quantity: 1,
                 user: item.user
-        })
-        
-       
+            })
+
+
     })
 }
 /////////////////////////////////////////////////////////////////////////
- 
