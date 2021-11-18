@@ -289,3 +289,12 @@ table.invoice-list-table.style-two td, table.style-two.contact-list-table td, ta
   padding: 8px 0;
   margin-top: 120px;
 }
+
+.w3-bar .w3-bar-item {
+  padding: 8px 10px !important;
+  float: left;
+  width: auto;
+  border: none;
+  display: block;
+  outline: 0;
+}
