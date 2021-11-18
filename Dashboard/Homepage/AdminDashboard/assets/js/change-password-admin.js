@@ -77,7 +77,7 @@ function changePassword(user, credential, newPassword) {
     console.log('Password Updated!');
     Swal.fire({ title: "Success!", text: "Password have been change !", allowOutsideClick: !0, confirmButtonClass: "btn long", buttonsStyling: !1 }); 
     //run(3000).then(() => { window.location.href = "/Homepage/index.html"; });
-    window.location.href = "/AdminDashboard/pages/pages/authentication/login.html";
+   // window.location.href = "/AdminDashboard/pages/pages/authentication/login.html";
   })
   .catch(error => {
     console.error(error);
