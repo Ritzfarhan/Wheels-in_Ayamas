@@ -215,3 +215,13 @@ table tr:not(:last-child) td {
     font-size: 20px;
     color: #00192f;
 }
+
+.custom-select21 {
+    background-color: #ffffff;
+    height: auto;
+    color: #00192f;
+}
+
+.status-wdth1{
+    height: 30px !important;
+}
