@@ -21,19 +21,20 @@ const refdisplay = firebase.firestore().collection('Order Status').where("comple
 //    }
 //    
 //}
-refdisplay.onSnapshot(snapshot => {
-    // console.log(snapshot);
-
-    let requests = [];
-    snapshot.forEach(doc => {
-        requests.push({ ...doc.data(), id: doc.id });
-    });
-    console.log(requests);
-
-    let list = '';
-    requests.forEach(request => {
-
-        list +=
+auth.onAuthStateChanged(user => {
+    firebase.firestore().collection('Order Status').where("user", "==", user.uid).onSnapshot(snapshot => {
+        // console.log(snapshot);
+    
+        let requests = [];
+        snapshot.forEach(doc => {
+            requests.push({ ...doc.data(), id: doc.id });
+        });
+        console.log(requests);
+    
+        let list = '';
+        requests.forEach(request => {
+            if(request.completion==""){
+            list +=
 
             `                                                 <tbody id="app">
             <tr v-for="request in requests">
@@ -68,7 +69,7 @@ refdisplay.onSnapshot(snapshot => {
          </tbody>
          
          `
-
+        }
         //name += `<td>${request.Username}</td>`
         //email += `<li>${request.text}</li>`
     });
@@ -78,6 +79,7 @@ refdisplay.onSnapshot(snapshot => {
     //document.querySelector('.name').innerHTML = name;
     //document.querySelector('.email').innerHTML = email;
 });
+})
 
 ref.onSnapshot(snapshot => {
     // console.log(snapshot);
