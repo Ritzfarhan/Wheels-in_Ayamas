@@ -272,4 +272,18 @@ table.cart_table_booking tr th:nth-child(5), table.cart_table_booking tr td:nth-
 table.cart_table_booking thead th {
     background-color: khaki;
 }
-
+.modal-content{
+  background-color: burlywood;
+}
+.details-list-wrap {
+  padding: 10px 40px 30px;
+  background:#f8f2ac;
+}
+table.invoice-list-table.style-two th, table.style-two.contact-list-table th, table.invoice-list.style-two th {
+  padding: 20px;
+  background: khaki;
+}
+table.invoice-list-table.style-two td, table.style-two.contact-list-table td, table.invoice-list.style-two td {
+  padding: 26px 20px;
+  background: #f8f2ac;
+}
