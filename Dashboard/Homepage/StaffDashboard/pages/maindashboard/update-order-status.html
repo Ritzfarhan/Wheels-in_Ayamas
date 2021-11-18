@@ -323,14 +323,7 @@
                            <table class="invoice-list-table text-nowrap bg-white">
                               <thead>
                                  <tr>
-                                    <th>
-                                       <!-- Custom Checkbox -->
-                                       <label class="custom-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                       </label>
-                                       <!-- End Custom Checkbox -->
-
+                                    
                                     </th>
                                     <th>Amount</th>
                                     <th>Date</th>
@@ -341,15 +334,7 @@
                               </thead>
                               <tbody class="status-list" id="app">
                                  <tr v-for="request in requests">
-                                    <td>
-                                       <!-- Custom Checkbox -->
-                                       <label class="custom-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                       </label>
-                                       <!-- End Custom Checkbox -->
-
-                                    </td>
+                            
                                     <td>{{ request.Amount }}</td>
                                     <td>{{ request.Date.toDate().toDateString()}}</td>
                                     <td>{{ request.Name }}</td>
@@ -660,7 +645,7 @@
    <script src="../../assets/js/script.js"></script>
    <script src="../../assets/js/profile.js"></script>
    <script src="../../assets/js/index.js"></script>
-   <script src="/StaffDashboard/assets/js/orderstatus.js"></script>
+   <script src="/StaffDashboard/assets/js/order-status.js"></script>
    <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
 
    <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
