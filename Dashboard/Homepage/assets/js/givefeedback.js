@@ -19,7 +19,7 @@ feedbackform.addEventListener('submit', (e) => {
     feedbackform.querySelector('.error').innerHTML = ''
     Swal.fire({ title: "Success!", text: "Feedback added", allowOutsideClick: !0, confirmButtonClass: "btn long", buttonsStyling: !1 }); 
     run(2000).then(() => { getFeedback(name); });
-    run(3000).then(() => { window.location.href = "/Homepage/index.html"; });
+    run(3000).then(() => { window.location.href = "/index.html"; });
  
     //setupPage(user);
     
@@ -34,7 +34,7 @@ feedbackform.addEventListener('submit', (e) => {
     console.log('uploaded profile image')
   }).then(() => {
     run(2000).then(() => { getFeedback(name); });
-    run(5502).then(() => { window.location.href = "/Homepage/index.html"; });
+    run(5502).then(() => { window.location.href = "/index.html"; });
   }).catch(error => {
     console.log(error.message);
   })
