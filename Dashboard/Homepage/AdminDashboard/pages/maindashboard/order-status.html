@@ -353,15 +353,7 @@
                            <table class="invoice-list-table text-nowrap bg-white">
                               <thead>
                                  <tr>
-                                    <th>
-                                       <!-- Custom Checkbox -->
-                                       <label class="custom-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                       </label>
-                                       <!-- End Custom Checkbox -->
-
-                                    </th>
+                                    
                                     <th>Amount</th>
                                     <th>Date</th>
                                     <th>Customer</th>
@@ -371,15 +363,7 @@
                               </thead>
                               <tbody class="status-list-display" id="app">
                                  <tr v-for="request in requests">
-                                    <td>
-                                       <!-- Custom Checkbox -->
-                                       <label class="custom-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                       </label>
-                                       <!-- End Custom Checkbox -->
-
-                                    </td>
+                                    
                                     <td>RM{{ request.Amount }}</td>
                                     <td>{{ request.Date.toDate().toDateString()}}</td>
                                     <td>{{ request.Name }}</td>
@@ -602,7 +586,7 @@
                                                    <table class="invoice-list-table style-two some-center text-nowrap">
                                                       <thead>
                                                          <tr>
-                                                            <th>#</th>
+   
                                                             <th>Parking Slot</th>
                                                             <th>Plate Number</th>
                                                             <th>Car Model</th>
@@ -611,7 +595,7 @@
                                                    
                                                       <tbody class="bg-white">
                                                          <tr>
-                                                            <td class="bold">#01</td>
+                                                            
                                                             <td class="slot"></td>
                                                             <td class="plate"></td>
                                                             <td class="model"></td>

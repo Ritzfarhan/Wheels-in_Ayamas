@@ -38,15 +38,7 @@ auth.onAuthStateChanged(user => {
 
             `                                                 <tbody id="app">
             <tr v-for="request in requests">
-               <td>
-                  <!-- Custom Checkbox -->
-                  <label class="custom-checkbox">
-                     <input type="checkbox">
-                     <span class="checkmark"></span>
-                  </label>
-                  <!-- End Custom Checkbox -->
-
-               </td>
+               
                <td>RM${request.Amount}</td>
                <td>${request.Date.toDate().toDateString()}</td>
                <td>${request.Name}</td>
@@ -97,15 +89,7 @@ if(request.completion==""){
 
     `                                                 <tbody id="app">
     <tr v-for="request in requests">
-       <td>
-          <!-- Custom Checkbox -->
-          <label class="custom-checkbox">
-             <input type="checkbox">
-             <span class="checkmark"></span>
-          </label>
-          <!-- End Custom Checkbox -->
-
-       </td>
+       
        <td>RM${request.Amount}</td>
        <td>${request.Date.toDate().toDateString()}</td>
        <td>${request.Name}</td>
