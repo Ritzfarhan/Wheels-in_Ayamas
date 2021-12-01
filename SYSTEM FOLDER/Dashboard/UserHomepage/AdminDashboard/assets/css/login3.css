@@ -1,0 +1,133 @@
+html, 
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #f5f5f5 !important;  
+  display: flex;
+  align-items: center !important;    
+  background-image: url("/AdminDashboard/assets/img/bg2.jpg");
+  background-size: cover;
+}
+
+.panel   {
+  background-color: #fff;
+}
+
+/*.panel__left-title {
+text-align:left;
+  font-size: 2rem;
+  color: #bb3b0e;
+}*/
+
+.login_title{
+    padding-right: 1cm;
+    font-size: 1.9rem;
+    color: #00192f;
+
+}
+.panel__left-title-logo {
+  width: 40px;
+  height: auto;
+  padding-right: 5px;
+}
+
+.panel__left-body {
+  padding: 30px 0px;  
+}
+.form-group label {  
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+input::placeholder {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+.btn2 {
+  /*background-color: #b52217 !important;
+  border: #810f07 !important;
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;*/
+  width: auto;
+  min-width: 100px;
+  border-radius: 24px;
+  text-align: center;
+  padding: 15px 40px;
+  margin-top: 15px;
+  background-color: #caa476;
+  color: #fff;
+  font-size: 14px;
+  margin-left: auto;
+  font-weight: 500;
+  box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.13);
+  border: none;
+  transition: all 0.3s ease;
+  outline: 0;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 1.5rem + 2px) !important;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn:hover:active{
+  transform: scale(0.99);
+}
+
+.btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 2px 6px -1px rgba(182, 157, 230, 0.65);
+}
+.panel__left-footer a {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.panel__right {
+  background-color:  #caa476;
+}
+
+.panel__right-title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  margin-top: 45px;
+}
+
+.panel__left-img {
+  position: absolute;
+  bottom: 1.8rem;
+  left: 0;
+}
+.panel__left-img svg {
+  width: 50%;
+  height: auto;
+}
+
+/* LINKS */
+a {
+  color: #b52217 !important;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.error {
+  color: #B52217;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.row {
+  text-align: left!important;
+}

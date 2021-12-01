@@ -1,0 +1,300 @@
+
+
+  .sidenav-1 {
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    top: 30px;
+    left: 100px;
+    background:burlywood;
+    overflow-x: hidden;
+    padding: 8px 0;
+    margin-top: 120px;
+    height: 300px;
+  }
+  
+
+  
+.tasks_aside, .aside {
+    width: 240px;
+    height: 100%;
+    margin-right: 15px;
+    margin-left: 15px;
+    background: burlywood;
+    padding: 8px 0;
+}
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  background: #f8f2ac;
+  width: 900px;
+  margin-top: -40px;
+  margin-bottom: -40px;
+  margin-left: 30px;
+}
+.card-history {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  background: #f8f2ac;
+  width: 900px;
+  margin-top: -40px;
+  margin-bottom: -40px;
+  margin-left: 200px;
+}
+.footer {
+    height: 80px;
+    padding-left: 290px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1;
+    background-color: #cda45e;
+    color: #00192f;
+    margin-top: 30px;
+}
+.edit-card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #865846;
+    background-clip: border-box;
+    border-radius: .25rem;
+    margin-top: 80px;
+    margin-bottom: 90px;
+}
+.cart-list {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 30px;
+    width: 900px;
+    margin-top: -10px;
+    margin-bottom: 50px;
+}
+#header {
+    /*background: rgba(12, 11, 9, 0.6);*/
+    background-color: #dbae48;
+    border-bottom:1px solid #d89d13;
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 15px 0;
+    top: 40px;
+  }
+  #header.header-scrolled {
+    top: 0;
+    background: rgba(0, 0, 0, 0.85);
+    border-bottom: 1px solid #37332a;
+  }
+  #header .logo {
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+  }
+  #header .logo a {
+    color: #fff;
+  }
+  #header .logo img {
+    max-height: 65px;
+  }
+  button, button[type="submit"], input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    -webkit-appearance: button;
+    background: #caa476;
+    -moz-appearance: button;
+}
+.soft-pink, .follow-btn.soft-pink, .link-btn.soft-pink, .close-btn, .close-btn:hover {
+  color: #b52217;
+}
+.c1, a, .dashboard-date.style--six input, .pagination ul li, .follow-btn, .link-btn, .theme-input-group button:hover, .theme-input-group > a:hover, .header-toogle-menu, .sidebar .sidebar-header .sidebar-toogle-pin, .aside-body li a.active, .aside-body li:hover a, .aside-body li.active a, .product-details-content .woocommerce-Price-amount, .mail-compose .form-group .input-wrap span, .modal-body .form-group .input-wrap span, .mail-compose .form-group .input-wrap input, .modal-body .form-group .input-wrap input {
+  color: #b52217;
+}
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: -10px;
+  border-radius: 10px;
+}
+
+.row-menu {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: 15px;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.product-details-content {
+  font-size: 17px;
+  color: burlywood;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #ffff;
+}
+#product-details .row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 300px;
+  margin-left: -15px;
+}
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: burlywood;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  margin-right: 500px;
+  margin-top: 1px;
+  
+}
+.cart-list {
+  margin: auto !important;
+  width: 100% !important;
+  padding: 10px !important;
+}
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.list-heading {
+  min-width: 60px;
+  color: #00192f;
+}
+.product-details-content .woocommerce-product-details__short-description p {
+  line-height: 1.733;
+  color: #00192f;
+}
+.c2-bg, .ba, .btn-circle:after, .offcanvas-overlay, .aside-body li a:after, .chat_aside .aside-header .aside-header-bottom:after, .message:after, .todo-list .single-row:after, .board .board-cards .board-card:before, #menu button, .btn:hover, #example-vertical > .actions ul li a:hover[href="#next"], #example-vertical > .actions ul li a:hover[href="#finish"], .light-btn.c2-bg, .change-card-btn.c2, a.change-card-btn:hover, .dropdown-menu .dropdown-body a:hover .change-card-btn.main-text, .dropdown-menu.style--two .dropdown-body a:hover .change-card-btn.time, .change-card-btn.btn.preview, #example-vertical > .actions ul li a.change-card-btn.preview[href="#next"], #example-vertical > .actions ul li a.change-card-btn.preview[href="#finish"], .change-card-btn.btn.style--two, #example-vertical > .actions ul li a.change-card-btn.style--two[href="#next"], #example-vertical > .actions ul li a.change-card-btn.style--two[href="#finish"], .change-card-btn.btn.s_alert, #example-vertical > .actions ul li a.change-card-btn.s_alert[href="#next"], #example-vertical > .actions ul li a.change-card-btn.s_alert[href="#finish"], .change-card-btn.details-btn, .change-card-btn.light-btn, table.table-condensed thead tr:nth-child(2) th.change-card-btn, table.table-contextual .change-card-btn.details-btn:hover, table.table-contextual .details-btn:hover i.change-card-btn, .sidebar .sidebar-body li.active > a.change-card-btn, .sidebar .sidebar-body li:hover > a.change-card-btn, .fc-view > table thead th.change-card-btn.fc-day-header, .notifications a:hover p.change-card-btn, .news a:hover p.change-card-btn, .change-card-btn.icon:hover, .select2-container--default .select2-selection--multiple .change-card-btn.select2-selection__choice, .change-card-btn.p_nav-link, .about-nav-tab a.change-card-btn.active, .change-card-btn.iconwrap, .dragable-list > div.ui-sortable-helper i.change-card-btn, .change-card-btn.c2:hover, .change-card-btn.details-btn:hover, .change-card-btn.light-btn:hover, table.table-condensed thead tr:nth-child(2) th.change-card-btn:hover, .change-card-btn.p_nav-link:hover, .change-card-btn.iconwrap:hover, .theme-input-group button, .theme-input-group > a, .theme-input-group button:hover, .theme-input-group > a:hover, .theme-input-group button.btn.style--three:hover, .theme-input-group > a.btn.style--three:hover, .sidebar .sidebar-body li.active:before, .sidebar .sidebar-body li:hover:before, .labels .label.add-label, .label-item .label.add-label, .switch input:checked ~ .control:after, .switch input:checked ~ .control .check, .input-group.bootstrap-touchspin button.btn, .color-circle, .faq h5:after {
+    background-color: #caa476;
+}
+.product-details {
+  padding: 30px;
+  padding-left: 200px;
+}
+.btn-w2{
+  background:#f8f2ac;
+  color: #caa476;
+}
+
+.mb-101 {
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 20px
+}
+
+.font3 {
+  font-size: 30px;
+  color: #fff;
+}
+
+.font4 {
+  font-size: 20px;
+  color: #fff;
+}
+
+::marker {
+  color: transparent;
+}
+
+.edit1 {
+  margin-bottom: 15px;
+  margin-right: 10px;
+}
+
+.menualign {
+  text-align: center;
+}
+
+.navalign {
+  align-content: center;
+  width: 1000px;
+  color: #fff;
+}
+
+table.cart_table tr th:nth-child(2), table.cart_table tr td:nth-child(2) {
+  width: 30%;
+}
+table.cart_table_booking tr th:nth-child(2), table.cart_table_booking tr td:nth-child(2) {
+  width: 17%;
+}
+table.cart_table_booking tr th:nth-child(5), table.cart_table_booking tr td:nth-child(5) {
+  width: 10%;
+}
+table.cart_table_booking thead th {
+    background-color: khaki;
+}
+.modal-content{
+  background-color: burlywood;
+}
+.details-list-wrap {
+  padding: 10px 40px 30px;
+  background:#f8f2ac;
+}
+table.invoice-list-table.style-two th, table.style-two.contact-list-table th, table.invoice-list.style-two th {
+  padding: 20px;
+  background: khaki;
+}
+table.invoice-list-table.style-two td, table.style-two.contact-list-table td, table.invoice-list.style-two td {
+  padding: 26px 20px;
+  background: #f8f2ac;
+}
+
+.sidenav {
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 60px;
+  left: 42px;
+  background: burlywood;
+  overflow-x: hidden;
+  padding: 8px 0;
+  margin-top: 120px;
+}
+
+.w3-bar .w3-bar-item {
+  padding: 8px 10px !important;
+  float: left;
+  width: auto;
+  border: none;
+  display: block;
+  outline: 0;
+}

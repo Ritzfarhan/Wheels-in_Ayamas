@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+   <!-- Page Title -->
+   <title>Wheels - In Ayamas</title>
+
+   <!-- Meta Data -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="../../../assets/img/wia.png">
+
+   <!-- Web Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+   
+   <!-- ======= BEGIN GLOBAL MANDATORY STYLES ======= -->
+   <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="../../../assets/fonts/icofont/icofont.min.css">
+   <link rel="stylesheet" href="../../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.css">
+   <!-- ======= END BEGIN GLOBAL MANDATORY STYLES ======= -->
+
+   <!-- ======= BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
+   <link rel="stylesheet" href="../../../assets/fonts/themify-icons/themify-icons.css">
+   <!-- ======= END BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
+
+   <!-- ======= MAIN STYLES ======= -->
+   <link rel="stylesheet" href="../../../assets/css/style.css">
+   <link rel="stylesheet" href="../../../assets/css/custom.css">
+   <!-- ======= END MAIN STYLES ======= -->
+
+</head>
+
+<body>
+
+   <!-- Offcanval Overlay -->
+   <div class="offcanvas-overlay"></div>
+   <!-- Offcanval Overlay -->
+
+   <!-- Wrapper -->
+   <div class="wrapper">
+      <!-- Header -->
+      <header class="header white-bg fixed-top d-flex align-content-center flex-wrap">
+         <!-- Logo -->
+         <div class="logo">
+            <a href="../../../index.html" class="default-logo"><img src="../../../assets/img/WIAAA.png" alt=""></a>
+            <a href="../../../index.html" class="mobile-logo"><img src="../../../assets/img/WIAAA.png" alt=""></a>
+         </div>
+         <!-- End Logo -->
+
+         <!-- Main Header -->
+         <div class="main-header">
+            <div class="container-fluid">
+               <div class="row justify-content-between">
+                  <div class="col-3 col-lg-1 col-xl-4">
+                     <!-- Header Left -->
+                     <div class="main-header-left h-100 d-flex align-items-center">
+
+                        <!-- Main Header Menu -->
+                        <div class="main-header-menu d-block d-lg-none">
+                           <div class="header-toogle-menu">
+                              <!-- <i class="icofont-navigation-menu"></i> -->
+                              <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" color= "#00192F" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                               </svg>
+                           </div>
+                        </div>
+                        <!-- End Main Header Menu -->
+
+                     </div>
+                     <!-- End Header Left -->
+                  </div>
+                  <div class="col-9 col-lg-11 col-xl-8">
+                     <!-- Header Right -->
+                     <div class="main-header-right d-flex justify-content-end">
+                        <ul class="nav">
+
+                           <li class="d-none d-md-block d-lg-flex">
+                              <!-- Main Header Time -->
+                              <div class="main-header-date-time text-right">
+                                 <h3 class="time">
+                                    <span id="hours"></span>
+                                    <span id="point">:</span>
+                                    <span id="min"></span>
+                                 </h3>
+                                 <span class="date"><span id="date"></span></span>
+                              </div>
+                              <!-- End Main Header Time -->
+                           </li>
+
+                           <li class="order-2 order-sm-0">
+                              <!-- Main Header Search -->
+                              <div class="main-header-search d-none d-md-block">
+                                 <form action="#" class="search-form">
+                                    <div class="theme-input-group header-search">
+                                       <input type="text" class="theme-input-style" placeholder="Search Here">
+
+                                       <button type="submit">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="font-size:20px;color:#B52217" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                           </svg>
+                                       </button>
+
+                                    </div>
+                                 </form>
+                              </div>
+                              <!-- End Main Header Search -->
+                           </li>
+
+                           <li>
+                              <!-- Main Header User -->
+                              <div class="main-header-user">
+                                 <a href="#" class="d-flex align-items-center" data-toggle="dropdown">
+                                    <div class="menu-icon d-none">
+                                       <span></span>
+                                       <span></span>
+                                       <span></span>
+                                    </div>
+
+                                    <div class="user-profile d-xl-flex align-items-center d-none d-md-block">
+                                       <div class="user-profile d-xl-flex align-items-center d-none d-md-block">
+                                          <!-- User Avatar -->
+                                          <div class="user-avatar d-flex justify-content-end">
+
+                                              <img src="../../../assets/img/avatar/user1 (70x70).png"
+                                                  alt="" id="profilepic">
+
+
+                                          </div>
+                                          <!-- End User Avatar -->
+
+                                          <!-- User Info -->
+                             <div class="user-info ">
+                              <div class='user-name'></div>
+                                  <div class='roles'></div>
+                          </div>
+                          <!-- End User Info -->
+
+
+                                      </div>
+                                  </a>
+                                 <div class="dropdown-menu">
+                                    <a href="/StaffDashboard/pages/pages/user-profile/edit-profile.html">My Profile</a>
+                                    <a href="/index.html">Homepage</a>
+                                    <a href="/StaffDashboard/pages/pages/account-setting.html">Settings</a>
+                                    <a href="#" id="logout">Log Out</a>
+                                 </div>
+                              </div>
+                              <!-- End Main Header User -->
+                           </li>
+                        </ul>
+                     </div>
+                     <!-- End Header Right -->
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- End Main Header -->
+      </header>
+      <!-- End Header -->
+
+      <!-- Main Wrapper -->
+      <div class="main-wrapper">
+         <!-- Sidebar -->
+         <nav class="sidebar" data-trigger="scrollbar">
+            <!-- Sidebar Header -->
+            <div class="sidebar-header d-none d-lg-block">
+               <!-- Sidebar Toggle Pin Button -->
+               <div class="sidebar-toogle-pin">
+                  <i class="icofont-tack-pin"></i>
+               </div>
+               <!-- End Sidebar Toggle Pin Button -->
+            </div>
+            <!-- End Sidebar Header -->
+
+            <!-- Sidebar Body -->
+            <div class="sidebar-body">
+               <!-- Nav -->
+               <ul class="nav">
+                  <li class="nav-category">Main</li>
+                  <li>
+                     
+                  </li>
+
+                  <li>
+                     <a href="#">
+                           <i class="ti-notepad"></i>
+                           <span class="link-title">Menu</span>
+                     </a>
+                     <!--Sub Menu-->
+                     <ul class="nav sub-menu">
+               
+                           <li><a href="/StaffDashboard/pages/maindashboard/menu.html">Chicken Roaster</a></li>
+                           <li><a href="/StaffDashboard/pages/maindashboard/menu2.html">Meal For One</a></li>
+                           <li><a href="/StaffDashboard/pages/maindashboard/menu3.html">Meal For Two</a></li>
+                           <li><a href="/StaffDashboard/pages/maindashboard/menu4.html">Pasta Fiesta</a></li>
+                           <li><a href="/StaffDashboard/pages/maindashboard/menu5.html">Kids Meal</a></li>
+                           <li><a href="/StaffDashboard/pages/maindashboard/menu6.html">Chicken Curry Mee</a></li>
+                           <li><a href="/StaffDashboard/pages/maindashboard/menu7.html">Sides</a></li>
+                           <li><a href="/StaffDashboard/pages/maindashboard/menu8.html">Side Dishes</a></li>
+                           <li><a href="/StaffDashboard/pages/maindashboard/menu9.html">Drinks</a></li>
+                     </ul>
+                  </li>
+
+                  <li>
+                     <a href="/StaffDashboard/pages/maindashboard/order-status.html">
+                           <i class="ti-timer"></i>
+                           <span class="link-title">Order Status</span>
+                     </a>
+                  </li>
+               
+                  <li class="nav-category">Apps</li>
+ 
+                  <li>
+                     <a href="/StaffDashboard/pages/apps/sales/sales-history.html">
+                        <i class="icofont-file-document"></i>
+                        <span class="link-title">Sales History</span>
+                     </a>
+
+                     <!-- Sub Menu 
+                     <ul class="nav sub-menu">
+                        <li><a href="/AdminDashboard/pages/apps/sales/sales-history.html">History</a></li>
+                        <li><a href="/AdminDashboard/pages/apps/sales/invoice-details.html">Details</a></li>
+                        <li><a href="/AdminDashboard/pages/apps/sales/invoice-add-new.html">Add New</a></li>
+                     </ul>
+                      End Sub Menu -->
+                  </li>
+                  
+                  <li>
+                     <a href="/StaffDashboard/pages/apps/list/staff-list.html">
+                        <i class="ti-list"></i>
+                        <span class="link-title">Staff List</span>
+                     </a>
+                  </li>
+
+                  <li class="nav sub-menu">
+                     <a href="/StaffDashboard/pages/apps/feedback/view-feedback-staff.html">
+                        <i class="ti-thumb-up"></i>
+                        <span class="link-title">Feedback List</span>
+                     </a>
+                  </li>
+                  
+
+                  <li class="nav-category">pages</li>
+                  <li>
+                     <a href="#">
+                        <i class="icofont-ui-user"></i>
+                        <span class="link-title">User Profile</span>
+                     </a>
+
+                     <!-- Sub Menu -->
+                     <ul class="nav sub-menu">
+                        <!--<li><a href="pages/pages/user-profile/news-feed.html">News Feed</a></li>
+                        <li><a href="pages/pages/user-profile/about.html">About</a></li>
+                        <li><a href="pages/pages/user-profile/gallery.html">Gallery</a></li>                        
+                        <li><a href="pages/pages/user-profile/connection.html">Connections</a></li>
+                        <li><a href="pages/pages/user-profile/profile-chat.html">Chat</a></li>-->
+                        <li><a href="/StaffDashboard/pages/pages/user-profile/edit-profile.html">View Profile</a></li>
+                        <!--<li><a href="/Wheels-in_Ayamas/Dashboard/AdminDashboard/pages/pages/user-profile/user-dashboard.html">User Dashboard</a></li>-->
+                     </ul>
+                     <!-- End Sub Menu -->
+                  </li>
+
+                  <li>
+                     <a href="/StaffDashboard/pages/pages/account-setting.html">
+                        <i class="icofont-settings-alt"></i>
+                        <span class="link-title">Account Settings</span>
+                     </a>
+                  </li>
+                  <!--<li>
+                     <a href="#">
+                        <i class="icofont-check-circled"></i>
+                        <span class="link-title">Authentication</span>
+                     </a>-->
+
+                     <!-- Sub Menu -->
+                     <!--<ul class="nav sub-menu">-->
+                        <!--<li><a href="/AdminDashboard/pages/pages/authentication/login.html">Log In</a></li>
+                        <li><a href="/Wheels-in_Ayamas/Dashboard/AdminDashboard/pages/pages/authentication/register.html">Register</a></li>
+                        <li><a href="/AdminDashboard/pages/pages/authentication/forget-pass.html">Forget Password</a></li>
+                        <li><a href="/AdminDashboard/pages/pages/authentication/reset-pass.html">Reset Password</a></li>
+                     </ul>-->
+                     <!-- End Sub Menu -->
+                  <!--</li>-->
+                  <!--<li>
+                     <a href="#">
+                        <i class="icofont-exclamation-tringle"></i>
+                        <span class="link-title">Miscellaneous</span>
+                     </a>-->
+
+                     <!-- Sub Menu -->
+                     <!--<ul class="nav sub-menu">
+                        <li><a href="/AdminDashboard/pages/pages/miscellaneous/comming-soon.html">Coming Soon</a></li>
+                        <li><a href="/AdminDashboard/pages/pages/miscellaneous/404.html">404 Error</a></li>
+                        <li><a href="/AdminDashboard/pages/pages/miscellaneous/500.html">500 Error</a></li>
+                        <li><a href="/AdminDashboard/pages/pages/miscellaneous/page-not-authorized.html">Not Authorized</a></li>
+                        <li><a href="/AdminDashboard/pages/pages/miscellaneous/maintenance.html">Maintenance</a></li>
+                        <li><a href="/AdminDashboard/pages/pages/miscellaneous/session-timeout.html">Session Timeout</a></li>
+                     </ul>-->
+                     <!-- End Sub Menu -->
+               </ul>
+               <!-- End Nav -->
+            </div>
+            <!-- End Sidebar Body -->
+         </nav>
+         <!-- End Sidebar -->
+
+         <!-- Main Content -->
+         <div class="main-content d-flex flex-column flex-md-row">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-12">
+                     <!-- Invoice Header -->
+                     <div class="invoice-details-header bg-white d-flex align-items-sm-center flex-column flex-sm-row mb-30 justify-content-sm-between">
+                        <div class="d-flex align-items-center">
+                           <a href="#" class="mr-2"><img src="../../../assets/img/svg/angle-left.svg" alt="" class="svg"></a>
+                           <h2 class="regular mr-3 font-30">Invoice</h2>
+                           <h4 class="c4">#256987</h4>
+                        </div>
+
+                        <div class="invoice-header-right d-flex align-items-center justify-content-around justify-content-sm-end mt-3 mt-sm-0">
+
+                           <!-- Delete Mail -->
+                           <div class="delete_mail">
+                              <a href="#"><img src="../../../assets/img/svg/delete.svg" alt="" class="svg"></a>
+                           </div>
+                           <!-- End Delete Mail -->
+
+                           <!-- Pagination -->
+                           <div class="pagination style--two d-flex flex-column align-items-center ml-2">
+                                 <ul class="list-inline d-inline-flex align-items-center">
+                                 <li><a href="#">
+                                    <img src="../../../assets/img/svg/left-angle.svg" alt="" class="svg">
+                                 </a></li>
+                                 <li><a href="#" class="current">
+                                    <img src="../../../assets/img/svg/right-angle.svg" alt="" class="svg">
+                                 </a></li>
+                                 </ul>
+                           </div>
+                           <!-- End Pagination -->
+                        </div>
+                     </div>
+                     <!-- End Invoice Header -->
+
+                     <!-- Invoice Top -->
+                     <div class="invoice-pd c2-bg" data-bg-img="../../../assets/img/media/invoice-pattern.png">
+                        <div class="row">
+                            <div class="col-md-8">
+                                 <!-- Invoice Left -->
+                                 <div class="invoice-left">
+                                       <div class="logo mb-3"><img src="../../../assets/img/wia-invoice.png" alt=""></div>
+         
+                                       <ul class="list-invoice">
+                                          <li class="location">
+                                             <textarea  class="theme-input-style style--four">84A-D, Jalan Tun Sambanthan, Brickfields, Kuala Lumpur, 50470</textarea>
+                                          </li>
+                                          <li class="call">
+                                             <textarea  class="theme-input-style style--four">(+03) 2273 7730 &#10;(+03) 1854 5511</textarea>
+                                          </li>
+                                       </ul>
+                                 </div>
+                                 <!-- End Invoice Left -->
+                            </div>
+                            <div class="col-md-4">
+                                <!-- Invoice Right -->
+                                <div class="invoice-right mt-5 mt-md-0">
+                                    <h3 class="white font-20 mb-3">Invoice</h3>
+
+                                    <ul class="status-list">
+                                        <li>
+                                            <span class="key font-14">Invoice No:</span>
+                                            <span class="white bold font-17"></span>
+                                            <input type="text" class="theme-input-style style--four" value="#256987">
+                                        </li>
+                                        <li>
+                                            <span class="key font-14">Project No:</span>
+                                            <input type="text" class="theme-input-style style--four" value="#0165">
+                                        </li>
+                                        <li>
+                                            <span class="key font-14">Date:</span>
+                                            <input type="text" class="theme-input-style style--four" value="08/01/2021">
+                                        </li>
+                                        <li>
+                                            <span class="key font-14">Due Date:</span>
+                                            <input type="text" class="theme-input-style style--four" value="07/09/2021">
+                                        </li>
+                                        <li>
+                                            <span class="key font-14">Status:</span>
+                                            <div class="custom-selectbox">
+                                                <select class="custom-select">
+                                                    <option value="completed">Completed</option>
+                                                    <option value="product">Product</option>
+                                                    <option value="on_hold">On Hold</option>
+                                                    <option value="paid">Paid</option>
+                                                    <option value="family">Family</option>
+                                                    <option value="work">Work</option>
+                                                    <option value="draft">Draft</option>
+                                                    <option value="design">Design</option>
+                                                    <option value="others">Others</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- End Invoice Right -->
+                            </div>
+                        </div>
+                     </div>
+                     <!-- End Invoice Top -->
+
+                     <!-- Invois Wrapper -->
+                     <div class="bg-white invoice-pd">
+                        <div class="row">
+                           <div class="col-xl-4 col-md-6">
+                              <!-- Invoice Payment Details -->
+                              <div class="invoice edit payment-details mt-5 mt-xl-0">
+                                 <div class="invoice-title c4 bold font-14 mb-3">Payment Details:</div>
+      
+                                 <ul class="status-list">
+                                    <li>
+                                        <span class="key">Total Due</span>
+                                        <input type="text" class="theme-input-style style--three" value="RM300.54">
+                                    </li>
+                                    <li>
+                                        <span class="key">Bank name</span>
+                                        <input type="text" class="theme-input-style style--three" value="Maybank">
+                                    </li>
+                                    <li><span class="key">SWIFT code</span>
+                                        <input type="text" class="theme-input-style style--three" value="AS4F1">
+                                    </li>
+                                    <li>
+                                        <span class="key">IBAN</span>
+                                        <input type="text" class="theme-input-style style--three" value="ETD85039283901259">
+                                    </li>
+                                    <li>
+                                        <span class="key">Country</span>
+                                        <input type="text" class="theme-input-style style--three" value="Malaysia">
+                                    </li>
+                                    <li>
+                                        <span class="key">Address</span>
+                                        <input type="text" class="theme-input-style style--three" value="West Kelantan, 23 Sussex Ave.">
+                                    </li>
+                                 </ul>
+                              </div>
+                              <!-- End Invoice Payment Details -->
+                           </div>
+                        </div>
+                     </div>
+                     <!-- End Invois Wrapper -->
+
+                     <!-- Invoice Details List Wrapper -->
+                     <div class="bg-white details-list-wrap">
+                        <div class="table-responsive position-relative repeater-default pb-4">
+
+                           <button data-repeater-create type="button" class="add-row-btn btn-circle">
+                              <img src="../../../assets/img/svg/plus_white.svg" alt="" class="svg">
+                           </button>
+
+                           <!-- Invoice List Table -->
+                           <table id="invoice-edit-list-table" class="invoice-list-table style-two text-nowrap">
+                              <thead>
+                                 <tr>
+                                    <th>#</th>
+                                    <th>Description</th>
+                                    <th><span>Weight (KG)</span></th>
+                                    <th><span>Rate</span></th>
+                                    <th class="text-center"><span>Amount</span></th>
+                                 </tr>
+                              </thead>
+
+                              <tbody data-repeater-list="group-a" class="bg-white">
+                                 <tr data-repeater-item>
+                                    <td class="bold">#01</td>
+                                    <td><input type="text" class="theme-input-style style--three" value="White Flour"></td>
+                                    <td><input type="text" class="theme-input-style style--three" value="10"></td>
+                                    <td><input type="text" class="theme-input-style style--three" value="RM2.00"></td>
+                                    <td class="text-right">
+                                       <div class="">
+                                          <span>RM20.00</span>
+                                          <span data-repeater-delete class="tr-close">
+                                             <img src="../../../assets/img/svg/table-colse.svg" alt="" class="svg">
+                                          </span>
+                                       </div>
+                                    </td>
+                                 </tr>
+
+                                 <tr data-repeater-item>
+                                    <td class="bold">#02</td>
+                                    <td><input type="text" class="theme-input-style style--three" value="Ayam Kampung"></td>
+                                    <td><input type="text" class="theme-input-style style--three" value="26"></td>
+                                    <td><input type="text" class="theme-input-style style--three" value="RM7.00"></td>
+                                    <td class="text-right">
+                                       <div class="">
+                                          <span>RM182.00</span>
+                                          <span data-repeater-delete class="tr-close">
+                                             <img src="../../../assets/img/svg/table-colse.svg" alt="" class="svg">
+                                          </span>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- End Invoice List Table -->
+                        </div>
+
+                        <!-- Cart Collaterals -->
+                        <div class="cart-collaterals style--two pt-4 pt-xl-0">
+                           <div class="cart_totals calculated_shipping">
+                              <table class="shop_table style-two">
+                                 <tbody>
+                                    <tr class="cart-subtotal">
+                                       <th>Subtotal</th>
+                                       <th>
+                                          <span class="Price-amount amount">
+                                             <span class="Price-currencySymbol">RM</span>202.00</span>
+                                       </th>
+                                    </tr>
+                                    <tr class="cart-tax">
+                                       <td>Tax (19%)</td>
+                                       <td>
+                                          <span class="Price-amount amount">
+                                             <span class="Price-currencySymbol">RM</span>154.45</span>
+                                       </td>
+                                    </tr>
+                                    <tr class="cart-tax">
+                                       <td>Discount (5%)</td>
+                                       <td>
+                                          <span class="Price-amount amount">
+                                             <span class="Price-currencySymbol">-RM</span>54.45</span>
+                                       </td>
+                                    </tr>
+                     
+                                    <tr class="order-total">
+                                       <td>Total</td>
+                                       <td>
+                                          <strong>
+                                             <span class="Price-amount amount"><span class="Price-currencySymbol">RM</span>300.45</span>
+                                          </strong> 
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                     
+                              <div class="proceed-to-checkout invoice-edit d-flex align-items-center justify-content-end mr-20 mt-4">
+                                 <a href="#" class="btn preview">Preview</a>
+                                 <a href="#" class="btn">Save Now</a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End Cart Collaterals -->
+                     </div>
+                     <!-- End Invoice Details List Wrapper -->
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- End Main Content -->
+      </div>
+      <!-- End Main Wrapper -->
+
+      <!-- Footer -->
+      <footer class="footer">
+         Wheels - In Ayamas © 2021 created by G6_39
+      </footer>
+      <!-- End Footer -->
+   </div>
+   <!-- End wrapper -->
+
+      <!--initialize firebase-->
+      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-storage.js"></script>
+
+      <script>
+         // Initialize Firebase
+         var config = {
+            apiKey: "AIzaSyAS1DsUK4USZG5MMG8kXjkJKjm5-gR8YB0",
+            authDomain: "authentication-8d6ac.firebaseapp.com",
+            projectId: "authentication-8d6ac",
+            storageBucket: "authentication-8d6ac.appspot.com",
+            messagingSenderId: "277365742255",
+            appId: "1:277365742255:web:c09e2d6a2a78b2ee6c125a",
+            measurementId: "G-FVM023WR2T"
+         };
+         firebase.initializeApp(config);
+   
+         // make auth and firestore references
+         const auth = firebase.auth();
+         const db = firebase.firestore();
+         const functions = firebase.functions();
+   
+         // update firestore settings
+         db.settings({ timestampsInSnapshots: true });
+      </script>
+   <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
+   <script src="../../../assets/js/jquery.min.js"></script>
+   <script src="../../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="../../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+   <script src="../../../assets/js/script.js"></script>
+   <script src="../../../assets/js/profile.js"></script>
+   <script src="../../../assets/js/index.js"></script>
+   <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
+
+   <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
+   <script src="../../../assets/plugins/jquery-repeater/repeater.min.js"></script>
+   <script src="../../../assets/plugins/jquery-repeater/custom-repeater.js"></script>
+   <!-- ======= End BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
+
+    <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
+    <script src="/AdminDashboard/assets/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="/AdminDashboard/assets/plugins/sweetalert2/sweetalerts.js"></script>
+    <!-- ======= End BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
+</body>
+
+</html>

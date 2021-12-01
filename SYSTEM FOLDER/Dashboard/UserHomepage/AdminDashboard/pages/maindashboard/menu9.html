@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+   <!-- Page Title -->
+   <title>Wheels - In Ayamas</title>
+
+   <!-- Meta Data -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="../../assets/img/wia.png">
+
+   <!-- Web Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+   
+   <!-- ======= BEGIN GLOBAL MANDATORY STYLES ======= -->
+   <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="../../assets/fonts/icofont/icofont.min.css">
+   <link rel="stylesheet" href="../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.css">
+   <!-- ======= END BEGIN GLOBAL MANDATORY STYLES ======= -->
+
+   <!-- ======= BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
+   <link rel="stylesheet" href="../../assets/fonts/themify-icons/themify-icons.css">
+   <!-- ======= END BEGIN PAGE LEVEL PLUGINS STYLES ======= -->
+
+   <!-- ======= MAIN STYLES ======= -->
+   <link rel="stylesheet" href="../../assets/css/style.css">
+   <link rel="stylesheet" href="../../assets/css/custom.css">
+   <!-- ======= END MAIN STYLES ======= -->
+
+</head>
+
+<body>
+
+   <!-- Offcanval Overlay -->
+   <div class="offcanvas-overlay"></div>
+   <!-- Offcanval Overlay -->
+
+   <!-- Wrapper -->
+   <div class="wrapper">
+      <!-- Header -->
+      <header class="header white-bg fixed-top d-flex align-content-center flex-wrap">
+         <!-- Logo -->
+         <div class="logo">
+            <a href="../../index.html" class="default-logo"><img src="../../assets/img/WIAAA.png" alt=""></a>
+            <a href="../../index.html" class="mobile-logo"><img src="../../assets/img/WIAAA.png" alt=""></a>
+         </div>
+         <!-- End Logo -->
+
+         <!-- Main Header -->
+         <div class="main-header">
+            <div class="container-fluid">
+               <div class="row justify-content-between">
+                  <div class="col-3 col-lg-1 col-xl-4">
+                     <!-- Header Left -->
+                     <div class="main-header-left h-100 d-flex align-items-center">
+
+                        <!-- Main Header Menu -->
+                        <div class="main-header-menu d-block d-lg-none">
+                           <div class="header-toogle-menu">
+                              <!-- <i class="icofont-navigation-menu"></i> -->
+                              <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" color= "#00192F" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                               </svg>
+                           </div>
+                        </div>
+                        <!-- End Main Header Menu -->
+
+                     </div>
+                     <!-- End Header Left -->
+                  </div>
+                  <div class="col-9 col-lg-11 col-xl-8">
+                     <!-- Header Right -->
+                     <div class="main-header-right d-flex justify-content-end">
+                        <ul class="nav">
+
+                           <li class="d-none d-md-block d-lg-flex">
+                              <!-- Main Header Time -->
+                              <div class="main-header-date-time text-right">
+                                 <h3 class="time">
+                                    <span id="hours"></span>
+                                    <span id="point">:</span>
+                                    <span id="min"></span>
+                                 </h3>
+                                 <span class="date"><span id="date"></span></span>
+                              </div>
+                              <!-- End Main Header Time -->
+                           </li>
+
+                           <li class="order-2 order-sm-0">
+                              <!-- Main Header Search -->
+                              <div class="main-header-search d-none d-md-block">
+                                 <form action="#" class="search-form">
+                                    <div class="theme-input-group header-search">
+                                       <input type="text" class="theme-input-style" placeholder="Search Here">
+
+                                       <button type="submit">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="font-size:20px;color:#B52217" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                           </svg>
+                                       </button>
+
+                                    </div>
+                                 </form>
+                              </div>
+                              <!-- End Main Header Search -->
+                           </li>
+
+                           <li>
+                              <!-- Main Header User -->
+                              <div class="main-header-user">
+                                 <a href="#" class="d-flex align-items-center" data-toggle="dropdown">
+                                    <div class="menu-icon d-none">
+                                       <span></span>
+                                       <span></span>
+                                       <span></span>
+                                    </div>
+
+                                    <div class="user-profile d-xl-flex align-items-center d-none d-md-block">
+                                       <div class="user-profile d-xl-flex align-items-center d-none d-md-block">
+                                          <!-- User Avatar -->
+                                          <div class="user-avatar d-flex justify-content-end">
+
+                                              <img src="../../../assets/img/avatar/user1 (70x70).png"
+                                                  alt="" id="profilepic">
+
+
+                                          </div>
+                                          <!-- End User Avatar -->
+
+                                          <!-- User Info -->
+                             <div class="user-info ">
+                              <div class='user-name'></div>
+                                  <div class='roles'></div>
+                          </div>
+                          <!-- End User Info -->
+
+
+                                      </div>
+                                  </a>
+                                 <div class="dropdown-menu">
+                                    <a href="/AdminDashboard/pages/pages/user-profile/edit-profile.html">My Profile</a>
+                                    <a href="/index.html">Homepage</a>
+                                    <a href="/AdminDashboard/pages/pages/account-setting.html">Settings</a>
+                                    <a href="#" id=logout>Log Out</a>
+                                 </div>
+                              </div>
+                              <!-- End Main Header User -->
+                           </li>
+                        </ul>
+                     </div>
+                     <!-- End Header Right -->
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- End Main Header -->
+      </header>
+      <!-- End Header -->
+
+      <!-- Main Wrapper -->
+      <div class="main-wrapper">
+         <!-- Sidebar -->
+         <nav class="sidebar" data-trigger="scrollbar">
+            <!-- Sidebar Header -->
+            <div class="sidebar-header d-none d-lg-block">
+               <!-- Sidebar Toggle Pin Button -->
+               <div class="sidebar-toogle-pin">
+                  <i class="icofont-tack-pin"></i>
+               </div>
+               <!-- End Sidebar Toggle Pin Button -->
+            </div>
+            <!-- End Sidebar Header -->
+
+            <!-- Sidebar Body -->
+            <div class="sidebar-body">
+               <!-- Nav -->
+               <ul class="nav">
+                  <li class="nav-category">Main</li>
+                  <!--<li>
+                     <a href="#">
+                        <i class="icofont-pie-chart"></i>
+                        <span class="link-title">Dashboard</span>
+                     </a>-->
+                     <!-- Sub Menu 
+                     <ul class="nav sub-menu">
+                        <li><a href="/AdminDashboard/index.html">Order List</a></li>
+                        <li><a href="/AdminDashboard/editorderlist.html">Edit Order List</a></li>
+                     </ul>
+                  </li>-->
+
+                  <li class="sub-menu-opened">
+                     <a href="#">
+                        <i class="ti-notepad"></i>
+                        <span class="link-title">Menu</span>
+                     </a>
+                     <!--Sub Menu-->
+                     <ul class="nav sub-menu">
+                        <li><a href="#">Edit Menu</a>
+                           <ul>
+                              <li><a href="menu-list.html">Details</a></li>
+                              <li><a href="add-menu.html">Add</a></li>
+                           </ul>
+                        </li>
+               
+                        <li><a href="menu.html">Chicken Roaster</a></li>
+                        <li><a href="menu2.html">Meal For One</a></li>
+                        <li><a href="menu3.html">Meal For Two</a></li>
+                        <li><a href="menu4.html">Pasta Fiesta</a></li>
+                        <li><a href="menu5.html">Kids Meal</a></li>
+                        <li><a href="menu6.html">Chicken Curry Mee</a></li>
+                        <li><a href="menu7.html">Sides</a></li>
+                        <li><a href="menu8.html">Side Dishes</a></li>
+                        <li class="active"><a href="menu9.html">Drinks</a></li>
+                     </ul>
+                  </li>
+
+                  <li>
+                     <a href="cartlist.html">
+                        <i class="icofont-shopping-cart"></i>
+                        <span class="link-title">Cart List</span>
+                     </a>
+                  </li>
+                  
+                  <li>
+                     <a href="#">
+                         <i class="ti-timer"></i>
+                         <span class="link-title">Order Status</span>
+                     </a>
+                     <!-- Sub Menu -->
+                     <ul class="nav sub-menu">
+                         <li><a href="/AdminDashboard/pages/maindashboard/order-status.html">User Order Status</a></li>
+                         <li><a href="/AdminDashboard/pages/maindashboard/update-order-status.html">Update Order Status</a></li>
+                     </ul>
+                 </li>
+
+                  <li>
+                     <a href="/AdminDashboard/pages/maindashboard/booking-status.html">
+                           <i class="ti-tablet"></i>
+                           <span class="link-title">Booking Status</span>
+                     </a>
+                  </li>
+               
+                  <li class="nav-category">Apps</li>
+ 
+                  <li>
+                     <a href="/AdminDashboard/pages/apps/sales/sales-history.html">
+                        <i class="icofont-file-document"></i>
+                        <span class="link-title">Sales History</span>
+                     </a>
+
+                     <!-- Sub Menu 
+                     <ul class="nav sub-menu">
+                        <li><a href="/AdminDashboard/pages/apps/sales/sales-history.html">History</a></li>
+                        <li><a href="/AdminDashboard/pages/apps/sales/invoice-details.html">Details</a></li>
+                        <li><a href="/AdminDashboard/pages/apps/sales/invoice-add-new.html">Add New</a></li>
+                     </ul>
+                      End Sub Menu -->
+                  </li>
+                  
+                  <li>
+                     <a href="#">
+                        <i class="ti-list"></i>
+                        <span class="link-title">Lists</span>
+                     </a>
+
+                     <!-- Sub Menu -->
+                     <ul class="nav sub-menu">
+                        <li><a href="/AdminDashboard/pages/apps/list/user-list.html">User List</a></li>
+                        <li><a href="/AdminDashboard/pages/apps/list/staff-list.html">Staff List</a></li>
+                        <!--<li><a href="/Wheels-in_Ayamas/Dashboard/AdminDashboard/pages/apps/contact/contact-grid.html">Grid View</a></li>-->
+                     </ul>
+                     <!-- End Sub Menu -->
+                  </li>
+
+                  <li class="nav sub-menu">
+                     <a href="/AdminDashboard/pages/apps/feedback/view-feedback-admin.html">
+                        <i class="ti-thumb-up"></i>
+                        <span class="link-title">Feedback List</span>
+                     </a>
+                  </li>
+
+                  <li class="nav-category">Pages</li>
+                  <li>
+                     <a href="#">
+                        <i class="icofont-ui-user"></i>
+                        <span class="link-title">User Profile</span>
+                     </a>
+
+                     <!-- Sub Menu -->
+                     <ul class="nav sub-menu">
+                        <!--<li><a href="pages/pages/user-profile/news-feed.html">News Feed</a></li>
+                        <li><a href="pages/pages/user-profile/about.html">About</a></li>
+                        <li><a href="pages/pages/user-profile/gallery.html">Gallery</a></li>                        
+                        <li><a href="pages/pages/user-profile/connection.html">Connections</a></li>
+                        <li><a href="pages/pages/user-profile/profile-chat.html">Chat</a></li>-->
+                        <li><a href="/AdminDashboard/pages/pages/user-profile/edit-profile.html">View Profile</a></li>
+                        <!--<li><a href="pages/pages/user-profile/user-dashboard.html">User Dashboard</a></li>-->
+                     </ul>
+                     <!-- End Sub Menu -->
+                  </li>
+
+                  <li>
+                     <a href="/AdminDashboard/pages/pages/account-setting.html">
+                        <i class="icofont-settings-alt"></i>
+                        <span class="link-title">Account Settings</span>
+                     </a>
+                  </li>
+                  
+                  <!--<li>
+                     <a href="#">
+                        <i class="icofont-exclamation-tringle"></i>
+                        <span class="link-title">Miscellaneous</span>
+                     </a>-->
+
+                     <!-- Sub Menu -->
+                     <!--<ul class="nav sub-menu">
+                        <li><a href="/Wheels-in_Ayamas/Dashboard/AdminDashboard/pages/pages/miscellaneous/comming-soon.html">Coming Soon</a></li>
+                        <li><a href="/Wheels-in_Ayamas/Dashboard/AdminDashboard/pages/pages/miscellaneous/404.html">404 Error</a></li>
+                        <li><a href="/Wheels-in_Ayamas/Dashboard/AdminDashboard/pages/pages/miscellaneous/500.html">500 Error</a></li>
+                        <li><a href="/Wheels-in_Ayamas/Dashboard/AdminDashboard/pages/pages/miscellaneous/page-not-authorized.html">Not Authorized</a></li>
+                        <li><a href="/Wheels-in_Ayamas/Dashboard/AdminDashboard/pages/pages/miscellaneous/maintenance.html">Maintenance</a></li>
+                        <li><a href="/Wheels-in_Ayamas/Dashboard/AdminDashboard/pages/pages/miscellaneous/session-timeout.html">Session Timeout</a></li>
+                     </ul>-->
+                     <!-- End Sub Menu -->
+               </ul>
+               <!-- End Nav -->
+            </div>
+            <!-- End Sidebar Body -->
+         </nav>
+         <!-- End Sidebar -->
+
+         <!-- Main Content -->
+         <div class="main-content">
+            <div class="container-fluid">
+                <!-- Card -->
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="pt-2 mb-4">Menu </h4>
+                        <h6 class="pt-2 mb-4">Drinks </h6>
+        
+                        <!-- Product Grid -->
+                        <div class="product-grid pt-2">
+                            <div class="row-menu">
+                                <!--<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                   
+                                    <div class="product-grid-item mb-30">
+                                        <div class="product-img mb-3">
+                                             <a href="menu-details.html"> 
+                                                <img src="../../assets/img/MenuPicture/DrinkTehTarikLessSweet.png" class="w-100" alt="">
+                                             </a>
+                                        </div>
+                                        <div class="product-content">
+                                            <h6 class="mb-10">RM3.00</h6>
+                                             <a href="menu-details.html">
+                                                <p class="black">F&N - TEH TARIK KURANG MANIS</p>
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                  
+                                    <div class="product-grid-item mb-30">
+                                       <div class="product-img mb-3">
+                                          <a href="menu-details.html">
+                                             <img src="../../assets/img/MenuPicture/DrinkTehTarikOri.png" class="w-100" alt="">
+                                          </a>
+                                       </div>
+                                       <div class="product-content">
+                                          <h6 class="mb-10">RM3.00</h6>
+                                          <a href="menu-details.html">
+                                             <p class="black">F&N - TEH TARIK ORI</p> 
+                                          </a>
+                                       </div>
+                                    </div>
+                                
+                                </div>
+                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                               
+                                    <div class="product-grid-item mb-30">
+                                        <div class="product-img mb-3">
+                                          <a href="menu-details.html">
+                                             <img src="../../assets/img/MenuPicture/DrinkFarmFreshCafeLate.png" class="w-100" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="product-content">
+                                            <h6 class="mb-10">RM2.50</h6>
+                                            <a href="menu-details.html">
+                                               <p class="black">FARM FRESH - CAFE LATTE 200ML</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                   
+                                    <div class="product-grid-item mb-30">
+                                        <div class="product-img mb-3">
+                                          <a href="menu-details.html">
+                                             <img src="../../assets/img/MenuPicture/DrinkFarmFreshChoc1L.png" class="w-100" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="product-content">
+                                            <h6 class="mb-10">RM6.70</h6>
+                                            <a href="menu-details.html">
+                                               <p class="black">FARM FRESH - CHOCOLATE 1L</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                   
+                                 </div> 
+                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                  
+                                    <div class="product-grid-item mb-30">
+                                        <div class="product-img mb-3">
+                                          <a href="menu-details.html">
+                                             <img src="../../assets/img/MenuPicture/DrinkFarmFreshChoc.png" class="w-100" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="product-content">
+                                            <h6 class="mb-10">RM2.50</h6>
+                                            <a href="menu-details.html">
+                                               <p class="black">FARM FRESH - CHOCOLATE 200ML</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                               
+                                 </div>
+                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                 
+                                    <div class="product-grid-item mb-30">
+                                        <div class="product-img mb-3">
+                                          <a href="menu-details.html">
+                                             <img src="../../assets/img/MenuPicture/DrinkFarmFreshKurma1L.png" class="w-100" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="product-content">
+                                            <h6 class="mb-10">RM6.70</h6>
+                                            <a href="menu-details.html">
+                                               <p class="black">FARM FRESH - SUSU KURMA 1L</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                  
+                                 </div>     
+                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                              
+                                    <div class="product-grid-item mb-30">
+                                        <div class="product-img mb-3">
+                                          <a href="menu-details.html">
+                                             <img src="../../assets/img/MenuPicture/DrinkFarmFreshKurma.png" class="w-100" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="product-content">
+                                            <h6 class="mb-10">RM2.50</h6>
+                                            <a href="menu-details.html">
+                                               <p class="black">FARM FRESH - SUSU KURMA 200ML</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                           
+                                 </div>
+                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                   
+                                    <div class="product-grid-item mb-30">
+                                        <div class="product-img mb-3">
+                                          <a href="menu-details.html">
+                                             <img src="../../assets/img/MenuPicture/DrinkFitrahCincauSegar.png" class="w-100" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="product-content">
+                                            <h6 class="mb-10">RM3.00</h6>
+                                            <a href="menu-details.html">
+                                               <p class="black">FITRAH - CINCAU SEGAR</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                   
+                                 </div>
+                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                   
+                                    <div class="product-grid-item mb-30">
+                                        <div class="product-img mb-3">
+                                          <a href="menu-details.html">
+                                             <img src="../../assets/img/MenuPicture/DrinkFitrahRumpaiLautLemon.png" class="w-100" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="product-content">
+                                            <h6 class="mb-10">RM3.00</h6>
+                                            <a href="menu-details.html">
+                                               <p class="black">FITRAH - RUMPAI LAUT LEMON</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                             
+                                 </div>   
+                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                 
+                                    <div class="product-grid-item mb-30">
+                                        <div class="product-img mb-3">
+                                          <a href="menu-details.html">
+                                             <img src="../../assets/img/MenuPicture/DrinkHausboomBlackckurrent.png" class="w-100" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="product-content">
+                                            <h6 class="mb-10">RM3.70</h6>
+                                            <a href="menu-details.html">
+                                               <p class="black">HAUSBOOM - BLACKCURRENT 275ML</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                  
+                                 </div>  
+                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                   
+                                    <div class="product-grid-item mb-30">
+                                        <div class="product-img mb-3">
+                                          <a href="menu-details.html">
+                                             <img src="../../assets/img/MenuPicture/DrinkHausboomGuava.png" class="w-100" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="product-content">
+                                            <h6 class="mb-10">RM3.70</h6>
+                                            <a href="menu-details.html">
+                                               <p class="black">HAUSBOOM - GUAVA 275ML</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                   
+                                 </div>  
+                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                  
+                                    <div class="product-grid-item mb-30">
+                                        <div class="product-img mb-3">
+                                          <a href="menu-details.html">
+                                             <img src="../../assets/img/MenuPicture/DrinkHausboomLemonade.png" class="w-100" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="product-content">
+                                            <h6 class="mb-10">RM3.70</h6>
+                                            <a href="menu-details.html">
+                                               <p class="black">HAUSBOOM - LEMONADE 275ML</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                   
+                                 </div>
+                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                                 
+                                    <div class="product-grid-item mb-30">
+                                        <div class="product-img mb-3">
+                                          <a href="menu-details.html">
+                                             <img src="../../assets/img/MenuPicture/DrinkHausboomMango.png" class="w-100" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="product-content">
+                                            <h6 class="mb-10">RM3.70</h6>
+                                            <a href="menu-details.html">
+                                               <p class="black">HAUSBOOM - MANGO 275ML</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                  
+                                 </div>      -->                 
+                                
+                               
+                            </div>
+                        </div>
+                         <div class="col-xl-12">
+                                    <!-- Pagination -->
+                                    <div class="pagination pagination-sm d-flex flex-column align-items-center mb-10">
+                                       <ul class="list-inline d-inline-flex align-items-center mb-2">
+                                          <li><a href="menu.html">1</a></li>
+                                          <li><a href="menu2.html">2</a></li>
+                                          <li><a href="menu3.html">3</a></li>
+                                          <li><a href="menu4.html">4</a></li>
+                                          <li><a href="menu5.html">5</a></li>
+                                          <li><a href="menu6.html">6</a></li>
+                                          <li><a href="menu7.html">7</a></li>
+                                          <li><a href="menu8.html">8</a></li>
+                                          <li class="disabled"><a href="menu9.html">9</a></li>                           
+                                       </ul>
+                                    </div>
+                                    <!-- End Pagination -->
+                                </div>
+                        <!-- End Product Grid -->
+                    </div>
+                </div>
+                <!-- End Card -->
+            </div>
+         </div>
+         <!-- End Main Content -->
+      </div>
+      <!-- End Main Wrapper -->
+
+      <!-- Footer -->
+      <footer class="footer">
+         Wheels - In Ayamas © 2021 created by G6_39
+      </footer>
+      <!-- End Footer -->
+   </div>
+   <!-- End wrapper -->
+   <!--initialize firebase-->
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-storage.js"></script>
+   <script>
+      // Initialize Firebase
+      var config = {
+         apiKey: "AIzaSyAS1DsUK4USZG5MMG8kXjkJKjm5-gR8YB0",
+         authDomain: "authentication-8d6ac.firebaseapp.com",
+         projectId: "authentication-8d6ac",
+         storageBucket: "authentication-8d6ac.appspot.com",
+         messagingSenderId: "277365742255",
+         appId: "1:277365742255:web:c09e2d6a2a78b2ee6c125a",
+         measurementId: "G-FVM023WR2T"
+      };
+      firebase.initializeApp(config);
+
+      // make auth and firestore references
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+      const functions = firebase.functions();
+
+      // update firestore settings
+      db.settings({ timestampsInSnapshots: true });
+   </script>
+
+   <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
+   <script src="../../assets/js/jquery.min.js"></script>
+   <script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+   <script src="/AdminDashboard/assets/js/script.js"></script>
+   <script src="/AdminDashboard/assets/js/profile.js"></script>
+   <script src="/AdminDashboard/assets/js/index.js"></script>
+   <script src="/AdminDashboard/assets/js/displaymenu9.js"></script>
+   <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
+
+      <!-- ======= BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
+      <script src="/AdminDashboard/assets/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+      <script src="/AdminDashboard/assets/plugins/sweetalert2/sweetalerts.js"></script>
+      <!-- ======= End BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS ======= -->
+  </body>
+  
+</body>
+
+</html>
