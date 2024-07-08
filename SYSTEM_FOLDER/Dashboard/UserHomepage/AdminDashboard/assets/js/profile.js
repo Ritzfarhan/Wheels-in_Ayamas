@@ -8,58 +8,74 @@ const roles_profile = document.querySelector('.roles-profile');
 const f_nameForm = document.getElementById('edit-fname');
 const l_nameForm = document.getElementById('edit-lname');
 const accountUsername = document.querySelector(".accUsername");
-
-// Define the avatar and profilepic variables
 const avatar = document.getElementById('avatar');
 const profilepic = document.getElementById('profilepic');
 
 const setupUI = (user) => {
     if (user) {
-        // account info
         db.collection('users').doc(user.uid).get().then(doc => {
-            const html = `<br><br><center><h6>${doc.data().Username} </h6></center>`;
-            username.innerHTML = html;
-
-            const username2html = `<h3>${doc.data().Username}</h3> ${user.email}`;
-            username2.innerHTML = username2html;
-
-            const roles_profilehtml = `${user.admin ? 'Admin of Ayamas' : user.staff ? 'Staff of Ayamas' : ''}`;
-            roles_profile.innerHTML = roles_profilehtml;
-
-            const usernamehtml = `<br><br><h6>${doc.data().Username}<h6> `;
-            username.innerHTML = usernamehtml;
-            
-            const roleshtml = `<h6 class='roles'><center>${user.admin ? 'Admin' : user.staff ? 'Staff' : ''}</center></h6>`;
-            roles.innerHTML = roleshtml;
-
-            const username3html = `${doc.data().Username}`;
-            username3.innerHTML = username3html;
-            
-            const f_namehtml = `${doc.data().f_name}`;
-            f_name.innerHTML = f_namehtml;
-
-            const l_namehtml = `${doc.data().l_name} `;
-            l_name.innerHTML = l_namehtml;
-
-            const emailhtml = `${user.email} `;
-            email.innerHTML = emailhtml;
+            if (doc.exists) {
+                if (username) {
+                    username.innerHTML = `<br><br><center><h6>${doc.data().Username} </h6></center>`;
+                }
+                if (username2) {
+                    username2.innerHTML = `<h3>${doc.data().Username}</h3> ${user.email}`;
+                }
+                if (roles_profile) {
+                    roles_profile.innerHTML = `${user.admin ? 'Admin of Ayamas' : user.staff ? 'Staff of Ayamas' : ''}`;
+                }
+                if (username3) {
+                    username3.innerHTML = `${doc.data().Username}`;
+                }
+                if (f_name) {
+                    f_name.innerHTML = `${doc.data().f_name}`;
+                }
+                if (l_name) {
+                    l_name.innerHTML = `${doc.data().l_name}`;
+                }
+                if (roles) {
+                    roles.innerHTML = `<h6 class='roles'><center>${user.admin ? 'Admin' : user.staff ? 'Staff' : ''}</center></h6>`;
+                }
+                // If you need to set the value for form inputs, use value instead of innerHTML
+                if (f_nameForm) {
+                    f_nameForm.value = doc.data().f_name;
+                }
+                if (l_nameForm) {
+                    l_nameForm.value = doc.data().l_name;
+                }
+            } else {
+                console.error("No such document!");
+            }
+        }).catch(error => {
+            console.error("Error getting document:", error);
         });
     } else {
         // clear account info
-        username.innerHTML = '<br><br>Not Logged in';
+        if (username) {
+            username.innerHTML = '<br><br>Not Logged in';
+        }
     }
 };
 
 auth.onAuthStateChanged(user => {
     if (user) {
-        firebase.storage().ref('users/'+ user.uid + '/profile.jpg').getDownloadURL()
+        firebase.storage().ref('users/' + user.uid + '/profile.jpg').getDownloadURL()
         .then(imgUrl => {
-            profilepic.src = imgUrl;
-            avatar.src = imgUrl;
+            if (profilepic) {
+                profilepic.src = imgUrl;
+            }
+            if (avatar) {
+                avatar.src = imgUrl;
+            }
+        }).catch(error => {
+            console.error("Error fetching profile picture:", error);
         });
+
         user.getIdTokenResult().then(idTokenResult => {
             user.admin = idTokenResult.claims.admin;
             setupUI(user);
+        }).catch(error => {
+            console.error("Error fetching ID token result:", error);
         });
     } else {
         setupUI();
